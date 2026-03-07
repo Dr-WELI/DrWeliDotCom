@@ -4,8 +4,6 @@ Production-ready static site for **GitHub Pages**.
 
 ## 🚀 Publish / Update
 
-Open **Command Prompt** and run:
-
 ```bat
 cd %USERPROFILE%\weli-site
 
@@ -13,7 +11,7 @@ rem ensure correct remote (org repo)
 git remote set-url origin https://github.com/Dr-WELI/program-site.git
 
 git add .
-git commit -m "Design refresh: moonlight shimmer + Experience Highlights + Recurring Programs"
+git commit -m "Design refresh: Ariana-style gradient (no grid) + subtle shimmer + Ideal-for + hero CTAs"
 git push -u origin main
 ```
 
@@ -24,14 +22,14 @@ Then enable Pages:
 
 ## 🧩 Customise
 - Edit `index.html` text and links
-- Tweak colours, grid, shimmer in `styles.css`
-- Program Pack: replace `WELI_Program_Pack.pdf` when needed
+- Tweak gradient colours in `:root` (`styles.css`)
+- Replace `WELI_Program_Pack.pdf` when needed
 
 ## 📄 Files
 - `index.html` — landing page
-- `styles.css` — moonlight gradient, grid, glitter, subtle shimmer
+- `styles.css` — Ariana-style gradient (no grid), glitter, subtle shimmer
 - `script.js` — mobile nav + smooth scroll
-- `WELI_Program_Pack.pdf` — program pack with pricing and testimonials
+- `WELI_Program_Pack.pdf` — program pack with pricing, ideal-for & testimonials
 
 ---
 © WELI
