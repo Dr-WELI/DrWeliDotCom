@@ -1,52 +1,37 @@
 # WELI — Creativity, Wellbeing & Engagement (Landing Page)
 
-A fast, single-page site you can deploy **free** with **GitHub Pages**.
+Production-ready static site for **GitHub Pages**.
 
-## 🚀 Quick start
+## 🚀 Publish / Update
 
-1. **Create a new folder** and copy these files into it (or clone from your local working directory).
-2. Initialize git and commit:
+Open **Command Prompt** and run:
 
-```bash
-git init
+```bat
+cd %USERPROFILE%\weli-site
+
+rem ensure correct remote (org repo)
+git remote set-url origin https://github.com/Dr-WELI/program-site.git
+
 git add .
-git commit -m "Initial commit: WELI landing page"
-```
-
-3. Create a new GitHub repo (replace `USERNAME` and `REPO`):
-
-**Option A — without GitHub CLI**
-```bash
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPO.git
+git commit -m "Design refresh: moonlight shimmer + Experience Highlights + Recurring Programs"
 git push -u origin main
 ```
 
-**Option B — with GitHub CLI (`gh`)**
-```bash
-git branch -M main
-gh repo create REPO --public --source=. --remote=origin --push
-```
+Then enable Pages:
+- Settings → **Pages** → *Deploy from a branch*
+- Branch: `main` · Folder: `/ (root)` → **Save**
+- Live at: `https://dr-weli.github.io/program-site/`
 
-4. **Enable GitHub Pages** (no build step needed):
-   - On GitHub, open **Settings → Pages**
-   - **Build and deployment**: *Deploy from a branch*
-   - **Branch**: `main` — **Folder**: `/ (root)`
-   - Click **Save**. Wait ~1–2 minutes.
+## 🧩 Customise
+- Edit `index.html` text and links
+- Tweak colours, grid, shimmer in `styles.css`
+- Program Pack: replace `WELI_Program_Pack.pdf` when needed
 
-5. Your site will be live at:
-   - `https://USERNAME.github.io/REPO/` (or `https://USERNAME.github.io/` if you name the repo `USERNAME.github.io`).
-
-## 🔧 Customise
-- Edit **`index.html`** for text/sections.
-- Update **contact** links near the end of `index.html`.
-- Replace the YouTube/LinkedIn links in the **Watch my work** section if needed.
-- Tweak colours in **`styles.css`** (CSS variables at the top).
-
-## 🧩 Notes
-- The LinkedIn promo opens in a new tab (LinkedIn embedding is restricted). The YouTube video is embedded.
-- This site is 100% static — no backend required.
+## 📄 Files
+- `index.html` — landing page
+- `styles.css` — moonlight gradient, grid, glitter, subtle shimmer
+- `script.js` — mobile nav + smooth scroll
+- `WELI_Program_Pack.pdf` — program pack with pricing and testimonials
 
 ---
-
 © WELI
