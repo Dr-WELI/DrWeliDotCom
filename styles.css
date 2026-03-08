@@ -1,7 +1,7 @@
 
-/* Headline / brand treatment with Permanent Marker */
+/* Typography: Anton for display, Inter for body */
 :root{
-  --headline-font: "Permanent Marker", cursive;
+  --display-font: "Anton", sans-serif;
   --body-font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -10,18 +10,18 @@ body{
   font-family: var(--body-font);
 }
 
-/* Apply Permanent Marker to headings and brand */
+/* Apply Anton to major headings and brand mark */
 h1, h2, h3, .brand, .section h2 {
-  font-family: var(--headline-font);
-  letter-spacing: 0.2px;         /* tiny tracking improves display fonts */
+  font-family: var(--display-font);
+  letter-spacing: 0.2px;         /* small tracking helps condensed faces */
 }
 
-/* Optional: slightly tighter hero heading */
+/* Optional: hero headline polish */
 .hero h1{
-  font-family: var(--headline-font);
+  font-family: var(--display-font);
   line-height: 1.05;
+  font-size: clamp(36px, 6vw, 64px);
 }
-
 :root{
   --bg1:#2A303C; --bg2:#1F242E; --bg3:#11141A;
   --text:#e5e7eb; --muted:#a8b0bd; --ink:#11141A; --white:#ffffff;
