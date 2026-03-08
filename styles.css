@@ -1,4 +1,30 @@
-﻿:root{
+<!-- Permanent Marker (Google Fonts) -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+/* Headline / brand treatment with Permanent Marker */
+:root{
+  --headline-font: "Permanent Marker", cursive;
+  --body-font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Keep body copy readable */
+body{
+  font-family: var(--body-font);
+}
+
+/* Apply Permanent Marker to headings and brand */
+h1, h2, h3, .brand, .section h2 {
+  font-family: var(--headline-font);
+  letter-spacing: 0.2px;         /* tiny tracking improves display fonts */
+}
+
+/* Optional: slightly tighter hero heading */
+.hero h1{
+  font-family: var(--headline-font);
+  line-height: 1.05;
+}
+
+:root{
   --bg1:#2A303C; --bg2:#1F242E; --bg3:#11141A;
   --text:#e5e7eb; --muted:#a8b0bd; --ink:#11141A; --white:#ffffff;
 }
@@ -13,6 +39,8 @@ body{
   line-height:1.6;
 }
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(17,20,26,.65);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
