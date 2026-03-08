@@ -175,3 +175,22 @@ body{
   .site-nav{position:fixed;right:16px;top:64px;background:rgba(17,20,26,.96);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:12px;display:none;flex-direction:column;min-width:240px}
   .site-nav.show{display:flex}
 }
+
+/* Pricing tweaks */
+.small { font-size: 0.92rem; }
+
+/* POA intake */
+.poa-wrap { margin-top: 24px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 16px; }
+.poa-form .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+.poa-form label { display: grid; gap: 6px; }
+.poa-form input, .poa-form textarea {
+  width: 100%; padding: 10px 12px; border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.06); color: #fff;
+}
+.poa-form .contact-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+.poa-form .status { margin-top: 6px; opacity: .9; font-size: .95rem; }
