@@ -101,3 +101,7 @@ body {
   .site-nav { position: fixed; right: 16px; top: 64px; background: rgba(17,20,26,0.96); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 12px; display: none; flex-direction: column; min-width: 240px; }
   .site-nav.show { display: flex; }
 }
+/* Media list (sorted & grouped) */
+.media-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
+.media-list a { color: #cfe7ff; text-decoration: underline; text-underline-offset: 2px; }
+.media-list a:hover { color: #ffffff; }
