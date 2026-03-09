@@ -1,7 +1,7 @@
 
 /* Typography: Anton for display, Inter for body */
 :root{
-  --display-font: "Anton", sans-serif;
+  --display-font: "Libre Franklin", sans-serif;
   --body-font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -16,17 +16,6 @@ h1, h2, h3, .brand, .section h2 {
   letter-spacing: 0.2px;         /* small tracking helps condensed faces */
 }
 
-
-/* Strong, thick outline for Anton headings */
-h1, h2, h3, .brand, .section h2 {
-  text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-    -3px -3px 3px rgba(0,0,0,0.8),
-     3px  3px 3px rgba(0,0,0,0.8);
-}
 
 /* Optional: hero headline polish */
 .hero h1{
