@@ -17,13 +17,15 @@ h1, h2, h3, .brand, .section h2 {
 }
 
 
-/* Soft dark outline for Anton headings */
+/* Strong, thick outline for Anton headings */
 h1, h2, h3, .brand, .section h2 {
   text-shadow:
-    -1px -1px 0 #111,
-     1px -1px 0 #111,
-    -1px  1px 0 #111,
-     1px  1px 0 #111;
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+    -3px -3px 3px rgba(0,0,0,0.8),
+     3px  3px 3px rgba(0,0,0,0.8);
 }
 
 /* Optional: hero headline polish */
