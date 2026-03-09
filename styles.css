@@ -16,6 +16,16 @@ h1, h2, h3, .brand, .section h2 {
   letter-spacing: 0.2px;         /* small tracking helps condensed faces */
 }
 
+
+/* Soft dark outline for Anton headings */
+h1, h2, h3, .brand, .section h2 {
+  text-shadow:
+    -1px -1px 0 #111,
+     1px -1px 0 #111,
+    -1px  1px 0 #111,
+     1px  1px 0 #111;
+}
+
 /* Optional: hero headline polish */
 .hero h1{
   font-family: var(--display-font);
