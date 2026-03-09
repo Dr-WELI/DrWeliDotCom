@@ -32,6 +32,16 @@ h1, h2, h3, .brand, .section h2 {
   line-height: 1.05;
   font-size: clamp(36px, 6vw, 64px);
 }
+
+h1, .hero h1 {
+  text-shadow:
+    0 0 8px rgba(0,0,0,0.65),
+    -1px 0 1px #000,
+     1px 0 1px #000,
+     0 -1px 1px #000,
+     0  1px 1px #000;
+}
+
 :root{
   --bg1:#2A303C; --bg2:#1F242E; --bg3:#11141A;
   --text:#e5e7eb; --muted:#a8b0bd; --ink:#11141A; --white:#ffffff;
@@ -87,6 +97,7 @@ body{
 .lead{font-size:clamp(16px,2.2vw,18px);color:var(--muted);margin:0 auto 18px}
 .hero-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:8px 0 8px}
 .watch-link a{color:#fff;text-decoration:underline;text-underline-offset:3px;opacity:.95}
+
 
 /* Sections */
 .section{padding:60px 0}
