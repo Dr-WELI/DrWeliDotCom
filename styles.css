@@ -1,8 +1,8 @@
 
 /* Typography: Anton for display, Inter for body */
 :root{
-  --display-font: "Libre Franklin", sans-serif;
-  --body-font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --display-font: "Josefin Sans", sans-serif;
+  --body-font: Inter, system-ui, -apple-system, Optima, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Keep body copy readable */
