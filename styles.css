@@ -288,3 +288,65 @@ h1, h2, h3, .brand, .section h2 {
   .logo { width: 38px; height: 38px; }
   .logo img { width: 18px; height: 18px; }
 }
+
+/* === Premium accent tuning (subtle gold/metal) === */
+:root{
+  /* keep your existing colors; add a restrained gold accent */
+  --gold-1: #c8a96b;      /* mid gold */
+  --gold-2: #ead9b1;      /* pale highlight */
+  --gold-3: #8a6b3a;      /* shadow */
+}
+
+/* Gold gradient used for small elements (badges, micro borders) */
+.gold-sheen {
+  background: linear-gradient(135deg, var(--gold-2) 0%, var(--gold-1) 45%, var(--gold-3) 100%);
+}
+
+/* Step badge adopts a gold gradient */
+.flow-badge{
+  background: linear-gradient(135deg, var(--gold-2) 10%, var(--gold-1) 55%, var(--gold-3) 110%);
+  color:#0b0f14;
+  border: 1px solid rgba(0,0,0,.35);
+  box-shadow: 0 6px 14px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+/* Cards: add faint metallic border on hover only (premium restraint) */
+.card{
+  transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+}
+.card:hover{
+  border-color: rgba(202, 174, 115, 0.45); /* gold tint */
+  box-shadow: 0 10px 26px rgba(0,0,0,.18);
+  transform: translateY(-1px);
+}
+
+/* Metallic hairline divider can be applied where needed */
+.hr-metal{
+  height: 1px;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.06) 15%,
+    rgba(202,174,115,.45) 50%,
+    rgba(255,255,255,.06) 85%,
+    rgba(255,255,255,0) 100%);
+  border: 0; margin: 18px 0;
+}
+
+/* Nature rationale spacing */
+.rationale{
+  margin: 6px 0 18px;
+}
+
+/* Optional: caps letter-spacing just a touch more “fashion” */
+.section-subtitle, h2, h3{
+  letter-spacing: 0.4px;
+}
+
+/* Optional: pills get extremely subtle gold on hover */
+.pill{
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.pill:hover{
+  border-color: rgba(202,174,115,.45);
+  background-color: rgba(255,255,255,0.10);
+}
