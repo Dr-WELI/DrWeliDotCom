@@ -1,26 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WELI — Nature • Science • Culture</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <main style="display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;flex-direction:column;gap:24px;padding:40px 24px;">
-    <h1>WELI</h1>
+    <section id="academic" class="section alt">
+      <div class="container narrow">
+        <div class="section-header">
+          <h2>Academic & professional</h2>
+          <p class="muted">
+            The part of the practice that holds research, facilitation, publications, speaking, and professional history.
+          </p>
+        </div>
 
-    <p>Nature • Science • Culture</p>
+        <div class="cards three">
+          <article class="card">
+            <h3>Publications</h3>
+            <p>Selected papers, research outputs, and science communication writing.</p>
+          </article>
+          <article class="card">
+            <h3>Professional CV</h3>
+            <p>Roles, education, achievements, teaching, facilitation, and applied work.</p>
+          </article>
+          <article class="card">
+            <h3>Talks & workshops</h3>
+            <p>Speaking, creative facilitation, science communication, and public engagement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <p style="max-width:700px;">
-      Dr Weliton Menário Costa is a transdisciplinary practitioner working across science, music, and creative engagement. His work blends nature-inspired systems thinking, storytelling, and collective movement to create impactful experiences across research, education, and culture.
-    </p>
+    <section id="about" class="section">
+      <div class="container narrow center">
+        <div class="section-header">
+          <h2>About WELI</h2>
+        </div>
 
-    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
-      <a href="/program">Programs</a>
-      <a href="mailto:bookings@drweli.com">Bookings</a>
-      <a href="https://www.linkedin.com/in/dr-weli-weliton-men%C3%A1rio-costa-21aa8b224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
+        <div class="statement-box drweli-about-box">
+          <p class="statement">
+            WELI is the public-facing home of Dr Weliton Menário Costa — a Brazilian-born, Sydney-based artist and transdisciplinary practitioner whose work connects music, science, humour, performance, and culture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container contact narrow">
+        <div class="section-header">
+          <h2>Book a workshop, performance, or conversation.</h2>
+          <p class="muted">
+            For programs, speaking, music, collaborations, or broader creative opportunities.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:bookings@drweli.com">Email bookings@drweli.com</a>
+          <a
+            class="btn btn-outline"
+            href="https://www.linkedin.com/in/dr-weli-weliton-men%C3%A1rio-costa-21aa8b224/"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> WELI</span>
+
+      <nav aria-label="Footer">
+        <a href="#music">Music</a>
+        <a href="/program">Programs</a>
+        <a href="#academic">Academic</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>
