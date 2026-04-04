@@ -91,10 +91,11 @@ h2.section-title::after,
   position:absolute;
   left:0;
   bottom:0;
-  width: 100px;
-  height:50px;
+  width: 72px;
+  height: 1px;
   border-radius:999px;
-  background:linear-gradient(90deg, var(--champagne) 0%, var(--diamond) 55%, rgba(201,199,204,0) 100%);
+  -- background:linear-gradient(90deg, var(--champagne) 0%, var(--diamond) 55%, rgba(201,199,204,0) 100%);
+  background:linear-gradient(90deg, var(--champagne) 0%, var(--diamond) 80%, rgba(201,199,204,0) 100%);
   opacity:.95;
 }
 
