@@ -86,9 +86,17 @@ h1, h2, h3, .brand, .section h2 {
   background: linear-gradient(90deg, var(--gold-1) 0%, var(--lavender) 65%, rgba(255,255,255,0) 100%);
 }
 
-.hero h1{
-  line-height: 1.05;
-  font-size: clamp(36px, 6vw, 64px);
+.hero-title {
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-title span {
+  display: block;
+  font-size: 0.6em;   /* makes it smaller but still connected */
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 6px;    /* controls how close it sits */
 }
 
 /* Optional: alternative header accent styles (toggle by adding class to <body>)
