@@ -24,3 +24,10 @@
 .section{
   padding: 64px 0;
 }
+
+.video-grid,
+.cards.three,
+.testimonials-grid,
+.service-flow{
+  gap: 16px;
+}
