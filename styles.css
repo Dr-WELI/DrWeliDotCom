@@ -242,18 +242,19 @@ p{margin-top:0}
   mix-blend-mode:multiply;
 }
 
-.shimmer{
+.hero-glare{
   position:absolute;
-  inset:-35% -55%;
+  inset:-30% -50%;
   z-index:0;
   pointer-events:none;
   background:
-    radial-gradient(circle at 18% 42%, rgba(74,95,138,.20) 0%, rgba(74,95,138,0) 18%),
-    radial-gradient(circle at 24% 36%, rgba(201,199,204,.22) 0%, rgba(201,199,204,0) 14%),
-    radial-gradient(circle at 30% 48%, rgba(183,154,114,.14) 0%, rgba(183,154,114,0) 18%),
-    radial-gradient(circle at 78% 22%, rgba(158,58,67,.07) 0%, rgba(158,58,67,0) 18%);
-  filter: blur(34px);
-  opacity: .85;
+    radial-gradient(circle at 18% 42%, rgba(47,67,104,.22) 0%, rgba(47,67,104,0) 16%),
+    radial-gradient(circle at 23% 36%, rgba(201,199,204,.24) 0%, rgba(201,199,204,0) 12%),
+    radial-gradient(circle at 28% 47%, rgba(183,154,114,.16) 0%, rgba(183,154,114,0) 16%),
+    radial-gradient(circle at 76% 20%, rgba(158,58,67,.05) 0%, rgba(158,58,67,0) 16%);
+  filter: blur(42px);
+  opacity: .9;
+  mix-blend-mode: screen;
 }
 
 .hero-inner{
