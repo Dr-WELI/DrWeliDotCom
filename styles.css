@@ -55,7 +55,7 @@ iframe{display:block;border:0}
 }
 
 .narrow{
-  max-width:1000px;
+  max-width:760px;
   margin:0 auto;
 }
 
@@ -91,8 +91,8 @@ h2.section-title::after,
   position:absolute;
   left:0;
   bottom:0;
-  width:72px;
-  height:1px;
+  width: 100px;
+  height:50px;
   border-radius:999px;
   background:linear-gradient(90deg, var(--champagne) 0%, var(--diamond) 55%, rgba(201,199,204,0) 100%);
   opacity:.95;
