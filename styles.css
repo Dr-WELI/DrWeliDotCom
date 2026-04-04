@@ -251,9 +251,9 @@ p{margin-top:0}
     radial-gradient(circle at 18% 42%, rgba(74,95,138,.20) 0%, rgba(74,95,138,0) 18%),
     radial-gradient(circle at 24% 36%, rgba(201,199,204,.22) 0%, rgba(201,199,204,0) 14%),
     radial-gradient(circle at 30% 48%, rgba(183,154,114,.14) 0%, rgba(183,154,114,0) 18%),
-    radial-gradient(circle at 78% 22%, rgba(158,58,67,.06) 0%, rgba(158,58,67,0) 18%);
-  filter:blur(34px);
-  opacity:.95;
+    radial-gradient(circle at 78% 22%, rgba(158,58,67,.07) 0%, rgba(158,58,67,0) 18%);
+  filter: blur(34px);
+  opacity: .85;
 }
 
 .hero-inner{
