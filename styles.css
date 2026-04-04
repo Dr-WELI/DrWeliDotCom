@@ -96,8 +96,9 @@ h1, h2, h3, .brand, .section h2 {
   font-size: 0.6em;   /* makes it smaller but still connected */
   font-weight: 400;
   opacity: 0.85;
-  margin-top: 6px;    /* controls how close it sits */
+  margin-top: 1px;    /* controls how close it sits */
 }
+
 
 /* Optional: alternative header accent styles (toggle by adding class to <body>)
    .hdr-first-letter  → first letter metallic
