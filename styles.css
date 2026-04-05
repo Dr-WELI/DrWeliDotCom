@@ -1150,3 +1150,70 @@ p{margin-top:0}
   transform:scale(1.03);
   filter:contrast(1.06) brightness(1.02);
 }
+
+/* homepage refinement */
+.home-title{
+  max-width:none;
+  font-size:clamp(56px, 10vw, 112px);
+  letter-spacing:-0.06em;
+  margin-bottom:10px;
+}
+
+.hero-lead{
+  max-width:620px;
+  margin:0 auto 22px;
+  font-size:clamp(17px, 2.1vw, 20px);
+}
+
+.site-nav a{
+  font-size:15px;
+}
+
+.showreel-section{
+  padding-top:12px;
+}
+
+.showreel-card{
+  min-height:280px;
+}
+
+.showreel-card.tall{
+  min-height:620px;
+}
+
+.showreel-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+  transition:transform .4s ease, filter .3s ease;
+  filter:contrast(1.04) saturate(.95) brightness(.99);
+}
+
+.showreel-card.tall img{
+  object-position:center 18%;
+}
+
+.showreel-card:hover img{
+  transform:scale(1.03);
+  filter:contrast(1.06) saturate(.97) brightness(1);
+}
+
+.pathway-card p,
+.section-header p,
+.statement,
+.split-callout p,
+.contact p{
+  text-wrap:pretty;
+}
+
+@media (max-width:640px){
+  .home-title{
+    font-size:clamp(48px, 16vw, 84px);
+  }
+
+  .showreel-card.tall{
+    min-height:420px;
+  }
+}
