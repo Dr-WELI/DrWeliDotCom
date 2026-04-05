@@ -1131,3 +1131,22 @@ p{margin-top:0}
     border-radius: 20px;
   }
 }
+
+/* showreel image refinement */
+.showreel-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+  transition:transform .4s ease, filter .3s ease;
+}
+
+.showreel-card.tall img{
+  object-position:center 20%;
+}
+
+.showreel-card:hover img{
+  transform:scale(1.03);
+  filter:contrast(1.06) brightness(1.02);
+}
