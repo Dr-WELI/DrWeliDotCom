@@ -1071,3 +1071,33 @@ p{margin-top:0}
   object-fit:cover;
   box-shadow:var(--shadow-card);
 }
+
+/* press headshot */
+.headshot-section{
+  padding-top: 12px;
+}
+
+.press-headshot{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.press-headshot img{
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid rgba(23,23,23,.08);
+  box-shadow: var(--shadow-card);
+  filter: contrast(1.03) saturate(.95) brightness(.99);
+  background: rgba(255,255,255,.38);
+}
+
+@media (max-width: 640px){
+  .press-headshot img{
+    max-width: 340px;
+    border-radius: 20px;
+  }
+}
