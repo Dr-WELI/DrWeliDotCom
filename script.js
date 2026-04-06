@@ -165,5 +165,33 @@ if (musicWorld && musicCursorGlow) {
     requestAnimationFrame(animateGlow);
   }
 
+  if (!prefersReducedMotion) {
+    const particlesWrap = document.createElement("div");
+    particlesWrap.className = "music-particles";
+    document.body.appendChild(particlesWrap);
+
+    function spawnParticle() {
+      const p = document.createElement("span");
+      p.className = "music-particle";
+      p.style.left = `${Math.random() * 100}%`;
+      p.style.bottom = `${-10 + Math.random() * 20}px`;
+      p.style.animationDuration = `${4 + Math.random() * 6}s`;
+      p.style.animationDelay = `${Math.random() * 1.5}s`;
+      p.style.opacity = `${0.15 + Math.random() * 0.35}`;
+      p.style.transform = `scale(${0.6 + Math.random() * 1.8})`;
+      particlesWrap.appendChild(p);
+
+      window.setTimeout(() => {
+        p.remove();
+      }, 11000);
+    }
+
+    for (let i = 0; i < 18; i++) {
+      window.setTimeout(spawnParticle, i * 260);
+    }
+
+    window.setInterval(spawnParticle, 420);
+  }
+
   requestAnimationFrame(animateGlow);
 }
