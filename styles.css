@@ -1225,14 +1225,17 @@ p{margin-top:0}
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 20px 88px;
+  padding: 132px 20px 88px;
   overflow: hidden;
   isolation: isolate;
 }
 
 .hero-showreel{
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 74px;
+  bottom: 0;
   z-index: 0;
   overflow: hidden;
 }
@@ -1409,8 +1412,13 @@ p{margin-top:0}
 @media (max-width: 640px){
   .home-hero{
     min-height: 88vh;
-    padding: 108px 20px 72px;
+    padding: 118px 20px 72px;
   }
+
+  .hero-showreel{
+    top: 64px;
+  }
+}
 
   .editorial-progress{
     left: 18px;
@@ -1429,8 +1437,8 @@ p{margin-top:0}
     font-size: 16px;
   }
 
-  .editorial-slide[data-index="2"] img{
-  object-position: left center;
+.editorial-slide[data-index="2"] img{
+  object-position: 18% center;
 }
 }
 
