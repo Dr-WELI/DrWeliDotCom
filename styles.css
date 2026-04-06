@@ -1424,143 +1424,276 @@ p{margin-top:0}
    ========================= */
 
 .music-page-hero{
-  padding-top: 42px;
-  padding-bottom: 28px;
+  padding-top:42px;
+  padding-bottom:28px;
 }
 
 .music-page-hero .music-hero-inner{
-  max-width: 880px;
+  max-width:920px;
+  margin:0 auto;
 }
 
 .music-page-hero .music-title{
-  max-width: 10.5ch;
+  max-width:10.5ch;
+  font-size:clamp(46px, 7vw, 82px);
+  line-height:.94;
+  margin:0 0 16px;
 }
 
 .music-page-hero .music-title span{
-  display: block;
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: .42em;
-  line-height: 1.05;
-  font-weight: 500;
+  display:block;
+  margin-top:10px;
+  color:var(--muted);
+  font-size:.38em;
+  line-height:1.08;
+  font-weight:500;
+  letter-spacing:-0.02em;
+}
+
+.music-intro{
+  max-width:680px;
+  font-size:clamp(17px, 2vw, 20px);
+  color:var(--muted);
+  margin:0 0 22px;
+}
+
+.music-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:0 0 20px;
+}
+
+.platform-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:22px 0 28px;
+}
+
+.icon-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--text);
+  background:rgba(255,255,255,.42);
+  border:1px solid rgba(23,23,23,.08);
+  box-shadow:var(--shadow-soft);
+  font-weight:600;
+  transition:transform .18s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.icon-link:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.68);
+  border-color:rgba(23,23,23,.14);
+  box-shadow:var(--shadow-card);
+}
+
+.icon-link svg{
+  width:18px;
+  height:18px;
+  display:block;
+  fill:currentColor;
+  flex-shrink:0;
+}
+
+.spotify-feature{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:18px;
+  align-items:center;
+  background:var(--bg-panel-strong);
+  border:1px solid rgba(23,23,23,.08);
+  border-radius:28px;
+  padding:22px;
+  box-shadow:var(--shadow-soft);
+}
+
+.spotify-feature-title{
+  margin:0 0 8px;
+  font-size:clamp(26px, 3vw, 36px);
+  line-height:1.02;
+}
+
+.spotify-embed-wrap{
+  min-width:0;
 }
 
 .music-local-callout{
-  align-items: center;
+  align-items:center;
 }
 
 .music-video-grid-single{
-  grid-template-columns: minmax(0, 1fr);
-  max-width: 920px;
-  margin: 0 auto;
+  grid-template-columns:minmax(0, 1fr);
+  max-width:920px;
+  margin:0 auto;
 }
 
 .release-grid{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:18px;
 }
 
 .release-card{
-  background: var(--bg-panel-strong);
-  border: 1px solid rgba(23,23,23,.08);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  display: flex;
-  flex-direction: column;
+  background:var(--bg-panel-strong);
+  border:1px solid rgba(23,23,23,.08);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow-soft);
+  display:flex;
+  flex-direction:column;
 }
 
 .release-art{
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: rgba(255,255,255,.4);
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  background:rgba(255,255,255,.4);
 }
 
 .release-art img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .release-body{
-  padding: 16px 16px 18px;
+  padding:16px 16px 18px;
 }
 
 .release-kicker{
-  font-size: .72rem;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  color: var(--muted);
-  font-weight: 700;
-  margin-bottom: 10px;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:10px;
 }
 
 .release-card h3{
-  margin: 0 0 14px;
-  font-size: 1.12rem;
-  line-height: 1.08;
+  margin:0 0 14px;
+  font-size:1.12rem;
+  line-height:1.08;
 }
 
 .release-links{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
 
 .release-links a{
-  color: var(--text);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 600;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.stream-button{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.5);
+  border:1px solid rgba(23,23,23,.09);
+  transition:transform .18s ease, background .2s ease, border-color .2s ease;
+}
+
+.stream-button:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.78);
+  border-color:rgba(23,23,23,.16);
+}
+
+.stream-button svg{
+  width:17px;
+  height:17px;
+  display:block;
+  fill:currentColor;
+  flex-shrink:0;
 }
 
 .music-link-grid{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:16px;
 }
 
 .music-link-card{
-  min-height: 250px;
+  min-height:250px;
 }
 
 .stacked-links{
-  display: grid;
-  gap: 10px;
-  margin-top: 10px;
+  display:grid;
+  gap:10px;
+  margin-top:10px;
 }
 
 .stacked-links a{
-  color: var(--text);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 600;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.stacked-links-icons a{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+
+.stacked-links-icons svg{
+  width:17px;
+  height:17px;
+  display:block;
+  fill:currentColor;
+  flex-shrink:0;
 }
 
 .music-note{
-  margin-top: 18px;
-  text-align: center;
+  margin-top:18px;
+  text-align:center;
 }
 
-@media (max-width: 1100px){
+@media (max-width:1100px){
   .release-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:repeat(2, minmax(0,1fr));
   }
 
   .music-link-grid{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+
+  .spotify-feature{
+    grid-template-columns:1fr;
   }
 }
 
-@media (max-width: 640px){
+@media (max-width:640px){
   .release-grid,
   .music-link-grid{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
 
   .music-page-hero{
-    padding-top: 24px;
+    padding-top:24px;
+  }
+
+  .music-actions{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .platform-links{
+    gap:10px;
+  }
+
+  .icon-link{
+    width:100%;
+    justify-content:flex-start;
   }
 }
