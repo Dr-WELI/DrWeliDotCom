@@ -44,7 +44,15 @@ body{
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
 }
-
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('/assets/img/grain.png');
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
 img{max-width:100%;display:block}
 iframe{display:block;border:0}
 
