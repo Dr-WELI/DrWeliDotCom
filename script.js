@@ -36,29 +36,12 @@ const editorialReel = document.getElementById("editorialReel");
 
 if (editorialReel) {
   const slides = Array.from(editorialReel.querySelectorAll(".editorial-slide"));
-  const counter = document.getElementById("editorialCounter");
   const prevBtn = document.getElementById("editorialPrev");
   const nextBtn = document.getElementById("editorialNext");
 
   let currentIndex = 0;
   let reelTimer = null;
   const interval = 5200;
-
-  function updateCounter(index) {
-    if (!counter) return;
-    const current = String(index + 1).padStart(2, "0");
-    const total = String(slides.length).padStart(2, "0");
-    counter.textContent = `${current} / ${total}`;
-  }
-
-       // force restart animation
-      void bar.offsetWidth;
-
-      if (i === index) {
-        bar.classList.add("is-active");
-      }
-    });
-  }
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -69,14 +52,12 @@ if (editorialReel) {
         img.style.animation = "none";
         void img.offsetWidth;
         if (i === index) {
-          img.style.animation = "editorialKenBurns 7s ease-in-out forwards";
+          img.style.animation = "heroKenBurns 7s ease-in-out forwards";
         }
       }
     });
 
     currentIndex = index;
-    updateCounter(currentIndex);
-    restartProgress(currentIndex);
   }
 
   function nextSlide() {
