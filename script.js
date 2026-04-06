@@ -36,7 +36,6 @@ const editorialReel = document.getElementById("editorialReel");
 
 if (editorialReel) {
   const slides = Array.from(editorialReel.querySelectorAll(".editorial-slide"));
-  const progressBars = Array.from(editorialReel.querySelectorAll(".editorial-progress span"));
   const counter = document.getElementById("editorialCounter");
   const prevBtn = document.getElementById("editorialPrev");
   const nextBtn = document.getElementById("editorialNext");
@@ -52,11 +51,7 @@ if (editorialReel) {
     counter.textContent = `${current} / ${total}`;
   }
 
-  function restartProgress(index) {
-    progressBars.forEach((bar, i) => {
-      bar.classList.remove("is-active");
-
-      // force restart animation
+       // force restart animation
       void bar.offsetWidth;
 
       if (i === index) {
