@@ -1329,38 +1329,6 @@ p{margin-top:0}
   border-color: rgba(255,255,255,.34);
 }
 
-.editorial-progress{
-  position: absolute;
-  left: 28px;
-  right: 28px;
-  top: 24px;
-  z-index: 4;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.editorial-progress span{
-  display: block;
-  height: 2px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.24);
-  overflow: hidden;
-  position: relative;
-}
-
-.editorial-progress span::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  transform: scaleX(0);
-  transform-origin: left center;
-  background: rgba(255,255,255,.95);
-}
-
-.editorial-progress span.is-active::after{
-  animation: editorialProgress 5.2s linear forwards;
-}
 
 .editorial-nav{
   position: absolute;
