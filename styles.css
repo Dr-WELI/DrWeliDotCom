@@ -56,11 +56,16 @@ body::before {
 img{max-width:100%;display:block}
 iframe{display:block;border:0}
 
-.container{
-  max-width:960px;
-  margin:0 auto;
-  padding:0 28px;
+.section {
+  padding: clamp(80px, 10vw, 140px) 0;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 
 .narrow{
   max-width:760px;
