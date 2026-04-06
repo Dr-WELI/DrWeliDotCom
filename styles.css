@@ -1266,7 +1266,7 @@ p{margin-top:0}
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(100%) contrast(1.04) brightness(.93);
+  filter: grayscale(100%) contrast(1.08) brightness(.9) sepia(.12);
   transform: scale(1.03);
   animation: editorialKenBurns 7s ease-in-out forwards;
 }
