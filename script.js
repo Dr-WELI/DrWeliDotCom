@@ -195,3 +195,78 @@ if (musicWorld && musicCursorGlow) {
 
   requestAnimationFrame(animateGlow);
 }
+
+// Homepage refinement interactions
+const homeHero = document.querySelector(".home-hero-single");
+const homeParticles = document.getElementById("homeParticles");
+const homeOrbs = document.querySelectorAll(".home-orb");
+const revealItems = document.querySelectorAll(".reveal-up, .reveal-card");
+const reducedMotionHome = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (revealItems.length) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
+
+if (homeHero && !reducedMotionHome) {
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+
+  window.addEventListener("pointermove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function animateHomeAtmosphere() {
+    if (homeOrbs.length) {
+      homeOrbs.forEach((orb, index) => {
+        const factor = (index + 1) * 0.006;
+        const offsetX = (mouseX - window.innerWidth / 2) * factor;
+        const offsetY = (mouseY - window.innerHeight / 2) * factor;
+        orb.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
+      });
+    }
+
+    requestAnimationFrame(animateHomeAtmosphere);
+  }
+
+  requestAnimationFrame(animateHomeAtmosphere);
+}
+
+if (homeParticles && !reducedMotionHome) {
+  function spawnHomeParticle() {
+    const p = document.createElement("span");
+    p.className = "home-particle";
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.bottom = `${-10 + Math.random() * 24}px`;
+    p.style.animationDuration = `${5 + Math.random() * 7}s`;
+    p.style.opacity = `${0.08 + Math.random() * 0.22}`;
+    p.style.transform = `scale(${0.8 + Math.random() * 1.8})`;
+
+    homeParticles.appendChild(p);
+
+    window.setTimeout(() => {
+      p.remove();
+    }, 13000);
+  }
+
+  for (let i = 0; i < 16; i++) {
+    window.setTimeout(spawnHomeParticle, i * 280);
+  }
+
+  window.setInterval(spawnHomeParticle, 650);
+}
