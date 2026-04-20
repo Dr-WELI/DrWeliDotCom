@@ -39,8 +39,8 @@ if (editorialReel) {
   let currentIndex = 0;
   let reelTimer = null;
 
-  const holdDuration = 3400;
-  const glitchDuration = 580;
+  const holdDuration = 1400;
+  const glitchDuration = 180;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
