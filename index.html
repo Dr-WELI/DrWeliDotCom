@@ -4,57 +4,84 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WELI</title>
+  <meta name="description" content="WELI is a Sydney based artist working across music, performance, science, and culture" />
 
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/glitch-home.css" />
   <link rel="stylesheet" href="/hero-refine.css" />
 </head>
 <body>
+  <main id="top">
+    <section class="hero home-hero home-hero-single" id="top">
+      <div class="hero-showreel" id="editorialReel" aria-hidden="true">
+        <figure class="editorial-slide is-active" data-index="0" style="background-image:url('/assets/img/home-showreel-2.jpg');">
+          <img src="/assets/img/home-showreel-2.jpg" alt="" loading="eager" />
+        </figure>
 
-<main id="top">
-<section class="hero home-hero home-hero-single" id="top">
+        <figure class="editorial-slide" data-index="1" style="background-image:url('/assets/img/home-showreel-1.jpg');">
+          <img src="/assets/img/home-showreel-1.jpg" alt="" loading="eager" />
+        </figure>
 
-  <div class="hero-showreel" id="editorialReel"></div>
+        <div class="hero-glitch-grid"></div>
+        <div class="hero-glitch-scan"></div>
+        <div class="hero-glitch-rgb"></div>
+        <div class="hero-glitch-crosshair"></div>
 
-  <div class="hero-inner hero-copy-panel">
-
-    <div class="hero-core">
-      <p class="eyebrow">MUSIC ARTIST & SCIENTIST</p>
-      <h1 class="hero-title">WELI</h1>
-      <p class="hero-lead">Live Performance • Songwriting • Engagement</p>
-    </div>
-
-    <div class="hero-marquee">
-      <div class="hero-marquee-track">
-
-        <div class="hero-marquee-group">
-          <span class="hero-marquee-item">LIVE PERFORMANCE</span>
-          <span class="hero-marquee-item">SCIENCE STORYTELLING</span>
-          <span class="hero-marquee-item">CULTURAL CONNECTION</span>
-          <span class="hero-marquee-item">MUSIC & MOVEMENT</span>
+        <div class="hero-glitch-hud">
+          <span class="hero-hud-tag hero-hud-tag-top">WELI / SIGNAL</span>
+          <span class="hero-hud-tag hero-hud-tag-side">music • science • culture</span>
+          <div class="hero-glitch-copy">
+            <span class="glitch-caption" id="glitchCaptionA" data-text="LIVE PERFORMANCE">LIVE PERFORMANCE</span>
+            <span class="glitch-caption" id="glitchCaptionB" data-text="CULTURAL STORYTELLING">CULTURAL STORYTELLING</span>
+          </div>
         </div>
 
-        <div class="hero-marquee-group">
-          <span class="hero-marquee-item">LIVE PERFORMANCE</span>
-          <span class="hero-marquee-item">SCIENCE STORYTELLING</span>
-          <span class="hero-marquee-item">CULTURAL CONNECTION</span>
-          <span class="hero-marquee-item">MUSIC & MOVEMENT</span>
-        </div>
-
+        <div class="hero-showreel-overlay"></div>
+        <div class="hero-showreel-vignette"></div>
+        <div class="hero-glint-layer"></div>
+        <div class="hero-noise-layer"></div>
+        <div class="hero-glitch-blocks" id="heroGlitchBlocks"></div>
       </div>
-    </div>
 
-    <div class="hero-cta-rail">
-      <a href="/music" class="hero-metal-btn">Explore music</a>
-      <a href="https://wildwoohoo.com" class="hero-metal-btn is-dark">Visit WildWooHoo</a>
-      <a href="/program" class="hero-metal-btn">For organisations</a>
-    </div>
+      <div class="vignette"></div>
+      <div class="hero-grain"></div>
 
-  </div>
+      <div class="hero-inner hero-copy-panel">
+        <div class="hero-core reveal-up is-visible">
+          <p class="eyebrow">MUSIC ARTIST &amp; SCIENTIST</p>
+          <h1 class="hero-title">WELI</h1>
+          <p class="hero-lead">Live Performance • Songwriting • Engagement</p>
+        </div>
 
-</section>
+        <div class="hero-marquee" id="heroMarquee" aria-label="Moving signal bar">
+          <div class="hero-marquee-track" id="heroMarqueeTrack">
+            <div class="hero-marquee-group">
+              <span class="hero-marquee-item">LIVE PERFORMANCE</span>
+              <span class="hero-marquee-item">SCIENCE STORYTELLING</span>
+              <span class="hero-marquee-item">CULTURAL CONNECTION</span>
+              <span class="hero-marquee-item">MUSIC &amp; MOVEMENT</span>
+              <span class="hero-marquee-item">SONGWRITING</span>
+            </div>
+            <div class="hero-marquee-group">
+              <span class="hero-marquee-item">LIVE PERFORMANCE</span>
+              <span class="hero-marquee-item">SCIENCE STORYTELLING</span>
+              <span class="hero-marquee-item">CULTURAL CONNECTION</span>
+              <span class="hero-marquee-item">MUSIC &amp; MOVEMENT</span>
+              <span class="hero-marquee-item">SONGWRITING</span>
+            </div>
+          </div>
+        </div>
 
-</main>
+        <div class="hero-cta-rail reveal-up is-visible">
+          <a href="/music" class="hero-metal-btn hero-metal-btn-light">Explore music</a>
+          <a href="https://wildwoohoo.com" target="_blank" rel="noopener" class="hero-metal-btn hero-metal-btn-dark">Visit WildWooHoo</a>
+          <a href="/program" class="hero-metal-btn hero-metal-btn-light">For organisations</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <script src="/glitch-home.js"></script>
+  <script src="/hero-cinematic.js"></script>
 </body>
 </html>
