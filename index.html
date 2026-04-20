@@ -27,6 +27,7 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/glitch-home.css" />
 </head>
 <body>
   <header class="site-header">
@@ -44,7 +45,7 @@
   </header>
 
  <main id="top">
-<section class="hero home-hero" id="top">
+<section class="hero home-hero home-hero-single" id="top">
   <div class="home-atmosphere" aria-hidden="true">
     <span class="home-orb home-orb-a"></span>
     <span class="home-orb home-orb-b"></span>
@@ -52,44 +53,53 @@
     <span class="home-particles" id="homeParticles"></span>
   </div>
 
-<div class="hero-showreel" id="editorialReel">
+  <div class="hero-showreel" id="editorialReel" aria-hidden="true">
+    <figure 
+      class="editorial-slide is-active" 
+      data-index="0"
+      style="background-image:url('/assets/img/home-showreel-2.jpg');"
+    >
+      <img
+        src="/assets/img/home-showreel-2.jpg"
+        alt=""
+        loading="eager"
+      />
+    </figure>
 
-  <figure 
-    class="editorial-slide is-active" 
-    data-index="0"
-    style="background-image:url('/assets/img/home-showreel-2.jpg');"
-  >
-    <img
-      src="/assets/img/home-showreel-2.jpg"
-      alt="WELI hero image one"
-      loading="eager"
-    />
-  </figure>
+    <figure 
+      class="editorial-slide" 
+      data-index="1"
+      style="background-image:url('/assets/img/home-showreel-1.jpg');"
+    >
+      <img
+        src="/assets/img/home-showreel-1.jpg"
+        alt=""
+        loading="eager"
+      />
+    </figure>
 
-  <figure 
-    class="editorial-slide" 
-    data-index="1"
-    style="background-image:url('/assets/img/home-showreel-1.jpg');"
-  >
-    <img
-      src="/assets/img/home-showreel-1.jpg"
-      alt="WELI hero image two"
-      loading="eager"
-    />
-  </figure>
+    <div class="hero-glitch-grid"></div>
+    <div class="hero-glitch-scan"></div>
+    <div class="hero-glitch-rgb"></div>
+    <div class="hero-glitch-crosshair"></div>
 
-  <div class="hero-showreel-overlay"></div>
-  <div class="hero-showreel-vignette"></div>
-  <div class="hero-glint-layer"></div>
-  <div class="hero-noise-layer"></div>
+    <div class="hero-glitch-hud">
+      <span class="hero-hud-tag hero-hud-tag-top">WELI / SIGNAL</span>
+      <span class="hero-hud-tag hero-hud-tag-side">music • science • culture</span>
+      <span class="hero-hud-line hero-hud-line-a"></span>
+      <span class="hero-hud-line hero-hud-line-b"></span>
+      <div class="hero-glitch-copy">
+        <span class="glitch-caption" data-text="LIVE PERFORMANCE">LIVE PERFORMANCE</span>
+        <span class="glitch-caption" data-text="CULTURAL STORYTELLING">CULTURAL STORYTELLING</span>
+      </div>
+    </div>
 
-</div>
-
-  <div class="hero-showreel-overlay"></div>
-  <div class="hero-showreel-vignette"></div>
-  <div class="hero-glint-layer"></div>
-  <div class="hero-noise-layer"></div>
-</div>
+    <div class="hero-showreel-overlay"></div>
+    <div class="hero-showreel-vignette"></div>
+    <div class="hero-glint-layer"></div>
+    <div class="hero-noise-layer"></div>
+    <div class="hero-glitch-blocks" id="heroGlitchBlocks"></div>
+  </div>
 
   <div class="vignette"></div>
   <div class="hero-grain"></div>
@@ -282,5 +292,6 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script src="/glitch-home.js"></script>
 </body>
 </html>
