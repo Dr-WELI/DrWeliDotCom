@@ -5,7 +5,7 @@
 
 .page-signal-shell{
   position:relative;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 .page-signal-shell::before,
