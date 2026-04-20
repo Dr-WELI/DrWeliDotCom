@@ -246,32 +246,3 @@ if (homeParticles && !reducedMotionHome) {
 
   window.setInterval(spawnHomeParticle, 650);
 }
-
-const phrasesA = [
-  "LIVE PERFORMANCE",
-  "MUSIC & MOVEMENT",
-  "STAGE ENERGY"
-];
-
-const phrasesB = [
-  "SCIENCE STORYTELLING",
-  "CULTURAL CONNECTION",
-  "PUBLIC ENGAGEMENT"
-];
-
-let i = 0;
-
-setInterval(() => {
-  i = (i + 1) % phrasesA.length;
-
-  const a = document.getElementById("glitchCaptionA");
-  const b = document.getElementById("glitchCaptionB");
-
-  if(a && b){
-    a.textContent = phrasesA[i];
-    a.setAttribute("data-text", phrasesA[i]);
-
-    b.textContent = phrasesB[i];
-    b.setAttribute("data-text", phrasesB[i]);
-  }
-}, 2800);
