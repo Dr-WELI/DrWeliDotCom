@@ -31,14 +31,13 @@ const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
 
-// Homepage hero glitch reel
+// Homepage hero reel
 const editorialReel = document.getElementById("editorialReel");
 
 if (editorialReel) {
   const slides = Array.from(editorialReel.querySelectorAll(".editorial-slide"));
   let currentIndex = 0;
   let reelTimer = null;
-  let glitchLock = false;
 
   const holdDuration = 1400;
   const glitchDuration = 180;
@@ -50,26 +49,21 @@ if (editorialReel) {
     currentIndex = index;
   }
 
-  function glitchToNextSlide() {
-    if (glitchLock || slides.length < 2) return;
-    glitchLock = true;
-
+  function moveToNextSlide() {
+    if (slides.length < 2) return;
     editorialReel.classList.add("is-glitching");
-
     window.setTimeout(() => {
       const nextIndex = (currentIndex + 1) % slides.length;
       showSlide(nextIndex);
-    }, 90);
-
+    }, 180);
     window.setTimeout(() => {
       editorialReel.classList.remove("is-glitching");
-      glitchLock = false;
-    }, glitchDuration);
+    }, 520);
   }
 
   function startAutoplay() {
     stopAutoplay();
-    reelTimer = window.setInterval(glitchToNextSlide, holdDuration);
+    reelTimer = window.setInterval(moveToNextSlide, holdDuration);
   }
 
   function stopAutoplay() {
