@@ -2160,7 +2160,7 @@ main,
 
 .hero-showreel {
   position: absolute;
-  inset: 74px 0 0 0;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
   isolation: isolate;
@@ -2185,16 +2185,38 @@ main,
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
-  object-position: center center;
-  filter: grayscale(100%) contrast(1.12) brightness(.68);
-  transform: scale(1.02);
+  object-fit: contain;
+  object-position: center 20%;
+  filter: grayscale(100%) contrast(1.08) brightness(.56);
+  transform: scale(1);
   animation:
-    heroImageDrift 3.8s ease-in-out infinite alternate,
-    heroImageFlicker 1.2s steps(3, end) infinite;
+    heroImageFloat 4.2s ease-in-out infinite alternate,
+    heroImageFlicker 1.3s steps(3, end) infinite;
   will-change: transform, filter, opacity;
 }
+.editorial-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 120ms linear, visibility 120ms linear;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.editorial-slide::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  pointer-events: none;
+  background: inherit;
+  filter: blur(26px) brightness(.42) grayscale(100%);
+  transform: scale(1.08);
+  opacity: .9;
+  z-index: 1;
+}
 /* RGB split / signal tear */
 .editorial-slide::before,
 .editorial-slide::after {
