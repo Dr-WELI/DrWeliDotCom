@@ -2451,3 +2451,32 @@ main,
     object-position: center;
   }
 }
+
+
+/* =========================================
+   HERO — FULL WIDTH SIGNAL BAR
+   ========================================= */
+
+.hero-copy-panel{
+  position: relative;
+  z-index: 12;
+
+  /* full width feel */
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+
+  /* bar style */
+  padding: 24px 28px 22px;
+  border-radius: 0;
+
+  /* IMPORTANT: lighter than before */
+  background: rgba(8,8,8,.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* subtle depth (not heavy box) */
+  box-shadow: 0 18px 44px rgba(0,0,0,.18);
+
+  text-align: center;
+}
