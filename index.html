@@ -11,6 +11,18 @@
   <link rel="stylesheet" href="/hero-refine.css" />
 </head>
 <body>
+  <header class="site-header hero-site-header">
+    <a class="brand" href="/" aria-label="WELI home">WELI</a>
+    <button class="nav-toggle" id="heroNavToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" id="heroSiteNav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/music">Music</a>
+      <a href="https://wildwoohoo.com" target="_blank" rel="noopener">WildWooHoo</a>
+      <a href="/program">Engagement</a>
+      <a href="/academic">Academic</a>
+    </nav>
+  </header>
+
   <main id="top">
     <section class="hero home-hero home-hero-single" id="top">
       <div class="hero-showreel" id="editorialReel" aria-hidden="true">
@@ -50,7 +62,6 @@
         <div class="hero-core reveal-up is-visible">
           <p class="eyebrow">MUSIC ARTIST &amp; SCIENTIST</p>
           <h1 class="hero-title">WELI</h1>
-          <p class="hero-lead">Live Performance • Songwriting • Engagement</p>
         </div>
 
         <div class="hero-marquee" id="heroMarquee" aria-label="Moving signal bar">
@@ -83,5 +94,6 @@
 
   <script src="/glitch-home.js"></script>
   <script src="/hero-cinematic.js"></script>
+  <script src="/hero-nav.js"></script>
 </body>
 </html>
