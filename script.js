@@ -39,8 +39,8 @@ if (editorialReel) {
   let currentIndex = 0;
   let reelTimer = null;
 
-  const holdDuration = 2200;   // how long each image stays visible
-  const glitchDuration = 260;  // quick glitch burst before switching
+  const holdDuration = 900;   // how long each image stays visible
+  const glitchDuration = 150;  // quick glitch burst before switching
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
