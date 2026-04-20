@@ -2226,11 +2226,16 @@ main,
 /* duplicate glitch layers */
 .editorial-slide::before,
 .editorial-slide::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
+  z-index: 3;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.00) 0px,
+      rgba(255,255,255,0.00) 2px,
+      rgba(255,255,255,0.05) 3px,
+      rgba(255,255,255,0.00) 5px
+    );
+  mix-blend-mode: screen;
 }
 
 .editorial-slide::before {
@@ -2281,14 +2286,14 @@ main,
   opacity: .22;
   background-image:
     repeating-linear-gradient(
-      180deg,
+      90deg,
       rgba(255,255,255,.018) 0px,
       rgba(255,255,255,.018) 1px,
       rgba(0,0,0,.018) 2px,
       rgba(0,0,0,.018) 3px
     );
   mix-blend-mode: soft-light;
-  animation: heroNoiseShift .18s steps(2, end) infinite;
+  animation: heroNoiseShiftX .18s steps(2, end) infinite;
 }
 
 /* active glitch burst */
@@ -2335,10 +2340,10 @@ main,
   100% { transform: translateX(28%) skewX(-10deg); }
 }
 
-@keyframes heroNoiseShift {
-  0%   { transform: translateY(0); opacity: .16; }
-  50%  { transform: translateY(-2px); opacity: .24; }
-  100% { transform: translateY(1px); opacity: .18; }
+@keyframes heroNoiseShiftX {
+  0%   { transform: translateX(0); opacity: .16; }
+  50%  { transform: translateX(-2px); opacity: .24; }
+  100% { transform: translateX(1px); opacity: .18; }
 }
 
 @keyframes heroGlitchBurst {
@@ -2353,19 +2358,19 @@ main,
 @keyframes heroChannelSplit {
   0% {
     opacity: .08;
-    clip-path: inset(0 0 82% 0);
+    clip-path: inset(0 82% 0 0);
     transform: translateX(-12px);
     background: rgba(255, 0, 90, .12);
   }
   30% {
     opacity: .24;
-    clip-path: inset(18% 0 46% 0);
+    clip-path: inset(0 46% 0 18%);
     transform: translateX(12px);
     background: rgba(0, 180, 255, .10);
   }
   60% {
     opacity: .18;
-    clip-path: inset(56% 0 16% 0);
+    clip-path: inset(0 16% 0 56%);
     transform: translateX(-8px);
     background: rgba(255,255,255,.08);
   }
@@ -2378,16 +2383,20 @@ main,
 }
 
 @keyframes heroScanBreak {
-  0%   { opacity: .18; transform: translateY(0); }
-  35%  { opacity: .95; transform: translateY(-4px); }
-  70%  { opacity: .65; transform: translateY(3px); }
-  100% { opacity: 0; transform: translateY(0); }
+  0%   { opacity: .18; transform: translateX(0); }
+  35%  { opacity: .95; transform: translateX(-6px); }
+  70%  { opacity: .65; transform: translateX(5px); }
+  100% { opacity: 0; transform: translateX(0); }
 }
 
 @keyframes heroGlitchFlash {
   0%   { filter: brightness(1); }
   40%  { filter: brightness(1.3); }
   100% { filter: brightness(1); }
+}
+    @keyframes heroGlintSweep {
+  0%   { transform: translateX(-36%) skewX(-8deg); }
+  100% { transform: translateX(36%) skewX(-8deg); }
 }
 
 @media (max-width: 640px) {
