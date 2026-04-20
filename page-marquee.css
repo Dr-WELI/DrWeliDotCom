@@ -1,0 +1,44 @@
+/* Lightweight shared marquee for program + academic pages */
+.page-marquee{
+  width:100vw;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  overflow:hidden;
+  margin:16px 0 10px;
+}
+
+.page-marquee-track{
+  display:flex;
+  gap:34px;
+  width:max-content;
+  white-space:nowrap;
+  animation:pageMarqueeScroll 24s linear infinite;
+}
+
+.page-marquee-track span{
+  display:inline-block;
+  padding-right:34px;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(23,23,23,.66);
+}
+
+@keyframes pageMarqueeScroll{
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+
+@media (max-width:640px){
+  .page-marquee-track{
+    gap:20px;
+    animation-duration:18s;
+  }
+
+  .page-marquee-track span{
+    font-size:.62rem;
+    letter-spacing:.14em;
+    padding-right:20px;
+  }
+}
