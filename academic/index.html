@@ -17,6 +17,21 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .academic-hero{position:relative;overflow:hidden;isolation:isolate}
+    .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px}
+    .academic-top-title{margin:0 0 14px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+    .academic-signal{position:absolute;top:34px;right:18px;bottom:34px;width:44px;overflow:hidden;pointer-events:none;z-index:1;opacity:.82}
+    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:18px;animation:academicSignalMove 26s linear infinite}
+    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(23,23,23,.62);white-space:nowrap}
+    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(234,228,220,1) 0%, rgba(234,228,220,0) 10%, rgba(234,228,220,0) 90%, rgba(234,228,220,1) 100%);pointer-events:none;z-index:2}
+    @keyframes academicSignalMove{from{transform:translateY(-4%)}to{transform:translateY(-52%)}}
+    .academic-cap-grid .card h3{letter-spacing:-.03em}.academic-cap-grid .card p{max-width:34ch}.academic-cap-grid .pathway-kicker{margin-bottom:10px}
+    .site-nav .nav-links{display:flex;gap:16px;align-items:center}
+    @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
+    @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
+    @media (max-width:640px){.academic-top-title{font-size:.7rem;letter-spacing:.14em;margin-bottom:12px}.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -24,26 +39,46 @@
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
     <nav class="site-nav" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/music">Music</a>
-      <a href="/academic">Academic</a>
-      <a href="https://wildwoohoo.com" target="_blank" rel="noopener">Visit WildWooHoo</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/music">Music</a>
+        <a href="/academic">Academic</a>
+        <a href="https://wildwoohoo.com" target="_blank" rel="noopener">Visit WildWooHoo</a>
+      </div>
       <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary">Enquire</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero academic-hero">
       <div class="vignette"></div>
       <div class="hero-grain"></div>
       <div class="hero-sapphire"></div>
       <div class="hero-diamond"></div>
       <div class="hero-sun"></div>
+      <div class="academic-signal" aria-hidden="true">
+        <div class="academic-signal-track">
+          <span class="academic-signal-item">QILT • STUDENT EXPERIENCE SURVEY • RESPONSE RATE ANALYSIS</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE • QUANTITATIVE ANALYSIS • REPORTING</span>
+          <span class="academic-signal-item">ECOLOGY • ANIMAL BEHAVIOUR • PERSONALITY • SOCIAL ANIMALS</span>
+          <span class="academic-signal-item">FIELDWORK • ENVIRONMENT MONITORING • LONG-TERM STUDIES</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION • PUBLIC ENGAGEMENT • GUEST LECTURES</span>
+          <span class="academic-signal-item">POPULAR CULTURE • FILM • MUSIC • SOUND & MEDIA</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE • RESEARCH-CREATION • CULTURE</span>
+          <span class="academic-signal-item">QILT • STUDENT EXPERIENCE SURVEY • RESPONSE RATE ANALYSIS</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE • QUANTITATIVE ANALYSIS • REPORTING</span>
+          <span class="academic-signal-item">ECOLOGY • ANIMAL BEHAVIOUR • PERSONALITY • SOCIAL ANIMALS</span>
+          <span class="academic-signal-item">FIELDWORK • ENVIRONMENT MONITORING • LONG-TERM STUDIES</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION • PUBLIC ENGAGEMENT • GUEST LECTURES</span>
+          <span class="academic-signal-item">POPULAR CULTURE • FILM • MUSIC • SOUND & MEDIA</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE • RESEARCH-CREATION • CULTURE</span>
+        </div>
+      </div>
 
       <div class="hero-inner container">
         <p class="eyebrow">Academic & Professional</p>
+        <p class="academic-top-title">RESEARCH & ANALYSES, GUEST LECTURES, & TUTORIALS</p>
         <h1 class="hero-title">Research, talks, and facilitation</h1>
-        <p class="lead">Ecology, science communication, teaching, public speaking, and transdisciplinary practice</p>
 
         <div class="hero-ctas">
           <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary btn-lg">Professional enquiry</a>
@@ -54,23 +89,23 @@
 
     <section class="section">
       <div class="container">
-        <div class="cards three">
+        <div class="cards three academic-cap-grid">
           <article class="card">
             <p class="pathway-kicker">Research</p>
-            <h3>Ecology & analysis</h3>
-            <p>Animal behaviour, data analysis, interdisciplinary thinking, and applied research communication</p>
+            <h3>Quantitative research, ecology & analytical work</h3>
+            <p>Research data science across ecology, fieldwork, environment monitoring, survey analysis, animal behaviour, personality, social animals, and long-term studies.</p>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">Teaching</p>
-            <h3>Workshops & facilitation</h3>
-            <p>Sessions across science communication, creativity, storytelling, humour, movement, and engagement</p>
+            <h3>Guest lectures, tutorials & science communication</h3>
+            <p>Teaching and facilitation across ecology, science communication, creativity, humour, public engagement, and culturally resonant ways of translating complex knowledge.</p>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">Speaking</p>
-            <h3>Talks & public engagement</h3>
-            <p>Conference speaking, keynote style sessions, panels, and culture facing conversations grounded in research</p>
+            <h3>Public talks, culture-facing work & transdisciplinary practice</h3>
+            <p>Conference speaking, media-facing communication, and research-grounded work spanning popular culture, film, music, sound, performance, and research-creation.</p>
           </article>
         </div>
       </div>
