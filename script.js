@@ -38,9 +38,10 @@ if (editorialReel) {
   const slides = Array.from(editorialReel.querySelectorAll(".editorial-slide"));
   let currentIndex = 0;
   let reelTimer = null;
+  let glitchLock = false;
 
-  const holdDuration = 100;   // how long each image stays visible
-  const glitchDuration = 90;  // quick glitch burst before switching
+  const holdDuration = 1400;
+  const glitchDuration = 180;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -50,15 +51,19 @@ if (editorialReel) {
   }
 
   function glitchToNextSlide() {
+    if (glitchLock || slides.length < 2) return;
+    glitchLock = true;
+
     editorialReel.classList.add("is-glitching");
 
     window.setTimeout(() => {
       const nextIndex = (currentIndex + 1) % slides.length;
       showSlide(nextIndex);
-    }, glitchDuration / 2);
+    }, 90);
 
     window.setTimeout(() => {
       editorialReel.classList.remove("is-glitching");
+      glitchLock = false;
     }, glitchDuration);
   }
 
