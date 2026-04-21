@@ -30,85 +30,124 @@
     .academic-cap-grid .pathway-kicker{margin-bottom:10px}
     .site-nav .nav-links{display:flex;gap:16px;align-items:center}
 
-    .research-focus-shell{max-width:980px;margin:0 auto}
-    .research-focus-intro{max-width:760px;margin:0 auto 24px;text-align:center}
+    .research-focus-shell{max-width:1040px;margin:0 auto}
+    .research-focus-intro{max-width:760px;margin:0 auto 26px;text-align:center}
+    .research-orbit-shell{
+      position:relative;
+      margin:10px auto 0;
+      padding:28px;
+      border-radius:34px;
+      background:linear-gradient(180deg, rgba(255,251,248,.76) 0%, rgba(255,248,244,.54) 100%);
+      border:1px solid rgba(23,23,23,.08);
+      box-shadow:0 20px 54px rgba(23,23,23,.08);
+      overflow:hidden;
+    }
+    .research-orbit-shell::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 46%, rgba(183,154,114,.10) 0%, rgba(183,154,114,0) 26%),
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0));
+      pointer-events:none;
+    }
     .research-orbit{
       position:relative;
-      min-height:520px;
+      min-height:560px;
       display:flex;
       align-items:center;
       justify-content:center;
-      margin:8px auto 0;
+      margin:0 auto;
     }
     .research-orbit::before{
       content:"";
       position:absolute;
-      width:420px;
-      height:420px;
-      border:1px dashed rgba(23,23,23,.10);
+      width:min(100%, 470px);
+      height:470px;
+      border:1px dashed rgba(23,23,23,.12);
+      border-radius:50%;
+      opacity:.9;
+    }
+    .research-orbit::after{
+      content:"";
+      position:absolute;
+      width:min(100%, 330px);
+      height:330px;
+      border:1px solid rgba(23,23,23,.06);
       border-radius:50%;
       opacity:.8;
     }
     .research-node{
       position:absolute;
-      width:240px;
-      min-height:168px;
-      padding:18px 18px 16px;
-      border-radius:24px;
-      background:rgba(255,251,248,.72);
+      width:252px;
+      min-height:182px;
+      padding:20px 20px 18px;
+      border-radius:26px;
+      background:rgba(255,251,248,.92);
       border:1px solid rgba(23,23,23,.08);
-      box-shadow:var(--shadow-soft);
+      box-shadow:0 16px 34px rgba(23,23,23,.08);
       text-align:left;
+      backdrop-filter:blur(12px);
     }
-    .research-node h3{margin:0 0 10px;font-size:1.06rem;letter-spacing:-.02em}
-    .research-node p{margin:0;color:var(--muted);line-height:1.55;font-size:.95rem}
-    .research-node.top{top:8px;left:50%;transform:translateX(-50%)}
-    .research-node.left{left:18px;bottom:82px}
-    .research-node.right{right:18px;bottom:82px}
+    .research-node h3{margin:0 0 10px;font-size:1.06rem;letter-spacing:-.02em;line-height:1.12}
+    .research-node p{margin:0;color:var(--muted);line-height:1.58;font-size:.95rem}
+    .research-node.top{top:10px;left:50%;transform:translateX(-50%)}
+    .research-node.left{left:20px;bottom:82px}
+    .research-node.right{right:20px;bottom:82px}
     .research-node::after{
       content:"";
       position:absolute;
       background:linear-gradient(180deg, rgba(183,154,114,.34), rgba(74,95,138,.18));
       z-index:-1;
+      opacity:.9;
     }
-    .research-node.top::after{width:1px;height:94px;left:50%;top:100%}
-    .research-node.left::after{width:120px;height:1px;right:-120px;top:56%}
-    .research-node.right::after{width:120px;height:1px;left:-120px;top:56%}
+    .research-node.top::after{width:1px;height:110px;left:50%;top:100%}
+    .research-node.left::after{width:132px;height:1px;right:-132px;top:56%}
+    .research-node.right::after{width:132px;height:1px;left:-132px;top:56%}
     .research-hub{
       position:relative;
       z-index:2;
-      width:210px;
-      height:210px;
+      width:228px;
+      height:228px;
       border-radius:50%;
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:center;
       text-align:center;
-      padding:22px;
-      background:linear-gradient(180deg, rgba(255,252,248,.94) 0%, rgba(240,233,225,.96) 100%);
+      padding:24px;
+      background:linear-gradient(180deg, rgba(255,252,248,.98) 0%, rgba(240,233,225,.98) 100%);
       border:1px solid rgba(23,23,23,.10);
-      box-shadow:0 18px 40px rgba(23,23,23,.10), inset 0 1px 0 rgba(255,255,255,.75);
+      box-shadow:0 20px 48px rgba(23,23,23,.12), inset 0 1px 0 rgba(255,255,255,.82);
     }
     .research-hub a{
       color:var(--text);
       text-decoration:none;
       font-weight:800;
-      font-size:1.22rem;
+      font-size:1.26rem;
       letter-spacing:-.03em;
     }
     .research-hub span{
       margin-top:6px;
-      font-size:.82rem;
+      font-size:.8rem;
       text-transform:uppercase;
-      letter-spacing:.12em;
+      letter-spacing:.14em;
       color:var(--muted);
     }
     .research-hub p{
       margin:12px 0 0;
       color:var(--muted);
-      font-size:.9rem;
-      line-height:1.45;
+      font-size:.92rem;
+      line-height:1.48;
+      max-width:18ch;
+    }
+    .research-orbit-note{
+      max-width:780px;
+      margin:18px auto 4px;
+      text-align:center;
+      color:var(--muted);
+      line-height:1.62;
+      text-wrap:pretty;
     }
 
     .appointments-wrap{max-width:1120px;margin:0 auto}
@@ -122,16 +161,39 @@
     .appointments-row.bottom{grid-template-columns:repeat(2,minmax(260px,320px))}
     .appointment-card p{line-height:1.58}
 
+    .flagship-project-card{
+      grid-column:1 / -1;
+      padding:22px;
+    }
+    .flagship-project-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.05fr) minmax(280px, .95fr);
+      gap:22px;
+      align-items:start;
+    }
+    .flagship-project-copy p{max-width:56ch}
+    .flagship-project-copy .muted:last-child{margin-bottom:0}
+
     @media (max-width:1080px){
       .appointments-row.top,.appointments-row.bottom{grid-template-columns:repeat(auto-fit,minmax(260px,320px))}
-      .research-orbit{min-height:unset;display:grid;gap:16px}
-      .research-orbit::before{display:none}
+      .research-orbit{min-height:unset;display:grid;gap:18px}
+      .research-orbit::before,.research-orbit::after{display:none}
       .research-node,.research-hub{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;margin:0 auto}
       .research-node::after{display:none}
+      .flagship-project-grid{grid-template-columns:1fr}
     }
     @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
     @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
-    @media (max-width:640px){.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}.research-node{width:100%;max-width:360px}.research-hub{width:190px;height:190px}}
+    @media (max-width:640px){
+      .academic-signal{display:none}
+      .academic-hero .hero-inner{padding-right:0}
+      .research-orbit-shell{padding:18px 14px 20px;border-radius:24px}
+      .research-node{width:100%;max-width:360px;min-height:auto;padding:18px}
+      .research-hub{width:196px;height:196px;padding:20px}
+      .research-hub p{font-size:.88rem}
+      .research-orbit-note{margin-top:14px;font-size:.96rem}
+      .flagship-project-card{padding:18px}
+    }
   </style>
 </head>
 <body>
@@ -220,27 +282,31 @@
           <p class="muted">The research side remains first, while the creative work operates as a public-facing translation layer through WildWooHoo.</p>
         </div>
 
-        <div class="research-orbit">
-          <article class="research-node top">
-            <h3>Science, popular culture, sound & media</h3>
-            <p>How music, film, audio-visual media, and popular culture shape public engagement with science and nature.</p>
-          </article>
+        <div class="research-orbit-shell">
+          <div class="research-orbit">
+            <article class="research-node top">
+              <h3>Science, popular culture, sound & media</h3>
+              <p>How music, film, audio-visual media, and popular culture shape public engagement with science and nature.</p>
+            </article>
 
-          <article class="research-node left">
-            <h3>Behaviour, ecology & multi-species knowledge</h3>
-            <p>Animal behaviour, social evolution, personality, social systems, long-term studies, and biological knowledge across species.</p>
-          </article>
+            <article class="research-node left">
+              <h3>Behaviour, ecology & multi-species knowledge</h3>
+              <p>Animal behaviour, social evolution, personality, social systems, long-term studies, and biological knowledge across species.</p>
+            </article>
 
-          <div class="research-hub">
-            <a href="https://wildwoohoo.com" target="_blank" rel="noopener">WildWooHoo</a>
-            <span>Creative hub</span>
-            <p>Music, audio-visual work, and educational material shaped by research and social impact goals.</p>
+            <div class="research-hub">
+              <a href="https://wildwoohoo.com" target="_blank" rel="noopener">WildWooHoo</a>
+              <span>Creative hub</span>
+              <p>Music, audio-visual work, and educational material shaped by research and social impact goals.</p>
+            </div>
+
+            <article class="research-node right">
+              <h3>Human–animal parallels & social impact</h3>
+              <p>Review parallels between human and other animal societies used to build communication, education, and wider public connection.</p>
+            </article>
           </div>
 
-          <article class="research-node right">
-            <h3>Human–animal parallels & social impact</h3>
-            <p>Review parallels between human and other animal societies used to build communication, education, and wider public connection.</p>
-          </article>
+          <p class="research-orbit-note">These interests remain rooted in research while converging in WildWooHoo as a creative and public-facing translation space — linking ecology, behaviour, sound, media, and wider social connection without separating them into different professional worlds.</p>
         </div>
       </div>
     </section>
@@ -350,7 +416,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Selected publications</h2>
-          <p class="muted">Research outputs in ecology and behaviour</p>
+          <p class="muted">Research outputs in ecology, behaviour, and public-facing research translation</p>
         </div>
 
         <div class="cards three">
@@ -364,6 +430,28 @@
             <p class="pathway-kicker">PhD thesis</p>
             <h3>Personality, social environment, and maternal-level effects</h3>
             <p>Menário Costa, W. (2021). <em>Personality, social environment, and maternal-level effects: insights from a wild kangaroo population.</em> PhD Thesis, Australian National University.</p>
+          </article>
+
+          <article class="card flagship-project-card">
+            <div class="flagship-project-grid">
+              <div>
+                <div class="video-wrap">
+                  <iframe
+                    src="https://www.youtube.com/embed/RoSYO3fApEc?start=27"
+                    title="Kangaroo Time Dance Your PhD"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="flagship-project-copy">
+                <p class="pathway-kicker">Flagship project</p>
+                <h3>Kangaroo Time — Dance Your PhD</h3>
+                <p class="muted">A public-facing research translation project connecting doctoral research on kangaroo behaviour with music, dance, performance, and cultural storytelling.</p>
+                <p class="muted">Placed here as a flagship output, it makes the academic and creative relationship explicit: the work emerges from behavioural ecology while also speaking directly to media, arts, music, and wider public engagement contexts.</p>
+              </div>
+            </div>
           </article>
         </div>
       </div>
