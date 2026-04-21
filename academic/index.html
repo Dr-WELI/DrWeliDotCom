@@ -29,13 +29,109 @@
     .academic-cap-grid .card p{max-width:34ch}
     .academic-cap-grid .pathway-kicker{margin-bottom:10px}
     .site-nav .nav-links{display:flex;gap:16px;align-items:center}
-    .research-focus-copy{max-width:760px}
-    .appointments-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-    .appointments-grid .card p{line-height:1.6}
-    .appointments-grid .card ul{margin:12px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
+
+    .research-focus-shell{max-width:980px;margin:0 auto}
+    .research-focus-intro{max-width:760px;margin:0 auto 24px;text-align:center}
+    .research-orbit{
+      position:relative;
+      min-height:520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:8px auto 0;
+    }
+    .research-orbit::before{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border:1px dashed rgba(23,23,23,.10);
+      border-radius:50%;
+      opacity:.8;
+    }
+    .research-node{
+      position:absolute;
+      width:240px;
+      min-height:168px;
+      padding:18px 18px 16px;
+      border-radius:24px;
+      background:rgba(255,251,248,.72);
+      border:1px solid rgba(23,23,23,.08);
+      box-shadow:var(--shadow-soft);
+      text-align:left;
+    }
+    .research-node h3{margin:0 0 10px;font-size:1.06rem;letter-spacing:-.02em}
+    .research-node p{margin:0;color:var(--muted);line-height:1.55;font-size:.95rem}
+    .research-node.top{top:8px;left:50%;transform:translateX(-50%)}
+    .research-node.left{left:18px;bottom:82px}
+    .research-node.right{right:18px;bottom:82px}
+    .research-node::after{
+      content:"";
+      position:absolute;
+      background:linear-gradient(180deg, rgba(183,154,114,.34), rgba(74,95,138,.18));
+      z-index:-1;
+    }
+    .research-node.top::after{width:1px;height:94px;left:50%;top:100%}
+    .research-node.left::after{width:120px;height:1px;right:-120px;top:56%}
+    .research-node.right::after{width:120px;height:1px;left:-120px;top:56%}
+    .research-hub{
+      position:relative;
+      z-index:2;
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:22px;
+      background:linear-gradient(180deg, rgba(255,252,248,.94) 0%, rgba(240,233,225,.96) 100%);
+      border:1px solid rgba(23,23,23,.10);
+      box-shadow:0 18px 40px rgba(23,23,23,.10), inset 0 1px 0 rgba(255,255,255,.75);
+    }
+    .research-hub a{
+      color:var(--text);
+      text-decoration:none;
+      font-weight:800;
+      font-size:1.22rem;
+      letter-spacing:-.03em;
+    }
+    .research-hub span{
+      margin-top:6px;
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted);
+    }
+    .research-hub p{
+      margin:12px 0 0;
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.45;
+    }
+
+    .appointments-wrap{max-width:1120px;margin:0 auto}
+    .appointments-row{
+      display:grid;
+      gap:16px;
+      justify-content:center;
+      margin-bottom:16px;
+    }
+    .appointments-row.top{grid-template-columns:repeat(3,minmax(260px,320px))}
+    .appointments-row.bottom{grid-template-columns:repeat(2,minmax(260px,320px))}
+    .appointment-card p{line-height:1.58}
+
+    @media (max-width:1080px){
+      .appointments-row.top,.appointments-row.bottom{grid-template-columns:repeat(auto-fit,minmax(260px,320px))}
+      .research-orbit{min-height:unset;display:grid;gap:16px}
+      .research-orbit::before{display:none}
+      .research-node,.research-hub{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;margin:0 auto}
+      .research-node::after{display:none}
+    }
     @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
     @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
-    @media (max-width:640px){.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}}
+    @media (max-width:640px){.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}.research-node{width:100%;max-width:360px}.research-hub{width:190px;height:190px}}
   </style>
 </head>
 <body>
@@ -117,25 +213,34 @@
     </section>
 
     <section class="section alt">
-      <div class="container narrow research-focus-copy">
-        <div class="split-callout">
-          <div>
-            <p class="pathway-kicker">Research focus</p>
-            <h2 class="split-title">Science, culture, and multi-species understanding in practice</h2>
-            <p class="muted">
-              My research sits at the intersection of science and popular culture, with a focus on how music, audio-visual media, and storytelling shape public engagement with science and nature.
-            </p>
-          </div>
-          <div>
-            <p class="muted">
-              Grounded in ecology, animal behaviour, and evolutionary theory, my work explores social and behavioural systems across species, and the parallels between human and non-human societies as a basis for communication, education, and cultural production.
-            </p>
-          </div>
+      <div class="container research-focus-shell">
+        <div class="research-focus-intro">
+          <p class="pathway-kicker">Research interests</p>
+          <h2 class="split-title">Research interests that feed directly into practice</h2>
+          <p class="muted">The research side remains first, while the creative work operates as a public-facing translation layer through WildWooHoo.</p>
         </div>
-        <div style="margin-top:28px;">
-          <p class="muted" style="max-width:720px;">
-            This research directly informs my creative practice through WildWooHoo, where I develop music, film, and educational projects that translate scientific knowledge into culturally resonant formats. The aim is to expand how science is experienced beyond academic contexts, reaching broader audiences through emotionally engaging and socially impactful work.
-          </p>
+
+        <div class="research-orbit">
+          <article class="research-node top">
+            <h3>Science, popular culture, sound & media</h3>
+            <p>How music, audio-visual media, and popular culture shape public engagement with science and nature.</p>
+          </article>
+
+          <article class="research-node left">
+            <h3>Behaviour, ecology & multi-species knowledge</h3>
+            <p>Animal behaviour, personality, social systems, long-term studies, and biological knowledge across species.</p>
+          </article>
+
+          <div class="research-hub">
+            <a href="https://wildwoohoo.com" target="_blank" rel="noopener">WildWooHoo</a>
+            <span>Creative hub</span>
+            <p>Music, audio-visual work, and educational material shaped by research and social impact goals.</p>
+          </div>
+
+          <article class="research-node right">
+            <h3>Human–animal parallels & social impact</h3>
+            <p>Parallels between human and other animal societies used to build communication, education, and wider public connection.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -180,65 +285,43 @@
     </section>
 
     <section class="section alt">
-      <div class="container">
+      <div class="container appointments-wrap">
         <div class="section-header">
           <h2>Appointments</h2>
           <p class="muted">Recent academic, research, and applied roles</p>
         </div>
 
-        <div class="appointments-grid">
-          <article class="card">
+        <div class="appointments-row top">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2025–Current</p>
             <h3>Visiting Fellow (Honorary)</h3>
-            <p><strong>Centre for the Public Awareness of Science (Popsicule), ANU College of Systems & Society</strong><br />Group: Dr Anna-Sophie Jürgens</p>
-            <ul>
-              <li>Designed and delivered a lecture for Science, Humour and Popular Culture using Kangaroo Time as a case study.</li>
-              <li>Panel participant for Science. Art. Film: Tank Girl showcase at the NFSA in Canberra.</li>
-              <li>Designed and delivered Transforming Science into Compelling Art through ACT National Science Week 2025 and Athens Science Festival.</li>
-              <li>Developing two publication strands: film/camp portrayals of science, and music as a knowledge practice in science communication.</li>
-            </ul>
+            <p>Centre for the Public Awareness of Science (Popsicule), ANU College of Systems & Society — Group: Dr Anna-Sophie Jürgens. Lectures, panels, workshops, and research development across science, humour, film, music, and popular culture.</p>
           </article>
 
-          <article class="card">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2025–2026</p>
             <h3>Research Data Scientist</h3>
-            <p><strong>UNSW, Educational Data & Insights</strong><br />Level 6, Step 2 · Fixed-term, part-time · 21h/week · Supervisor: Anaëlle Medioni</p>
-            <ul>
-              <li>Analysis of student experience and educational outcomes data, including QILT and response-rate focused work.</li>
-              <li>Prepared reports and advanced statistical analyses to support evidence-based decision-making across UNSW.</li>
-              <li>Worked with internal stakeholders to improve representation and interpretation of student feedback across groups.</li>
-            </ul>
+            <p>UNSW, Educational Data & Insights — Level 6, Step 2, fixed-term part-time. Worked with Anaëlle Medioni on QILT, student experience survey analysis, response rates, reporting, and stakeholder-facing evidence building.</p>
           </article>
 
-          <article class="card">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2022–2024</p>
             <h3>Research Officer</h3>
-            <p><strong>ANU Research School of Biology</strong><br />Officer Grade 5/6 · Full-time fixed term · Supervisor: Prof. Justin Borevitz</p>
-            <ul>
-              <li>Worked across ARC-funded projects on new plant cells linked to root transport, and farm resilience and sustainable prosperity.</li>
-              <li>Soil carbon research spanning design, fieldwork, lab work, remote sensing integration, and advanced modelling.</li>
-              <li>Built eQTL/GWAS pipelines, reproducible data systems, and advanced statistics workflows including Bayesian models and GLMMs.</li>
-              <li>Supported reporting, coordination, student advising, outreach, and operational research workflows.</li>
-            </ul>
+            <p>ANU Research School of Biology — Officer Grade 5/6, full-time fixed term. Worked with Prof. Justin Borevitz across ARC-funded projects, soil carbon research, remote sensing, modelling, data systems, and advanced statistical workflows.</p>
           </article>
+        </div>
 
-          <article class="card">
+        <div class="appointments-row bottom">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2017–2021</p>
             <h3>PhD Student</h3>
-            <p><strong>The Australian National University</strong><br />Supervisors: Prof. Loeske Kruuk & Prof. Marco Festa-Bianchet</p>
-            <ul>
-              <li>PhD research in Ecology & Evolution focused on personality, social environment, and maternal-level effects in a wild kangaroo population.</li>
-              <li>Field-based long-term behavioural research integrating ecology, quantitative analysis, and social systems.</li>
-            </ul>
+            <p>The Australian National University — Supervisors: Prof. Loeske Kruuk & Prof. Marco Festa-Bianchet. Long-term field-based Ecology & Evolution research on personality, social environment, and maternal effects in wild kangaroos.</p>
           </article>
 
-          <article class="card">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2012–2017</p>
             <h3>Administration Assistant (Science & Education)</h3>
-            <p><strong>Federal Institute of Espírito Santo (IFES), Brazil</strong><br />Permanent, full-time</p>
-            <ul>
-              <li>Supported science and education delivery, research activities, and academic administration.</li>
-            </ul>
+            <p>Federal Institute of Espírito Santo (IFES), Brazil — Permanent, full-time. Supported science and education delivery, research activities, and academic administration.</p>
           </article>
         </div>
       </div>
