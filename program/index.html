@@ -84,14 +84,17 @@
       gap:18px;
       animation:marqueeVertical 28s linear infinite;
     }
-    .left-marquee span{
-      writing-mode:vertical-rl;
-      text-orientation:mixed;
-      font-size:.64rem;
-      letter-spacing:.18em;
-      color:rgba(23,23,23,.65);
-      white-space:nowrap;
-    }
+
+.left-marquee span{
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-orientation: mixed;
+  font-size:.64rem;
+  letter-spacing:.18em;
+  color:rgba(23,23,23,.65);
+  white-space:nowrap;
+}
+    
     .left-marquee::before{
       content:"";
       position:absolute;
