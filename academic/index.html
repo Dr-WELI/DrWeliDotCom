@@ -17,6 +17,122 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .academic-hero{position:relative;overflow:hidden;isolation:isolate}
+    .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px}
+    .academic-signal{position:absolute;top:34px;right:18px;bottom:34px;width:44px;overflow:hidden;pointer-events:none;z-index:1;opacity:.82}
+    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:18px;animation:academicSignalMove 26s linear infinite}
+    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(23,23,23,.62);white-space:nowrap}
+    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(234,228,220,1) 0%, rgba(234,228,220,0) 10%, rgba(234,228,220,0) 90%, rgba(234,228,220,1) 100%);pointer-events:none;z-index:2}
+    @keyframes academicSignalMove{from{transform:translateY(-4%)}to{transform:translateY(-52%)}}
+    .academic-cap-grid .card h3{letter-spacing:-.03em}
+    .academic-cap-grid .card p{max-width:34ch}
+    .academic-cap-grid .pathway-kicker{margin-bottom:10px}
+    .site-nav .nav-links{display:flex;gap:16px;align-items:center}
+
+    .research-focus-shell{max-width:980px;margin:0 auto}
+    .research-focus-intro{max-width:760px;margin:0 auto 24px;text-align:center}
+    .research-orbit{
+      position:relative;
+      min-height:520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:8px auto 0;
+    }
+    .research-orbit::before{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border:1px dashed rgba(23,23,23,.10);
+      border-radius:50%;
+      opacity:.8;
+    }
+    .research-node{
+      position:absolute;
+      width:240px;
+      min-height:168px;
+      padding:18px 18px 16px;
+      border-radius:24px;
+      background:rgba(255,251,248,.72);
+      border:1px solid rgba(23,23,23,.08);
+      box-shadow:var(--shadow-soft);
+      text-align:left;
+    }
+    .research-node h3{margin:0 0 10px;font-size:1.06rem;letter-spacing:-.02em}
+    .research-node p{margin:0;color:var(--muted);line-height:1.55;font-size:.95rem}
+    .research-node.top{top:8px;left:50%;transform:translateX(-50%)}
+    .research-node.left{left:18px;bottom:82px}
+    .research-node.right{right:18px;bottom:82px}
+    .research-node::after{
+      content:"";
+      position:absolute;
+      background:linear-gradient(180deg, rgba(183,154,114,.34), rgba(74,95,138,.18));
+      z-index:-1;
+    }
+    .research-node.top::after{width:1px;height:94px;left:50%;top:100%}
+    .research-node.left::after{width:120px;height:1px;right:-120px;top:56%}
+    .research-node.right::after{width:120px;height:1px;left:-120px;top:56%}
+    .research-hub{
+      position:relative;
+      z-index:2;
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:22px;
+      background:linear-gradient(180deg, rgba(255,252,248,.94) 0%, rgba(240,233,225,.96) 100%);
+      border:1px solid rgba(23,23,23,.10);
+      box-shadow:0 18px 40px rgba(23,23,23,.10), inset 0 1px 0 rgba(255,255,255,.75);
+    }
+    .research-hub a{
+      color:var(--text);
+      text-decoration:none;
+      font-weight:800;
+      font-size:1.22rem;
+      letter-spacing:-.03em;
+    }
+    .research-hub span{
+      margin-top:6px;
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted);
+    }
+    .research-hub p{
+      margin:12px 0 0;
+      color:var(--muted);
+      font-size:.9rem;
+      line-height:1.45;
+    }
+
+    .appointments-wrap{max-width:1120px;margin:0 auto}
+    .appointments-row{
+      display:grid;
+      gap:16px;
+      justify-content:center;
+      margin-bottom:16px;
+    }
+    .appointments-row.top{grid-template-columns:repeat(3,minmax(260px,320px))}
+    .appointments-row.bottom{grid-template-columns:repeat(2,minmax(260px,320px))}
+    .appointment-card p{line-height:1.58}
+
+    @media (max-width:1080px){
+      .appointments-row.top,.appointments-row.bottom{grid-template-columns:repeat(auto-fit,minmax(260px,320px))}
+      .research-orbit{min-height:unset;display:grid;gap:16px}
+      .research-orbit::before{display:none}
+      .research-node,.research-hub{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;margin:0 auto}
+      .research-node::after{display:none}
+    }
+    @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
+    @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
+    @media (max-width:640px){.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}.research-node{width:100%;max-width:360px}.research-hub{width:190px;height:190px}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -24,26 +140,46 @@
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
     <nav class="site-nav" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/music">Music</a>
-      <a href="/academic">Academic</a>
-      <a href="https://wildwoohoo.com" target="_blank" rel="noopener">Visit WildWooHoo</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/music">Music</a>
+        <a href="/academic">Academic</a>
+        <a href="https://wildwoohoo.com" target="_blank" rel="noopener">Visit WildWooHoo</a>
+      </div>
       <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary">Enquire</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero academic-hero">
       <div class="vignette"></div>
       <div class="hero-grain"></div>
       <div class="hero-sapphire"></div>
       <div class="hero-diamond"></div>
       <div class="hero-sun"></div>
+      <div class="academic-signal" aria-hidden="true">
+        <div class="academic-signal-track">
+          <span class="academic-signal-item">ANIMAL & HUMAN SOCIALITY PARALLELS</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE • QUANTITATIVE ANALYSIS • REPORTING</span>
+          <span class="academic-signal-item">ECOLOGY • ANIMAL BEHAVIOUR • PERSONALITY • SOCIAL ANIMALS</span>
+          <span class="academic-signal-item">FIELDWORK • ENVIRONMENT MONITORING • LONG-TERM STUDIES</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION • PUBLIC ENGAGEMENT • GUEST LECTURES</span>
+          <span class="academic-signal-item">POPULAR CULTURE • FILM • MUSIC • SOUND & MEDIA</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE • RESEARCH-CREATION • CULTURE</span>
+          <span class="academic-signal-item">QILT • STUDENT EXPERIENCE SURVEY • RESPONSE RATE ANALYSIS</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE • QUANTITATIVE ANALYSIS • REPORTING</span>
+          <span class="academic-signal-item">ANIMAL & HUMAN SOCIALITY PARALLELS</span>
+          <span class="academic-signal-item">ECOLOGY • ANIMAL BEHAVIOUR • PERSONALITY • SOCIAL ANIMALS</span>
+          <span class="academic-signal-item">FIELDWORK • ENVIRONMENT MONITORING • LONG-TERM STUDIES</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION • PUBLIC ENGAGEMENT • GUEST LECTURES</span>
+          <span class="academic-signal-item">POPULAR CULTURE • FILM • MUSIC • SOUND & MEDIA</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE • RESEARCH-CREATION • CULTURE</span>
+        </div>
+      </div>
 
       <div class="hero-inner container">
         <p class="eyebrow">Academic & Professional</p>
-        <h1 class="hero-title">Research, talks, and facilitation</h1>
-        <p class="lead">Ecology, science communication, teaching, public speaking, and transdisciplinary practice</p>
+        <h1 class="hero-title">RESEARCH, LECTURES & FACILITATION</h1>
 
         <div class="hero-ctas">
           <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary btn-lg">Professional enquiry</a>
@@ -54,23 +190,56 @@
 
     <section class="section">
       <div class="container">
-        <div class="cards three">
+        <div class="cards three academic-cap-grid">
           <article class="card">
             <p class="pathway-kicker">Research</p>
-            <h3>Ecology & analysis</h3>
-            <p>Animal behaviour, data analysis, interdisciplinary thinking, and applied research communication</p>
+            <h3>Science and popular culture, ecology & evolution, and analytical work</h3>
+            <p>Research spanning science and popular culture, with ecology, evolution, animal behaviour, personality, and analytical work remaining central through publications, fieldwork, environment monitoring, survey analysis, and long-term studies.</p>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">Teaching</p>
-            <h3>Workshops & facilitation</h3>
-            <p>Sessions across science communication, creativity, storytelling, humour, movement, and engagement</p>
+            <h3>Guest lectures, tutorials & science communication</h3>
+            <p>Teaching and facilitation across ecology, science communication, creativity, humour, public engagement, and culturally resonant ways of translating complex knowledge.</p>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">Speaking</p>
-            <h3>Talks & public engagement</h3>
-            <p>Conference speaking, keynote style sessions, panels, and culture facing conversations grounded in research</p>
+            <h3>Public talks, culture-facing work & transdisciplinary practice</h3>
+            <p>Conference speaking, media-facing communication, and research-grounded work spanning popular culture, film, music, sound, performance, and research-creation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container research-focus-shell">
+        <div class="research-focus-intro">
+          <p class="pathway-kicker">Research interests</p>
+          <h2 class="split-title">Research interests that feed directly into practice</h2>
+          <p class="muted">The research side remains first, while the creative work operates as a public-facing translation layer through WildWooHoo.</p>
+        </div>
+
+        <div class="research-orbit">
+          <article class="research-node top">
+            <h3>Science, popular culture, sound & media</h3>
+            <p>How music, audio-visual media, and popular culture shape public engagement with science and nature.</p>
+          </article>
+
+          <article class="research-node left">
+            <h3>Behaviour, ecology & multi-species knowledge</h3>
+            <p>Animal behaviour, personality, social systems, long-term studies, and biological knowledge across species.</p>
+          </article>
+
+          <div class="research-hub">
+            <a href="https://wildwoohoo.com" target="_blank" rel="noopener">WildWooHoo</a>
+            <span>Creative hub</span>
+            <p>Music, audio-visual work, and educational material shaped by research and social impact goals.</p>
+          </div>
+
+          <article class="research-node right">
+            <h3>Human–animal parallels & social impact</h3>
+            <p>Parallels between human and other animal societies used to build communication, education, and wider public connection.</p>
           </article>
         </div>
       </div>
@@ -116,35 +285,43 @@
     </section>
 
     <section class="section alt">
-      <div class="container">
+      <div class="container appointments-wrap">
         <div class="section-header">
           <h2>Appointments</h2>
           <p class="muted">Recent academic, research, and applied roles</p>
         </div>
 
-        <div class="cards three">
-          <article class="card">
+        <div class="appointments-row top">
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2025–Current</p>
+            <h3>Visiting Fellow (Honorary)</h3>
+            <p>Centre for the Public Awareness of Science (Popsicule), ANU College of Systems & Society — Group: Dr Anna-Sophie Jürgens. Lectures, panels, workshops, and research development across science, humour, film, music, and popular culture.</p>
+          </article>
+
+          <article class="card appointment-card">
             <p class="pathway-kicker">2025–2026</p>
             <h3>Research Data Scientist</h3>
-            <p>University of New South Wales (UNSW), Educational Data & Insights. Qualitative and quantitative analysis, reporting, and stakeholder-facing research support.</p>
+            <p>UNSW, Educational Data & Insights — Level 6, Step 2, fixed-term part-time. Worked with Anaëlle Medioni on QILT, student experience survey analysis, response rates, reporting, and stakeholder-facing evidence building.</p>
           </article>
 
-          <article class="card">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2022–2024</p>
             <h3>Research Officer</h3>
-            <p>The Australian National University. Literature reviews, ethics documentation, technical reports, reproducible workflows, and multi-partner research coordination.</p>
+            <p>ANU Research School of Biology — Officer Grade 5/6, full-time fixed term. Worked with Prof. Justin Borevitz across ARC-funded projects, soil carbon research, remote sensing, modelling, data systems, and advanced statistical workflows.</p>
+          </article>
+        </div>
+
+        <div class="appointments-row bottom">
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2017–2021</p>
+            <h3>PhD Student</h3>
+            <p>The Australian National University — Supervisors: Prof. Loeske Kruuk & Prof. Marco Festa-Bianchet. Long-term field-based Ecology & Evolution research on personality, social environment, and maternal effects in wild kangaroos.</p>
           </article>
 
-          <article class="card">
-            <p class="pathway-kicker">2024</p>
-            <h3>Graduate Sustainability Consultant</h3>
-            <p>Malo Sustainability Consulting. Applied research and public-facing reporting for community-oriented initiatives.</p>
-          </article>
-
-          <article class="card">
+          <article class="card appointment-card">
             <p class="pathway-kicker">2012–2017</p>
-            <h3>Administration Assistant</h3>
-            <p>Federal Institute of Espírito Santo, Brazil. Research and teaching support across science and education contexts.</p>
+            <h3>Administration Assistant (Science & Education)</h3>
+            <p>Federal Institute of Espírito Santo (IFES), Brazil — Permanent, full-time. Supported science and education delivery, research activities, and academic administration.</p>
           </article>
         </div>
       </div>
