@@ -64,36 +64,41 @@
       position:absolute;
       width:min(100%, 470px);
       height:470px;
-      border:1px dashed rgba(23,23,23,.12);
+      border:1px solid rgba(183,154,114,.22);
       border-radius:50%;
-      opacity:.9;
+      opacity:.95;
+      animation:orbitSpin 40s linear infinite;
     }
     .research-orbit::after{
       content:"";
       position:absolute;
       width:min(100%, 330px);
       height:330px;
-      border:1px solid rgba(23,23,23,.06);
+      border:1px solid rgba(74,95,138,.18);
       border-radius:50%;
-      opacity:.8;
+      opacity:.85;
+      animation:orbitSpinReverse 28s linear infinite;
     }
+    @keyframes orbitSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @keyframes orbitSpinReverse{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
     .research-node{
       position:absolute;
-      width:252px;
-      min-height:182px;
+      width:244px;
+      min-height:178px;
       padding:20px 20px 18px;
       border-radius:26px;
-      background:rgba(255,251,248,.92);
+      background:rgba(255,251,248,.82);
       border:1px solid rgba(23,23,23,.08);
       box-shadow:0 16px 34px rgba(23,23,23,.08);
       text-align:left;
-      backdrop-filter:blur(12px);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
     }
     .research-node h3{margin:0 0 10px;font-size:1.06rem;letter-spacing:-.02em;line-height:1.12}
     .research-node p{margin:0;color:var(--muted);line-height:1.58;font-size:.95rem}
     .research-node.top{top:10px;left:50%;transform:translateX(-50%)}
-    .research-node.left{left:20px;bottom:82px}
-    .research-node.right{right:20px;bottom:82px}
+    .research-node.left{left:72px;bottom:88px}
+    .research-node.right{right:72px;bottom:88px}
     .research-node::after{
       content:"";
       position:absolute;
@@ -102,8 +107,8 @@
       opacity:.9;
     }
     .research-node.top::after{width:1px;height:110px;left:50%;top:100%}
-    .research-node.left::after{width:132px;height:1px;right:-132px;top:56%}
-    .research-node.right::after{width:132px;height:1px;left:-132px;top:56%}
+    .research-node.left::after{width:118px;height:1px;right:-118px;top:56%}
+    .research-node.right::after{width:118px;height:1px;left:-118px;top:56%}
     .research-hub{
       position:relative;
       z-index:2;
@@ -116,7 +121,7 @@
       justify-content:center;
       text-align:center;
       padding:24px;
-      background:linear-gradient(180deg, rgba(255,252,248,.98) 0%, rgba(240,233,225,.98) 100%);
+      background:linear-gradient(180deg, rgba(255,252,248,.94) 0%, rgba(240,233,225,.96) 100%);
       border:1px solid rgba(23,23,23,.10);
       box-shadow:0 20px 48px rgba(23,23,23,.12), inset 0 1px 0 rgba(255,255,255,.82);
     }
@@ -161,15 +166,24 @@
     .appointments-row.bottom{grid-template-columns:repeat(2,minmax(260px,320px))}
     .appointment-card p{line-height:1.58}
 
+    .publications-grid{
+      max-width:1080px;
+      margin:0 auto;
+      align-items:stretch;
+      justify-content:center;
+    }
+    .publications-grid > .card{height:100%}
     .flagship-project-card{
       grid-column:1 / -1;
+      max-width:1080px;
+      margin:0 auto;
       padding:22px;
     }
     .flagship-project-grid{
       display:grid;
-      grid-template-columns:minmax(0, 1.05fr) minmax(280px, .95fr);
-      gap:22px;
-      align-items:start;
+      grid-template-columns:minmax(0, 1.02fr) minmax(320px, .98fr);
+      gap:24px;
+      align-items:center;
     }
     .flagship-project-copy p{max-width:56ch}
     .flagship-project-copy .muted:last-child{margin-bottom:0}
@@ -181,6 +195,7 @@
       .research-node,.research-hub{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;margin:0 auto}
       .research-node::after{display:none}
       .flagship-project-grid{grid-template-columns:1fr}
+      .flagship-project-card{max-width:none}
     }
     @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
     @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
@@ -188,11 +203,15 @@
       .academic-signal{display:none}
       .academic-hero .hero-inner{padding-right:0}
       .research-orbit-shell{padding:18px 14px 20px;border-radius:24px}
-      .research-node{width:100%;max-width:360px;min-height:auto;padding:18px}
-      .research-hub{width:196px;height:196px;padding:20px}
-      .research-hub p{font-size:.88rem}
+      .research-node{width:100%;max-width:290px;min-height:auto;padding:16px 16px 14px}
+      .research-hub{width:184px;height:184px;padding:18px}
+      .research-hub a{font-size:1.08rem}
+      .research-hub p{font-size:.84rem}
       .research-orbit-note{margin-top:14px;font-size:.96rem}
       .flagship-project-card{padding:18px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .research-orbit::before,.research-orbit::after{animation:none}
     }
   </style>
 </head>
@@ -241,7 +260,7 @@
 
       <div class="hero-inner container">
         <p class="eyebrow">Academic & Professional</p>
-        <h1 class="hero-title">Research, Lectures & Engagement </h1>
+        <h1 class="hero-title">Research, Teaching & Creative Practice</h1>
 
         <div class="hero-ctas">
           <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary btn-lg">Professional enquiry</a>
@@ -419,7 +438,7 @@
           <p class="muted">Research outputs in ecology, behaviour, and public-facing research translation</p>
         </div>
 
-        <div class="cards three">
+        <div class="cards three publications-grid">
           <article class="card">
             <p class="pathway-kicker">Journal article</p>
             <h3>Early-life behavior, survival, and maternal personality in a wild marsupial</h3>
