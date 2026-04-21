@@ -1,207 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Artist Page</title>
-  <meta
-    name="description"
-    content="WELI is a Sydney and Canberra connected artist creating contemporary music across pop, Latin, and world rhythms"
-  />
-  <meta name="author" content="Dr Weliton Menário Costa (WELI)" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WELI — Music</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/music-app.css">
 </head>
-<body class="music-world-page">
-  <main class="music-world-shell" id="musicWorld">
-    <div class="music-world-bg" aria-hidden="true">
-      <span class="music-orb orb-a"></span>
-      <span class="music-orb orb-b"></span>
-      <span class="music-orb orb-c"></span>
-      <span class="music-grid-glow"></span>
-      <span class="music-noise"></span>
+
+<body class="music-page">
+
+<div class="music-app">
+
+<header class="music-app-header">
+  <a href="/" class="music-app-brand">WELI</a>
+  <nav class="music-app-nav">
+    <a href="/music" class="active">Music</a>
+    <a href="#releases">Releases</a>
+    <a href="#about">Story</a>
+    <a href="mailto:bookings@drweli.com">Book</a>
+  </nav>
+</header>
+
+<section class="music-hero">
+
+  <div class="music-panel music-hero-copy">
+    <p class="music-kicker">Brazil → Australia</p>
+    <h1>WELI <span>Nature · Nightlife · Pop</span></h1>
+
+    <p class="music-statement">
+      Latin-rooted, movement-driven music shaped by culture, science, and identity.
+    </p>
+
+    <div class="music-chip-row">
+      <span class="music-chip">Latin</span>
+      <span class="music-chip">Electronic</span>
+      <span class="music-chip">Pop</span>
+      <span class="music-chip">World</span>
     </div>
 
-    <div class="music-cursor-glow" id="musicCursorGlow" aria-hidden="true"></div>
+    <div class="music-hero-actions">
+      <a class="music-button" href="https://open.spotify.com/artist/50lLmw55L8IEvin7efZ063" target="_blank">Spotify</a>
+      <a class="music-button-secondary" href="https://www.youtube.com/@welimusician" target="_blank">YouTube</a>
+    </div>
 
-    <header class="music-world-header">
-      <a class="music-world-brand" href="/">WELI</a>
+  </div>
 
-      <nav class="music-world-nav" aria-label="Music navigation">
-        <a href="/music" class="is-active">Music</a>
-        <a href="#releases">Releases</a>
-        <a href="#live">Live</a>
-        <a href="mailto:bookings@drweli.com?subject=Music%20Booking%20Enquiry">Book</a>
-        <a href="/">drweli.com</a>
-      </nav>
-    </header>
+  <div class="music-panel music-player-panel">
 
-    <section class="music-world-hero">
-      <div class="music-world-copy">
-        <p class="music-world-kicker">Music • Performance</p>
-
-        <h1 class="music-world-title">
-          LISTEN NOW
-          <span>Contemporary Music | Pop, Latin, &amp; World Rhythms</span>
-        </h1>
-
-        <p class="music-world-intro">
-          WELI is a Sydney &amp; Canberra connected artist available for live performances,
-          collaborations, and artist-led cultural work
-        </p>
-
-        <div class="music-world-actions">
-          <a
-            class="music-pill music-pill-primary music-interactive"
-            href="https://open.spotify.com/album/0NcO0Jz1X2wlkedPjB7IZL?si=XpuoVmQ7R7iteu6h1CVC7A"
-            target="_blank"
-            rel="noopener"
-          >
-            Stream the EP
-          </a>
-
-          <a
-            class="music-pill music-pill-secondary music-interactive"
-            href="mailto:bookings@drweli.com?subject=Live%20Performance%20Enquiry"
-          >
-            Book WELI
-          </a>
-        </div>
-
-        <div class="music-platform-rail" aria-label="Streaming platforms">
-          <a class="music-rail-link music-interactive" href="https://open.spotify.com/intl-pt/artist/50lLmw55L8IEvin7efZ063?si=iRjy49huTbeixTxSkfdMuQ" target="_blank" rel="noopener">Spotify</a>
-          <a class="music-rail-link music-interactive" href="https://music.apple.com/au/artist/weli/1705899792" target="_blank" rel="noopener">Apple Music</a>
-          <a class="music-rail-link music-interactive" href="https://tidal.com/browse/artist/41908782" target="_blank" rel="noopener">Tidal</a>
-          <a class="music-rail-link music-interactive" href="https://www.youtube.com/@welimusician/?sub_confirmation=1" target="_blank" rel="noopener">YouTube</a>
-          <a class="music-rail-link music-interactive" href="https://buymeacoffee.com/weli" target="_blank" rel="noopener">Support</a>
-        </div>
+    <div class="music-player-top">
+      <div>
+        <p class="music-kicker">Now Playing</p>
+        <h2 id="musicTitle"></h2>
+        <p id="musicSub"></p>
       </div>
 
-<div class="music-world-visuals">
-  <a
-    class="music-portal-card music-portal-main music-interactive"
-    href="https://open.spotify.com/track/0oifq4mMHGsCjEcLfPwy47?si=f2e7068c78af42a5"
-    target="_blank"
-    rel="noopener"
-    aria-label="Open Kangaroo Time on Spotify"
-  >
-    <img src="/assets/img/release-kangaroo-time.jpg" alt="Kangaroo Time release artwork" loading="eager" />
-    <span class="music-portal-label">Cover</span>
-  </a>
+      <a id="musicOpen" class="music-button music-open-link" target="_blank">Open</a>
+    </div>
 
-  <a
-    class="music-portal-card music-portal-side music-interactive"
-    href="https://open.spotify.com/album/0NcO0Jz1X2wlkedPjB7IZL?si=XpuoVmQ7R7iteu6h1CVC7A"
-    target="_blank"
-    rel="noopener"
-    aria-label="Open Yours Academically, Dr. WELI EP on Spotify"
-  >
-    <img src="/assets/img/release-el-doctor.jpg" alt="El Doctor release artwork" loading="eager" />
-    <span class="music-portal-label">Cover</span>
-  </a>
+    <div class="music-frame-wrap">
+      <iframe id="musicFrame"></iframe>
+    </div>
+
+    <div class="music-track-grid" id="musicTrackGrid"></div>
+
+  </div>
+
+</section>
+
+<section class="music-section" id="releases">
+  <div class="music-section-head">
+    <h2>Releases</h2>
+  </div>
+
+  <div class="music-release-grid">
+    <a class="music-release-card" href="https://open.spotify.com/album/0NcO0Jz1X2wlkedPjB7IZL" target="_blank">
+      <img src="/assets/img/release-el-doctor.jpg">
+      <div class="music-release-copy">
+        <span class="music-release-meta">EP</span>
+        <h3>Yours Academically</h3>
+        <p>Story-driven project blending science and sound</p>
+      </div>
+    </a>
+
+    <a class="music-release-card" href="https://open.spotify.com/track/0oifq4mMHGsCjEcLfPwy47" target="_blank">
+      <img src="/assets/img/release-kangaroo-time.jpg">
+      <div class="music-release-copy">
+        <span class="music-release-meta">Single</span>
+        <h3>Kangaroo Time</h3>
+        <p>Movement, rhythm, and narrative</p>
+      </div>
+    </a>
+
+    <a class="music-release-card" href="https://open.spotify.com/track/4JmFwCmHASS4WkujMTPHWs" target="_blank">
+      <img src="/assets/img/release-el-doctor.jpg">
+      <div class="music-release-copy">
+        <span class="music-release-meta">Single</span>
+        <h3>El Doctor</h3>
+        <p>Latin rhythm meets club energy</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="music-section" id="about">
+  <div class="music-info-grid">
+
+    <div class="music-panel music-info-card">
+      <h3>Artist</h3>
+      <p>Brazilian-born, Sydney-based artist working across music, science, and culture.</p>
+      <p>Creating sound shaped by movement, identity, and nature.</p>
+
+      <div class="music-about-lines">
+        <span>Latin immigrant</span>
+        <span>Queer</span>
+        <span>Scientist</span>
+        <span>Performer</span>
+      </div>
+    </div>
+
+    <div class="music-panel music-info-card">
+      <h3>Bookings</h3>
+      <p>Live performance, festivals, and cultural events.</p>
+
+      <div class="music-booking-points">
+        <span>Live Sets</span>
+        <span>Festivals</span>
+        <span>Workshops</span>
+      </div>
+
+      <div class="music-hero-actions">
+        <a class="music-button" href="mailto:bookings@drweli.com">Enquire</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="music-footer">
+  <a href="https://www.instagram.com/welimusic/" target="_blank">Instagram</a>
+  <a href="https://www.tiktok.com/@welimusician" target="_blank">TikTok</a>
+  <a href="https://buymeacoffee.com/weli" target="_blank">Support</a>
+</footer>
+
+<div class="music-mini-player">
+  <div class="music-mini-player-main">
+    <img id="miniArt">
+    <div>
+      <strong id="miniTitle"></strong>
+      <span id="miniSub"></span>
+    </div>
+  </div>
+  <a class="music-button compact" href="#">Open</a>
 </div>
-    </section>
 
-    <section class="music-world-section" id="releases">
-      <div class="music-world-section-head">
-        <p class="music-world-kicker">Out right now</p>
-        <h2>Releases</h2>
-      </div>
+</div>
 
-      <div class="music-release-table" role="list">
-        <article class="music-release-item music-interactive" role="listitem">
-          <div class="music-release-meta">
-            <span class="music-release-year">2024</span>
-            <h3>Yours Academically, Dr. WELI</h3>
-            <span class="music-release-type">EP</span>
-          </div>
-          <div class="music-release-links">
-            <a href="https://open.spotify.com/album/0NcO0Jz1X2wlkedPjB7IZL?si=XpuoVmQ7R7iteu6h1CVC7A" target="_blank" rel="noopener">Spotify</a>
-          </div>
-        </article>
-
-        <article class="music-release-item music-interactive" role="listitem">
-          <div class="music-release-meta">
-            <span class="music-release-year">2024</span>
-            <h3>Kangaroo Time (Club Edit)</h3>
-            <span class="music-release-type">Single</span>
-          </div>
-          <div class="music-release-links">
-            <a href="https://open.spotify.com/track/0oifq4mMHGsCjEcLfPwy47?si=f2e7068c78af42a5" target="_blank" rel="noopener">Spotify</a>
-          </div>
-        </article>
-
-        <article class="music-release-item music-interactive" role="listitem">
-          <div class="music-release-meta">
-            <span class="music-release-year">2024</span>
-            <h3>El Doctor</h3>
-            <span class="music-release-type">Single</span>
-          </div>
-          <div class="music-release-links">
-            <a href="https://open.spotify.com/track/4JmFwCmHASS4WkujMTPHWs?si=2b7d8581f32b4968" target="_blank" rel="noopener">Spotify</a>
-          </div>
-        </article>
-
-        <article class="music-release-item music-interactive" role="listitem">
-          <div class="music-release-meta">
-            <span class="music-release-year">2024</span>
-            <h3>Shall We Let It Go?</h3>
-            <span class="music-release-type">Single</span>
-          </div>
-          <div class="music-release-links">
-            <a href="https://open.spotify.com/track/2lDpGWYFNF25neKAI6aGUM?si=35c899a26f764ce7" target="_blank" rel="noopener">Spotify</a>
-          </div>
-        </article>
-
-        <article class="music-release-item music-interactive" role="listitem">
-          <div class="music-release-meta">
-            <span class="music-release-year">2024</span>
-            <h3>Interlude (Yours Academically)</h3>
-            <span class="music-release-type">Track</span>
-          </div>
-          <div class="music-release-links">
-            <a href="https://open.spotify.com/track/62wTmLROE6bydxVSDB07In?si=c436e062d25a471c" target="_blank" rel="noopener">Spotify</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="music-world-section" id="live">
-      <div class="music-world-section-head">
-        <p class="music-world-kicker">Performance</p>
-        <h2>Live</h2>
-      </div>
-
-      <a
-        class="music-live-panel music-interactive"
-        href="https://www.youtube.com/watch?v=MeugaprjwGk"
-        target="_blank"
-        rel="noopener"
-      >
-        <div class="music-live-panel-copy">
-          <p class="music-world-kicker">Watch live</p>
-          <h3>Llewellyn Hall, ANU</h3>
-          <span>A live performance example showing stage presence, artist identity, and performance energy →</span>
-        </div>
-      </a>
-    </section>
-
-    <footer class="music-world-footer">
-      <div class="music-world-footer-links">
-        <a href="mailto:bookings@drweli.com?subject=Music%20Booking%20Enquiry">Bookings</a>
-        <a href="https://www.instagram.com/welimusic/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/welimusician" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.tiktok.com/@welimusician" target="_blank" rel="noopener">TikTok</a>
-      </div>
-    </footer>
-  </main>
-
-  <script src="/script.js"></script>
+<script src="/assets/js/music-app.js"></script>
 </body>
 </html>
