@@ -20,17 +20,22 @@
   <style>
     .academic-hero{position:relative;overflow:hidden;isolation:isolate}
     .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px}
-    .academic-top-title{margin:0 0 14px;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--muted)}
     .academic-signal{position:absolute;top:34px;right:18px;bottom:34px;width:44px;overflow:hidden;pointer-events:none;z-index:1;opacity:.82}
     .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:18px;animation:academicSignalMove 26s linear infinite}
     .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(23,23,23,.62);white-space:nowrap}
     .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(234,228,220,1) 0%, rgba(234,228,220,0) 10%, rgba(234,228,220,0) 90%, rgba(234,228,220,1) 100%);pointer-events:none;z-index:2}
     @keyframes academicSignalMove{from{transform:translateY(-4%)}to{transform:translateY(-52%)}}
-    .academic-cap-grid .card h3{letter-spacing:-.03em}.academic-cap-grid .card p{max-width:34ch}.academic-cap-grid .pathway-kicker{margin-bottom:10px}
+    .academic-cap-grid .card h3{letter-spacing:-.03em}
+    .academic-cap-grid .card p{max-width:34ch}
+    .academic-cap-grid .pathway-kicker{margin-bottom:10px}
     .site-nav .nav-links{display:flex;gap:16px;align-items:center}
+    .research-focus-copy{max-width:760px}
+    .appointments-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .appointments-grid .card p{line-height:1.6}
+    .appointments-grid .card ul{margin:12px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
     @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
     @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
-    @media (max-width:640px){.academic-top-title{font-size:.7rem;letter-spacing:.14em;margin-bottom:12px}.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}}
+    @media (max-width:640px){.academic-signal{display:none}.academic-hero .hero-inner{padding-right:0}}
   </style>
 </head>
 <body>
@@ -112,6 +117,30 @@
     </section>
 
     <section class="section alt">
+      <div class="container narrow research-focus-copy">
+        <div class="split-callout">
+          <div>
+            <p class="pathway-kicker">Research focus</p>
+            <h2 class="split-title">Science, culture, and multi-species understanding in practice</h2>
+            <p class="muted">
+              My research sits at the intersection of science and popular culture, with a focus on how music, audio-visual media, and storytelling shape public engagement with science and nature.
+            </p>
+          </div>
+          <div>
+            <p class="muted">
+              Grounded in ecology, animal behaviour, and evolutionary theory, my work explores social and behavioural systems across species, and the parallels between human and non-human societies as a basis for communication, education, and cultural production.
+            </p>
+          </div>
+        </div>
+        <div style="margin-top:28px;">
+          <p class="muted" style="max-width:720px;">
+            This research directly informs my creative practice through WildWooHoo, where I develop music, film, and educational projects that translate scientific knowledge into culturally resonant formats. The aim is to expand how science is experienced beyond academic contexts, reaching broader audiences through emotionally engaging and socially impactful work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
       <div class="container narrow">
         <div class="split-callout academic-callout">
           <div>
@@ -157,29 +186,59 @@
           <p class="muted">Recent academic, research, and applied roles</p>
         </div>
 
-        <div class="cards three">
+        <div class="appointments-grid">
+          <article class="card">
+            <p class="pathway-kicker">2025–Current</p>
+            <h3>Visiting Fellow (Honorary)</h3>
+            <p><strong>Centre for the Public Awareness of Science (Popsicule), ANU College of Systems & Society</strong><br />Group: Dr Anna-Sophie Jürgens</p>
+            <ul>
+              <li>Designed and delivered a lecture for Science, Humour and Popular Culture using Kangaroo Time as a case study.</li>
+              <li>Panel participant for Science. Art. Film: Tank Girl showcase at the NFSA in Canberra.</li>
+              <li>Designed and delivered Transforming Science into Compelling Art through ACT National Science Week 2025 and Athens Science Festival.</li>
+              <li>Developing two publication strands: film/camp portrayals of science, and music as a knowledge practice in science communication.</li>
+            </ul>
+          </article>
+
           <article class="card">
             <p class="pathway-kicker">2025–2026</p>
             <h3>Research Data Scientist</h3>
-            <p>University of New South Wales (UNSW), Educational Data & Insights. Qualitative and quantitative analysis, reporting, and stakeholder-facing research support.</p>
+            <p><strong>UNSW, Educational Data & Insights</strong><br />Level 6, Step 2 · Fixed-term, part-time · 21h/week · Supervisor: Anaëlle Medioni</p>
+            <ul>
+              <li>Analysis of student experience and educational outcomes data, including QILT and response-rate focused work.</li>
+              <li>Prepared reports and advanced statistical analyses to support evidence-based decision-making across UNSW.</li>
+              <li>Worked with internal stakeholders to improve representation and interpretation of student feedback across groups.</li>
+            </ul>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">2022–2024</p>
             <h3>Research Officer</h3>
-            <p>The Australian National University. Literature reviews, ethics documentation, technical reports, reproducible workflows, and multi-partner research coordination.</p>
+            <p><strong>ANU Research School of Biology</strong><br />Officer Grade 5/6 · Full-time fixed term · Supervisor: Prof. Justin Borevitz</p>
+            <ul>
+              <li>Worked across ARC-funded projects on new plant cells linked to root transport, and farm resilience and sustainable prosperity.</li>
+              <li>Soil carbon research spanning design, fieldwork, lab work, remote sensing integration, and advanced modelling.</li>
+              <li>Built eQTL/GWAS pipelines, reproducible data systems, and advanced statistics workflows including Bayesian models and GLMMs.</li>
+              <li>Supported reporting, coordination, student advising, outreach, and operational research workflows.</li>
+            </ul>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">2017–2021</p>
             <h3>PhD Student</h3>
-            <p>The Australian National University. PhD research in Ecology & Evolution focused on personality, social environment, and maternal-level effects in a wild kangaroo population.</p>
+            <p><strong>The Australian National University</strong><br />Supervisors: Prof. Loeske Kruuk & Prof. Marco Festa-Bianchet</p>
+            <ul>
+              <li>PhD research in Ecology & Evolution focused on personality, social environment, and maternal-level effects in a wild kangaroo population.</li>
+              <li>Field-based long-term behavioural research integrating ecology, quantitative analysis, and social systems.</li>
+            </ul>
           </article>
 
           <article class="card">
             <p class="pathway-kicker">2012–2017</p>
-            <h3>Administration Assistant</h3>
-            <p>Federal Institute of Espírito Santo, Brazil. Research and teaching support across science and education contexts.</p>
+            <h3>Administration Assistant (Science & Education)</h3>
+            <p><strong>Federal Institute of Espírito Santo (IFES), Brazil</strong><br />Permanent, full-time</p>
+            <ul>
+              <li>Supported science and education delivery, research activities, and academic administration.</li>
+            </ul>
           </article>
         </div>
       </div>
