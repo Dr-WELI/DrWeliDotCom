@@ -9,7 +9,7 @@ if (toggle && nav) {
   });
 }
 
-// Smooth scroll for same-page links
+// Smooth scroll
 const links = document.querySelectorAll('a[href^="#"]');
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
@@ -26,58 +26,54 @@ links.forEach((link) => {
   });
 });
 
-// Year in footer
+// YEAR
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
+// =============================
+// MUSIC STREAM SWITCHER
+// =============================
 
-// Homepage hero reel
-const editorialReel = document.getElementById("editorialReel");
+const streamFrame = document.getElementById("musicStreamFrame");
+const streamButtons = document.querySelectorAll(".music-stream-switch");
+const playerTitle = document.getElementById("musicPlayerTitle");
+const playerKicker = document.getElementById("musicPlayerKicker");
+const playerDesc = document.getElementById("musicPlayerDescription");
+const playerArt = document.getElementById("musicPlayerArt");
+const playerSource = document.getElementById("musicPlayerSource");
+const playerOpen = document.getElementById("musicPlayerOpen");
+const mobileDockTitle = document.getElementById("musicMobileDockTitle");
 
-if (editorialReel) {
-  const slides = Array.from(editorialReel.querySelectorAll(".editorial-slide"));
-  let currentIndex = 0;
-  let reelTimer = null;
+if (streamFrame && streamButtons.length) {
+  streamButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const embed = btn.dataset.streamEmbed;
+      const source = btn.dataset.streamSource;
+      const title = btn.dataset.streamTitle;
+      const kicker = btn.dataset.streamKicker;
+      const desc = btn.dataset.streamDescription;
+      const art = btn.dataset.streamArt;
+      const link = btn.dataset.streamLink;
 
-  const holdDuration = 1400;
-  const glitchDuration = 180;
+      if (embed) streamFrame.src = embed;
+      if (title && playerTitle) playerTitle.textContent = title;
+      if (kicker && playerKicker) playerKicker.textContent = kicker;
+      if (desc && playerDesc) playerDesc.textContent = desc;
+      if (art && playerArt) playerArt.src = art;
+      if (source && playerSource) playerSource.textContent = source;
+      if (link && playerOpen) playerOpen.href = link;
+      if (title && mobileDockTitle) mobileDockTitle.textContent = title;
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("is-active", i === index);
+      streamButtons.forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
     });
-    currentIndex = index;
-  }
-
-  function moveToNextSlide() {
-    if (slides.length < 2) return;
-    editorialReel.classList.add("is-glitching");
-    window.setTimeout(() => {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      showSlide(nextIndex);
-    }, 180);
-    window.setTimeout(() => {
-      editorialReel.classList.remove("is-glitching");
-    }, 520);
-  }
-
-  function startAutoplay() {
-    stopAutoplay();
-    reelTimer = window.setInterval(moveToNextSlide, holdDuration);
-  }
-
-  function stopAutoplay() {
-    if (reelTimer) {
-      window.clearInterval(reelTimer);
-      reelTimer = null;
-    }
-  }
-
-  showSlide(0);
-  startAutoplay();
+  });
 }
 
-// WELI music world interactions
+// =============================
+// EXISTING INTERACTIONS
+// =============================
+
 const musicWorld = document.getElementById("musicWorld");
 const musicCursorGlow = document.getElementById("musicCursorGlow");
 
@@ -91,31 +87,23 @@ if (musicWorld && musicCursorGlow) {
   let glowX = mouseX;
   let glowY = mouseY;
 
-  function handlePointerMove(e) {
+  document.addEventListener("pointermove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
     musicCursorGlow.style.opacity = "1";
-  }
+  });
 
-  function handlePointerLeave() {
+  document.addEventListener("pointerleave", () => {
     musicCursorGlow.style.opacity = "0";
-  }
-
-  document.addEventListener("pointermove", handlePointerMove);
-  document.addEventListener("pointerleave", handlePointerLeave);
+  });
 
   interactiveItems.forEach((item) => {
     item.addEventListener("pointermove", (e) => {
       const rect = item.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-
       item.style.setProperty("--mx", `${x}px`);
       item.style.setProperty("--my", `${y}px`);
-      item.classList.add("is-hovered");
-    });
-
-    item.addEventListener("pointerenter", () => {
       item.classList.add("is-hovered");
     });
 
@@ -141,108 +129,5 @@ if (musicWorld && musicCursorGlow) {
     requestAnimationFrame(animateGlow);
   }
 
-  if (!prefersReducedMotion) {
-    const particlesWrap = document.createElement("div");
-    particlesWrap.className = "music-particles";
-    document.body.appendChild(particlesWrap);
-
-    function spawnParticle() {
-      const p = document.createElement("span");
-      p.className = "music-particle";
-      p.style.left = `${Math.random() * 100}%`;
-      p.style.bottom = `${-10 + Math.random() * 20}px`;
-      p.style.animationDuration = `${4 + Math.random() * 6}s`;
-      p.style.animationDelay = `${Math.random() * 1.5}s`;
-      p.style.opacity = `${0.15 + Math.random() * 0.35}`;
-      p.style.transform = `scale(${0.6 + Math.random() * 1.8})`;
-      particlesWrap.appendChild(p);
-
-      window.setTimeout(() => {
-        p.remove();
-      }, 11000);
-    }
-
-    for (let i = 0; i < 18; i++) {
-      window.setTimeout(spawnParticle, i * 260);
-    }
-
-    window.setInterval(spawnParticle, 420);
-  }
-
   requestAnimationFrame(animateGlow);
-}
-
-// Homepage refinement interactions
-const homeHero = document.querySelector(".home-hero-single");
-const homeParticles = document.getElementById("homeParticles");
-const homeOrbs = document.querySelectorAll(".home-orb");
-const revealItems = document.querySelectorAll(".reveal-up, .reveal-card");
-const reducedMotionHome = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-if (revealItems.length) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.16,
-      rootMargin: "0px 0px -40px 0px"
-    }
-  );
-
-  revealItems.forEach((item) => revealObserver.observe(item));
-}
-
-if (homeHero && !reducedMotionHome) {
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-
-  window.addEventListener("pointermove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateHomeAtmosphere() {
-    if (homeOrbs.length) {
-      homeOrbs.forEach((orb, index) => {
-        const factor = (index + 1) * 0.006;
-        const offsetX = (mouseX - window.innerWidth / 2) * factor;
-        const offsetY = (mouseY - window.innerHeight / 2) * factor;
-        orb.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
-      });
-    }
-
-    requestAnimationFrame(animateHomeAtmosphere);
-  }
-
-  requestAnimationFrame(animateHomeAtmosphere);
-}
-
-if (homeParticles && !reducedMotionHome) {
-  function spawnHomeParticle() {
-    const p = document.createElement("span");
-    p.className = "home-particle";
-    p.style.left = `${Math.random() * 100}%`;
-    p.style.bottom = `${-10 + Math.random() * 24}px`;
-    p.style.animationDuration = `${5 + Math.random() * 7}s`;
-    p.style.opacity = `${0.08 + Math.random() * 0.22}`;
-    p.style.transform = `scale(${0.8 + Math.random() * 1.8})`;
-
-    homeParticles.appendChild(p);
-
-    window.setTimeout(() => {
-      p.remove();
-    }, 13000);
-  }
-
-  for (let i = 0; i < 16; i++) {
-    window.setTimeout(spawnHomeParticle, i * 280);
-  }
-
-  window.setInterval(spawnHomeParticle, 650);
 }
