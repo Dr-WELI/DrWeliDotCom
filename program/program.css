@@ -51,7 +51,24 @@ body.program-page {
   cursor: pointer;
   backdrop-filter: blur(10px);
 }
+/* Split CTA into two rows */
+.program-hero-actions-top {
+  flex-direction: column;
+  align-items: flex-end;
+}
 
+/* Primary (Book) sits alone */
+.program-actions-primary {
+  display: block;
+}
+
+/* Secondary buttons row */
+.program-actions-secondary {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 .program-secondary-menu {
   position: absolute;
   top: 80px;
@@ -226,6 +243,13 @@ body.program-page {
 .video-caption {
   font-size: 0.9rem;
   color: rgba(255,255,255,.75);
+}
+
+.program-home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
 }
 
 @media (max-width: 900px) {
