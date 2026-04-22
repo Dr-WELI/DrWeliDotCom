@@ -6,7 +6,7 @@ body.program-page {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(1.15) brightness(.95) contrast(1.05);
+  filter: grayscale(.25) saturate(1.15) brightness(.95) contrast(1.05);
 }
 
 .program-hero-overlay {
