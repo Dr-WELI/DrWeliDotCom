@@ -126,3 +126,55 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   opacity:0.6;
   margin-top:6px;
 }
+
+
+/* MAP */
+.media-map{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.map-wrap{
+  position:relative;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.world-map{
+  width:100%;
+  opacity:0.15;
+}
+
+.world-map path{
+  fill:#b79a72;
+}
+
+/* glowing points */
+.map-point{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:#b79a72;
+  border-radius:50%;
+  box-shadow:0 0 12px #b79a72;
+  animation:pulse 2s infinite;
+}
+
+/* positions (tuned visually) */
+.map-point.usa{ top:45%; left:28%; }
+.map-point.uk{ top:32%; left:48%; }
+.map-point.eu{ top:38%; left:55%; }
+.map-point.aus{ top:75%; left:82%; }
+.map-point.br{ top:68%; left:40%; }
+
+@keyframes pulse{
+  0%{ transform:scale(1); opacity:1 }
+  50%{ transform:scale(1.6); opacity:0.6 }
+  100%{ transform:scale(1); opacity:1 }
+}
+
+.map-note{
+  font-size:0.9rem;
+  opacity:0.6;
+  margin-top:20px;
+}
