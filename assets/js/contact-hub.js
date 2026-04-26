@@ -14,18 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = el.textContent.replaceAll('—', '-').replace(/\.$/, '');
   });
 
-  // add linkedin if missing
-  const grid = document.querySelector('.contact-social-grid');
-  if (grid && !grid.querySelector('[href*="linkedin"]')) {
-    const link = document.createElement('a');
-    link.href = 'https://www.linkedin.com/in/dr-weli-weliton-menário-costa-21aa8b224/';
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.className = 'contact-social-link';
-    link.innerHTML = '<span class="contact-social-icon"></span>';
-    grid.appendChild(link);
-  }
-
   const style = document.createElement('style');
   style.textContent = `
     .contact-social-link{justify-content:center;width:36px;height:36px;padding:0}
@@ -39,35 +27,34 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
-  // ensure engagement form has name + email
-  const engagementGrid = document.querySelector('#engagementFields .contact-grid');
-  if (engagementGrid && !engagementGrid.querySelector('input[type="email"]')) {
-    const nameField = document.createElement('div');
-    nameField.className = 'contact-field';
-    nameField.innerHTML = '<label>Name</label><input type="text" required>';
-
-    const emailField = document.createElement('div');
-    emailField.className = 'contact-field';
-    emailField.innerHTML = '<label>Email</label><input type="email" required>';
-
-    engagementGrid.prepend(emailField);
-    engagementGrid.prepend(nameField);
-  }
-
   const intentRadios = document.querySelectorAll('input[name="intent"]');
   const musicBlock = document.getElementById('musicFields');
   const engagementBlock = document.getElementById('engagementFields');
 
-  function setIntent(value){
-    if (musicBlock) musicBlock.hidden = value !== 'music';
-    if (engagementBlock) engagementBlock.hidden = value !== 'engagement';
+  function toggleFields(activeBlock, inactiveBlock){
+    if (activeBlock){
+      activeBlock.hidden = false;
+      activeBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = false);
+    }
+    if (inactiveBlock){
+      inactiveBlock.hidden = true;
+      inactiveBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
+    }
   }
 
   intentRadios.forEach(r => {
     r.addEventListener('change', () => {
-      setIntent(r.value);
+      if (r.value === 'music'){
+        toggleFields(musicBlock, engagementBlock);
+      }
+      if (r.value === 'engagement'){
+        toggleFields(engagementBlock, musicBlock);
+      }
     });
   });
 
-  setIntent('');
+  // initial state
+  if (musicBlock) musicBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
+  if (engagementBlock) engagementBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
+
 });
