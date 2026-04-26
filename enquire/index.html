@@ -64,12 +64,23 @@
   <input type="hidden" name="form_type" value="music">
   <div class="contact-grid">
     <div class="contact-field">
-      <label>Name</label>
-      <input type="text" name="name" required>
+      <label>Full name</label>
+      <input type="text" name="full_name" required>
     </div>
     <div class="contact-field">
       <label>Email</label>
       <input type="email" name="email" required>
+    </div>
+    <div class="contact-field">
+      <label>Phone</label>
+      <div style="display:flex;gap:6px">
+        <input type="text" name="phone_code" placeholder="+61" style="width:70px">
+        <input type="tel" name="phone" placeholder="Number">
+      </div>
+    </div>
+    <div class="contact-field">
+      <label>Location</label>
+      <input type="text" name="location" placeholder="City, Country">
     </div>
     <div class="contact-field full">
       <label>Type</label>
@@ -81,7 +92,7 @@
     </div>
     <div class="contact-field full">
       <label>Details</label>
-      <textarea name="details"></textarea>
+      <textarea name="details" placeholder="Private or public event, date, city, venue, audience size (pax), set length, technical requirements, budget range"></textarea>
     </div>
   </div>
 </div>
@@ -90,12 +101,27 @@
   <input type="hidden" name="form_type" value="engagement">
   <div class="contact-grid">
     <div class="contact-field">
-      <label>Name</label>
-      <input type="text" name="name" required>
+      <label>Full name</label>
+      <input type="text" name="full_name" required>
     </div>
     <div class="contact-field">
       <label>Email</label>
       <input type="email" name="email" required>
+    </div>
+    <div class="contact-field">
+      <label>Phone</label>
+      <div style="display:flex;gap:6px">
+        <input type="text" name="phone_code" placeholder="+61" style="width:70px">
+        <input type="tel" name="phone" placeholder="Number">
+      </div>
+    </div>
+    <div class="contact-field">
+      <label>Location</label>
+      <input type="text" name="location" placeholder="City, Country">
+    </div>
+    <div class="contact-field">
+      <label>Organisation</label>
+      <input type="text" name="organisation" placeholder="Optional">
     </div>
     <div class="contact-field">
       <label>Audience</label>
@@ -128,7 +154,7 @@
     </div>
     <div class="contact-field full">
       <label>Details</label>
-      <textarea name="details"></textarea>
+      <textarea name="details" placeholder="Context, dates, location, constraints, desired outcomes"></textarea>
     </div>
   </div>
 </div>
