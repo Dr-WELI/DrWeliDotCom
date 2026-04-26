@@ -87,14 +87,20 @@ English-language coverage tracked - additional global media beyond monitoring sc
   <div class="map-wrap">
 
     <!-- World map SVG -->
-    <svg viewBox="0 0 1000 500" class="world-map" aria-hidden="true">
-      <rect width="100%" height="100%" fill="transparent"/>
+   <svg viewBox="0 0 1000 500" class="world-map" aria-hidden="true">
 
-      <!-- simplified continents (minimal aesthetic) -->
-      <path d="M100,250 C150,200 250,200 300,250 C350,300 250,350 200,300 Z" />
-      <path d="M400,200 C500,150 650,200 700,260 C750,320 600,350 500,300 Z" />
-      <path d="M750,250 C820,230 900,260 920,300 C880,350 800,340 760,300 Z" />
-    </svg>
+  <!-- simplified but recognisable continents -->
+  <path d="M110,240 C180,180 260,180 320,230 C360,270 320,320 260,300 C200,280 150,260 110,240 Z" /> <!-- North America -->
+
+  <path d="M280,320 C320,330 340,370 310,420 C290,450 250,440 240,400 C230,360 250,330 280,320 Z" /> <!-- South America -->
+
+  <path d="M450,200 C520,170 650,180 720,230 C780,280 700,320 600,310 C520,300 480,260 450,200 Z" /> <!-- Europe + Asia -->
+
+  <path d="M520,300 C560,320 580,370 550,420 C520,450 470,420 460,370 C450,330 480,300 520,300 Z" /> <!-- Africa -->
+
+  <path d="M780,360 C820,350 900,380 920,420 C880,450 820,440 790,410 Z" /> <!-- Australia -->
+
+</svg>
 
     <!-- glowing points -->
     <span class="map-point usa" title="USA — NPR, MSNBC"></span>
