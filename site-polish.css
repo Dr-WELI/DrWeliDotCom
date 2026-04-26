@@ -1,29 +1,140 @@
 /* SAFE POLISH OVERRIDES */
 
-/* Remove white header bar */
-.hero-site-header,
-.program-page .site-header {
-  background: transparent !important;
-  border-bottom: 0 !important;
-  box-shadow: none !important;
+/* --------------------------------------------------
+   Header / hero overlay fixes
+   -------------------------------------------------- */
+
+html,
+body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
-/* Remove zoom effect */
+body > .hero-site-header,
+.hero-site-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Make the homepage image/showreel start at the real top of the viewport. */
+.home-hero.home-hero-single,
+body > main,
+body > main#top {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.home-hero.home-hero-single {
+  min-height: 100svh !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+.hero-showreel,
+.hero-showreel .editorial-slide,
+.editorial-slide {
+  position: absolute !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
+.editorial-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+/* Remove the white/page-wide bar on program pages without changing the hero itself. */
+.program-page .site-header,
+.program-page .program-header {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* --------------------------------------------------
+   Homepage CTA rail polish
+   -------------------------------------------------- */
+
+.hero-cta-rail-expanded {
+  max-width: min(920px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta-rail-expanded .hero-metal-btn {
+  min-width: 138px;
+}
+
+.hero-cta-rail-expanded .hero-metal-btn[href="/media"] {
+  min-width: 188px;
+}
+
+/* --------------------------------------------------
+   Remove zoom; keep image stable
+   -------------------------------------------------- */
+
 .editorial-slide img {
   animation: none !important;
   transform: none !important;
 }
 
-/* Glitch transition */
+/* --------------------------------------------------
+   Glitch transition
+   -------------------------------------------------- */
+
 .editorial-slide.is-transitioning img {
-  animation: glitchFlash 0.6s ease;
+  animation: glitchFlash 0.6s ease !important;
+}
+
+.hero-showreel.is-glitching .editorial-slide.is-active img,
+.editorial-slide.is-transitioning img {
+  filter: contrast(1.12) saturate(1.05) brightness(.96);
 }
 
 @keyframes glitchFlash {
-  0% { transform: translateX(0); filter: contrast(1); }
-  20% { transform: translateX(-6px); filter: contrast(1.4); }
-  40% { transform: translateX(6px); }
-  60% { transform: translateX(-3px); }
-  80% { transform: translateX(3px); }
-  100% { transform: translateX(0); filter: contrast(1); }
+  0% { transform: translate3d(0,0,0); filter: contrast(1); clip-path: inset(0 0 0 0); }
+  14% { transform: translate3d(-8px,0,0); filter: contrast(1.35) saturate(1.15); clip-path: inset(8% 0 68% 0); }
+  28% { transform: translate3d(8px,0,0); clip-path: inset(48% 0 30% 0); }
+  42% { transform: translate3d(-4px,0,0); clip-path: inset(22% 0 52% 0); }
+  58% { transform: translate3d(5px,0,0); clip-path: inset(70% 0 10% 0); }
+  76% { transform: translate3d(-2px,0,0); filter: contrast(1.2); clip-path: inset(0 0 0 0); }
+  100% { transform: translate3d(0,0,0); filter: contrast(1); clip-path: inset(0 0 0 0); }
+}
+
+@media (max-width: 640px) {
+  .home-hero.home-hero-single {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 76px) !important;
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 24px) !important;
+    align-items: flex-end !important;
+  }
+
+  .hero-cta-rail-expanded {
+    max-width: 420px;
+  }
 }
