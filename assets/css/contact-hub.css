@@ -10,6 +10,13 @@ body.contact-page{min-height:100vh;background:linear-gradient(180deg,#efe9e2 0%,
 .contact-signal-strip span{display:inline-flex;min-height:34px;align-items:center;padding:0 12px;border-radius:999px;border:1px solid rgba(23,23,23,.09);background:rgba(255,255,255,.42);color:rgba(23,23,23,.72);font-size:.8rem;font-weight:700;}
 .contact-direct{margin-top:30px;padding-top:20px;border-top:1px solid rgba(23,23,23,.08);}
 .contact-direct a{color:var(--text);text-decoration:none;font-weight:800;}
+.contact-socials{margin-top:22px;display:grid;gap:12px;}
+.contact-socials-title{margin:0;color:var(--muted);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;}
+.contact-socials-copy{margin:0;color:rgba(23,23,23,.68);font-size:.94rem;line-height:1.55;max-width:48ch;}
+.contact-social-grid{display:flex;flex-wrap:wrap;gap:10px;}
+.contact-social-link{display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:0 12px;border-radius:999px;border:1px solid rgba(23,23,23,.10);background:rgba(255,255,255,.46);color:var(--text);text-decoration:none;font-weight:800;font-size:.88rem;transition:transform .18s ease,background .18s ease,border-color .18s ease;}
+.contact-social-link:hover{transform:translateY(-2px);background:rgba(255,255,255,.78);border-color:rgba(183,154,114,.48);}
+.contact-social-icon{width:22px;height:22px;display:inline-grid;place-items:center;border-radius:50%;background:#111;color:#fff;font-size:.72rem;line-height:1;font-weight:900;letter-spacing:-.03em;}
 .contact-form-panel{padding:clamp(18px,3vw,28px);}
 .contact-form{display:grid;gap:18px;}
 .contact-step{display:grid;gap:12px;}
