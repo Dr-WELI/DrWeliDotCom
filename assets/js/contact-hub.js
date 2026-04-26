@@ -27,34 +27,41 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
   document.head.appendChild(style);
 
+  const form = document.querySelector('.contact-form');
+  let intentHidden = form.querySelector('input[name="intent_hidden"]');
+  if (!intentHidden) {
+    intentHidden = document.createElement('input');
+    intentHidden.type = 'hidden';
+    intentHidden.name = 'intent_hidden';
+    form.appendChild(intentHidden);
+  }
+
   const intentRadios = document.querySelectorAll('input[name="intent"]');
   const musicBlock = document.getElementById('musicFields');
   const engagementBlock = document.getElementById('engagementFields');
 
-  function toggleFields(activeBlock, inactiveBlock){
-    if (activeBlock){
-      activeBlock.hidden = false;
-      activeBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = false);
-    }
-    if (inactiveBlock){
-      inactiveBlock.hidden = true;
-      inactiveBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
-    }
+  function toggleBlock(block, active) {
+    if (!block) return;
+    block.hidden = !active;
+    block.querySelectorAll('input, select, textarea').forEach(el => {
+      el.disabled = !active;
+    });
+  }
+
+  function setIntent(value) {
+    toggleBlock(musicBlock, value === 'music');
+    toggleBlock(engagementBlock, value === 'engagement');
+    intentHidden.value = value || '';
   }
 
   intentRadios.forEach(r => {
     r.addEventListener('change', () => {
-      if (r.value === 'music'){
-        toggleFields(musicBlock, engagementBlock);
-      }
-      if (r.value === 'engagement'){
-        toggleFields(engagementBlock, musicBlock);
-      }
+      document.querySelectorAll('.contact-choice').forEach(c => c.classList.remove('is-selected'));
+      r.closest('.contact-choice')?.classList.add('is-selected');
+      setIntent(r.value);
     });
   });
 
   // initial state
-  if (musicBlock) musicBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
-  if (engagementBlock) engagementBlock.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
-
+  setIntent('');
 });
