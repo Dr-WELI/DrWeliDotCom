@@ -1,0 +1,28 @@
+body.media-page{font-family:Instrument Sans,system-ui;background:#faf8f5;color:#171717}
+.media-hero{position:relative;padding:140px 24px 100px;text-align:center;overflow:hidden}
+.media-hero-inner{max-width:760px;margin:0 auto}
+.media-kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;color:#777}
+.media-lead{margin-top:16px;color:#555;line-height:1.6}
+.media-hero-actions{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.media-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4}
+.media-orb-one{width:300px;height:300px;background:#b79a72;top:-80px;left:-80px}
+.media-orb-two{width:260px;height:260px;background:#4a5f8a;bottom:-60px;right:-60px}
+.media-signal{position:absolute;right:18px;top:20px;display:flex;flex-direction:column;font-size:.6rem;letter-spacing:.2em;color:#999}
+.media-stats-band{display:flex;gap:30px;justify-content:center;padding:40px 20px;font-weight:600}
+.media-video-section{padding:80px 20px}
+.media-section-head{max-width:720px;margin:0 auto 40px;text-align:center}
+.media-reel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1100px;margin:0 auto}
+.media-reel-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06);transition:transform .4s ease}
+.media-reel-card:hover{transform:translateY(-6px)}
+.media-reel-frame iframe{width:100%;aspect-ratio:9/16;border:0}
+.media-reel-placeholder{aspect-ratio:9/16;background:linear-gradient(180deg,#ddd,#bbb);display:flex;align-items:center;justify-content:center;font-weight:600}
+.media-reel-copy{padding:16px}
+.media-platform-cloud{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+.media-platform-cloud span{padding:6px 12px;border-radius:999px;background:#eee;font-size:.8rem}
+.media-press-list{padding:80px 20px}
+.press-table{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.press-table a{display:flex;justify-content:space-between;padding:14px;border-radius:10px;background:#fff;text-decoration:none;color:#171717}
+.press-table a:hover{background:#f0ede8}
+.reveal-media{opacity:0;transform:translateY(20px);transition:.6s ease}
+.reveal-media.visible{opacity:1;transform:none}
+@media(max-width:768px){.media-stats-band{flex-direction:column;align-items:center}}
