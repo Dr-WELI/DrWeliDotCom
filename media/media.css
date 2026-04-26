@@ -142,11 +142,11 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 
 .world-map{
   width:100%;
-  opacity:0.15;
+  opacity:0.08;
 }
 
 .world-map path{
-  fill:#b79a72;
+  fill:#1a1a1a;
 }
 
 /* glowing points */
@@ -161,11 +161,11 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 }
 
 /* positions (tuned visually) */
-.map-point.usa{ top:45%; left:28%; }
-.map-point.uk{ top:32%; left:48%; }
-.map-point.eu{ top:38%; left:55%; }
-.map-point.aus{ top:75%; left:82%; }
-.map-point.br{ top:68%; left:40%; }
+.map-point.usa{ top:42%; left:23%; }
+.map-point.uk{ top:28%; left:48%; }
+.map-point.eu{ top:32%; left:55%; }
+.map-point.aus{ top:78%; left:86%; }
+.map-point.br{ top:72%; left:34%; }
 
 @keyframes pulse{
   0%{ transform:scale(1); opacity:1 }
