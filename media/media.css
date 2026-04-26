@@ -120,3 +120,9 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   max-width:900px;
   margin:40px auto;
 }
+
+.media-note{
+  font-size:0.8rem;
+  opacity:0.6;
+  margin-top:6px;
+}
