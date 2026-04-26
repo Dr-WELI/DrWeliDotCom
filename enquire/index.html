@@ -1,211 +1,153 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — WELI</title>
-
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/assets/css/contact-hub.css">
-
 </head>
-
 <body class="contact-page">
-
 <header class="site-header">
   <a class="brand" href="/">WELI</a>
 </header>
-
 <main class="contact-shell">
-
 <section class="contact-hero">
-
-<!-- LEFT SIDE -->
 
 <div class="contact-panel contact-copy">
   <h1>Let’s create.</h1>
-
-  <p class="contact-intro">
-    Music, science, culture — tell me what you’re building and let’s shape something together.
-  </p>
-
+  <p class="contact-intro">Music, science, culture - tell me what you’re building and let’s shape something together</p>
   <div class="contact-signal-strip">
     <span>LIVE PERFORMANCE</span>
     <span>WORKSHOPS</span>
     <span>SCIENCE × ART</span>
     <span>CULTURAL PROJECTS</span>
   </div>
-
   <div class="contact-direct">
-    <p>Email directly:</p>
+    <p>Email directly</p>
     <a href="mailto:bookings@drweli.com">bookings@drweli.com</a>
   </div>
 </div>
 
 <div class="contact-socials">
-
   <p class="contact-socials-title">Stay connected</p>
-
-  <p class="contact-socials-copy">
-    Stay tuned for a world of rhythm and research — a unique blend of dance, music, and science.
-  </p>
-
+  <p class="contact-socials-copy">Stay tuned for rhythm and research, a unique blend of dance, music, and science</p>
   <div class="contact-social-grid">
-
-    <a href="https://www.youtube.com/@welimusician/?sub_confirmation=1" target="_blank" class="contact-social-link">
-      <span class="contact-social-icon">YT</span> YouTube
-    </a>
-
-    <a href="https://www.facebook.com/welimusician" target="_blank" class="contact-social-link">
-      <span class="contact-social-icon">FB</span> Facebook
-    </a>
-
-    <a href="https://www.instagram.com/welimusic/" target="_blank" class="contact-social-link">
-      <span class="contact-social-icon">IG</span> Instagram (WELI)
-    </a>
-
-    <a href="https://www.instagram.com/wildwoohoo/" target="_blank" class="contact-social-link">
-      <span class="contact-social-icon">IG</span> WildWooHoo
-    </a>
-
-    <a href="https://www.tiktok.com/@welimusician" target="_blank" class="contact-social-link">
-      <span class="contact-social-icon">TT</span> TikTok
-    </a>
-
-    <a href="https://twitter.com/welimusician" target="_blank" class="contact-social-link">
-      <span class="contact-social-icon">X</span> X / Twitter
-    </a>
-
+    <a href="https://www.youtube.com/@welimusician/?sub_confirmation=1" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
+    <a href="https://www.facebook.com/welimusician" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
+    <a href="https://www.instagram.com/welimusic/" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span>WELI</a>
+    <a href="https://www.instagram.com/wildwoohoo/" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
+    <a href="https://www.tiktok.com/@welimusician" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
+    <a href="https://twitter.com/welimusician" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
+    <a href="https://www.linkedin.com/in/dr-weli-weliton-menário-costa-21aa8b224/" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
   </div>
-
 </div>
 
-  
-<!-- RIGHT SIDE -->
-
 <div class="contact-panel contact-form-panel">
-
-<form class="contact-form">
-
-<!-- STEP 1 -->
+<form class="contact-form" action="https://formspree.io/f/mbdzlpgp" method="POST" accept-charset="UTF-8" autocomplete="on">
 
 <div class="contact-step">
   <p class="contact-step-title">What are you looking for?</p>
-
   <div class="contact-choice-grid">
-
-```
-<label class="contact-choice">
-  <input type="radio" name="intent" value="music">
-  <strong>Music</strong>
-  <span>Performances, collaborations, media</span>
-</label>
-
-<label class="contact-choice">
-  <input type="radio" name="intent" value="engagement">
-  <strong>Engagement</strong>
-  <span>Workshops, activations, programs</span>
-</label>
-```
-
+    <label class="contact-choice">
+      <input type="radio" name="intent" value="music">
+      <strong>Music</strong>
+      <span>Performances, collaborations, media</span>
+    </label>
+    <label class="contact-choice">
+      <input type="radio" name="intent" value="engagement">
+      <strong>Engagement</strong>
+      <span>Workshops, activations, programs</span>
+    </label>
   </div>
 </div>
-
-<!-- MUSIC -->
 
 <div id="musicFields" class="contact-dynamic" hidden>
+  <input type="hidden" name="form_type" value="music">
   <div class="contact-grid">
-
-```
-<div class="contact-field">
-  <label>Name</label>
-  <input type="text" required>
-</div>
-
-<div class="contact-field">
-  <label>Email</label>
-  <input type="email" required>
-</div>
-
-<div class="contact-field full">
-  <label>Type</label>
-  <select>
-    <option>Performance</option>
-    <option>Collaboration</option>
-    <option>Media / Press</option>
-  </select>
-</div>
-
-<div class="contact-field full">
-  <label>Details</label>
-  <textarea></textarea>
-</div>
-```
-
+    <div class="contact-field">
+      <label>Name</label>
+      <input type="text" name="name" required>
+    </div>
+    <div class="contact-field">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+    <div class="contact-field full">
+      <label>Type</label>
+      <select name="type">
+        <option>Performance</option>
+        <option>Collaboration</option>
+        <option>Media / Press</option>
+      </select>
+    </div>
+    <div class="contact-field full">
+      <label>Details</label>
+      <textarea name="details"></textarea>
+    </div>
   </div>
 </div>
-
-<!-- ENGAGEMENT -->
 
 <div id="engagementFields" class="contact-dynamic" hidden>
+  <input type="hidden" name="form_type" value="engagement">
   <div class="contact-grid">
-
-```
-<div class="contact-field">
-  <label>Audience</label>
-  <select>
-    <option>Corporate</option>
-    <option>University</option>
-    <option>School</option>
-  </select>
-</div>
-
-<div class="contact-field">
-  <label>Type</label>
-  <select>
-    <option>Activation</option>
-    <option>Workshop</option>
-    <option>Program</option>
-  </select>
-</div>
-
-<div class="contact-field full">
-  <label>Goals</label>
-  <div class="contact-goals">
-    <label><input type="checkbox"> Engagement</label>
-    <label><input type="checkbox"> Creativity</label>
-    <label><input type="checkbox"> Wellbeing</label>
-    <label><input type="checkbox"> Team building</label>
+    <div class="contact-field">
+      <label>Name</label>
+      <input type="text" name="name" required>
+    </div>
+    <div class="contact-field">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+    <div class="contact-field">
+      <label>Audience</label>
+      <select name="audience">
+        <option>Corporate</option>
+        <option>University</option>
+        <option>School</option>
+      </select>
+    </div>
+    <div class="contact-field">
+      <label>Type</label>
+      <select name="engagement_type">
+        <option>Activation</option>
+        <option>Workshop</option>
+        <option>Program</option>
+      </select>
+    </div>
+    <div class="contact-field">
+      <label>Audience size</label>
+      <input type="text" name="audience_size" placeholder="e.g. 50, 200, 1000+">
+    </div>
+    <div class="contact-field full">
+      <label>Goals</label>
+      <div class="contact-goals">
+        <label><input type="checkbox" name="goals[]" value="engagement"> Engagement</label>
+        <label><input type="checkbox" name="goals[]" value="creativity"> Creativity</label>
+        <label><input type="checkbox" name="goals[]" value="wellbeing"> Wellbeing</label>
+        <label><input type="checkbox" name="goals[]" value="team_building"> Team building</label>
+      </div>
+    </div>
+    <div class="contact-field full">
+      <label>Details</label>
+      <textarea name="details"></textarea>
+    </div>
   </div>
 </div>
-
-<div class="contact-field full">
-  <label>Details</label>
-  <textarea></textarea>
-</div>
-```
-
-  </div>
-</div>
-
-<!-- SUBMIT -->
 
 <div class="contact-submit-row">
   <button class="btn btn-primary" type="submit">Send enquiry</button>
-  <p class="contact-note">I’ll get back to you personally.</p>
+  <p class="contact-note">I’ll get back to you personally</p>
 </div>
 
 <p id="contactPreview" class="contact-preview"></p>
 
 </form>
-
 </div>
 
 </section>
 </main>
 
 <script src="/assets/js/contact-hub.js"></script>
-
 </body>
 </html>
