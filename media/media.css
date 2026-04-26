@@ -238,3 +238,7 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 .story-chip{
   font-size:0.7rem;
 }
+
+.media-story-card.hero-card{
+  transform:scale(1.01);
+}
