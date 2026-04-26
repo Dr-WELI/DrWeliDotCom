@@ -224,15 +224,15 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 }
 
 /* positions (refined + consistent) */
-.map-point.north-america{ top:38%; left:22%; }
+.map-point.north-america{ top:36.5%; left:23.5%; }
 
-.map-point.south-america{ top:66%; left:32%; }
+.map-point.south-america{ top:67.5%; left:33.5%; }
 
-.map-point.europe{ top:32%; left:50%; }
+.map-point.europe{ top:31.5%; left:50.5%; }
 
-.map-point.asia{ top:42%; left:78%; }
+.map-point.asia{ top:41%; left:78.5%; }
 
-.map-point.australia{ top:76%; left:85%; }
+.map-point.australia{ top:75.5%; left:85.5%; }
 
 /* animation */
 @keyframes mapPulse{
@@ -286,7 +286,7 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   width:100%;
   max-width:900px;
   margin:40px auto;
-  aspect-ratio: 2 / 1; /* CRITICAL */
+  aspect-ratio: 2 / 1;
 }
 
 .world-map-img{
@@ -294,8 +294,9 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   inset:0;
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain; /* IMPORTANT (not cover) */
   opacity:0.15;
+}
 }
 .map-point{
   position:absolute;
