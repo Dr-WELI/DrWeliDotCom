@@ -1,17 +1,30 @@
 const slides = document.querySelectorAll('.editorial-slide');
+const reel = document.getElementById('editorialReel');
 let current = 0;
 
-setInterval(() => {
-  slides[current].classList.remove('is-active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('is-active');
-}, 5000);
+if (slides.length > 1) {
+  const holdDuration = 5000;
+  const glitchDuration = 260;
+
+  setInterval(() => {
+    reel?.classList.add('is-glitching-transition');
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+
+    window.setTimeout(() => {
+      reel?.classList.remove('is-glitching-transition');
+    }, glitchDuration);
+  }, holdDuration);
+}
 
 /* MARQUEE SPEED REACT TO SCROLL */
 const track = document.getElementById('heroMarqueeTrack');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+  if (!track) return;
+
   const y = window.scrollY;
   const delta = y - lastScroll;
   lastScroll = y;
