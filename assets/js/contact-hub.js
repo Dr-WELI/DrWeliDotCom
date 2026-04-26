@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.innerHTML = document.body.innerHTML.replaceAll('```', '');
-
   document.querySelectorAll('.contact-intro, .contact-socials-copy').forEach(el => {
     el.textContent = el.textContent.replaceAll('—', ',').replace(/\.$/, '');
   });
@@ -34,11 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
     r.addEventListener('change', () => {
       document.querySelectorAll('.contact-choice').forEach(c => c.classList.remove('is-selected'));
       r.closest('.contact-choice')?.classList.add('is-selected');
-      if (musicBlock) musicBlock.hidden = false;
-      if (engagementBlock) engagementBlock.hidden = r.value === 'music';
+
+      if (r.value === 'music'){
+        if (musicBlock) musicBlock.hidden = false;
+        if (engagementBlock) engagementBlock.hidden = true;
+      }
+
+      if (r.value === 'engagement'){
+        if (musicBlock) musicBlock.hidden = true;
+        if (engagementBlock) engagementBlock.hidden = false;
+      }
+
       updatePreview();
     });
   });
+
+  if (musicBlock) musicBlock.hidden = true;
+  if (engagementBlock) engagementBlock.hidden = true;
 
   updatePreview();
 });
