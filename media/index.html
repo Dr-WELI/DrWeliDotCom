@@ -1,7 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>...</head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media | WELI</title>
+  <meta name="description" content="Global media coverage for WELI, Kangaroo Time, Dance Your PhD, and science-led creative work" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/media/media.css" />
+</head>
 <body class="media-page">
-<!-- trimmed for safe patch: only updating labels -->
+  <header class="site-header media-header">
+    <a class="brand" href="/" aria-label="WELI home">WELI</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/music">Music</a>
+      <a href="/academic">Academic</a>
+      <a href="/program">Engagement</a>
+      <a href="https://wildwoohoo.com" target="_blank" rel="noopener">WildWooHoo</a>
+      <a href="/media">Media</a>
+      <a href="/enquire/" class="btn btn-primary">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="media-dashboard-hero" aria-labelledby="media-title">
+      <div class="media-aurora" aria-hidden="true"></div>
+      <div class="media-glitter-field" aria-hidden="true"></div>
+      <div class="media-orbit-text" aria-hidden="true">
+        <span>GLOBAL PRESS</span><span>BROADCAST</span><span>SCIENCE</span><span>CULTURE</span><span>SIGNAL</span>
+      </div>
+
+      <div class="media-hero-layout">
+        <div class="media-hero-copy reveal-media">
+          <p class="media-kicker">Media intelligence / press atlas</p>
+          <h1 id="media-title">A PhD project that became a global media signal</h1>
+          <p class="media-lead">Kangaroo Time translated research on kangaroo behaviour into music, movement, humour, identity, and visual culture. The result travelled across TV, radio, podcasts, newsletters, social platforms, science media, and international press.</p>
+          <div class="media-hero-actions">
+            <a class="btn btn-primary btn-lg" href="#media-wall">Explore coverage</a>
+            <a class="btn btn-outline btn-lg" href="/enquire/">Book or enquire</a>
+          </div>
+        </div>
+
+        <aside class="media-command-panel reveal-media" aria-label="Media dashboard summary">
+          <div class="command-topline"><span>PRESS MAP</span><em>curated archive</em></div>
+          <div class="command-metric giant"><strong>250+</strong><span>reported media appearances</span></div>
+          <div class="command-grid">
+            <article><strong>145k+</strong><span>project views</span></article>
+            <article><strong>Global</strong><span>reach</span></article>
+            <article><strong>TV / Radio</strong><span>broadcast</span></article>
+            <article><strong>Science × Pop</strong><span>story angle</span></article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="media-lens reveal-media" aria-label="Coverage overview">
+      <article><span>01</span><strong>Readable science</strong><p>The research became clear through sound, bodies, humour, and a strong metaphor for behavioural diversity.</p></article>
+      <article><span>02</span><strong>Visual proof</strong><p>Media had a powerful object to show: scientist, dancers, kangaroos, identity, movement, and production design.</p></article>
+      <article><span>03</span><strong>Cultural traction</strong><p>The story crossed science, queer culture, Australian media, Brazilian media, radio, newsletters, and social feeds.</p></article>
+    </section>
+
+    <section class="media-wall-section" id="media-wall">
+      <div class="media-section-head reveal-media">
+        <p class="media-kicker">Playable coverage + outlet cards</p>
+        <h2>Embedded where platforms allow it, linked where they do not</h2>
+        <p>Instagram, Facebook, and X are not reliable native video hosts for custom websites, so they are presented as premium source cards. YouTube, Spotify, and Archive are embedded where possible.</p>
+      </div>
+
+      <div class="media-filter-row reveal-media" aria-label="Filter media cards">
+        <button class="media-filter is-active" data-filter="all">All</button>
+        <button class="media-filter" data-filter="broadcast">Broadcast</button>
+        <button class="media-filter" data-filter="radio">Radio / Podcast</button>
+        <button class="media-filter" data-filter="press">Press</button>
+        <button class="media-filter" data-filter="social">Social / Newsletter</button>
+      </div>
+
+      <div class="media-story-grid">
+        <article class="media-story-card reveal-media hero-card" data-type="broadcast" data-url="https://archive.org/details/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle/start/3600/end/3660">
+          <div class="story-visual archive-visual"><iframe src="https://archive.org/embed/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle?start=3600&end=3660" title="MSNBC The 11th Hour coverage" loading="lazy" allowfullscreen></iframe></div>
+          <div class="story-copy"><span class="story-chip">MSNBC</span><h3>The 11th Hour</h3><p>US broadcast coverage positioning Kangaroo Time as a science-culture story.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="broadcast" data-url="https://www.youtube.com/watch?v=Ze755mn2irQ">
+          <div class="story-visual archive-visual"><iframe src="https://www.youtube.com/embed/Ze755mn2irQ" title="Australian Geographic coverage" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="story-copy"><span class="story-chip">Australian Geographic</span><h3>Video feature</h3><p>Nature and science media coverage for a broad audience.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="radio" data-url="https://open.spotify.com/episode/4G5V5fEHktEU64AvlesEyo">
+          <div class="story-visual reel-visual gold"><img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=128" alt="Spotify"><span>Podcast</span></div>
+          <div class="story-copy"><span class="story-chip">The Eco Enthusiast</span><h3>EP 35 - The Super Communicator</h3><p>Podcast conversation on communication, research, and public engagement.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="radio" data-url="https://www.sbs.com.au/language/portuguese/pt/podcast-episode/brasileiro-na-australia-ganha-premio-mundial-dance-seu-phd-com-estudo-sobre-cangurus/lc06w9zrg">
+          <div class="story-visual reel-visual violet"><img src="https://www.google.com/s2/favicons?domain=sbs.com.au&sz=128" alt="SBS"><span>SBS</span></div>
+          <div class="story-copy"><span class="story-chip">SBS Portuguese</span><h3>Brazilian in Australia wins global award</h3><p>Portuguese-language coverage linking migration, research, and culture.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="radio" data-url="https://www.npr.org/2024/03/05/1235911164/kangaroo-time-wins-the-annual-dance-your-phd-contest-in-australia">
+          <div class="story-visual reel-visual"><img src="https://www.google.com/s2/favicons?domain=npr.org&sz=128" alt="NPR"><span>NPR</span></div>
+          <div class="story-copy"><span class="story-chip">NPR</span><h3>Morning Edition</h3><p>US public radio coverage introducing the story to a national audience.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="press" data-url="https://www.science.org/content/article/kangaroo-research-wins-dance-phd-contest">
+          <div class="story-visual reel-visual gold"><img src="https://www.google.com/s2/favicons?domain=science.org&sz=128" alt="Science"><span>Science</span></div>
+          <div class="story-copy"><span class="story-chip">Science Magazine</span><h3>Kangaroo research wins Dance Your PhD</h3><p>The origin story in the publication connected to the contest.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="press" data-url="https://www.theguardian.com/science/2024/feb/27/kangaroo-time-anu-scientist-global-science-prize-aaas-dance-your-phd-competition">
+          <div class="story-visual reel-visual violet"><img src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=128" alt="The Guardian"><span>Guardian</span></div>
+          <div class="story-copy"><span class="story-chip">The Guardian</span><h3>Global science feature</h3><p>A major international outlet helped position the work beyond academia.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="press" data-url="https://www.abc.net.au/news/2024-02-28/act-weli-anu-academic-dance-your-phd-kangaroo-time-socialisation/103519188">
+          <div class="story-visual reel-visual"><img src="https://www.google.com/s2/favicons?domain=abc.net.au&sz=128" alt="ABC"><span>ABC</span></div>
+          <div class="story-copy"><span class="story-chip">ABC News</span><h3>Australian national coverage</h3><p>Local-to-national framing of the project and its social meaning.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="press" data-url="https://www.smithsonianmag.com/smart-news/watch-this-years-dance-your-phd-contest-winner-a-musical-celebration-of-kangaroo-behavior-180983865/">
+          <div class="story-visual reel-visual gold"><img src="https://www.google.com/s2/favicons?domain=smithsonianmag.com&sz=128" alt="Smithsonian"><span>Smithsonian</span></div>
+          <div class="story-copy"><span class="story-chip">Smithsonian</span><h3>Musical celebration of kangaroo behaviour</h3><p>A global culture-and-science frame for the work.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="social" data-url="https://www.tomscott.com/newsletter/2024-03-04/">
+          <div class="story-visual carousel-visual"><img src="https://www.google.com/s2/favicons?domain=tomscott.com&sz=128" alt="Tom Scott"><span>Tom Scott</span></div>
+          <div class="story-copy"><span class="story-chip">Tom Scott</span><h3>Newsletter feature</h3><p>A rare endorsement from a major science-and-technology communicator.</p><button class="story-open">Open source</button></div>
+        </article>
+
+        <article class="media-story-card reveal-media" data-type="social" data-url="https://www.facebook.com/story.php/?story_fbid=941185167379328&id=100044635590185">
+          <div class="story-visual reel-visual violet"><img src="https://www.google.com/s2/favicons?domain=facebook.com&sz=128" alt="Facebook"><span>George Takei</span></div>
+          <div class="story-copy"><span class="story-chip">George Takei</span><h3>9.3M-follower amplification</h3><p>Celebrity social signal that pushed the work outside science media.</p><button class="story-open">Open source</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="media-data-story reveal-media">
+      <div class="data-panel headline-panel"><p class="media-kicker">Coverage anatomy</p><h2>The story moved because it had multiple entry points</h2><p>Animals, drag, migration, music, humour, academic credibility, queer identity, Australian nature, and Brazilian cultural energy all gave different outlets a way into the story.</p></div>
+      <div class="data-panel chart-panel" aria-label="Coverage format chart">
+        <div class="chart-row"><span>Science press</span><div><i style="--w:88%"></i></div><em>high</em></div>
+        <div class="chart-row"><span>Broadcast / radio</span><div><i style="--w:76%"></i></div><em>strong</em></div>
+        <div class="chart-row"><span>Social amplification</span><div><i style="--w:94%"></i></div><em>viral</em></div>
+        <div class="chart-row"><span>Brazilian / diaspora</span><div><i style="--w:72%"></i></div><em>strong</em></div>
+      </div>
+      <div class="data-panel pulse-panel"><span class="pulse-dot"></span><strong>Pattern detected</strong><p>Environmental knowledge travelled further when it was translated into culturally resonant, emotionally legible, visual performance.</p></div>
+    </section>
+
+    <section class="media-platforms reveal-media" aria-label="Additional outlets">
+      <p class="media-kicker">Additional coverage constellation</p>
+      <h2>More outlets in the archive</h2>
+      <div class="media-platform-cloud">
+        <span>NEWS.com.au</span><span>Yahoo UK</span><span>MSN</span><span>Revry LGBTQ TV</span><span>My Modern Met</span><span>NDTV</span><span>LGBTQ Nation</span><span>MyGWork</span><span>Scholarly Kitchen</span><span>Daily Mail</span><span>Australian Geographic</span><span>Kleine Zeitung</span><span>Süddeutsche Zeitung</span><span>Times Higher Education</span><span>Scimex</span><span>EurekAlert</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><span>© <span id="year"></span> WELI</span><nav aria-label="Footer"><a href="/">Home</a><a href="/music">Music</a><a href="/academic">Academic</a><a href="/program">Programs</a><a href="/enquire/">Contact</a></nav></div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script src="/media/media.js"></script>
 </body>
 </html>
