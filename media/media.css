@@ -42,3 +42,81 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 @media(max-width:1050px){.media-story-grid{grid-template-columns:repeat(2,1fr)}.media-data-story{grid-template-columns:1fr}.media-lens{grid-template-columns:1fr}.media-hero-layout{grid-template-columns:1fr}.media-orbit-text{display:none}}
 @media(max-width:640px){.media-dashboard-hero{padding:118px 18px 70px}.media-hero-copy h1{font-size:clamp(2.8rem,17vw,4.5rem)}.media-story-grid{grid-template-columns:1fr}.media-story-card.hero-card{grid-column:auto}.press-table a{grid-template-columns:24px 1fr;gap:8px}.press-table strong,.press-table em{grid-column:2}.chart-row{grid-template-columns:1fr}.media-lens{margin-top:0}}
 @media(prefers-reduced-motion:reduce){.media-page::before,.media-page::after,.media-aurora,.media-glitter-field,.media-orbit-text,.pulse-dot{animation:none!important}.reveal-media{transition:none;opacity:1;transform:none}}
+
+
+/* IMPACT */
+.media-impact{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:30px auto;
+}
+
+.impact-box{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  transition:.3s;
+}
+
+.impact-box:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.impact-box strong{
+  font-size:1.6rem;
+  display:block;
+}
+
+/* SENTIMENT */
+.media-sentiment{
+  max-width:800px;
+  margin:60px auto;
+  padding:0 20px;
+}
+
+.sentiment-row{
+  display:grid;
+  grid-template-columns:80px 1fr 40px;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.bar{
+  background:#eee;
+  height:8px;
+  border-radius:6px;
+}
+
+.bar i{
+  display:block;
+  height:100%;
+  width:var(--w);
+  background:linear-gradient(90deg,#b79a72,#d8c3a5);
+  animation:growBar 1.2s ease;
+}
+
+@keyframes growBar{
+  from{width:0}
+}
+
+/* WHY */
+.media-why{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:40px auto;
+}
