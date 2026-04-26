@@ -128,56 +128,6 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 }
 
 
-/* MAP */
-.media-map{
-  text-align:center;
-  padding:80px 20px;
-}
-
-.map-wrap{
-  position:relative;
-  max-width:900px;
-  margin:40px auto;
-}
-
-.world-map{
-  width:100%;
-  opacity:0.08;
-}
-
-.world-map path{
-  fill:#1a1a1a;
-}
-
-/* glowing points */
-.map-point{
-  position:absolute;
-  width:10px;
-  height:10px;
-  background:#b79a72;
-  border-radius:50%;
-  box-shadow:0 0 12px #b79a72;
-  animation:pulse 2s infinite;
-}
-
-/* positions (tuned visually) */
-.map-point.usa{ top:42%; left:23%; }
-.map-point.uk{ top:28%; left:48%; }
-.map-point.eu{ top:32%; left:55%; }
-.map-point.aus{ top:78%; left:86%; }
-.map-point.br{ top:72%; left:34%; }
-
-@keyframes pulse{
-  0%{ transform:scale(1); opacity:1 }
-  50%{ transform:scale(1.6); opacity:0.6 }
-  100%{ transform:scale(1); opacity:1 }
-}
-
-.map-note{
-  font-size:0.9rem;
-  opacity:0.6;
-  margin-top:20px;
-}
 
 /* === MEDIA GRID REBALANCE === */
 
@@ -239,42 +189,85 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   font-size:0.7rem;
 }
 
-.world-map-img{
-  width:100%;
-  opacity:0.2;
-  filter:grayscale(100%);
+/* ===== MAP (final clean version) ===== */
+
+.media-map{
+  text-align:center;
+  padding:80px 20px;
 }
 
+/* container */
+.map-wrap{
+  position:relative;
+  max-width:900px;
+  margin:40px auto;
+}
+
+/* map image (you DO need this back, but corrected) */
+.world-map-img{
+  width:100%;
+  display:block;
+  opacity:0.15;
+  filter:grayscale(100%) contrast(0.9);
+}
+
+/* dots */
 .map-point{
   position:absolute;
   width:10px;
   height:10px;
   border-radius:50%;
-  background:#6c63ff;
-  box-shadow:0 0 10px #6c63ff;
+  background:#b79a72; /* keep consistent with your site */
+  box-shadow:0 0 14px rgba(183,154,114,0.9);
+  transform:translate(-50%, -50%);
+  animation:mapPulse 2s ease-in-out infinite;
 }
 
-/* positions */
-.map-point.usa{ top:42%; left:25%; }
-.map-point.brazil{ top:70%; left:38%; }
-.map-point.japan{ top:45%; left:85%; }
-.map-point.uk{ top:30%; left:50%; }
-.map-point.europe{ top:35%; left:55%; }
+/* positions (refined + consistent) */
+.map-point.usa{ top:40%; left:26%; }
+.map-point.brazil{ top:70%; left:36%; }
+.map-point.japan{ top:43%; left:86%; }
+.map-point.uk{ top:30%; left:49%; }
+.map-point.germany{ top:32%; left:53%; }
+.map-point.belgium{ top:31%; left:52%; }
+.map-point.switzerland{ top:35%; left:53%; }
+.map-point.portugal{ top:38%; left:47%; }
+.map-point.australia{ top:75%; left:83%; }
 
-/* legend */
-.map-legend{
-  display:flex;
-  justify-content:center;
-  gap:20px;
+/* animation */
+@keyframes mapPulse{
+  0%{ transform:translate(-50%, -50%) scale(1); opacity:1 }
+  50%{ transform:translate(-50%, -50%) scale(1.6); opacity:0.6 }
+  100%{ transform:translate(-50%, -50%) scale(1); opacity:1 }
+}
+
+/* tooltip */
+.map-point::after{
+  content:attr(title);
+  position:absolute;
+  top:-28px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.7rem;
+  background:rgba(0,0,0,0.75);
+  color:#fff;
+  padding:4px 6px;
+  border-radius:4px;
+  opacity:0;
+  transition:0.2s;
+  white-space:nowrap;
+}
+
+.map-point:hover::after{
+  opacity:1;
+}
+
+/* caption */
+.map-note{
+  font-size:0.9rem;
+  opacity:0.6;
   margin-top:20px;
-  font-size:0.8rem;
-  opacity:0.7;
-}
-
-.map-legend i{
-  display:inline-block;
-  width:10px;
-  height:10px;
-  background:#6c63ff;
-  margin-right:6px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
 }
