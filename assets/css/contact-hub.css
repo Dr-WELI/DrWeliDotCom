@@ -1,0 +1,40 @@
+body.contact-page{min-height:100vh;background:linear-gradient(180deg,#efe9e2 0%,#e8ded4 100%);}
+.contact-page .site-header{position:relative;background:transparent!important;border-bottom:0!important;box-shadow:none!important;}
+.contact-shell{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:42px 0 70px;}
+.contact-hero{display:grid;grid-template-columns:minmax(0,.95fr) minmax(320px,1.05fr);gap:22px;align-items:stretch;}
+.contact-panel{border:1px solid rgba(23,23,23,.08);border-radius:30px;background:rgba(255,251,248,.64);box-shadow:0 24px 80px rgba(31,22,15,.12);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+.contact-copy{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;justify-content:space-between;min-height:560px;}
+.contact-copy h1{margin:0;font-size:clamp(3.8rem,9vw,7.2rem);line-height:.86;letter-spacing:-.08em;max-width:8ch;}
+.contact-intro{max-width:38ch;margin:20px 0 0;color:var(--muted);font-size:1.05rem;}
+.contact-signal-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}
+.contact-signal-strip span{display:inline-flex;min-height:34px;align-items:center;padding:0 12px;border-radius:999px;border:1px solid rgba(23,23,23,.09);background:rgba(255,255,255,.42);color:rgba(23,23,23,.72);font-size:.8rem;font-weight:700;}
+.contact-direct{margin-top:30px;padding-top:20px;border-top:1px solid rgba(23,23,23,.08);}
+.contact-direct a{color:var(--text);text-decoration:none;font-weight:800;}
+.contact-form-panel{padding:clamp(18px,3vw,28px);}
+.contact-form{display:grid;gap:18px;}
+.contact-step{display:grid;gap:12px;}
+.contact-step-title{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:800;}
+.contact-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.contact-choice{position:relative;display:grid;gap:8px;min-height:132px;padding:18px;border-radius:22px;border:1px solid rgba(23,23,23,.10);background:rgba(255,255,255,.44);cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease;}
+.contact-choice input{position:absolute;opacity:0;pointer-events:none;}
+.contact-choice strong{font-size:1.18rem;letter-spacing:-.04em;}
+.contact-choice span{color:var(--muted);line-height:1.45;}
+.contact-choice:hover,.contact-choice.is-selected{transform:translateY(-2px);border-color:rgba(183,154,114,.55);background:rgba(255,255,255,.72);box-shadow:var(--shadow-soft);}
+.contact-dynamic{display:grid;gap:14px;}
+.contact-dynamic[hidden]{display:none!important;}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+.contact-field{display:grid;gap:7px;}
+.contact-field.full{grid-column:1/-1;}
+.contact-field label,.contact-field span{color:rgba(23,23,23,.72);font-size:.86rem;font-weight:700;}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;border:1px solid rgba(23,23,23,.12);border-radius:16px;background:rgba(255,255,255,.66);color:var(--text);padding:13px 14px;font:inherit;outline:none;transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;}
+.contact-form textarea{min-height:132px;resize:vertical;}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:rgba(74,95,138,.45);box-shadow:0 0 0 4px rgba(74,95,138,.10);background:rgba(255,255,255,.84);}
+.contact-goals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+.contact-goals label{display:flex;align-items:center;gap:8px;padding:10px 11px;border-radius:14px;border:1px solid rgba(23,23,23,.08);background:rgba(255,255,255,.42);color:var(--muted);font-size:.9rem;}
+.contact-goals input{width:auto;}
+.contact-submit-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding-top:4px;}
+.contact-submit-row .btn{min-height:50px;}
+.contact-note{margin:0;color:var(--muted);font-size:.92rem;}
+.contact-preview{margin-top:4px;padding:14px 16px;border-radius:18px;border:1px dashed rgba(23,23,23,.16);color:var(--muted);background:rgba(255,255,255,.34);font-size:.92rem;}
+@media (max-width:920px){.contact-hero{grid-template-columns:1fr}.contact-copy{min-height:auto}}
+@media (max-width:640px){.contact-shell{width:min(100% - 22px,1180px);padding-top:22px}.contact-choice-grid,.contact-grid,.contact-goals{grid-template-columns:1fr}.contact-copy,.contact-form-panel{border-radius:24px}.contact-copy h1{font-size:clamp(3.2rem,18vw,4.8rem)}}
