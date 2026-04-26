@@ -1,11 +1,19 @@
 const slides = document.querySelectorAll('.editorial-slide');
 let current = 0;
 
-setInterval(() => {
-  slides[current].classList.remove('is-active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('is-active');
-}, 5000);
+function showSlide(next){
+  slides[current].classList.add('is-transitioning');
+  setTimeout(()=>{
+    slides[current].classList.remove('is-active','is-transitioning');
+    slides[next].classList.add('is-active');
+    current = next;
+  },600);
+}
+
+setInterval(()=>{
+  const next = (current + 1) % slides.length;
+  showSlide(next);
+},5000);
 
 /* MARQUEE SPEED REACT TO SCROLL */
 const track = document.getElementById('heroMarqueeTrack');
