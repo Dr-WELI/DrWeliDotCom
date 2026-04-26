@@ -224,15 +224,15 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 }
 
 /* positions (refined + consistent) */
-.map-point.usa{ top:40%; left:26%; }
-.map-point.brazil{ top:70%; left:36%; }
-.map-point.japan{ top:43%; left:86%; }
-.map-point.uk{ top:30%; left:49%; }
-.map-point.germany{ top:32%; left:53%; }
-.map-point.belgium{ top:31%; left:52%; }
-.map-point.switzerland{ top:35%; left:53%; }
-.map-point.portugal{ top:38%; left:47%; }
-.map-point.australia{ top:75%; left:83%; }
+.map-point.north-america{ top:38%; left:23%; }
+
+.map-point.south-america{ top:68%; left:32%; }
+
+.map-point.europe{ top:30%; left:50%; }
+
+.map-point.asia{ top:40%; left:78%; }
+
+.map-point.australia{ top:75%; left:82%; }
 
 /* animation */
 @keyframes mapPulse{
