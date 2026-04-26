@@ -29,131 +29,121 @@
   </header>
 
   <main>
-    <section class="media-hero" aria-labelledby="media-title">
-      <div class="media-orb media-orb-one" aria-hidden="true"></div>
-      <div class="media-orb media-orb-two" aria-hidden="true"></div>
-      <div class="media-signal" aria-hidden="true">
-        <span>GLOBAL PRESS</span><span>TV</span><span>SCIENCE</span><span>MUSIC</span><span>CULTURE</span><span>DANCE YOUR PHD</span>
-      </div>
+    <section class="media-dashboard-hero" aria-labelledby="media-title">
+      <div class="media-aurora" aria-hidden="true"></div>
+      <div class="media-glitter-field" aria-hidden="true"></div>
+      <div class="media-orbit-text" aria-hidden="true"><span>PRESS SIGNAL</span><span>SCIENCE</span><span>CULTURE</span><span>GLOBAL</span></div>
 
-      <div class="media-hero-inner reveal-media">
-        <p class="media-kicker">Media & Press</p>
-        <h1 id="media-title">A kangaroo scientist turned global culture signal</h1>
-        <p class="media-lead">Selected coverage, reels, broadcasts, and articles following WELI’s award-winning science-performance work, including Kangaroo Time and Dance Your PhD.</p>
-        <div class="media-hero-actions">
-          <a class="btn btn-primary btn-lg" href="/enquire/">Book or enquire</a>
-          <a class="btn btn-outline btn-lg" href="#coverage">Explore coverage</a>
+      <div class="media-hero-layout">
+        <div class="media-hero-copy reveal-media">
+          <p class="media-kicker">Media intelligence / press archive</p>
+          <h1 id="media-title">A global story told through TV, reels, articles, and science culture</h1>
+          <p class="media-lead">A visual dashboard of how Kangaroo Time and WELI’s science-performance work travelled across broadcast, digital, social, academic, and culture-facing media.</p>
+          <div class="media-hero-actions">
+            <a class="btn btn-primary btn-lg" href="#media-wall">Open media wall</a>
+            <a class="btn btn-outline btn-lg" href="/enquire/">Book or enquire</a>
+          </div>
         </div>
+
+        <aside class="media-command-panel reveal-media" aria-label="Media dashboard summary">
+          <div class="command-topline"><span>LIVE PRESS MAP</span><em>curated archive</em></div>
+          <div class="command-metric giant"><strong>250+</strong><span>reported media appearances</span></div>
+          <div class="command-grid">
+            <article><strong>Global</strong><span>reach</span></article>
+            <article><strong>TV</strong><span>broadcast</span></article>
+            <article><strong>Reels</strong><span>social video</span></article>
+            <article><strong>Science</strong><span>culture</span></article>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="media-stats-band reveal-media" aria-label="Media statistics">
-      <article><strong>250+</strong><span>media appearances worldwide</span></article>
-      <article><strong>Global</strong><span>TV, radio, digital, print, and social coverage</span></article>
-      <article><strong>Science × Culture</strong><span>coverage across research, performance, and identity</span></article>
+    <section class="media-lens reveal-media" aria-label="Coverage overview">
+      <article><span>01</span><strong>What happened?</strong><p>A PhD project became a global science-performance story.</p></article>
+      <article><span>02</span><strong>Why did it travel?</strong><p>It was visual, surprising, musical, joyful, and scientifically grounded.</p></article>
+      <article><span>03</span><strong>What does this prove?</strong><p>Research can become public culture when the story has rhythm.</p></article>
     </section>
 
-    <section class="media-video-section" id="coverage">
+    <section class="media-wall-section" id="media-wall">
       <div class="media-section-head reveal-media">
-        <p class="media-kicker">Watch the coverage</p>
-        <h2>What outlets showed, shared, and said</h2>
-        <p>Vertical social reels and broadcast clips are presented as a visual press wall so people can feel the reach, tone, and cultural impact quickly.</p>
+        <p class="media-kicker">Interactive media wall</p>
+        <h2>Watch the signal move across platforms</h2>
+        <p>Choose a format, open the feature, and scan the coverage like a living press dashboard.</p>
       </div>
 
-      <div class="media-reel-grid">
-        <article class="media-reel-card reveal-media featured">
-          <div class="media-reel-frame">
-            <iframe src="https://archive.org/embed/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle?start=3600&end=3660" title="MSNBC feature on Kangaroo Time" loading="lazy" allowfullscreen></iframe>
-          </div>
-          <div class="media-reel-copy">
-            <span>Broadcast</span>
-            <h3>MSNBC — The 11th Hour</h3>
-            <p>International television coverage introducing the story to a US audience.</p>
-          </div>
+      <div class="media-filter-row reveal-media" aria-label="Filter media cards">
+        <button class="media-filter is-active" data-filter="all">All</button>
+        <button class="media-filter" data-filter="broadcast">Broadcast</button>
+        <button class="media-filter" data-filter="reel">Reels</button>
+        <button class="media-filter" data-filter="carousel">Carousel</button>
+      </div>
+
+      <div class="media-story-grid">
+        <article class="media-story-card reveal-media hero-card" data-type="broadcast" data-url="https://archive.org/details/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle/start/3600/end/3660">
+          <div class="story-visual archive-visual"><iframe src="https://archive.org/embed/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle?start=3600&end=3660" title="MSNBC coverage" loading="lazy" allowfullscreen></iframe></div>
+          <div class="story-copy"><span class="story-chip">Broadcast</span><h3>MSNBC — The 11th Hour</h3><p>International TV segment positioning Kangaroo Time as a science story with cultural reach.</p><button class="story-open">Open source</button></div>
         </article>
 
-        <article class="media-reel-card reveal-media">
-          <a class="media-reel-link" href="https://www.instagram.com/reels/C33Rn_whrWY/" target="_blank" rel="noopener">
-            <div class="media-reel-placeholder" data-label="Instagram Reel"><span>Open Reel</span></div>
-          </a>
-          <div class="media-reel-copy">
-            <span>Social video</span>
-            <h3>Instagram Reel</h3>
-            <p>Short-form coverage made for vertical viewing.</p>
-          </div>
+        <article class="media-story-card reveal-media" data-type="reel" data-url="https://www.instagram.com/reels/C33Rn_whrWY/">
+          <div class="story-visual reel-visual" data-thumb="youtube"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Instagram"><span>Reel</span></div>
+          <div class="story-copy"><span class="story-chip">Social video</span><h3>Instagram Reel</h3><p>Short-form feature designed for vertical audience attention.</p><button class="story-open">Open reel</button></div>
         </article>
 
-        <article class="media-reel-card reveal-media">
-          <a class="media-reel-link" href="https://www.instagram.com/reel/C39g0u2yxuV/" target="_blank" rel="noopener">
-            <div class="media-reel-placeholder" data-label="Instagram Reel"><span>Open Reel</span></div>
-          </a>
-          <div class="media-reel-copy">
-            <span>Social video</span>
-            <h3>Science meets performance</h3>
-            <p>A reel-format media moment around the project’s visibility.</p>
-          </div>
+        <article class="media-story-card reveal-media" data-type="reel" data-url="https://www.instagram.com/reel/C39g0u2yxuV/">
+          <div class="story-visual reel-visual violet"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Instagram"><span>Reel</span></div>
+          <div class="story-copy"><span class="story-chip">Social video</span><h3>Science meets performance</h3><p>A compact media moment translating research into movement, humour, and surprise.</p><button class="story-open">Open reel</button></div>
         </article>
 
-        <article class="media-reel-card reveal-media">
-          <a class="media-reel-link" href="https://www.instagram.com/p/C4xWOaiInth/?img_index=4" target="_blank" rel="noopener">
-            <div class="media-reel-placeholder" data-label="Instagram Post"><span>Open Post</span></div>
-          </a>
-          <div class="media-reel-copy">
-            <span>Carousel</span>
-            <h3>Behind the feature</h3>
-            <p>Social coverage with stills and article-style framing.</p>
-          </div>
+        <article class="media-story-card reveal-media" data-type="carousel" data-url="https://www.instagram.com/p/C4xWOaiInth/?img_index=4">
+          <div class="story-visual carousel-visual"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Instagram"><span>Carousel</span></div>
+          <div class="story-copy"><span class="story-chip">Carousel</span><h3>Behind the coverage</h3><p>Still-image media format that expands the press story beyond video.</p><button class="story-open">Open post</button></div>
         </article>
 
-        <article class="media-reel-card reveal-media">
-          <a class="media-reel-link" href="https://www.instagram.com/reels/C2dk9-gqF0H/" target="_blank" rel="noopener">
-            <div class="media-reel-placeholder" data-label="Instagram Reel"><span>Open Reel</span></div>
-          </a>
-          <div class="media-reel-copy">
-            <span>Social video</span>
-            <h3>Viral science story</h3>
-            <p>Short-form video coverage bringing the project into popular feeds.</p>
-          </div>
+        <article class="media-story-card reveal-media" data-type="reel" data-url="https://www.instagram.com/reels/C2dk9-gqF0H/">
+          <div class="story-visual reel-visual gold"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=128" alt="Instagram"><span>Reel</span></div>
+          <div class="story-copy"><span class="story-chip">Social video</span><h3>Viral science story</h3><p>A feed-native version of a bigger global coverage arc.</p><button class="story-open">Open reel</button></div>
         </article>
       </div>
+    </section>
+
+    <section class="media-data-story reveal-media">
+      <div class="data-panel headline-panel"><p class="media-kicker">Coverage analytics</p><h2>From thesis to global media object</h2><p>Use this as the dashboard layer: it shows the scale, formats, and narrative strength of the project at a glance.</p></div>
+      <div class="data-panel chart-panel" aria-label="Coverage format chart">
+        <div class="chart-row"><span>Digital / Social</span><div><i style="--w:92%"></i></div><em>high</em></div>
+        <div class="chart-row"><span>Broadcast</span><div><i style="--w:68%"></i></div><em>strong</em></div>
+        <div class="chart-row"><span>Science media</span><div><i style="--w:78%"></i></div><em>strong</em></div>
+        <div class="chart-row"><span>University / public engagement</span><div><i style="--w:86%"></i></div><em>high</em></div>
+      </div>
+      <div class="data-panel pulse-panel"><span class="pulse-dot"></span><strong>Pattern detected</strong><p>Media responded because the story combined evidence, movement, humour, identity, animals, music, and visual spectacle.</p></div>
     </section>
 
     <section class="media-platforms reveal-media" aria-label="Media platforms">
-      <p class="media-kicker">Platforms</p>
-      <h2>Television, digital press, radio, social media, and science outlets</h2>
+      <p class="media-kicker">Platform cloud</p>
+      <h2>Coverage moved through different attention systems</h2>
       <div class="media-platform-cloud">
-        <span>MSNBC</span><span>ABC</span><span>The Guardian</span><span>NPR</span><span>Science Magazine</span><span>University media</span><span>Radio</span><span>Digital culture</span>
+        <span>MSNBC</span><span>Instagram Reels</span><span>Archive video</span><span>Science media</span><span>University media</span><span>Broadcast</span><span>Digital culture</span><span>Public engagement</span>
       </div>
     </section>
 
     <section class="media-press-list reveal-media">
       <div class="media-section-head compact">
         <p class="media-kicker">Press archive</p>
-        <h2>Coverage list architecture</h2>
-        <p>This section is built to grow into a full press database with outlet, country, format, link, and story angle.</p>
+        <h2>Clickable source list</h2>
+        <p>Each row can grow into a structured archive with outlet, date, region, format, reach, and angle.</p>
       </div>
 
       <div class="press-table" role="list">
-        <a role="listitem" href="https://archive.org/details/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle/start/3600/end/3660" target="_blank" rel="noopener"><span>MSNBC</span><strong>The 11th Hour With Stephanie Ruhle</strong><em>Broadcast</em></a>
-        <a role="listitem" href="https://www.instagram.com/reels/C33Rn_whrWY/" target="_blank" rel="noopener"><span>Instagram</span><strong>Vertical reel feature</strong><em>Social video</em></a>
-        <a role="listitem" href="https://www.instagram.com/reel/C39g0u2yxuV/" target="_blank" rel="noopener"><span>Instagram</span><strong>Vertical reel feature</strong><em>Social video</em></a>
-        <a role="listitem" href="https://www.instagram.com/p/C4xWOaiInth/?img_index=4" target="_blank" rel="noopener"><span>Instagram</span><strong>Carousel media post</strong><em>Social / carousel</em></a>
-        <a role="listitem" href="https://www.instagram.com/reels/C2dk9-gqF0H/" target="_blank" rel="noopener"><span>Instagram</span><strong>Vertical reel feature</strong><em>Social video</em></a>
+        <a role="listitem" href="https://archive.org/details/MSNBCW_20240307_040000_The_11th_Hour_With_Stephanie_Ruhle/start/3600/end/3660" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=archive.org&sz=64" alt=""><span>MSNBC / Archive</span><strong>The 11th Hour With Stephanie Ruhle</strong><em>Broadcast</em></a>
+        <a role="listitem" href="https://www.instagram.com/reels/C33Rn_whrWY/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=64" alt=""><span>Instagram</span><strong>Vertical reel feature</strong><em>Social video</em></a>
+        <a role="listitem" href="https://www.instagram.com/reel/C39g0u2yxuV/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=64" alt=""><span>Instagram</span><strong>Science meets performance</strong><em>Social video</em></a>
+        <a role="listitem" href="https://www.instagram.com/p/C4xWOaiInth/?img_index=4" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=64" alt=""><span>Instagram</span><strong>Carousel media post</strong><em>Carousel</em></a>
+        <a role="listitem" href="https://www.instagram.com/reels/C2dk9-gqF0H/" target="_blank" rel="noopener"><img src="https://www.google.com/s2/favicons?domain=instagram.com&sz=64" alt=""><span>Instagram</span><strong>Viral science story</strong><em>Social video</em></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> WELI</span>
-      <nav aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/music">Music</a>
-        <a href="/academic">Academic</a>
-        <a href="/program">Programs</a>
-        <a href="/enquire/">Contact</a>
-      </nav>
-    </div>
+    <div class="container footer-inner"><span>© <span id="year"></span> WELI</span><nav aria-label="Footer"><a href="/">Home</a><a href="/music">Music</a><a href="/academic">Academic</a><a href="/program">Programs</a><a href="/enquire/">Contact</a></nav></div>
   </footer>
 
   <script src="/script.js"></script>
