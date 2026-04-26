@@ -14,39 +14,57 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = el.textContent.replaceAll('—', '-').replace(/\.$/, '');
   });
 
+  // add linkedin if missing
+  const grid = document.querySelector('.contact-social-grid');
+  if (grid && !grid.querySelector('[href*="linkedin"]')) {
+    const link = document.createElement('a');
+    link.href = 'https://www.linkedin.com/in/dr-weli-weliton-menário-costa-21aa8b224/';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.className = 'contact-social-link';
+    link.innerHTML = '<span class="contact-social-icon"></span>';
+    grid.appendChild(link);
+  }
+
   const style = document.createElement('style');
   style.textContent = `
-    .contact-socials{margin-top:18px;display:grid;gap:8px}
-    .contact-socials-copy{font-size:.88rem;line-height:1.45;max-width:42ch}
-    .contact-social-grid{gap:8px}
-    .contact-social-link{min-height:34px;padding:0 10px;gap:7px;font-size:.8rem}
-    .contact-social-icon{width:18px;height:18px;display:inline-block;border-radius:5px;background-size:18px 18px;background-position:center;background-repeat:no-repeat;overflow:hidden;flex:0 0 18px}
-    .contact-social-icon svg{display:none}
+    .contact-social-link{justify-content:center;width:36px;height:36px;padding:0}
+    .contact-social-icon{width:18px;height:18px;display:inline-block;border-radius:5px;background-size:18px 18px;background-position:center;background-repeat:no-repeat}
     .contact-social-link[href*="youtube"] .contact-social-icon{background-image:url('https://www.google.com/s2/favicons?domain=youtube.com&sz=64')}
     .contact-social-link[href*="facebook"] .contact-social-icon{background-image:url('https://www.google.com/s2/favicons?domain=facebook.com&sz=64')}
     .contact-social-link[href*="instagram"] .contact-social-icon{background-image:url('https://www.google.com/s2/favicons?domain=instagram.com&sz=64')}
     .contact-social-link[href*="tiktok"] .contact-social-icon{background-image:url('https://www.google.com/s2/favicons?domain=tiktok.com&sz=64')}
     .contact-social-link[href*="twitter"] .contact-social-icon{background-image:url('https://www.google.com/s2/favicons?domain=x.com&sz=64')}
-    .contact-form:has(input[name="intent"][value="music"]:checked) #engagementFields{display:none!important}
-    .contact-form:has(input[name="intent"][value="engagement"]:checked) #musicFields{display:none!important}
+    .contact-social-link[href*="linkedin"] .contact-social-icon{background-image:url('https://www.google.com/s2/favicons?domain=linkedin.com&sz=64')}
   `;
   document.head.appendChild(style);
+
+  // ensure engagement form has name + email
+  const engagementGrid = document.querySelector('#engagementFields .contact-grid');
+  if (engagementGrid && !engagementGrid.querySelector('input[type="email"]')) {
+    const nameField = document.createElement('div');
+    nameField.className = 'contact-field';
+    nameField.innerHTML = '<label>Name</label><input type="text" required>';
+
+    const emailField = document.createElement('div');
+    emailField.className = 'contact-field';
+    emailField.innerHTML = '<label>Email</label><input type="email" required>';
+
+    engagementGrid.prepend(emailField);
+    engagementGrid.prepend(nameField);
+  }
 
   const intentRadios = document.querySelectorAll('input[name="intent"]');
   const musicBlock = document.getElementById('musicFields');
   const engagementBlock = document.getElementById('engagementFields');
-  const preview = document.getElementById('contactPreview');
 
   function setIntent(value){
     if (musicBlock) musicBlock.hidden = value !== 'music';
     if (engagementBlock) engagementBlock.hidden = value !== 'engagement';
-    if (preview) preview.textContent = value ? 'You are enquiring about ' + value : 'Select a direction to tailor the enquiry';
   }
 
   intentRadios.forEach(r => {
     r.addEventListener('change', () => {
-      document.querySelectorAll('.contact-choice').forEach(c => c.classList.remove('is-selected'));
-      r.closest('.contact-choice')?.classList.add('is-selected');
       setIntent(r.value);
     });
   });
