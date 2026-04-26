@@ -178,3 +178,60 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   opacity:0.6;
   margin-top:20px;
 }
+
+/* === MEDIA GRID REBALANCE === */
+
+/* grid spacing stays yours */
+.media-story-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+/* HERO (top 2–3) */
+.media-story-card.hero-card{
+  grid-column:span 2;
+}
+
+/* default cards = square */
+.media-story-card:not(.hero-card) .story-visual{
+  aspect-ratio:1 / 1;
+}
+
+/* hero cards = landscape (cleaner than 9:16) */
+.media-story-card.hero-card .story-visual{
+  aspect-ratio:16 / 9;
+}
+
+/* make embeds fill nicely */
+.story-visual{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+}
+
+.story-visual iframe,
+.story-visual img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* tighten vertical space */
+.media-story-card{
+  display:flex;
+  flex-direction:column;
+}
+
+/* make text more compact */
+.story-copy{
+  padding:14px 14px 16px;
+}
+
+/* optional: slightly reduce paragraph size */
+.story-copy p{
+  font-size:0.9rem;
+  line-height:1.4;
+}
