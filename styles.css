@@ -149,9 +149,9 @@ p{margin-top:0}
   align-items:center;
   justify-content:space-between;
   padding:16px 20px;
-  background:transparent;
-  backdrop-filter:none;
-  border-bottom:0;
+  background:rgba(245,241,235,.72);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(23,23,23,.08);
 }
 
 .brand{
