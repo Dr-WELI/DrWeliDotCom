@@ -1,0 +1,29 @@
+/* SAFE POLISH OVERRIDES */
+
+/* Remove white header bar */
+.hero-site-header,
+.program-page .site-header {
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove zoom effect */
+.editorial-slide img {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Glitch transition */
+.editorial-slide.is-transitioning img {
+  animation: glitchFlash 0.6s ease;
+}
+
+@keyframes glitchFlash {
+  0% { transform: translateX(0); filter: contrast(1); }
+  20% { transform: translateX(-6px); filter: contrast(1.4); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); filter: contrast(1); }
+}
