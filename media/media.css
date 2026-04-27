@@ -297,7 +297,6 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
   object-fit:contain; /* IMPORTANT (not cover) */
   opacity:0.15;
 }
-}
 .map-point{
   position:absolute;
   transform:translate(-50%, -50%);
