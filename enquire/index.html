@@ -132,22 +132,36 @@
       <label>Organisation</label>
       <input type="text" name="organisation" placeholder="Optional">
     </div>
-    <div class="contact-field">
-      <label>Audience</label>
-      <select name="audience">
-        <option>Corporate</option>
-        <option>University</option>
-        <option>School</option>
-      </select>
-    </div>
-    <div class="contact-field">
-      <label>Type</label>
-      <select name="engagement_type">
-        <option>Activation</option>
-        <option>Workshop</option>
-        <option>Program</option>
-      </select>
-    </div>
+	    <div class="contact-field">
+	      <label>Audience</label>
+	      <select name="audience">
+	        <option>Corporate / Conference</option>
+	        <option>University / Student Experience</option>
+	        <option>School / STEAM</option>
+	        <option>Science × Art Collaboration</option>
+	      </select>
+	    </div>
+	    <div class="contact-field">
+	      <label>Your role</label>
+	      <select name="role">
+	        <option>HR / People & Culture</option>
+	        <option>Event Coordinator / Producer</option>
+	        <option>Student Experience</option>
+	        <option>School Director / Leadership</option>
+	        <option>Science Teacher / STEAM Lead</option>
+	        <option>Research / Innovation Lead</option>
+	        <option>Funder / Partner</option>
+	      </select>
+	    </div>
+	    <div class="contact-field">
+	      <label>Type</label>
+	      <select name="engagement_type">
+	        <option>Activation</option>
+	        <option>Workshop</option>
+	        <option>Program</option>
+	        <option>Creative Lab / Collaboration</option>
+	      </select>
+	    </div>
     <div class="contact-field">
       <label>Audience size</label>
       <input type="text" name="audience_size" placeholder="e.g. 50, 200, 1000+">
@@ -161,19 +175,22 @@
         <option value="5000+">$5k+</option>
       </select>
     </div>
-    <div class="contact-field full">
-      <label>Goals</label>
-      <div class="contact-goals">
-        <label><input type="checkbox" name="goals[]" value="engagement"> Engagement</label>
-        <label><input type="checkbox" name="goals[]" value="creativity"> Creativity</label>
-        <label><input type="checkbox" name="goals[]" value="wellbeing"> Wellbeing</label>
-        <label><input type="checkbox" name="goals[]" value="team_building"> Team building</label>
-      </div>
-    </div>
-    <div class="contact-field full">
-      <label>Details</label>
-      <textarea name="details" placeholder="Context, dates, location, constraints, desired outcomes"></textarea>
-    </div>
+	    <div class="contact-field full">
+	      <label>Goals</label>
+	      <div class="contact-goals">
+	        <label><input type="checkbox" name="goals[]" value="engagement"> Engagement</label>
+	        <label><input type="checkbox" name="goals[]" value="creativity"> Creativity</label>
+	        <label><input type="checkbox" name="goals[]" value="wellbeing"> Wellbeing</label>
+	        <label><input type="checkbox" name="goals[]" value="team_building"> Team building</label>
+	        <label><input type="checkbox" name="goals[]" value="student_belonging"> Student belonging</label>
+	        <label><input type="checkbox" name="goals[]" value="science_communication"> Science communication</label>
+	        <label><input type="checkbox" name="goals[]" value="funding_partnership"> Funding / partnership support</label>
+	      </div>
+	    </div>
+	    <div class="contact-field full">
+	      <label>Details</label>
+	      <textarea name="details" placeholder="Context, timeline, location, audience profile, desired outcomes, and any budget/funding constraints"></textarea>
+	    </div>
   </div>
 </div>
 
