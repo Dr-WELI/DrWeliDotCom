@@ -231,6 +231,13 @@ body.music-page button {
   flex: 0 0 18px;
 }
 
+.music-platform-link img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex: 0 0 18px;
+}
+
 .music-player-panel {
   padding: 18px;
   background:
@@ -344,6 +351,18 @@ body.music-page button {
   letter-spacing: -0.05em;
 }
 
+.music-section-head.compact {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.music-section-head h3 {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  letter-spacing: -0.02em;
+  color: rgba(244,247,251,0.9);
+}
+
 .music-release-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -400,6 +419,16 @@ body.music-page button {
   font-size: 0.92rem;
 }
 
+.music-ep-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.music-release-card.is-static {
+  pointer-events: none;
+}
+
 .music-info-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -453,6 +482,10 @@ body.music-page button {
   font-weight: 700;
 }
 
+.music-inline-link {
+  margin-top: 8px;
+}
+
 .music-footer {
   margin-top: 20px;
   padding-top: 18px;
@@ -483,7 +516,8 @@ body.music-page button {
 
   .music-platform-strip,
   .music-track-grid,
-  .music-release-grid {
+  .music-release-grid,
+  .music-ep-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -506,7 +540,8 @@ body.music-page button {
 
   .music-platform-strip,
   .music-track-grid,
-  .music-release-grid {
+  .music-release-grid,
+  .music-ep-grid {
     grid-template-columns: 1fr;
   }
 
