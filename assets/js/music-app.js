@@ -9,26 +9,26 @@ const tracks = [
   },
   {
     id: "kangaroo",
-    title: "Kangaroo Time",
+    title: "Kangaroo Time (Original Edit)",
     subtitle: "Single · Spotify",
-    embed: "https://open.spotify.com/embed/track/0oifq4mMHGsCjEcLfPwy47?utm_source=generator&theme=0",
-    link: "https://open.spotify.com/track/0oifq4mMHGsCjEcLfPwy47",
+    embed: "https://open.spotify.com/embed/track/3IDcuKMd6lErGPzaSS2oVx?utm_source=generator&theme=0",
+    link: "https://open.spotify.com/track/3IDcuKMd6lErGPzaSS2oVx?si=4d4ef6596169468f",
     cover: "/assets/img/release-kangaroo-time.jpg"
   },
   {
-    id: "doctor",
-    title: "El Doctor",
+    id: "goat",
+    title: "Cabra da Peste (G.O.A.T.)",
     subtitle: "Single · Spotify",
-    embed: "https://open.spotify.com/embed/track/4JmFwCmHASS4WkujMTPHWs?utm_source=generator&theme=0",
-    link: "https://open.spotify.com/track/4JmFwCmHASS4WkujMTPHWs",
+    embed: "https://open.spotify.com/embed/track/6j1Zkij6ETgFgmJkqxfPux?utm_source=generator&theme=0",
+    link: "https://open.spotify.com/track/6j1Zkij6ETgFgmJkqxfPux?si=af049e27021441e7",
     cover: "/assets/img/release-el-doctor.jpg"
   },
   {
-    id: "live",
-    title: "Live Performance",
-    subtitle: "YouTube",
-    embed: "https://www.youtube.com/embed/MeugaprjwGk?rel=0",
-    link: "https://www.youtube.com/watch?v=MeugaprjwGk",
+    id: "kangaroo-video",
+    title: "Kangaroo Time (Video)",
+    subtitle: "Music Video · YouTube",
+    embed: "https://www.youtube.com/embed/RoSYO3fApEc?rel=0",
+    link: "https://youtu.be/RoSYO3fApEc?si=8G5b-VzZRXEnHRef",
     cover: "/assets/img/release-kangaroo-time.jpg"
   }
 ];
