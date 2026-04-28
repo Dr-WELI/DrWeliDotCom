@@ -1,183 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WELI: Music</title>
-<meta name="description" content="Brazilian-Australian artist WELI makes global pop with Latin roots and genre-fluid direction, and leads WildWooHoo's nature-science creative universe.">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/music-app.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WELI: Music</title>
+  <meta name="description" content="Brazilian-Australian artist WELI makes global pop with Latin roots and genre-fluid direction, and leads WildWooHoo's nature-science creative universe.">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/music-app.css">
 </head>
-
 <body class="music-page">
+  <div class="music-app">
+    <header class="music-app-header">
+      <a href="/" class="music-app-brand">WELI</a>
+      <nav class="music-app-nav" aria-label="Music navigation">
+        <a href="/music" class="active" aria-current="page">Music</a>
+        <a href="#releases">Releases</a>
+        <a href="#about">Story</a>
+        <a href="/enquire/">Contact</a>
+      </nav>
+    </header>
 
-<div class="music-app">
+    <section class="music-hero">
+      <div class="music-panel music-hero-copy">
+        <p class="music-kicker">Brazil ↔ Australia</p>
+        <h1>WELI <span>Global pop with Latin roots and a performance-first voice.</span></h1>
 
-<header class="music-app-header">
-  <a href="/" class="music-app-brand">WELI</a>
-  <nav class="music-app-nav">
-    <a href="/music" class="active">Music</a>
-    <a href="#releases">Releases</a>
-    <a href="#about">Story</a>
-    <a href="/enquire/">Contact</a>
-  </nav>
-</header>
+        <p class="music-statement">
+          Brazilian-Australian artist making global pop with Latin roots, a genre-fluid edge, and a performance-first voice.
+        </p>
 
-<section class="music-hero">
+        <div class="music-chip-row" aria-label="Genres and style tags">
+          <span class="music-chip">Global Pop</span>
+          <span class="music-chip">Latin Pop</span>
+          <span class="music-chip">Electronic Pop</span>
+          <span class="music-chip">Genre-Fluid</span>
+        </div>
 
-  <div class="music-panel music-hero-copy">
-    <p class="music-kicker">Brazil ↔ Australia</p>
-    <h1>WELI <span></span></h1>
+        <div class="music-hero-actions">
+          <a class="music-button" href="/enquire/">Enquire</a>
+          <a class="music-button" href="https://open.spotify.com/artist/50lLmw55L8IEvin7efZ063" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a class="music-button-secondary" href="https://www.youtube.com/@welimusician" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
 
-    <p class="music-statement">
-      Brazilian-Australian artist making global pop with Latin roots, a genre-fluid edge, and a performance-first voice
-    </p>
-
-    <div class="music-chip-row">
-      <span class="music-chip">Global Pop</span>
-      <span class="music-chip">Latin Pop</span>
-      <span class="music-chip">Electronic Pop</span>
-      <span class="music-chip">Genre-Fluid</span>
-    </div>
-    
-      <div class="music-hero-actions">
-        <a class="music-button" href="/enquire/">Enquire</a>
+        <div class="music-platform-strip" aria-label="Music platforms">
+          <a class="music-platform-link" href="https://open.spotify.com/intl-pt/artist/50lLmw55L8IEvin7efZ063?si=iRjy49huTbeixTxSkfdMuQ" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+            <img alt="Spotify" loading="lazy" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64">
+            <span>Spotify</span>
+          </a>
+          <a class="music-platform-link" href="https://music.apple.com/au/artist/weli/1705899792" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
+            <img alt="Apple Music" loading="lazy" src="https://www.google.com/s2/favicons?domain=music.apple.com&sz=64">
+            <span>Apple Music</span>
+          </a>
+          <a class="music-platform-link" href="https://tidal.com/browse/artist/41908782" target="_blank" rel="noopener noreferrer" aria-label="TIDAL">
+            <img alt="TIDAL" loading="lazy" src="https://www.google.com/s2/favicons?domain=tidal.com&sz=64">
+            <span>TIDAL</span>
+          </a>
+          <a class="music-platform-link" href="https://www.amazon.com/music/player/artists/B0943D6PXS/weli" target="_blank" rel="noopener noreferrer" aria-label="Amazon Music">
+            <img alt="Amazon Music" loading="lazy" src="https://www.google.com/s2/favicons?domain=amazon.com&sz=64">
+            <span>Amazon Music</span>
+          </a>
+          <a class="music-platform-link" href="https://www.youtube.com/@welimusician" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img alt="YouTube" loading="lazy" src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64">
+            <span>YouTube</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="music-hero-actions">
-      <a class="music-button" href="https://open.spotify.com/artist/50lLmw55L8IEvin7efZ063" target="_blank">Spotify</a>
-      <a class="music-button-secondary" href="https://www.youtube.com/@welimusician" target="_blank">YouTube</a>
-    </div>
+      <div class="music-panel music-player-panel">
+        <div class="music-player-top">
+          <div>
+            <p class="music-kicker">Now Playing</p>
+            <h2 id="musicTitle"></h2>
+            <p id="musicSub"></p>
+          </div>
+          <a id="musicOpen" class="music-button music-open-link" target="_blank" rel="noopener noreferrer">Open</a>
+        </div>
 
-    <div class="music-platform-strip" aria-label="Music platforms">
-      <a class="music-platform-link" href="https://open.spotify.com/intl-pt/artist/50lLmw55L8IEvin7efZ063?si=iRjy49huTbeixTxSkfdMuQ" target="_blank" rel="noopener" aria-label="Spotify">
-        <img alt="" loading="lazy" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64">
-        <span>Spotify</span>
-      </a>
-      <a class="music-platform-link" href="https://music.apple.com/au/artist/weli/1705899792" target="_blank" rel="noopener" aria-label="Apple Music">
-        <img alt="" loading="lazy" src="https://www.google.com/s2/favicons?domain=music.apple.com&sz=64">
-        <span>Apple Music</span>
-      </a>
-      <a class="music-platform-link" href="https://tidal.com/browse/artist/41908782" target="_blank" rel="noopener" aria-label="TIDAL">
-        <img alt="" loading="lazy" src="https://www.google.com/s2/favicons?domain=tidal.com&sz=64">
-        <span>TIDAL</span>
-      </a>
-      <a class="music-platform-link" href="https://www.amazon.com/music/player/artists/B0943D6PXS/weli" target="_blank" rel="noopener" aria-label="Amazon Music">
-        <img alt="" loading="lazy" src="https://www.google.com/s2/favicons?domain=amazon.com&sz=64">
-        <span>Amazon Music</span>
-      </a>
-      <a class="music-platform-link" href="https://www.youtube.com/@welimusician" target="_blank" rel="noopener" aria-label="YouTube">
-        <img alt="" loading="lazy" src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64">
-        <span>YouTube</span>
-      </a>
-    </div>
+        <div class="music-frame-wrap">
+          <iframe id="musicFrame" title="WELI player" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
 
+        <div class="music-track-grid" id="musicTrackGrid"></div>
+      </div>
+    </section>
+
+    <section class="music-section" id="releases">
+      <div class="music-section-head">
+        <h2>Releases</h2>
+      </div>
+
+      <div class="music-release-grid">
+        <a class="music-release-card" href="https://youtu.be/suldaVz4L0E?si=U5kX3GsWOJL9NlDe" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.ytimg.com/vi/suldaVz4L0E/hqdefault.jpg" alt="World Pop Release 01 thumbnail">
+          <div class="music-release-copy">
+            <span class="music-release-meta">Music Video</span>
+            <h3>World Pop Release 01</h3>
+            <p>Watch on YouTube</p>
+          </div>
+        </a>
+
+        <a class="music-release-card" href="https://youtu.be/I-PVPVHC-Fg?si=36ZMrOzJ5JQT45yW" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.ytimg.com/vi/I-PVPVHC-Fg/hqdefault.jpg" alt="World Pop Release 02 thumbnail">
+          <div class="music-release-copy">
+            <span class="music-release-meta">Music Video</span>
+            <h3>World Pop Release 02</h3>
+            <p>Watch on YouTube</p>
+          </div>
+        </a>
+
+        <a class="music-release-card" href="https://youtu.be/hc9lBRw4rcI?si=GGAzqOf-ksila_kU" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.ytimg.com/vi/hc9lBRw4rcI/hqdefault.jpg" alt="World Pop Release 03 thumbnail">
+          <div class="music-release-copy">
+            <span class="music-release-meta">Music Video</span>
+            <h3>World Pop Release 03</h3>
+            <p>Watch on YouTube</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="music-section" id="about">
+      <div class="music-info-grid">
+        <div class="music-panel music-info-card">
+          <h3>WildWooHoo</h3>
+          <p>
+            WELI is the founder, face, and voice of WildWooHoo: nature-science inspired audio-visual projects for social impact and creator of <em>Kangaroo Time</em> (2024 Dance Your PhD winner).
+          </p>
+          <p>
+            WildWooHoo is a distinct nature-science-culture universe where music, film, and storytelling become tools for social impact.
+          </p>
+          <p>
+            It is the mission-led counterpart to the main artist lane: more cinematic, research-informed, and built to bring nature-inspired narratives into mainstream culture.
+          </p>
+          <a class="music-button-secondary music-inline-link" href="https://wildwoohoo.com" target="_blank" rel="noopener noreferrer">Explore wildwoohoo.com</a>
+
+          <div class="music-about-lines">
+            <span>Audio-visual products &amp; experiences</span>
+            <span>Nature-science inspired</span>
+            <span>Social impact focus</span>
+          </div>
+        </div>
+
+        <div class="music-panel music-info-card">
+          <h3>Bookings</h3>
+          <p>Live performance, festivals, and cultural events.</p>
+
+          <div class="music-booking-points">
+            <span>Live Sets</span>
+            <span>Festivals</span>
+            <span>Productions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="music-footer">
+      <a href="https://www.instagram.com/welimusic/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@welimusician" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://buymeacoffee.com/weli" target="_blank" rel="noopener noreferrer">Support</a>
+    </footer>
+
+    <div class="music-mini-player" id="musicMiniPlayer">
+      <div class="music-mini-player-main">
+        <img id="miniArt" alt="Current release cover art" loading="lazy">
+        <div>
+          <strong id="miniTitle"></strong>
+          <span id="miniSub"></span>
+        </div>
+      </div>
+      <a id="miniOpen" class="music-button compact" href="#" target="_blank" rel="noopener noreferrer">Open</a>
+    </div>
   </div>
 
-  <div class="music-panel music-player-panel">
-
-    <div class="music-player-top">
-      <div>
-        <p class="music-kicker">Now Playing</p>
-        <h2 id="musicTitle"></h2>
-        <p id="musicSub"></p>
-      </div>
-
-      <a id="musicOpen" class="music-button music-open-link" target="_blank">Open</a>
-    </div>
-
-    <div class="music-frame-wrap">
-      <iframe id="musicFrame"></iframe>
-    </div>
-
-    <div class="music-track-grid" id="musicTrackGrid"></div>
-
-  </div>
-
-</section>
-
-<section class="music-section" id="releases">
-  <div class="music-section-head">
-    <h2>Releases</h2>
-  </div>
-
-  <div class="music-release-grid">
-    <a class="music-release-card" href="https://youtu.be/suldaVz4L0E?si=U5kX3GsWOJL9NlDe" target="_blank" rel="noopener">
-      <img src="https://i.ytimg.com/vi/suldaVz4L0E/hqdefault.jpg" alt="Music video release 1">
-      <div class="music-release-copy">
-        <span class="music-release-meta">Music Video</span>
-        <h3>World Pop Release 01</h3>
-        <p>Watch on YouTube</p>
-      </div>
-    </a>
-
-    <a class="music-release-card" href="https://youtu.be/I-PVPVHC-Fg?si=36ZMrOzJ5JQT45yW" target="_blank" rel="noopener">
-      <img src="https://i.ytimg.com/vi/I-PVPVHC-Fg/hqdefault.jpg" alt="Music video release 2">
-      <div class="music-release-copy">
-        <span class="music-release-meta">Music Video</span>
-        <h3>World Pop Release 02</h3>
-        <p>Watch on YouTube</p>
-      </div>
-    </a>
-
-    <a class="music-release-card" href="https://youtu.be/hc9lBRw4rcI?si=GGAzqOf-ksila_kU" target="_blank" rel="noopener">
-      <img src="https://i.ytimg.com/vi/hc9lBRw4rcI/hqdefault.jpg" alt="Music video release 3">
-      <div class="music-release-copy">
-        <span class="music-release-meta">Music Video</span>
-        <h3>World Pop Release 03</h3>
-        <p>Watch on YouTube</p>
-      </div>
-    </a>
-  </div>
-
-<section class="music-section" id="about">
-  <div class="music-info-grid">
-
-    <div class="music-panel music-info-card">
-      <h3>WildWooHoo</h3>
-      <p>WELI is also the founder, face, and voice of **WildWooHoo**: nature-science inspired audio-visual projects for social impact, creator of *Kangaroo Time* (2024 Dance Your PhD winner)  Founded by WELI, WildWooHoo is a distinct nature-science-culture universe where music, film, and storytelling become tools for social impact</p>
-      <p>WildWooHoo is the mission-led counterpart to the main artist lane: more cinematic, research-informed, and built to bring nature-inspired narratives into mainstream culture</p>
-      <a class="music-button-secondary music-inline-link" href="https://wildwoohoo.com" target="_blank" rel="noopener">Explore wildwoohoo.com</a>
-
-      <div class="music-about-lines">
-        <span>Audio-visual products &amp; experiences</span>
-        <span>Nature-science inspired</span>
-        <span>Social impact focus</span>
-      </div>
-    </div>
-
-    <div class="music-panel music-info-card">
-      <h3>Bookings</h3>
-      <p>Live performance, festivals, and cultural events</p>
-
-      <div class="music-booking-points">
-        <span>Live Sets</span>
-        <span>Festivals</span>
-        <span>Productions</span>
-      </div>
-  </div>
-</section>
-
-<footer class="music-footer">
-  <a href="https://www.instagram.com/welimusic/" target="_blank">Instagram</a>
-  <a href="https://www.tiktok.com/@welimusician" target="_blank">TikTok</a>
-  <a href="https://buymeacoffee.com/weli" target="_blank">Support</a>
-</footer>
-
-<div class="music-mini-player">
-  <div class="music-mini-player-main">
-    <img id="miniArt">
-    <div>
-      <strong id="miniTitle"></strong>
-      <span id="miniSub"></span>
-    </div>
-  </div>
-  <a class="music-button compact" href="#">Open</a>
-</div>
-
-</div>
-
-<script src="/assets/js/music-app.js"></script>
+  <script src="/assets/js/music-app.js"></script>
 </body>
 </html>
