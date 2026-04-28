@@ -5,7 +5,7 @@ const tracks = [
     subtitle: "EP · Spotify",
     embed: "https://open.spotify.com/embed/album/0NcO0Jz1X2wlkedPjB7IZL?utm_source=generator&theme=0",
     link: "https://open.spotify.com/album/0NcO0Jz1X2wlkedPjB7IZL",
-    cover: "/assets/img/release-el-doctor.jpg"
+    cover: "/assets/img/release-interlude-yours-academically.jpg"
   },
   {
     id: "kangaroo",
@@ -21,7 +21,7 @@ const tracks = [
     subtitle: "Single · Spotify",
     embed: "https://open.spotify.com/embed/track/6j1Zkij6ETgFgmJkqxfPux?utm_source=generator&theme=0",
     link: "https://open.spotify.com/track/6j1Zkij6ETgFgmJkqxfPux?si=af049e27021441e7",
-    cover: "/assets/img/release-el-doctor.jpg"
+    cover: "/assets/img/release-shall-we-let-it-go.jpg"
   },
   {
     id: "kangaroo-video",
@@ -29,7 +29,7 @@ const tracks = [
     subtitle: "Music Video · YouTube",
     embed: "https://www.youtube.com/embed/RoSYO3fApEc?rel=0",
     link: "https://youtu.be/RoSYO3fApEc?si=8G5b-VzZRXEnHRef",
-    cover: "/assets/img/release-kangaroo-time.jpg"
+    cover: "/assets/img/release-el-doctor.jpg"
   }
 ];
 

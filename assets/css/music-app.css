@@ -201,20 +201,20 @@ body.music-page button {
 
 .music-platform-strip {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(56px, max-content));
   gap: 10px;
+  justify-content: start;
   margin-top: 22px;
 }
 
 .music-platform-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  min-height: 54px;
-  padding: 0 14px;
+  justify-content: center;
+  width: 56px;
+  min-height: 56px;
   border-radius: 16px;
   text-decoration: none;
-  color: var(--music-text);
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
   transition: 0.2s ease;
@@ -226,10 +226,10 @@ body.music-page button {
 }
 
 .music-platform-link img {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  flex: 0 0 18px;
+  flex: 0 0 24px;
 }
 
 .music-player-panel {
@@ -368,10 +368,15 @@ body.music-page button {
   background: rgba(255,255,255,0.07);
 }
 
-.music-release-card img {
+.music-release-embed-wrap {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #070b10;
+}
+
+.music-release-embed-wrap iframe {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border: 0;
   display: block;
 }
 
@@ -395,39 +400,42 @@ body.music-page button {
   letter-spacing: -0.03em;
 }
 
-.music-release-copy p {
-  margin: 0;
-  color: var(--music-muted);
-  line-height: 1.45;
-  font-size: 0.92rem;
-}
-
-
-.music-release-card.is-static {
-  pointer-events: none;
-}
-
-.music-info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.music-info-card {
+.music-wild-feature {
   padding: 22px;
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(280px, 1fr);
+  gap: 18px;
 }
 
-.music-info-card h3 {
+.music-wild-copy h3,
+.music-bookings-cta h3 {
   margin: 0 0 12px;
   font-size: clamp(1.7rem, 2.5vw, 2.4rem);
   letter-spacing: -0.05em;
   line-height: 0.98;
 }
 
-.music-info-card p {
+.music-wild-copy p,
+.music-bookings-cta p {
   margin: 0 0 12px;
   color: rgba(244,247,251,0.82);
   line-height: 1.55;
+}
+
+.music-wild-video iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border: 0;
+  border-radius: 18px;
+}
+
+.music-bookings-cta {
+  margin-top: 14px;
+  padding: 22px;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
 }
 
 .music-about-lines {
@@ -440,25 +448,6 @@ body.music-page button {
   color: var(--music-muted);
 }
 
-.music-booking-points {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.music-booking-points span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.05);
-  font-size: 0.82rem;
-  color: rgba(244,247,251,0.84);
-  font-weight: 700;
-}
 
 .music-inline-link {
   margin-top: 8px;
@@ -495,12 +484,13 @@ body.music-page button {
 
 @media (max-width: 1180px) {
   .music-hero,
-  .music-info-grid {
+  .music-wild-feature {
     grid-template-columns: 1fr;
   }
 
   .music-platform-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(56px, max-content));
+    justify-content: start;
   }
 }
 
@@ -532,7 +522,8 @@ body.music-page button {
   }
 
   .music-platform-strip {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(5, minmax(48px, max-content));
+    justify-content: start;
   }
 
   .music-frame-wrap iframe {
@@ -541,8 +532,13 @@ body.music-page button {
 
   .music-hero-copy,
   .music-player-panel,
-  .music-info-card {
+  .music-wild-feature,
+  .music-bookings-cta {
     padding: 18px;
+  }
+
+  .music-wild-video iframe {
+    min-height: 220px;
   }
 
   .music-mini-player {
