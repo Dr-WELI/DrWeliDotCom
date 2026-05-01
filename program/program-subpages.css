@@ -20,17 +20,6 @@
   margin-bottom: 14px;
 }
 
-.program-page .page-meta-link {
-  margin: 0 0 10px;
-  font-size: .92rem;
-}
-
-.program-page .page-meta-link a {
-  color: rgba(255,255,255,.82);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.3);
-}
-
 .program-page p,
 .program-page li {
   max-width: 72ch;
@@ -121,10 +110,6 @@
 .program-page .list li,
 .program-page ul li {
   margin-bottom: 6px;
-}
-
-.program-page #outcomes ul {
-  padding-left: 20px;
 }
 
 .program-page .proof-cue {
