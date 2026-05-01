@@ -254,7 +254,9 @@ body.program-page {
 
 @media (max-width: 900px) {
   .program-hero-actions-top {
-    position: static;
+    position: relative;
+    z-index: 6;
+    pointer-events: auto;
     margin: 100px 16px 0;
     justify-content: flex-start;
   }
