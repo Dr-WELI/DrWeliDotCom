@@ -148,3 +148,9 @@
     gap: 6px;
   }
 }
+
+
+.program-page .quick-jump strong { text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; }
+.program-page .quick-jump ul { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:14px; }
+.program-page .quick-jump a{ width:100%; justify-content:center; border-radius:2px; letter-spacing:.06em; text-transform:uppercase; font-size:.74rem; }
+@media (max-width:640px){ .program-page .quick-jump ul{ grid-template-columns:1fr 1fr; } }

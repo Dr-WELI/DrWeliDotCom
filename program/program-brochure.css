@@ -1,59 +1,83 @@
 .program-page.brochure-page {
-  --brochure-bg: #0f1720;
-  --brochure-accent: #f97316;
-  --brochure-soft: #f8fafc;
-  --brochure-panel: #111827;
-  --brochure-text: #e5e7eb;
-  background: radial-gradient(circle at top right, color-mix(in srgb, var(--brochure-accent) 15%, transparent), transparent 50%), var(--brochure-bg);
+  --brochure-bg: #11151d;
+  --brochure-accent: #ff5b45;
+  --brochure-soft: #f2f2f0;
+  --brochure-panel: #161b24;
+  --brochure-text: #e7eaef;
+  background:
+    radial-gradient(circle at 12% 15%, color-mix(in srgb, var(--brochure-accent) 20%, transparent), transparent 38%),
+    linear-gradient(180deg, #0b0f15 0%, var(--brochure-bg) 38%, #0f131b 100%);
   color: var(--brochure-text);
 }
 
 .brochure-page main { padding-bottom: 4rem; }
-.brochure-page .section { position: relative; }
-.brochure-page .section { opacity: .92; transform: translateY(6px); transition: .35s ease; }
+.brochure-page .section { position: relative; opacity: .95; transform: translateY(6px); transition: .35s ease; }
 .brochure-page .section.is-visible { opacity: 1; transform: translateY(0); }
 .brochure-page .section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255,255,255,0.04), transparent 30%);
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.03) 0 1px, transparent 1px 160px);
   pointer-events: none;
+  mix-blend-mode: soft-light;
 }
 .brochure-page .container { position: relative; z-index: 1; }
 .brochure-page h1, .brochure-page h2, .brochure-page h3 { color: #fff; letter-spacing: .02em; }
 .brochure-page p, .brochure-page li { color: var(--brochure-text); }
 
 .brochure-hero {
-  border: 1px solid color-mix(in srgb, var(--brochure-accent) 55%, #fff);
-  background: linear-gradient(145deg, color-mix(in srgb, var(--brochure-accent) 23%, #000), rgba(0,0,0,.66)), var(--brochure-texture, none) center/cover;
-  border-radius: 20px;
-  padding: clamp(1.2rem, 2vw, 2rem);
-  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--brochure-accent) 45%, #fff);
+  background:
+    linear-gradient(130deg, color-mix(in srgb, var(--brochure-accent) 45%, #000) 5%, rgba(0,0,0,.55) 60%),
+    var(--brochure-texture, none) center/cover;
+  border-radius: 4px;
+  padding: clamp(1.4rem, 3vw, 3rem);
+  min-height: clamp(340px, 48vh, 520px);
+  display: grid;
+  align-content: end;
+  box-shadow: 0 24px 60px rgba(0,0,0,.45);
 }
-.brochure-hero .lead { color: #fff; max-width: 65ch; }
-.brochure-academic-link { margin-top: .8rem; font-size: .95rem; }
+.brochure-hero h1 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: .98;
+  max-width: 12ch;
+  margin-bottom: .8rem;
+}
+.brochure-hero .lead {
+  color: #fff;
+  max-width: 58ch;
+  border-top: 2px solid rgba(255,255,255,.85);
+  padding-top: .85rem;
+}
+.brochure-academic-link { margin-top: .8rem; font-size: .95rem; max-width: 62ch; }
 .brochure-academic-link a { color: #fff; text-decoration-thickness: 2px; }
 
 .brochure-page .decision-card,
 .brochure-page .card,
 .brochure-page .quick-jump,
 .brochure-page .cta-bottom {
-  background: color-mix(in srgb, var(--brochure-panel) 80%, black);
-  border: 1px solid color-mix(in srgb, var(--brochure-accent) 35%, #ffffff);
-  border-radius: 16px;
+  background: color-mix(in srgb, var(--brochure-panel) 88%, black);
+  border: 1px solid color-mix(in srgb, var(--brochure-accent) 30%, #fff);
+  border-radius: 4px;
 }
+.brochure-page .decision-item { background: rgba(0,0,0,.28); }
 .brochure-page .card,
 .brochure-page .decision-item { backdrop-filter: blur(1px); }
-.brochure-page .btn-primary {
-  background: var(--brochure-accent);
-  border-color: var(--brochure-accent);
+.brochure-page .btn-primary { background: var(--brochure-accent); border-color: var(--brochure-accent); }
+.brochure-page .btn {
+  border-radius: 2px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .82rem;
 }
 
-.program-page.theme-corporate { --brochure-bg: #101623; --brochure-accent: #ff6b35; --brochure-panel: #1a1f2f; --brochure-texture: url('/assets/img/prog-14.jpg'); }
-.program-page.theme-university { --brochure-bg: #0f1f2f; --brochure-accent: #4da3ff; --brochure-panel: #152537; --brochure-texture: url('/assets/img/prog-9.jpg'); }
-.program-page.theme-school { --brochure-bg: #13261f; --brochure-accent: #50c878; --brochure-panel: #1b332b; --brochure-texture: url('/assets/img/prog-2.jpg'); }
-.program-page.theme-sciart { --brochure-bg: #1a1716; --brochure-accent: #ff5d4d; --brochure-panel: #2a2320; --brochure-texture: url('/assets/img/prog-12.jpg'); }
+/* theme mapping requested: red corporate, blue university, yellow schools, green science-art */
+.program-page.theme-corporate { --brochure-bg: #121722; --brochure-accent: #ff5b45; --brochure-panel: #1a202e; --brochure-texture: url('https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2?auto=format&fit=crop&w=1600&q=80'); }
+.program-page.theme-university { --brochure-bg: #101a29; --brochure-accent: #4ea1ff; --brochure-panel: #132236; --brochure-texture: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80'); }
+.program-page.theme-school { --brochure-bg: #2d280f; --brochure-accent: #ffcc00; --brochure-panel: #332d14; --brochure-texture: url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80'); }
+.program-page.theme-sciart { --brochure-bg: #102116; --brochure-accent: #34c759; --brochure-panel: #163024; --brochure-texture: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80'); }
 
 @media (max-width: 760px) {
-  .brochure-hero { border-radius: 14px; }
+  .brochure-hero { border-radius: 4px; min-height: 320px; }
 }
