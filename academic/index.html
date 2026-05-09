@@ -19,13 +19,50 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/site-archive.css" />
   <style>
-    .academic-hero{position:relative;overflow:hidden;isolation:isolate}
-    .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px}
-    .academic-signal{position:absolute;top:34px;right:18px;bottom:34px;width:44px;overflow:hidden;pointer-events:none;z-index:1;opacity:.82}
-    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:18px;animation:academicSignalMove 26s linear infinite}
-    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(23,23,23,.62);white-space:nowrap}
-    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(234,228,220,1) 0%, rgba(234,228,220,0) 10%, rgba(234,228,220,0) 90%, rgba(234,228,220,1) 100%);pointer-events:none;z-index:2}
-    @keyframes academicSignalMove{from{transform:translateY(-4%)}to{transform:translateY(-52%)}}
+    .academic-hero{position:relative;overflow:hidden;isolation:isolate;min-height:clamp(520px, 75vh, 720px);display:flex;align-items:center;}
+    .academic-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      background:
+        radial-gradient(ellipse 70% 55% at 22% 55%, rgba(74,95,138,.42) 0%, rgba(74,95,138,0) 65%),
+        radial-gradient(ellipse 55% 40% at 80% 36%, rgba(47,67,104,.34) 0%, rgba(47,67,104,0) 65%),
+        radial-gradient(ellipse 45% 30% at 60% 78%, rgba(183,154,114,.22) 0%, rgba(183,154,114,0) 70%),
+        linear-gradient(180deg, rgba(74,95,138,.10) 0%, rgba(74,95,138,.02) 50%, rgba(74,95,138,.06) 100%);
+    }
+    .academic-hero .hero-title{
+      position:relative;
+      font-size:clamp(56px, 10vw, 132px) !important;
+      line-height:.88 !important;
+      letter-spacing:-.05em !important;
+      max-width:none !important;
+      font-weight:800;
+    }
+    .academic-hero .hero-title::before{
+      content:"";
+      position:absolute;
+      left:0; top:50%;
+      transform:translateY(-50%);
+      width:min(820px, 92%);
+      height:130%;
+      background:radial-gradient(ellipse 60% 80% at 30% 50%, rgba(74,95,138,.32) 0%, rgba(74,95,138,0) 70%);
+      z-index:-1;
+      pointer-events:none;
+      filter:blur(10px);
+    }
+    .academic-hero .eyebrow{
+      color:#2F4368;
+      font-weight:800;
+      letter-spacing:.22em;
+    }
+    .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(20px, 4vw, 64px);padding-right:calc(72px + clamp(20px, 4vw, 64px));}
+    .academic-signal{position:absolute;top:50%;right:24px;transform:translateY(-50%);height:min(560px, 80%);width:48px;overflow:hidden;pointer-events:none;z-index:1;opacity:.78}
+    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:20px;animation:academicSignalMove 32s linear infinite}
+    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#2F4368;white-space:nowrap;font-weight:700}
+    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(234,228,220,1) 0%, rgba(234,228,220,0) 14%, rgba(234,228,220,0) 86%, rgba(234,228,220,1) 100%);pointer-events:none;z-index:2}
+    @keyframes academicSignalMove{from{transform:translateY(0)}to{transform:translateY(-50%)}}
     .academic-cap-grid .card h3{letter-spacing:-.03em}
     .academic-cap-grid .card p{max-width:34ch}
     .academic-cap-grid .pathway-kicker{margin-bottom:10px}
@@ -54,11 +91,12 @@
     }
     .research-orbit{
       position:relative;
-      min-height:560px;
+      min-height:600px;
       display:flex;
-      align-items:center;
+      align-items:flex-end;       /* anchor children to bottom so hub sits lower */
       justify-content:center;
       margin:0 auto;
+      padding-bottom:40px;        /* breathing room under the hub */
     }
     .research-orbit::before{
       content:"";
@@ -97,9 +135,10 @@
     }
     .research-node h3{margin:0 0 10px;font-size:1.06rem;letter-spacing:-.02em;line-height:1.12}
     .research-node p{margin:0;color:var(--muted);line-height:1.58;font-size:.95rem}
-    .research-node.top{top:10px;left:50%;transform:translateX(-50%)}
-    .research-node.left{left:72px;bottom:88px}
-    .research-node.right{right:72px;bottom:88px}
+    .research-node.top{top:30px;left:50%;transform:translateX(-50%)}
+    .research-node.left{left:72px;bottom:170px}
+    .research-node.right{right:72px;bottom:170px}
+    .research-hub{margin-bottom:20px}
     .research-node::after{
       content:"";
       position:absolute;
@@ -189,14 +228,39 @@
     .flagship-project-copy p{max-width:56ch}
     .flagship-project-copy .muted:last-child{margin-bottom:0}
 
-    @media (max-width:1080px){
+    @media (max-width:1100px){
       .appointments-row.top,.appointments-row.bottom{grid-template-columns:repeat(auto-fit,minmax(260px,320px))}
-      .research-orbit{min-height:unset;display:grid;gap:18px}
+      .research-orbit{
+        min-height:unset;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:18px;
+        padding-bottom:0;
+        align-items:stretch;
+      }
       .research-orbit::before,.research-orbit::after{display:none}
-      .research-node,.research-hub{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;margin:0 auto}
+      .research-node,.research-hub{
+        position:relative;
+        left:auto;right:auto;top:auto;bottom:auto;
+        transform:none;
+        margin:0;
+      }
+      .research-hub{
+        grid-column:1 / -1;
+        order:0;
+        margin:0 auto 8px;
+      }
+      .research-node{
+        order:1;
+        width:100%;
+      }
       .research-node::after{display:none}
       .flagship-project-grid{grid-template-columns:1fr}
       .flagship-project-card{max-width:none}
+    }
+    @media (max-width:720px){
+      .research-orbit{grid-template-columns:1fr}
+      .research-node{max-width:520px;margin:0 auto}
     }
     @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
     @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
@@ -256,27 +320,30 @@
       <div class="hero-sun"></div>
       <div class="academic-signal" aria-hidden="true">
         <div class="academic-signal-track">
-          <span class="academic-signal-item">ANIMAL & HUMAN SOCIALITY PARALLELS</span>
-          <span class="academic-signal-item">RESEARCH DATA SCIENCE • QUANTITATIVE ANALYSIS • REPORTING</span>
-          <span class="academic-signal-item">ECOLOGY • ANIMAL BEHAVIOUR • PERSONALITY • SOCIAL ANIMALS</span>
-          <span class="academic-signal-item">FIELDWORK • ENVIRONMENT MONITORING • LONG-TERM STUDIES</span>
-          <span class="academic-signal-item">SCIENCE COMMUNICATION • PUBLIC ENGAGEMENT • GUEST LECTURES</span>
-          <span class="academic-signal-item">POPULAR CULTURE • FILM • MUSIC • SOUND & MEDIA</span>
-          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE • RESEARCH-CREATION • CULTURE</span>
-          <span class="academic-signal-item">QILT • STUDENT EXPERIENCE SURVEY • RESPONSE RATE ANALYSIS</span>
-          <span class="academic-signal-item">RESEARCH DATA SCIENCE • QUANTITATIVE ANALYSIS • REPORTING</span>
-          <span class="academic-signal-item">ANIMAL & HUMAN SOCIALITY PARALLELS</span>
-          <span class="academic-signal-item">ECOLOGY • ANIMAL BEHAVIOUR • PERSONALITY • SOCIAL ANIMALS</span>
-          <span class="academic-signal-item">FIELDWORK • ENVIRONMENT MONITORING • LONG-TERM STUDIES</span>
-          <span class="academic-signal-item">SCIENCE COMMUNICATION • PUBLIC ENGAGEMENT • GUEST LECTURES</span>
-          <span class="academic-signal-item">POPULAR CULTURE • FILM • MUSIC • SOUND & MEDIA</span>
-          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE • RESEARCH-CREATION • CULTURE</span>
+          <span class="academic-signal-item">ECOLOGY · ANIMAL BEHAVIOUR · PERSONALITY</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE · QILT · UNSW</span>
+          <span class="academic-signal-item">DANCE YOUR PHD 2024 · GLOBAL WINNER</span>
+          <span class="academic-signal-item">ANU · POPSICULE · VISITING FELLOW</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION · POPULAR CULTURE</span>
+          <span class="academic-signal-item">FIELDWORK · LONG-TERM STUDIES · MARSUPIALS</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE · RESEARCH-CREATION</span>
+          <span class="academic-signal-item">PHD ECOLOGY &amp; EVOLUTION · 2017–2021</span>
+          <!-- duplicate set for seamless loop -->
+          <span class="academic-signal-item">ECOLOGY · ANIMAL BEHAVIOUR · PERSONALITY</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE · QILT · UNSW</span>
+          <span class="academic-signal-item">DANCE YOUR PHD 2024 · GLOBAL WINNER</span>
+          <span class="academic-signal-item">ANU · POPSICULE · VISITING FELLOW</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION · POPULAR CULTURE</span>
+          <span class="academic-signal-item">FIELDWORK · LONG-TERM STUDIES · MARSUPIALS</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE · RESEARCH-CREATION</span>
+          <span class="academic-signal-item">PHD ECOLOGY &amp; EVOLUTION · 2017–2021</span>
         </div>
       </div>
 
       <div class="hero-inner container">
-        <p class="eyebrow">Academic & Professional</p>
-        <h1 class="hero-title">Research, Teaching & Creative Practice</h1>
+        <p class="eyebrow">→ AUDIENCE / 02 — Academic &amp; Professional</p>
+        <h1 class="hero-title">Research,<br/>Teaching &amp;<br/>Creative Practice</h1>
+        <p style="font-family:'Instrument Serif', Georgia, serif;font-style:italic;font-size:clamp(17px, 1.5vw, 22px);line-height:1.45;color:#2F4368;max-width:54ch;margin:18px 0 6px;">PhD in ecology &amp; evolution. <em>Dance Your PhD</em> 2024 winner. Research, teaching, and culture-facing translation.</p>
 
         <div class="hero-ctas">
           <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary btn-lg">Professional enquiry</a>
@@ -563,17 +630,6 @@
   </footer>
 
   <script src="/script.js"></script>
-  <script>
-    (function(){
-      var el = document.getElementById('siteClock');
-      if(!el) return;
-      function tick(){
-        var d = new Date();
-        var p = function(n){ return String(n).padStart(2,'0'); };
-        el.textContent = p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC';
-      }
-      tick(); setInterval(tick, 1000);
-    })();
-  </script>
+  <script src="/site-clock.js"></script>
 </body>
 </html>

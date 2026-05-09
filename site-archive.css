@@ -64,6 +64,21 @@
 .site-ribbon .meta { opacity: .55; }
 .site-ribbon .live { color: var(--site-accent); font-weight: 700; }
 .site-ribbon .clock { font-variant-numeric: tabular-nums; }
+.site-ribbon a.meta,
+.site-ribbon .ribbon-brand-link {
+  color: var(--site-paper);
+  opacity: 1;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .14em;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.site-ribbon a.meta:hover,
+.site-ribbon .ribbon-brand-link:hover {
+  color: var(--site-accent);
+  border-bottom-color: var(--site-accent);
+}
 .site-ribbon .pulse {
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--site-accent);
@@ -398,6 +413,8 @@
 .site-audience-bottom {
   display: flex; flex-direction: column; gap: 14px;
   position: relative;
+  text-align: center;
+  align-items: center;
 }
 .site-audience-title {
   font-family: var(--site-display);
@@ -407,6 +424,7 @@
   letter-spacing: -.03em;
   color: #fff;
   margin: 0;
+  text-align: center;
 }
 .site-audience-sub {
   font-size: 13px;

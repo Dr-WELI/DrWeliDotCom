@@ -1272,7 +1272,7 @@ p{margin-top:0}
   height: 100%;
   display: block;
   object-fit: cover;
-  filter: grayscale(100%) contrast(1.06) brightness(.72);
+  filter: grayscale(55%) contrast(1.08) brightness(.75) saturate(1.1);
   transform: scale(1);
   animation: heroKenBurns 7s ease-in-out forwards;
 }
@@ -1296,8 +1296,10 @@ p{margin-top:0}
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(10,10,10,.30) 0%, rgba(10,10,10,.44) 35%, rgba(10,10,10,.60) 100%),
-    linear-gradient(90deg, rgba(10,10,10,.58) 0%, rgba(10,10,10,.18) 42%, rgba(10,10,10,.48) 100%);
+    radial-gradient(ellipse 70% 55% at 25% 50%, rgba(158,58,67,.32) 0%, rgba(158,58,67,0) 70%),
+    radial-gradient(ellipse 55% 45% at 78% 38%, rgba(110,31,42,.30) 0%, rgba(110,31,42,0) 70%),
+    linear-gradient(180deg, rgba(10,10,10,.34) 0%, rgba(10,10,10,.46) 35%, rgba(10,10,10,.60) 100%),
+    linear-gradient(90deg, rgba(10,10,10,.46) 0%, rgba(158,58,67,.10) 42%, rgba(10,10,10,.40) 100%);
 }
 
 .hero-showreel-vignette{

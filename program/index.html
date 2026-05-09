@@ -16,12 +16,12 @@
 <div class="site-ribbon">
   <div class="left">
     <span><span class="pulse"></span><span class="live">Bookings open</span></span>
-    <span class="meta">WELI · Programs</span>
+    <a href="/" class="meta ribbon-brand-link">WELI</a>
     <span class="meta">Activations · Workshops · Programs</span>
   </div>
   <div class="right">
-    <span class="meta">Sydney / Canberra / Worldwide</span>
-    <span class="clock" id="siteClock">00:00:00 UTC</span>
+    <span class="meta">Sydney · Canberra · Worldwide</span>
+    <span class="clock" id="siteClock">00:00:00</span>
   </div>
 </div>
 
@@ -224,18 +224,6 @@
 </main>
 
 <script src="/program/program.js"></script>
-<script>
-// Live UTC clock for ribbon
-(function(){
-  var el = document.getElementById('siteClock');
-  if(!el) return;
-  function tick(){
-    var d = new Date();
-    var p = function(n){ return String(n).padStart(2,'0'); };
-    el.textContent = p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC';
-  }
-  tick(); setInterval(tick, 1000);
-})();
-</script>
+<script src="/site-clock.js"></script>
 </body>
 </html>
