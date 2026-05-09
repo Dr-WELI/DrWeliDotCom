@@ -1,0 +1,492 @@
+/* ==========================================================================
+   SITE-ARCHIVE.CSS
+   Editorial polish layer shared across pages.
+   Scoped to opt-in classes (.site-*), so it can sit alongside any page's
+   existing styles without conflict. Loads after /styles.css.
+   ========================================================================== */
+
+:root {
+  --site-paper:      #EAE4DC;
+  --site-paper-2:    #F5F1EB;
+  --site-ink:        #111111;
+  --site-ink-soft:   #5F5852;
+  --site-rule:       rgba(17,17,17,.16);
+  --site-rule-soft:  rgba(17,17,17,.08);
+
+  --site-accent:        #9E3A43;
+  --site-accent-deep:   #6E1F2A;
+  --site-accent-blue:   #4A5F8A;
+  --site-accent-gold:   #C68A2C;
+  --site-accent-sage:   #4F8C6F;
+
+  --site-display: "Instrument Sans", Inter, system-ui, sans-serif;
+  --site-serif:   "Instrument Serif", Georgia, serif;
+  --site-mono:    ui-monospace, "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+/* ==========================================================================
+   1. UTILITY RIBBON (top of page, dark mono strip)
+   ========================================================================== */
+.site-ribbon {
+  background: var(--site-ink);
+  color: var(--site-paper);
+  font-family: var(--site-mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 8px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  z-index: 1100;          /* above program-page absolute header (z:1000) */
+}
+
+/* If a ribbon is present, push the absolute program-header below it
+   (site-polish.css sets .program-header to position:absolute; top:0). */
+.site-ribbon ~ header.program-header,
+.site-ribbon ~ header.site-header.program-header,
+.archive-ribbon ~ header.program-header,
+.archive-ribbon ~ header.site-header.program-header {
+  top: 37px !important;
+}
+@media (max-width: 700px) {
+  .site-ribbon ~ header.program-header,
+  .site-ribbon ~ header.site-header.program-header,
+  .archive-ribbon ~ header.program-header,
+  .archive-ribbon ~ header.site-header.program-header {
+    top: 33px !important;
+  }
+}
+.site-ribbon .left,
+.site-ribbon .right { display: flex; gap: 22px; align-items: center; }
+.site-ribbon .meta { opacity: .55; }
+.site-ribbon .live { color: var(--site-accent); font-weight: 700; }
+.site-ribbon .clock { font-variant-numeric: tabular-nums; }
+.site-ribbon .pulse {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--site-accent);
+  box-shadow: 0 0 0 0 var(--site-accent);
+  animation: sitePulse 1.8s infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+@keyframes sitePulse {
+  0%   { box-shadow: 0 0 0 0 var(--site-accent); }
+  70%  { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+@media (max-width: 700px) {
+  .site-ribbon { padding: 7px 16px; gap: 12px; font-size: 10px; }
+  .site-ribbon .meta { display: none; }
+}
+
+/* ==========================================================================
+   2. EDITORIAL SECTION HEAD (display title + stamp + meta)
+   ========================================================================== */
+.site-section-head {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 2fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: end;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--site-rule);
+  margin-bottom: 36px;
+}
+.site-section-title {
+  font-family: var(--site-display);
+  font-weight: 800;
+  font-size: clamp(36px, 5.2vw, 60px);
+  line-height: .92;
+  letter-spacing: -.04em;
+  color: var(--site-ink);
+  margin: 0;
+}
+.site-section-meta {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.site-section-stamp {
+  font-family: var(--site-mono);
+  font-size: 11px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--site-accent);
+  font-weight: 700;
+}
+.site-section-update {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--site-ink);
+  max-width: 56ch;
+  margin: 0;
+  line-height: 1.55;
+}
+.site-section-update small {
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--site-ink-soft);
+  font-family: var(--site-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+@media (max-width: 800px) {
+  .site-section-head { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* ==========================================================================
+   3. HAIRLINE CARD GRID (replaces rounded card grids)
+   ========================================================================== */
+.site-card-grid {
+  display: grid;
+  border-top: 1px solid var(--site-rule);
+  border-bottom: 1px solid var(--site-rule);
+}
+.site-card-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.site-card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.site-card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.site-card {
+  padding: clamp(24px, 3vw, 36px);
+  border-right: 1px solid var(--site-rule-soft);
+  border-bottom: 1px solid var(--site-rule-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+  transition: background 240ms ease;
+  position: relative;
+}
+.site-card:hover { background: var(--site-paper-2); }
+.site-card .num {
+  font-family: var(--site-mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: var(--site-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.site-card .kicker {
+  font-family: var(--site-mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--site-ink-soft);
+  font-weight: 600;
+  margin: 0;
+}
+.site-card h3 {
+  font-family: var(--site-display);
+  font-weight: 800;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  color: var(--site-ink);
+  margin: 0;
+}
+.site-card p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--site-ink-soft);
+  margin: 0;
+  max-width: 56ch;
+}
+.site-card a {
+  color: var(--site-accent-deep);
+  border-bottom: 1px solid var(--site-rule);
+  padding-bottom: 1px;
+}
+.site-card a:hover { border-bottom-color: var(--site-accent); color: var(--site-accent); }
+
+/* Remove right border for items in last column */
+.site-card-grid.cols-2 .site-card:nth-child(2n) { border-right: 0; }
+.site-card-grid.cols-3 .site-card:nth-child(3n) { border-right: 0; }
+.site-card-grid.cols-4 .site-card:nth-child(4n) { border-right: 0; }
+
+/* Remove bottom borders for last row */
+.site-card-grid.cols-2 .site-card:nth-last-child(-n+2):nth-child(2n+1),
+.site-card-grid.cols-2 .site-card:nth-last-child(-n+2):nth-child(2n+1) ~ .site-card,
+.site-card-grid.cols-2 .site-card:last-child:nth-child(2n+1) { border-bottom: 0; }
+.site-card-grid.cols-3 .site-card:last-child,
+.site-card-grid.cols-3 .site-card:last-child ~ .site-card,
+.site-card-grid.cols-3 .site-card:nth-last-child(-n+3) { border-bottom: 0; }
+.site-card-grid.cols-4 .site-card:nth-last-child(-n+4) { border-bottom: 0; }
+
+@media (max-width: 1100px) {
+  .site-card-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .site-card-grid.cols-4 .site-card:nth-child(2n) { border-right: 0; }
+  .site-card-grid.cols-4 .site-card:nth-child(2n+1) { border-right: 1px solid var(--site-rule-soft); }
+}
+@media (max-width: 800px) {
+  .site-card-grid.cols-3,
+  .site-card-grid.cols-4 { grid-template-columns: 1fr; }
+  .site-card-grid .site-card { border-right: 0 !important; }
+}
+@media (max-width: 700px) {
+  .site-card-grid.cols-2 { grid-template-columns: 1fr; }
+  .site-card-grid .site-card { border-right: 0 !important; }
+}
+
+/* ==========================================================================
+   4. CORNER TICKS (for any framed content)
+   ========================================================================== */
+.site-tick-frame { position: relative; }
+.site-tick {
+  position: absolute;
+  width: 12px; height: 12px;
+  z-index: 5;
+  color: rgba(255,255,255,.55);
+  pointer-events: none;
+}
+.site-tick::before, .site-tick::after {
+  content: ""; position: absolute; background: currentColor;
+}
+.site-tick::before { left: 50%; top: 0; bottom: 0; width: 1px; }
+.site-tick::after  { top: 50%; left: 0; right: 0; height: 1px; }
+.site-tick.tl { top: 8px; left: 8px; }
+.site-tick.tr { top: 8px; right: 8px; }
+.site-tick.bl { bottom: 8px; left: 8px; }
+.site-tick.br { bottom: 8px; right: 8px; }
+
+/* ==========================================================================
+   5. CLOSING BOOK CTA BAND
+   ========================================================================== */
+.site-book-band {
+  background: var(--site-ink);
+  color: var(--site-paper);
+  margin: clamp(64px, 8vw, 96px) 0 0;
+  padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 64px);
+  position: relative;
+  overflow: hidden;
+}
+.site-book-band::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(158,58,67,.18) 0%, transparent 60%);
+  opacity: .8;
+}
+.site-book-band-inner {
+  position: relative;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+.site-book-stamp {
+  font-family: var(--site-mono);
+  font-size: 11px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--site-accent);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.site-book-band h2 {
+  font-family: var(--site-display);
+  font-weight: 800;
+  font-size: clamp(32px, 4.6vw, 56px);
+  line-height: 1;
+  letter-spacing: -.03em;
+  color: var(--site-paper);
+  margin: 0 0 14px;
+  max-width: 22ch;
+}
+.site-book-band p {
+  font-family: var(--site-serif);
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(234,228,220,.85);
+  max-width: 50ch;
+  margin: 0;
+  line-height: 1.5;
+}
+.site-cta-button {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 16px 30px;
+  border: 1px solid var(--site-paper);
+  font-family: var(--site-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--site-paper);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: color 320ms ease;
+  background: transparent;
+  align-self: end;
+  justify-self: end;
+}
+.site-cta-button::before {
+  content: ""; position: absolute; inset: 0;
+  background: var(--site-paper);
+  transform: translateY(101%);
+  transition: transform 360ms cubic-bezier(.7,.05,.2,1);
+  z-index: 0;
+}
+.site-cta-button:hover { color: var(--site-ink); }
+.site-cta-button:hover::before { transform: translateY(0); }
+.site-cta-button span,
+.site-cta-button svg { position: relative; z-index: 1; }
+.site-cta-button svg { width: 26px; height: 12px; }
+
+@media (max-width: 800px) {
+  .site-book-band-inner { grid-template-columns: 1fr; gap: 24px; }
+  .site-cta-button { justify-self: start; }
+}
+
+/* ==========================================================================
+   6. AUDIENCE TILES (for /program landing — 4 themed tile grid)
+   ========================================================================== */
+.site-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--site-rule);
+  border-bottom: 1px solid var(--site-rule);
+}
+.site-audience-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  padding: 28px 24px;
+  border-right: 1px solid var(--site-rule-soft);
+  text-decoration: none;
+  overflow: hidden;
+  transition: padding 280ms ease;
+  color: #fff;
+}
+.site-audience-tile:last-child { border-right: 0; }
+.site-audience-tile:hover { padding-bottom: 36px; }
+
+.site-audience-tile.aud-corporate    { background: linear-gradient(165deg, #161616 0%, #3b2326 50%, #9E3A43 100%); }
+.site-audience-tile.aud-university   { background: linear-gradient(165deg, #161a22 0%, #2a3550 50%, #4A5F8A 100%); }
+.site-audience-tile.aud-school       { background: linear-gradient(165deg, #1a1612 0%, #4a3520 50%, #C68A2C 100%); }
+.site-audience-tile.aud-sciart       { background: linear-gradient(165deg, #131a16 0%, #25453a 50%, #4F8C6F 100%); }
+
+.site-audience-top {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.site-audience-num {
+  font-family: var(--site-mono);
+  font-size: 10px;
+  letter-spacing: .26em;
+  color: rgba(255,255,255,.55);
+  font-weight: 600;
+}
+.site-audience-tag {
+  font-family: var(--site-mono);
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  display: flex; align-items: center; gap: 8px;
+}
+.site-audience-tag::before {
+  content: ""; width: 18px; height: 1px; background: currentColor;
+}
+
+.site-audience-bottom {
+  display: flex; flex-direction: column; gap: 14px;
+  position: relative;
+}
+.site-audience-title {
+  font-family: var(--site-display);
+  font-weight: 800;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1;
+  letter-spacing: -.03em;
+  color: #fff;
+  margin: 0;
+}
+.site-audience-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.5;
+  max-width: 28ch;
+  margin: 0;
+}
+.site-audience-arrow {
+  font-family: var(--site-mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 6px;
+  font-weight: 700;
+  transition: transform 240ms ease;
+}
+.site-audience-tile:hover .site-audience-arrow { transform: translateX(4px); }
+
+.site-audience-glyph {
+  position: absolute;
+  bottom: -20px; right: -10px;
+  width: 60%; height: 60%;
+  opacity: .25;
+  pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .site-audience-grid { grid-template-columns: repeat(2, 1fr); }
+  .site-audience-tile:nth-child(2n) { border-right: 0; }
+  .site-audience-tile:nth-child(-n+2) { border-bottom: 1px solid var(--site-rule-soft); }
+}
+@media (max-width: 600px) {
+  .site-audience-grid { grid-template-columns: 1fr; }
+  .site-audience-tile { border-right: 0; min-height: 260px; }
+}
+
+/* ==========================================================================
+   7. CONTAINER UTILS
+   ========================================================================== */
+.site-archive-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+.site-archive-section {
+  margin: clamp(56px, 8vw, 96px) auto 0;
+}
+
+/* ==========================================================================
+   8. FORMAT CHIPS (small offer pills, e.g. "Activations · Workshops · Programs")
+   ========================================================================== */
+.site-chip-row {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-top: 8px;
+}
+.site-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--site-rule);
+  font-family: var(--site-mono);
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--site-ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 240ms ease;
+  background: transparent;
+}
+.site-chip:hover {
+  background: var(--site-ink);
+  color: var(--site-paper);
+  border-color: var(--site-ink);
+}
+.site-chip .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--site-accent);
+  flex-shrink: 0;
+}

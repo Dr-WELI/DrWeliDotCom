@@ -7,23 +7,8 @@
   <meta name="description" content="Brazilian-Australian artist WELI makes global pop with Latin roots and genre-fluid direction, and leads WildWooHoo's nature-science creative universe.">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/music-app.css">
-  <link rel="stylesheet" href="/site-archive.css">
 </head>
 <body class="music-page">
-
-  <!-- ===== UTILITY RIBBON ===== -->
-  <div class="site-ribbon">
-    <div class="left">
-      <span><span class="pulse"></span><span class="live">Releases</span></span>
-      <span class="meta">WELI · Music</span>
-      <span class="meta">Brazil ↔ Australia</span>
-    </div>
-    <div class="right">
-      <span class="meta">Global pop · Latin roots</span>
-      <span class="clock" id="siteClock">00:00:00 UTC</span>
-    </div>
-  </div>
-
   <div class="music-app">
     <header class="music-app-header">
       <a href="/" class="music-app-brand">WELI</a>
@@ -200,17 +185,5 @@
   </div>
 
   <script src="/assets/js/music-app.js"></script>
-  <script>
-    (function(){
-      var el = document.getElementById('siteClock');
-      if(!el) return;
-      function tick(){
-        var d = new Date();
-        var p = function(n){ return String(n).padStart(2,'0'); };
-        el.textContent = p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC';
-      }
-      tick(); setInterval(tick, 1000);
-    })();
-  </script>
 </body>
 </html>

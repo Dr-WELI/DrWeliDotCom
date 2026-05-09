@@ -13,45 +13,8 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/media/media.css" />
   <link rel="stylesheet" href="/media/media-stats-polish.css" />
-  <link rel="stylesheet" href="/site-archive.css" />
-  <style>
-    /* Mobile + tablet polish for media dashboard */
-    @media (max-width: 760px) {
-      .media-hero-actions { flex-wrap: wrap; gap: 10px; }
-      .media-hero-actions .btn { width: 100%; }
-      .command-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
-      .media-command-panel { padding: 18px !important; }
-      .media-platform-cloud { gap: 8px !important; }
-      .media-platform-cloud span { padding: 8px 12px !important; font-size: 13px !important; }
-      .map-point { width: 14px !important; height: 14px !important; }
-    }
-    @media (max-width: 500px) {
-      .command-grid { grid-template-columns: 1fr !important; }
-      .media-filter-row { gap: 6px !important; flex-wrap: wrap; }
-      .media-filter { padding: 8px 12px !important; font-size: 12px !important; }
-    }
-    /* Tighter sentiment + chart panels on small screens */
-    @media (max-width: 760px) {
-      .sentiment-bars, .data-panel.chart-panel { gap: 12px !important; }
-      .sentiment-row, .chart-row { gap: 8px !important; }
-    }
-  </style>
 </head>
 <body class="media-page">
-
-  <!-- ===== UTILITY RIBBON ===== -->
-  <div class="site-ribbon">
-    <div class="left">
-      <span><span class="pulse"></span><span class="live">Press atlas</span></span>
-      <span class="meta">WELI · Media</span>
-      <span class="meta">238+ features tracked</span>
-    </div>
-    <div class="right">
-      <span class="meta">Global · 6 continents</span>
-      <span class="clock" id="siteClock">00:00:00 UTC</span>
-    </div>
-  </div>
-
   <header class="site-header media-header">
     <a class="brand" href="/" aria-label="WELI home">WELI</a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -257,24 +220,6 @@ English-language coverage tracked - additional global media beyond monitoring sc
         <span>BBC</span><span>10's The Project</span><span>7 Sunrise</span><span>ABC News Breakfast</span><span>RN Breakfast</span><span>The Australian</span><span>NEWS.com.au</span><span>Yahoo UK</span><span>MSN</span><span>Revry LGBTQ TV</span><span>My Modern Met</span><span>NDTV</span><span>LGBTQ Nation</span><span>Daily Mail</span><span>Australian Geographic</span><span>European Broadcasting Union</span><span>Scimex</span><span>EurekAlert</span>
       </div>
     </section>
-
-    <!-- ===== CLOSING CTA ===== -->
-    <section class="site-book-band">
-      <div class="site-book-band-inner">
-        <div>
-          <div class="site-book-stamp">→ Press · Interview · Feature</div>
-          <h2>Looking for a story?</h2>
-          <p>Press kits, interviews, and features welcome — science, music, identity, and global cultural traction in one project.</p>
-        </div>
-        <a class="site-cta-button" href="/enquire/">
-          <span>Press &amp; bookings</span>
-          <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4">
-            <line x1="0" y1="6" x2="24" y2="6"/>
-            <polyline points="18,1 24,6 18,11"/>
-          </svg>
-        </a>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
@@ -283,17 +228,5 @@ English-language coverage tracked - additional global media beyond monitoring sc
 
   <script src="/script.js"></script>
   <script src="/media/media.js"></script>
-  <script>
-    (function(){
-      var el = document.getElementById('siteClock');
-      if(!el) return;
-      function tick(){
-        var d = new Date();
-        var p = function(n){ return String(n).padStart(2,'0'); };
-        el.textContent = p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC';
-      }
-      tick(); setInterval(tick, 1000);
-    })();
-  </script>
 </body>
 </html>
