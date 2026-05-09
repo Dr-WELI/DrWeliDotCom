@@ -3,15 +3,29 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>WEL: Schools & Teachers</title>
+<title>WELI: Schools & Teachers</title>
+<meta name="description" content="School STEAM experiences that transform science into movement, story, and unforgettable learning. Designed for engagement, curriculum relevance, and teacher PD." />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/program/program.css" />
-<link rel="stylesheet" href="/program/program-subpages.css" />
-<link rel="stylesheet" href="/program/program-brochure.css" />
+<link rel="stylesheet" href="/program/program-archive.css" />
 </head>
 
-<body class="program-page brochure-page theme-school">
+<body class="program-page archive-page theme-school">
 
+<!-- ===== UTILITY RIBBON ===== -->
+<div class="archive-ribbon">
+  <div class="left">
+    <span><span class="pulse"></span><span class="live">Bookings open</span></span>
+    <span class="meta">Schools Vault / v2.0</span>
+    <span class="meta">Sector // 04 — STEAM &amp; Wellbeing</span>
+  </div>
+  <div class="right">
+    <span class="meta">Term 2–4, 2026</span>
+    <span class="clock" id="archiveClock">00:00:00 UTC</span>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
 <header class="site-header program-header">
   <a class="brand" href="/">WELI</a>
   <button class="program-secondary-toggle" id="programMenuToggle">☰</button>
@@ -25,164 +39,360 @@
 </header>
 
 <main>
-<section class="section is-tight" id="top">
-  <div class="container narrow brochure-hero">
-    <h1>School STEAM experiences that transform science into movement, story, and unforgettable learning</h1>
-    <p class="lead">Designed for school leaders and teachers who want immediate engagement, curriculum relevance, and practical tools for both students and educators</p>
-    <p class="brochure-academic-link">This approach combines classroom creativity with evidence from student experience survey work. <a href="/academic/">See the academic and research profile</a></p>
-    <a href="/enquire/" class="btn btn-primary program-main-enquire">Bring this to your school</a>
-  </div>
-</section>
 
-<section class="section is-tight">
-  <div class="container narrow quick-jump">
-    <strong>On this page</strong>
-    <ul>
-      <li><a href="#decision">Decision snapshot</a></li>
-      <li><a href="#formats">Formats</a></li>
-      <li><a href="#outcomes">Outcomes</a></li>
-      <li><a href="#proof">Proof</a></li>
-      <li><a href="#book">Book</a></li>
-    </ul>
-  </div>
-</section>
+  <!-- ===== TIMELINE — Engagement DNA ===== -->
+  <section class="archive-timeline" aria-label="Engagement DNA">
 
-<section class="section is-tight" id="decision">
-  <div class="container">
-    <div class="decision-card">
-      <div class="decision-grid">
-        <article class="decision-item">
-          <h3>Who it’s for</h3>
-          <ul>
-            <li>Science / STEAM teachers</li>
-            <li>Heads of curriculum</li>
-            <li>Wellbeing and engagement teams</li>
-          </ul>
-        </article>
-        <article class="decision-item">
-          <h3>Top outcomes</h3>
-          <ul>
-            <li>Higher student participation</li>
-            <li>Better science concept retention</li>
-            <li>Increased curiosity and confidence</li>
-          </ul>
-        </article>
-        <article class="decision-item">
-          <h3>Formats / options</h3>
-          <ul>
-            <li>Assembly activation</li>
-            <li>Year-level workshop blocks</li>
-            <li>Teacher PD add-on</li>
-          </ul>
-        </article>
-        <article class="decision-item cta">
-          <div>
-            <h3>Quick CTA</h3>
-            <p>Share year levels, curriculum focus, and school priorities for a mapped session plan</p>
-          </div>
-          <a href="/enquire/" class="btn btn-primary">Get a school plan</a>
-        </article>
+    <article class="archive-era" data-step="1">
+      <div>
+        <div class="era-tag">Phase 01</div>
+        <h2 class="era-title">Student activation</h2>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="era-foot"><span>ASSEMBLY / OPENER</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="100" cy="100" r="40"/>
+        <path d="M100 60 L100 30"/>
+        <path d="M100 140 L100 170"/>
+        <path d="M60 100 L30 100"/>
+        <path d="M140 100 L170 100"/>
+      </svg>
+    </article>
 
-<section class="section" id="formats">
-  <div class="container">
-    <h2>Program options</h2>
-    <p class="proof-cue">School delivery follows a clear engagement DNA: collective activation → science message/story → practical workshop creation → uplifting close</p>
-    <div class="cards three service-formats">
-      <article class="card">
+    <article class="archive-era" data-step="2">
+      <div>
+        <div class="era-tag">Phase 02</div>
+        <h2 class="era-title">Science as story &amp; sound</h2>
+      </div>
+      <div class="era-foot"><span>STEAM MODULE</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width=".9">
+        <path d="M30 100 Q 60 40 100 100 T 170 100"/>
+        <path d="M30 130 Q 60 70 100 130 T 170 130"/>
+      </svg>
+    </article>
+
+    <article class="archive-era" data-step="3">
+      <div>
+        <div class="era-tag">Phase 03</div>
+        <h2 class="era-title">Creative STEAM lab</h2>
+      </div>
+      <div class="era-foot"><span>YEAR-LEVEL BLOCK</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width=".9">
+        <rect x="40" y="40" width="120" height="120" stroke-dasharray="6 4"/>
+        <rect x="60" y="60" width="80" height="80"/>
+        <line x1="60" y1="100" x2="140" y2="100"/>
+        <line x1="100" y1="60" x2="100" y2="140"/>
+      </svg>
+    </article>
+
+    <article class="archive-era" data-step="4">
+      <div>
+        <div class="era-tag">Phase 04</div>
+        <h2 class="era-title">Showcase &amp; celebration</h2>
+      </div>
+      <div class="era-foot"><span>UPLIFTING CLOSE</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.1">
+        <path d="M100 30 L120 80 L170 80 L130 110 L150 160 L100 130 L50 160 L70 110 L30 80 L80 80 Z"/>
+      </svg>
+    </article>
+
+  </section>
+
+  <!-- ===== HERO ===== -->
+  <div class="archive-hero-wrap">
+    <article class="archive-hero" id="archiveHero">
+
+      <span class="archive-tick tl"></span>
+      <span class="archive-tick tr"></span>
+      <span class="archive-tick bl"></span>
+      <span class="archive-tick br"></span>
+
+      <div class="archive-rail tl">REC // 04 — SCHOOLS</div>
+      <div class="archive-rail tr">SECTOR / STEAM &amp; WELLBEING</div>
+      <div class="archive-rail bl">FORMAT ASSEMBLY → BLOCK</div>
+      <div class="archive-rail br">SIG / OPEN</div>
+
+      <div class="archive-hero-bg">
+        <div class="streak"></div>
+        <div class="streak s2"></div>
+        <div class="glow"></div>
+      </div>
+
+      <div class="archive-hero-content">
+
+        <div class="archive-hero-top">
+          <div class="archive-avail">
+            <div class="archive-avail-label"><span>Term windows</span><span>T2 / T3 / T4 — 64%</span></div>
+            <div class="archive-avail-bar"></div>
+            <p class="archive-avail-msg">Assembly activations, year-level workshop blocks, and teacher PD scoped per school. Share year levels and curriculum focus to plan a fit.</p>
+          </div>
+          <div class="archive-hero-id">
+            <span>RECORD</span>
+            <span class="num">04 / 04</span>
+          </div>
+        </div>
+
+        <div class="archive-hero-title-block">
+          <div class="archive-hero-cat">
+            <span class="num">03</span>
+            <span class="rule"></span>
+            <span>Audience Profile</span>
+          </div>
+          <h1 class="archive-hero-title archive-title-reveal">
+            <span>Schools</span>
+          </h1>
+          <p class="archive-hero-sub">School STEAM experiences that transform science into movement, story, and unforgettable learning — immediate engagement, curriculum relevance, and practical tools for both students and educators.</p>
+          <p class="archive-hero-academic">Combines classroom creativity with evidence from student-experience survey work. <a href="/academic/">See academic profile →</a></p>
+          <a class="archive-hero-cta" href="/enquire/">
+            <span>Bring this to your school</span>
+            <svg viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.4">
+              <line x1="0" y1="6" x2="28" y2="6"/>
+              <polyline points="22,1 28,6 22,11"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== DECISION DOSSIER ===== -->
+  <section class="archive-dossier" id="decision">
+    <div class="archive-dossier-grid">
+
+      <div class="archive-dossier-cell">
+        <div class="label">Who it's for</div>
+        <ul>
+          <li>Science / STEAM teachers</li>
+          <li>Heads of curriculum</li>
+          <li>Wellbeing &amp; engagement teams</li>
+        </ul>
+      </div>
+
+      <div class="archive-dossier-cell">
+        <div class="label">Top outcomes</div>
+        <ul>
+          <li>Higher student participation</li>
+          <li>Better science concept retention</li>
+          <li>Increased curiosity &amp; confidence</li>
+        </ul>
+      </div>
+
+      <div class="archive-dossier-cell">
+        <div class="label">Formats</div>
+        <ul>
+          <li>Assembly activation</li>
+          <li>Year-level workshop blocks</li>
+          <li>Teacher PD add-on</li>
+        </ul>
+      </div>
+
+      <div class="archive-dossier-cell cta-cell">
+        <div>
+          <div class="label">Quick request</div>
+          <p>Share year levels, curriculum focus, and school priorities for a mapped session plan.</p>
+        </div>
+        <a class="btn-cta" href="/enquire/">Get a school plan →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FORMATS ===== -->
+  <section class="archive-section" id="formats">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Program<br/>Options</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">Activation → Workshop → PD</span>
+        <p class="archive-section-update">Clear engagement DNA: collective activation → science message / story → practical workshop creation → uplifting close.</p>
+      </div>
+    </header>
+
+    <div class="archive-formats">
+      <article class="archive-format">
+        <div class="num">F.01</div>
         <h3>Student activation</h3>
-        <ul class="list">
+        <ul>
           <li>Dynamic science-meets-story sessions</li>
-          <li>Great for assembly and event formats</li>
+          <li>Great for assembly &amp; event formats</li>
           <li>Fast engagement across mixed cohorts</li>
         </ul>
       </article>
-      <article class="card">
+      <article class="archive-format">
+        <div class="num">F.02</div>
         <h3>Curriculum workshop</h3>
-        <ul class="list">
+        <ul>
           <li>Hands-on STEAM-linked activities</li>
           <li>Animal behaviour, adaptation, ecology</li>
           <li>Designed for active classroom learning</li>
         </ul>
       </article>
-      <article class="card">
+      <article class="archive-format">
+        <div class="num">F.03</div>
         <h3>Teacher extension</h3>
-        <ul class="list">
+        <ul>
           <li>Practical facilitation strategies</li>
-          <li>Creative science communication tools</li>
+          <li>Creative science-communication tools</li>
           <li>Ready-to-adapt classroom approaches</li>
         </ul>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="outcomes">
-  <div class="container narrow">
-    <h2>What this delivers</h2>
-    <ul>
-      <li>✔ Science concepts made memorable through embodied learning</li>
-      <li>✔ Stronger student engagement and class participation</li>
-      <li>✔ Better links between inquiry, creativity, and communication</li>
-      <li>✔ Practical value for both students and educators</li>
-    </ul>
-    <h3>School activation and workshop menu</h3>
-    <ul>
-      <li>Collective start: guided movement, rhythm games, guided meditation, or full-group karaoke adapted by age level</li>
-      <li>Science message block: complex ideas made clear through story, sound, and embodied learning</li>
-      <li>Creative workshop phase: students turn concepts into songs, mini performances, and collaborative science communication outputs</li>
-      <li>Uplifting close: confidence-building final moment that celebrates learning and participation</li>
-      <li>Teacher PR and PD: frameworks to make science compelling through art and communication in everyday classes</li>
-      <li>Featured teacher-facing credential: Top 30 shortlist at <a href="https://falling-walls.com/falling-walls-science-summit/science-summit-2025/falling-walls-engage" target="_blank" rel="noopener">Falling Walls Engage 2025</a> for transforming science into compelling public communication</li>
-    </ul>
-
-    <h3>Named workshops and modules</h3>
-    <ul>
-      <li><strong>Kangaroo Time Kids</strong>: learning about kangaroos through music and dance (primary focus)</li>
-      <li><strong>Move the Message</strong>: turning science facts into songs, movement, and short performances</li>
-      <li><strong>From Curiosity to Communication</strong>: inquiry-to-story pathways for student voice</li>
-      <li><strong>Eco-Rhythm Lab</strong>: ecosystems, adaptation, and behaviour through rhythm-based activities</li>
-      <li><strong>Creative Science Showcase</strong>: student teams present science themes as mini performance pieces</li>
-      <li><strong>Teacher PD</strong>: adapting science communication tools for classroom delivery and engagement</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section" id="proof">
-  <div class="container">
-    <h2>Proof in action</h2>
-    <p class="proof-cue">Kangaroo Time material adapted for school audiences, year levels, and STEAM goals</p>
-    <div class="video-stack">
-      <div>
-        <div class="program-video-frame">
-          <iframe src="https://www.youtube.com/embed/ZUZkLnTioLQ" title="Kangaroo Time kids video" allowfullscreen></iframe>
-        </div>
-        <p class="video-caption">Kids-facing Kangaroo Time example for school contexts</p>
+  <!-- ===== INDEX — Named modules ===== -->
+  <section class="archive-section" id="themes">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Workshop<br/>Index</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">02.05.26 — Catalogue updated</span>
+        <p class="archive-section-update">Named workshops &amp; modules — adaptable by year level, indexed by topic.<small>Modules · Activations · 28 entries appended</small></p>
       </div>
-      <div>
-        <div class="program-video-frame">
-          <iframe src="https://www.youtube.com/embed/RoSYO3fApEc" title="Kangaroo Time education-facing performance example" allowfullscreen></iframe>
+    </header>
+
+    <div class="archive-index">
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">C</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>From Curiosity to Communication</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Creative Science Showcase</span><span class="archive-index-count">(03)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">E</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Eco-Rhythm Lab</span><span class="archive-index-count">(03)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">K</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Kangaroo Time Kids</span><span class="archive-index-count">(05)</span></li>
+          <li class="archive-index-entry"><span>Karaoke — full-room</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">M</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Move the Message</span><span class="archive-index-count">(04)</span></li>
+          <li class="archive-index-entry"><span>Movement &amp; rhythm games</span><span class="archive-index-count">(02)</span></li>
+          <li class="archive-index-entry"><span>Meditation — guided</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">R</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Rhythm-based ecology activities</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">S</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Science message blocks</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Showcase finals</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">T</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Teacher PD modules</span><span class="archive-index-count">(03)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">U</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Uplifting close</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ACCREDITATION CALL-OUT ===== -->
+  <section class="archive-section" id="accred">
+    <div class="archive-outcomes" style="border-top: 1px solid var(--rule); padding: 36px 0;">
+      <h3 class="archive-outcomes-title">Teacher-facing<br/>credential</h3>
+      <ul class="archive-outcomes-list">
+        <li><strong>Top 30 shortlist — Falling Walls Engage 2025</strong> for transforming science into compelling public communication. <a href="https://falling-walls.com/falling-walls-science-summit/science-summit-2025/falling-walls-engage" target="_blank" rel="noopener" style="color:var(--accent-deep);text-decoration:underline;">View →</a></li>
+        <li>Approach grounded in PhD-level research and applied student-experience data work</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== OUTCOMES ===== -->
+  <section class="archive-section" id="outcomes">
+    <div class="archive-outcomes">
+      <h3 class="archive-outcomes-title">What this<br/>delivers</h3>
+      <ul class="archive-outcomes-list">
+        <li>Science concepts made memorable through embodied learning</li>
+        <li>Stronger student engagement and class participation</li>
+        <li>Better links between inquiry, creativity, and communication</li>
+        <li>Practical value for both students and educators</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== PROOF ===== -->
+  <section class="archive-section" id="proof">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Proof<br/>in action</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">Field record — classrooms &amp; assemblies</span>
+        <p class="archive-section-update">Kangaroo Time material adapted for school audiences, year levels, and STEAM goals.</p>
+      </div>
+    </header>
+
+    <div class="archive-proof">
+      <p class="archive-proof-cue">Transmissions — student &amp; teacher</p>
+
+      <div class="archive-proof-item">
+        <div class="archive-proof-frame">
+          <span class="archive-tick tl"></span><span class="archive-tick tr"></span>
+          <span class="archive-tick bl"></span><span class="archive-tick br"></span>
+          <iframe src="https://www.youtube.com/embed/ZUZkLnTioLQ" title="Kangaroo Time Kids" allowfullscreen></iframe>
         </div>
-        <p class="video-caption">Flagship format adaptable for class and school events</p>
+        <p class="archive-proof-caption">// Kids-facing Kangaroo Time — school context</p>
+      </div>
+
+      <div class="archive-proof-item">
+        <div class="archive-proof-frame">
+          <span class="archive-tick tl"></span><span class="archive-tick tr"></span>
+          <span class="archive-tick bl"></span><span class="archive-tick br"></span>
+          <iframe src="https://www.youtube.com/embed/RoSYO3fApEc" title="Flagship adaptable" allowfullscreen></iframe>
+        </div>
+        <p class="archive-proof-caption">// Flagship format — adaptable for class &amp; school events</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="book">
-  <div class="container narrow cta-bottom">
-    <h2>Ready to bring this to your students?</h2>
-    <p>Send year levels, student numbers, and session goals to scope a fit</p>
-    <a href="/enquire/" class="btn btn-primary program-main-enquire">Enquire now</a>
-  </div>
-</section>
+  <!-- ===== BOOK CTA ===== -->
+  <section class="archive-book" id="book">
+    <div class="archive-book-inner">
+      <div>
+        <div class="archive-book-stamp">→ Plan the term</div>
+        <h2>Ready to bring this to your students?</h2>
+        <p>Send year levels, student numbers, and session goals to scope a fit.</p>
+      </div>
+      <a class="archive-hero-cta" href="/enquire/">
+        <span>Enquire now</span>
+        <svg viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="0" y1="6" x2="28" y2="6"/>
+          <polyline points="22,1 28,6 22,11"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
 </main>
 
 <script src="/program/program.js"></script>
-<script src="/program/program-brochure.js"></script>
+<script src="/program/program-archive.js"></script>
 
 </body>
 </html>

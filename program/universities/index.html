@@ -3,15 +3,29 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>WEL: Universities</title>
+<title>WELI: Universities</title>
+<meta name="description" content="High-participation cohort experiences for student life, faculties, HDR, and graduate programs. Communication confidence, WIL outcomes, transdisciplinary careers." />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="stylesheet" href="/program/program.css" />
-<link rel="stylesheet" href="/program/program-subpages.css" />
-<link rel="stylesheet" href="/program/program-brochure.css" />
+<link rel="stylesheet" href="/program/program-archive.css" />
 </head>
 
-<body class="program-page brochure-page theme-university">
+<body class="program-page archive-page theme-university">
 
+<!-- ===== UTILITY RIBBON ===== -->
+<div class="archive-ribbon">
+  <div class="left">
+    <span><span class="pulse"></span><span class="live">Bookings open</span></span>
+    <span class="meta">University Vault / v2.0</span>
+    <span class="meta">Sector // 03 — Student Experience</span>
+  </div>
+  <div class="right">
+    <span class="meta">Semester windows 2026</span>
+    <span class="clock" id="archiveClock">00:00:00 UTC</span>
+  </div>
+</div>
+
+<!-- ===== SITE HEADER ===== -->
 <header class="site-header program-header">
   <a class="brand" href="/">WELI</a>
   <button class="program-secondary-toggle" id="programMenuToggle">☰</button>
@@ -25,174 +39,366 @@
 </header>
 
 <main>
-<section class="section is-tight" id="top">
-  <div class="container narrow brochure-hero">
-    <h1>University experiences that connect cohorts, build communication confidence, and strengthen WIL outcomes</h1>
-    <p class="lead">For student experience teams, faculties, and graduate programs wanting a high-participation format that is creative, evidence-informed, and professionally relevant</p>
-    <p class="brochure-academic-link">Built by a researcher-practitioner with hands-on QILT student experience survey analysis experience as a Research Data Scientist at UNSW. <a href="/academic/">View academic background</a></p>
-    <a href="/enquire/" class="btn btn-primary program-main-enquire">Bring this to your students</a>
-  </div>
-</section>
 
-<section class="section is-tight">
-  <div class="container narrow quick-jump">
-    <strong>On this page</strong>
-    <ul>
-      <li><a href="#decision">Decision snapshot</a></li>
-      <li><a href="#formats">Formats</a></li>
-      <li><a href="#outcomes">Outcomes</a></li>
-      <li><a href="#proof">Proof</a></li>
-      <li><a href="#book">Book</a></li>
-    </ul>
-  </div>
-</section>
+  <!-- ===== TIMELINE — Engagement DNA ===== -->
+  <section class="archive-timeline" aria-label="Engagement DNA">
 
-<section class="section is-tight" id="decision">
-  <div class="container">
-    <div class="decision-card">
-      <div class="decision-grid">
-        <article class="decision-item">
-          <h3>Who it’s for</h3>
-          <ul>
-            <li>Student Experience / Life</li>
-            <li>Orientation and transition teams</li>
-            <li>HDR and capability programs</li>
-          </ul>
-        </article>
-        <article class="decision-item">
-          <h3>Top outcomes</h3>
-          <ul>
-            <li>Faster cohort connection</li>
-            <li>Higher communication confidence</li>
-            <li>More memorable student experience</li>
-          </ul>
-        </article>
-        <article class="decision-item">
-          <h3>Formats / options</h3>
-          <ul>
-            <li>5–20 min activations</li>
-            <li>60–120 min workshops</li>
-            <li>Multi-session cohort programs</li>
-          </ul>
-        </article>
-        <article class="decision-item cta">
-          <div>
-            <h3>Quick CTA</h3>
-            <p>Share your cohort type, WIL goals, and delivery window for a tailored university pathway</p>
-          </div>
-          <a href="/enquire/" class="btn btn-primary">Check dates</a>
-        </article>
+    <article class="archive-era" data-step="1">
+      <div>
+        <div class="era-tag">Phase 01</div>
+        <h2 class="era-title">Cohort activation</h2>
       </div>
+      <div class="era-foot"><span>5–20 MIN</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width=".9">
+        <circle cx="60" cy="100" r="14"/>
+        <circle cx="100" cy="60" r="14"/>
+        <circle cx="140" cy="100" r="14"/>
+        <circle cx="100" cy="140" r="14"/>
+        <line x1="60" y1="100" x2="140" y2="100"/>
+        <line x1="100" y1="60" x2="100" y2="140"/>
+      </svg>
+    </article>
+
+    <article class="archive-era" data-step="2">
+      <div>
+        <div class="era-tag">Phase 02</div>
+        <h2 class="era-title">Identity, purpose, voice</h2>
+      </div>
+      <div class="era-foot"><span>STORY MODULE</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width=".9">
+        <path d="M100 30 L100 170"/>
+        <path d="M30 100 L170 100"/>
+        <circle cx="100" cy="100" r="50"/>
+        <circle cx="100" cy="100" r="20"/>
+      </svg>
+    </article>
+
+    <article class="archive-era" data-step="3">
+      <div>
+        <div class="era-tag">Phase 03</div>
+        <h2 class="era-title">Communication studio</h2>
+      </div>
+      <div class="era-foot"><span>60–120 MIN</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1">
+        <rect x="40" y="60" width="120" height="80"/>
+        <line x1="40" y1="100" x2="160" y2="100"/>
+        <line x1="100" y1="60" x2="100" y2="140"/>
+      </svg>
+    </article>
+
+    <article class="archive-era" data-step="4">
+      <div>
+        <div class="era-tag">Phase 04</div>
+        <h2 class="era-title">Confidence-building close</h2>
+      </div>
+      <div class="era-foot"><span>SIGNATURE FINISH</span><span>↗</span></div>
+      <svg class="era-glyph" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.1">
+        <path d="M40 160 L100 40 L160 160"/>
+        <path d="M70 130 L130 130"/>
+      </svg>
+    </article>
+
+  </section>
+
+  <!-- ===== HERO ===== -->
+  <div class="archive-hero-wrap">
+    <article class="archive-hero" id="archiveHero">
+
+      <span class="archive-tick tl"></span>
+      <span class="archive-tick tr"></span>
+      <span class="archive-tick bl"></span>
+      <span class="archive-tick br"></span>
+
+      <div class="archive-rail tl">REC // 03 — UNIVERSITIES</div>
+      <div class="archive-rail tr">SECTOR / STUDENT EXPERIENCE</div>
+      <div class="archive-rail bl">FORMAT 5 MIN — MULTI-SESSION</div>
+      <div class="archive-rail br">SIG / OPEN</div>
+
+      <div class="archive-hero-bg">
+        <div class="streak"></div>
+        <div class="streak s2"></div>
+        <div class="glow"></div>
+      </div>
+
+      <div class="archive-hero-content">
+
+        <div class="archive-hero-top">
+          <div class="archive-avail">
+            <div class="archive-avail-label"><span>Semester windows</span><span>S1 / S2 — 64%</span></div>
+            <div class="archive-avail-bar"></div>
+            <p class="archive-avail-msg">Orientation, transition, HDR capability, and WIL pathways are scoped to your cohort. Share your dates and discipline mix to plan a fit.</p>
+          </div>
+          <div class="archive-hero-id">
+            <span>RECORD</span>
+            <span class="num">03 / 04</span>
+          </div>
+        </div>
+
+        <div class="archive-hero-title-block">
+          <div class="archive-hero-cat">
+            <span class="num">02</span>
+            <span class="rule"></span>
+            <span>Audience Profile</span>
+          </div>
+          <h1 class="archive-hero-title archive-title-reveal">
+            <span>Universities</span>
+          </h1>
+          <p class="archive-hero-sub">University experiences that connect cohorts, build communication confidence, and strengthen WIL outcomes — high-participation, evidence-informed, professionally relevant.</p>
+          <p class="archive-hero-academic">Built by a researcher-practitioner with hands-on QILT student-experience analysis at UNSW. <a href="/academic/">View academic background →</a></p>
+          <a class="archive-hero-cta" href="/enquire/">
+            <span>Bring this to your students</span>
+            <svg viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.4">
+              <line x1="0" y1="6" x2="28" y2="6"/>
+              <polyline points="22,1 28,6 22,11"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <!-- ===== DECISION DOSSIER ===== -->
+  <section class="archive-dossier" id="decision">
+    <div class="archive-dossier-grid">
+
+      <div class="archive-dossier-cell">
+        <div class="label">Who it's for</div>
+        <ul>
+          <li>Student Experience / Life</li>
+          <li>Orientation &amp; transition teams</li>
+          <li>HDR and capability programs</li>
+        </ul>
+      </div>
+
+      <div class="archive-dossier-cell">
+        <div class="label">Top outcomes</div>
+        <ul>
+          <li>Faster cohort connection</li>
+          <li>Higher communication confidence</li>
+          <li>More memorable student experience</li>
+        </ul>
+      </div>
+
+      <div class="archive-dossier-cell">
+        <div class="label">Formats</div>
+        <ul>
+          <li>5–20 min activations</li>
+          <li>60–120 min workshops</li>
+          <li>Multi-session cohort programs</li>
+        </ul>
+      </div>
+
+      <div class="archive-dossier-cell cta-cell">
+        <div>
+          <div class="label">Quick request</div>
+          <p>Share your cohort type, WIL goals, and delivery window for a tailored university pathway.</p>
+        </div>
+        <a class="btn-cta" href="/enquire/">Check dates →</a>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ===== FORMATS ===== -->
+  <section class="archive-section" id="formats">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Service<br/>Formats</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">Activation → Workshop → Program</span>
+        <p class="archive-section-update">A consistent arc: collective activation → communication / message session → workshop application → uplifting close students remember.</p>
+      </div>
+    </header>
 
-<section class="section" id="host">
-  <div class="container narrow">
-    <h2>Led by WELI</h2>
-    <p><strong>Dr Weliton Menário Costa (WELI)</strong> is a PhD-trained ecologist and transdisciplinary practitioner working across science, education, and creative performance. His facilitation blends nature-inspired systems thinking, music, and collective movement to unlock trust, connection, and creative thinking in groups. He is the international winner of Science Magazine’s <em>Dance Your PhD</em>, with work featured by 250+ global media outlets</p>
-    <p>The experience is playful in delivery and rigorous in design: each workshop is scoped to audience pains (disconnection, low engagement, message complexity, career uncertainty) and built to produce practical outcomes in communication, confidence, and collaboration</p>
-  </div>
-</section>
-
-<section class="section" id="formats">
-  <div class="container">
-    <h2>Service formats</h2>
-    <p class="proof-cue">The university experience arc is consistent and intentional: collective activation → communication/message session → workshop application → uplifting close students remember</p>
-    <div class="cards three service-formats">
-      <article class="card">
+    <div class="archive-formats">
+      <article class="archive-format">
+        <div class="num">F.01</div>
         <h3>Activation</h3>
-        <ul class="list">
-          <li>Short energisers for orientation/events</li>
+        <ul>
+          <li>Short energisers for orientation / events</li>
           <li>Creates safe social momentum quickly</li>
           <li>Strong for transitions and large cohorts</li>
         </ul>
       </article>
-      <article class="card">
+      <article class="archive-format">
+        <div class="num">F.02</div>
         <h3>Workshop</h3>
-        <ul class="list">
+        <ul>
           <li>Communication and belonging focus</li>
           <li>Identity, purpose, and participation</li>
-          <li>Ideal for mixed/interdisciplinary groups</li>
+          <li>Ideal for mixed / interdisciplinary groups</li>
         </ul>
       </article>
-      <article class="card">
+      <article class="archive-format">
+        <div class="num">F.03</div>
         <h3>Program</h3>
-        <ul class="list">
+        <ul>
           <li>Multi-session cohort development</li>
-          <li>HDR, transition, and capability pathways</li>
+          <li>HDR, transition, capability pathways</li>
           <li>Co-designed to campus priorities</li>
         </ul>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="outcomes">
-  <div class="container narrow">
-    <h2>Outcome focus</h2>
-    <ul>
-      <li>✔ Better peer connection across cohorts and disciplines</li>
-      <li>✔ More confidence in communication and collaboration</li>
-      <li>✔ Stronger engagement with identity and career direction</li>
-      <li>✔ Inclusive, high-energy student experiences</li>
-      <li>✔ Clearer translation of complex research for non-specialist audiences</li>
-    </ul>
-    <h3>Popular activation and workshop menu</h3>
-    <ul>
-      <li>Collective activations: guided dance, guided meditation, full-room karaoke, and group dynamics to reduce social friction fast</li>
-      <li>Message and talk modules: belonging, identity, purpose, and translating ideas for real audiences</li>
-      <li>Workshop studios: practical collaboration, communication confidence, and career-ready storytelling</li>
-      <li>WIL-strengthened options: selected sessions include guest professionals with real industry experience</li>
-      <li>Recurrent program pathways: single event, semester series, or multi-session cohort capability model</li>
-      <li>Uplifting close: a unifying finish that reinforces confidence, community, and action</li>
-    </ul>
+  <!-- ===== HOST / WELI dossier ===== -->
+  <section class="archive-section" id="host">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Led<br/>by WELI</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">Lead facilitator file</span>
+        <p class="archive-section-update"><strong>Dr Weliton Menário Costa (WELI)</strong> — PhD-trained ecologist and transdisciplinary practitioner. International winner of <em>Dance Your PhD</em> (Science Magazine), with work featured by 250+ global media outlets. Each session is scoped to audience pains and built to produce practical outcomes in communication, confidence, and collaboration.</p>
+      </div>
+    </header>
+  </section>
 
-    <h3>Workshop themes (student + career relevance)</h3>
-    <ul>
-      <li>Nature-inspired creative thinking for research, teams, and leadership</li>
-      <li>Connecting science and culture: turning complex ideas into audience-ready stories</li>
-      <li>Building transdisciplinary careers with WIL-aligned employability pathways</li>
-      <li>Dance Your Thesis: identifying the strongest message inside a research project</li>
-      <li>Lyric-writing labs for cross-disciplinary communication and public engagement</li>
-      <li>Science communication, popular culture, and humour through the Kangaroo Time case</li>
-    </ul>
-  </div>
-</section>
+  <!-- ===== WORKSHOP INDEX ===== -->
+  <section class="archive-section" id="themes">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Workshop<br/>Index</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">02.05.26 — Catalogue updated</span>
+        <p class="archive-section-update">Activation, workshop, and program menu — student + career relevance, indexed by topic.<small>Themes · Modules · 30 entries appended</small></p>
+      </div>
+    </header>
 
-<section class="section" id="proof">
-  <div class="container">
-    <h2>Proof in action</h2>
-    <p class="proof-cue">Large cohort facilitation and student-facing communication outcomes at university scale</p>
-    <div class="video-stack">
-      <div>
-        <div class="program-video-frame">
+    <div class="archive-index">
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">B</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Belonging &amp; identity sessions</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Building transdisciplinary careers</span><span class="archive-index-count">(04)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">C</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Cohort activation</span><span class="archive-index-count">(05)</span></li>
+          <li class="archive-index-entry"><span>Connecting science &amp; culture</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Career-ready storytelling</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">D</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Dance Your Thesis</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">I</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Identity, purpose, voice</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Interdisciplinary collaboration</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">L</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Lyric-writing labs</span><span class="archive-index-count">(02)</span></li>
+          <li class="archive-index-entry"><span>Leadership for HDR cohorts</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">N</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Nature-inspired creative thinking</span><span class="archive-index-count">(03)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">S</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>Science communication &amp; humour</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Studios — workshop labs</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+      <div class="archive-index-col">
+        <div class="archive-index-letter">W</div>
+        <ul class="archive-index-list">
+          <li class="archive-index-entry"><span>WIL employability pathways</span><span class="archive-index-count">(03)</span></li>
+          <li class="archive-index-entry"><span>Workshop studios</span><span class="archive-index-count">(02)</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== OUTCOMES ===== -->
+  <section class="archive-section" id="outcomes">
+    <div class="archive-outcomes">
+      <h3 class="archive-outcomes-title">Outcome<br/>focus</h3>
+      <ul class="archive-outcomes-list">
+        <li>Better peer connection across cohorts and disciplines</li>
+        <li>More confidence in communication and collaboration</li>
+        <li>Stronger engagement with identity and career direction</li>
+        <li>Inclusive, high-energy student experiences</li>
+        <li>Clearer translation of complex research for non-specialist audiences</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== PROOF ===== -->
+  <section class="archive-section" id="proof">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Proof<br/>in action</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">Field record — campus scale</span>
+        <p class="archive-section-update">Large cohort facilitation and student-facing communication outcomes.</p>
+      </div>
+    </header>
+
+    <div class="archive-proof">
+      <p class="archive-proof-cue">Transmissions — student experience</p>
+
+      <div class="archive-proof-item">
+        <div class="archive-proof-frame">
+          <span class="archive-tick tl"></span><span class="archive-tick tr"></span>
+          <span class="archive-tick bl"></span><span class="archive-tick br"></span>
           <iframe src="https://www.youtube.com/embed/14Auu3wNWPE" title="ANU Commencement" allowfullscreen></iframe>
         </div>
-        <p class="video-caption">ANU commencement: large audience guidance and engagement</p>
+        <p class="archive-proof-caption">// ANU commencement — large audience guidance</p>
       </div>
-      <div>
-        <div class="program-video-frame">
-          <iframe src="https://www.youtube.com/embed/_qhUe_SEOBo" title="University promo video" allowfullscreen></iframe>
+
+      <div class="archive-proof-item">
+        <div class="archive-proof-frame">
+          <span class="archive-tick tl"></span><span class="archive-tick tr"></span>
+          <span class="archive-tick bl"></span><span class="archive-tick br"></span>
+          <iframe src="https://www.youtube.com/embed/_qhUe_SEOBo" title="University promo" allowfullscreen></iframe>
         </div>
-        <p class="video-caption">Program promo aligned to campus activation and workshop use</p>
+        <p class="archive-proof-caption">// Program promo — campus activation &amp; workshop use</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="book">
-  <div class="container narrow cta-bottom">
-    <h2>Ready to plan your next student-facing moment?</h2>
-    <p>Tell us audience size, timing, and delivery format for a scoped proposal</p>
-    <a href="/enquire/" class="btn btn-primary program-main-enquire">Enquire now</a>
-  </div>
-</section>
+  <!-- ===== BOOK CTA ===== -->
+  <section class="archive-book" id="book">
+    <div class="archive-book-inner">
+      <div>
+        <div class="archive-book-stamp">→ Plan the cohort</div>
+        <h2>Ready to plan your next student-facing moment?</h2>
+        <p>Tell us audience size, timing, and delivery format for a scoped proposal.</p>
+      </div>
+      <a class="archive-hero-cta" href="/enquire/">
+        <span>Enquire now</span>
+        <svg viewBox="0 0 30 12" fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="0" y1="6" x2="28" y2="6"/>
+          <polyline points="22,1 28,6 22,11"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
 </main>
 
 <script src="/program/program.js"></script>
-<script src="/program/program-brochure.js"></script>
+<script src="/program/program-archive.js"></script>
 
 </body>
 </html>
