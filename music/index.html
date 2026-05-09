@@ -8,6 +8,178 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/music-app.css">
   <link rel="stylesheet" href="/site-archive.css">
+  <style>
+    /* === Music page polish overrides ============================== */
+
+    /* Press accolades strip under the chips */
+    .music-press-strip{
+      display:flex; flex-wrap:wrap; gap:6px;
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+    .music-press-item{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:5px 10px;
+      font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;
+      font-size:9.5px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(244,247,251,.72);
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.02);
+    }
+    .music-press-item strong{ color:#ffaa9c; font-weight:800; letter-spacing:.18em; }
+
+    /* WildWooHoo cleaner list */
+    .music-about-lines{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+      display:grid;
+      gap:0;
+      border-top:1px solid rgba(255,255,255,.10);
+    }
+    .music-about-lines li{
+      padding:11px 0 11px 22px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      color:rgba(244,247,251,.85);
+      font-size:.95rem;
+      line-height:1.4;
+      position:relative;
+    }
+    .music-about-lines li::before{
+      content:"→";
+      position:absolute; left:0; top:11px;
+      color:#ffaa9c;
+      font-weight:700;
+    }
+    .music-wild-feature{
+      padding:24px !important;
+      gap:24px !important;
+    }
+    .music-wild-copy h3{
+      font-size:clamp(2.2rem, 4vw, 3.4rem) !important;
+      letter-spacing:-.05em !important;
+    }
+    .music-wild-copy .music-kicker{ margin-bottom:8px; }
+
+    /* === Closing bookings band (replaces old music-bookings-cta) === */
+    .music-bookings-band{
+      margin:36px 0 0;
+      padding:clamp(40px, 5vw, 64px) clamp(20px, 4vw, 48px);
+      background:linear-gradient(135deg, rgba(158,58,67,.16) 0%, rgba(74,95,138,.12) 100%), rgba(8,8,8,.55);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:0;
+      position:relative;
+      overflow:hidden;
+    }
+    .music-bookings-band-inner{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:32px;
+      align-items:end;
+      max-width:1280px;
+      margin:0 auto;
+    }
+    .music-bookings-stamp{
+      font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;
+      font-size:11px;
+      letter-spacing:.26em;
+      text-transform:uppercase;
+      color:#ffaa9c;
+      font-weight:700;
+      margin:0 0 14px;
+    }
+    .music-bookings-band h2{
+      margin:0 0 12px;
+      font-size:clamp(28px, 4vw, 48px);
+      line-height:1;
+      letter-spacing:-.04em;
+      color:#fff;
+      max-width:22ch;
+      font-weight:800;
+    }
+    .music-bookings-band p{
+      margin:0;
+      font-family:"Instrument Serif", Georgia, serif;
+      font-style:italic;
+      font-size:17px;
+      color:rgba(244,247,251,.78);
+      max-width:50ch;
+      line-height:1.45;
+    }
+    .music-bookings-cta-btn{
+      display:inline-flex; align-items:center; gap:14px;
+      padding:16px 28px;
+      border:1px solid rgba(255,255,255,.85);
+      font-family:"Instrument Sans", Inter, system-ui, sans-serif;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.26em;
+      text-transform:uppercase;
+      color:#fff;
+      text-decoration:none;
+      position:relative;
+      overflow:hidden;
+      transition:color 320ms ease;
+      align-self:end;
+      justify-self:end;
+      background:transparent;
+    }
+    .music-bookings-cta-btn::before{
+      content:"";
+      position:absolute; inset:0;
+      background:#fff;
+      transform:translateY(101%);
+      transition:transform 360ms cubic-bezier(.7,.05,.2,1);
+      z-index:0;
+    }
+    .music-bookings-cta-btn:hover{ color:#0a0a0a; }
+    .music-bookings-cta-btn:hover::before{ transform:translateY(0); }
+    .music-bookings-cta-btn span,
+    .music-bookings-cta-btn svg{ position:relative; z-index:1; }
+    .music-bookings-cta-btn svg{ width:26px; height:12px; }
+
+    @media (max-width:760px){
+      .music-bookings-band-inner{ grid-template-columns:1fr; gap:18px; }
+      .music-bookings-cta-btn{ justify-self:start; }
+    }
+
+    /* === Footer band (sits flush after bookings band) ============= */
+    .music-footer{
+      margin:0 !important;
+      padding:24px clamp(20px, 4vw, 48px) !important;
+      border-top:1px solid rgba(255,255,255,.08);
+      background:rgba(8,8,8,.45);
+    }
+    .music-footer-inner{
+      max-width:1280px; margin:0 auto;
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:16px;
+    }
+    .music-footer-meta{
+      font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(244,247,251,.55);
+    }
+    .music-footer-nav{
+      display:flex; flex-wrap:wrap; gap:18px;
+    }
+    .music-footer-nav a{
+      font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(244,247,251,.7);
+      text-decoration:none;
+      font-weight:600;
+      transition:color .15s ease;
+    }
+    .music-footer-nav a:hover{ color:#ffaa9c; }
+  </style>
 </head>
 <body class="music-page">
 
@@ -29,32 +201,38 @@
       <a href="/" class="music-app-brand">WELI</a>
       <nav class="music-app-nav" aria-label="Music navigation">
         <a href="/music" class="active" aria-current="page">Music</a>
-        <a href="/media">Media</a>
         <a href="#releases">Releases</a>
-        <a href="#about">Story</a>
+        <a href="/media">Press</a>
+        <a href="https://wildwoohoo.com" target="_blank" rel="noopener noreferrer">WildWooHoo</a>
         <a href="/enquire/">Contact</a>
       </nav>
     </header>
 
     <section class="music-hero">
       <div class="music-panel music-hero-copy">
-        <p class="music-kicker">Brazil ↔ Australia</p>
-        <h1>WELI <span>Contemporary pop with Latin roots</span></h1>
+        <p class="music-kicker">Brazilian-Australian artist · Sydney</p>
+        <h1>WELI</h1>
 
         <p class="music-statement">
-          Genre-fluid, nature-culture, and playful storytelling. Sydney-based, performing across Sydney, Canberra, and beyond
+          Genre-fluid pop with Latin roots and a playful, nature-culture lens. Performing across Sydney, Canberra, and beyond.
         </p>
 
         <div class="music-chip-row" aria-label="Genres and style tags">
           <span class="music-chip">Global Pop</span>
           <span class="music-chip">Latin Pop</span>
-          <span class="music-chip">Electronic Pop</span>
+          <span class="music-chip">Electronic</span>
           <span class="music-chip">Genre-Fluid</span>
+        </div>
+
+        <div class="music-press-strip" aria-label="Press accolades">
+          <span class="music-press-item"><strong>Dance Your PhD</strong> 2024 winner</span>
+          <span class="music-press-item"><strong>238+</strong> media features</span>
+          <span class="music-press-item">NPR · Smithsonian · The Guardian · ABC</span>
         </div>
 
         <div class="music-hero-actions">
           <a class="music-button" href="/enquire/">Bookings</a>
-          <a class="music-button-secondary music-inline-link" href="/media">Media appearances</a>
+          <a class="music-button-secondary music-inline-link" href="/media">Press &amp; media</a>
         </div>
 
         <div class="music-platform-strip" aria-label="Music platforms">
@@ -150,18 +328,18 @@
     <section class="music-section" id="about">
       <div class="music-panel music-wild-feature">
         <div class="music-wild-copy">
+          <p class="music-kicker">Studio · Sister practice</p>
           <h3>WildWooHoo</h3>
-          <p>WildWooHoo is WELI's nature-science-culture storytelling universe, where music, film, and visual art are designed for social impact</p>
-          <p><em>Kangaroo Time</em> is a flagship WildWooHoo project and won the 2024 Dance Your PhD</p>
+          <p>The nature-science-culture storytelling universe behind <em>Kangaroo Time</em> — music, film, and visual art designed for social impact. Flagship project, 2024 Dance Your PhD winner.</p>
 
-          <div class="music-about-lines">
-            <span>¤ Audio-visual products &amp; experiences</span>
-            <span>¤ Nature-science inspired artistic concepts</span>
-            <span>¤ Emotion focus and cultural referencing</span>
-            <span>¤ Social impact messaging</span>
-          </div>
+          <ul class="music-about-lines">
+            <li>Audio-visual products &amp; experiences</li>
+            <li>Nature-science inspired artistic concepts</li>
+            <li>Emotion-led, culturally referenced</li>
+            <li>Social-impact messaging</li>
+          </ul>
 
-          <a class="music-button-secondary music-inline-link" href="https://wildwoohoo.com" target="_blank" rel="noopener noreferrer">Explore wildwoohoo.com</a>
+          <a class="music-button-secondary music-inline-link" href="https://wildwoohoo.com" target="_blank" rel="noopener noreferrer">Explore wildwoohoo.com →</a>
         </div>
 
         <div class="music-wild-video">
@@ -173,18 +351,37 @@
             allowfullscreen></iframe>
         </div>
       </div>
+    </section>
 
-      <div class="music-panel music-bookings-cta">
-        <h3>Bookings</h3>
-        <p>For live sets, festivals, and collaborations, use the enquiry form and we'll get back with availability.</p>
-        <a class="music-button" href="/enquire/">Enquire for Bookings</a>
+    <!-- ===== CLOSING BAND ===== -->
+    <section class="music-bookings-band">
+      <div class="music-bookings-band-inner">
+        <div>
+          <p class="music-bookings-stamp">→ Live · Festival · Collaboration</p>
+          <h2>Book a set, festival slot, or collaboration.</h2>
+          <p>Performance, original sets, features, and creative partnerships.</p>
+        </div>
+        <a class="music-bookings-cta-btn" href="/enquire/">
+          <span>Enquire for bookings</span>
+          <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <line x1="0" y1="6" x2="24" y2="6"/>
+            <polyline points="18,1 24,6 18,11"/>
+          </svg>
+        </a>
       </div>
     </section>
 
     <footer class="music-footer">
-      <a href="https://www.instagram.com/welimusic/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.tiktok.com/@welimusician" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://buymeacoffee.com/weli" target="_blank" rel="noopener noreferrer">Support</a>
+      <div class="music-footer-inner">
+        <span class="music-footer-meta">© <span id="year2"></span> WELI · Sydney</span>
+        <nav class="music-footer-nav">
+          <a href="https://www.instagram.com/welimusic/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@welimusician" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://www.youtube.com/@welimusician" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://open.spotify.com/intl-pt/artist/50lLmw55L8IEvin7efZ063" target="_blank" rel="noopener noreferrer">Spotify</a>
+          <a href="https://buymeacoffee.com/weli" target="_blank" rel="noopener noreferrer">Support</a>
+        </nav>
+      </div>
     </footer>
 
     <div class="music-mini-player" id="musicMiniPlayer">
@@ -200,17 +397,9 @@
   </div>
 
   <script src="/assets/js/music-app.js"></script>
+  <script src="/site-clock.js"></script>
   <script>
-    (function(){
-      var el = document.getElementById('siteClock');
-      if(!el) return;
-      function tick(){
-        var d = new Date();
-        var p = function(n){ return String(n).padStart(2,'0'); };
-        el.textContent = p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC';
-      }
-      tick(); setInterval(tick, 1000);
-    })();
+    (function(){ var y = document.getElementById('year2'); if (y) y.textContent = new Date().getFullYear(); })();
   </script>
 </body>
 </html>

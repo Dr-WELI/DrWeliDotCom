@@ -3,210 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WELI: Contact</title>
+<title>WELI: Enquire</title>
+<meta name="description" content="Enquire about live performances, workshops, programs, and creative collaborations with Dr Weliton Menário Costa (WELI)." />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/site-archive.css">
 <link rel="stylesheet" href="/assets/css/contact-hub.css">
 </head>
 <body class="contact-page">
+
+<!-- ===== UTILITY RIBBON ===== -->
+<div class="site-ribbon">
+  <div class="left">
+    <span><span class="pulse"></span><span class="live">Open</span></span>
+    <span class="meta">WELI · Enquire</span>
+    <span class="meta">Personal reply within a couple of days</span>
+  </div>
+  <div class="right">
+    <span class="meta">Sydney · Worldwide</span>
+    <span class="clock" id="siteClock">00:00:00</span>
+  </div>
+</div>
+
 <header class="site-header">
   <a class="brand" href="/">WELI</a>
 </header>
+
 <main class="contact-shell">
-<section class="contact-hero">
 
-<div class="contact-panel contact-copy">
-  <h1>Let’s do it</h1>
-  <p class="contact-intro">Tell me what you’re building and let’s shape something together</p>
-  <div class="contact-signal-strip">
-    <span>LIVE PERFORMANCE</span>
-    <span>WORKSHOPS</span>
-    <span>SCIENCE × ART</span>
-    <span>CULTURAL PROJECTS</span>
-  </div>
-  <div class="contact-direct">
-    <p>Email directly</p>
-    <a href="mailto:bookings@drweli.com">bookings@drweli.com</a>
-  </div>
-</div>
-
-<div class="contact-socials">
-  <p class="contact-socials-title">Stay connected</p>
-  <div class="contact-social-grid">
-    <a href="https://www.youtube.com/@welimusician/?sub_confirmation=1" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
-    <a href="https://www.instagram.com/welimusic/" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
-    <a href="https://www.facebook.com/welimusician" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
-    <a href="https://www.tiktok.com/@welimusician" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
-    <a href="https://twitter.com/welimusician" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
-    <a href="https://www.linkedin.com/in/dr-weli-weliton-menário-costa-21aa8b224/" target="_blank" class="contact-social-link"><span class="contact-social-icon"></span></a>
-  </div>
-</div>
-
-<div class="contact-panel contact-form-panel">
-<form class="contact-form" action="https://formspree.io/f/mbdzlpgp" method="POST" accept-charset="UTF-8" autocomplete="on">
-
-<div class="contact-step">
-  <p class="contact-step-title">What are you looking for?</p>
-  <div class="contact-choice-grid">
-    <label class="contact-choice">
-      <input type="radio" name="intent" value="music">
-      <strong>Music</strong>
-      <span>Performances, collaborations, media</span>
-    </label>
-    <label class="contact-choice">
-      <input type="radio" name="intent" value="engagement">
-      <strong>Engagement</strong>
-      <span>Workshops, activations, programs</span>
-    </label>
-  </div>
-</div>
-
-<div id="musicFields" class="contact-dynamic" hidden>
-  <input type="hidden" name="form_type" value="music">
-  <div class="contact-grid">
-    <div class="contact-field">
-      <label>Full name</label>
-      <input type="text" name="full_name" required>
-    </div>
-    <div class="contact-field">
-      <label>Email</label>
-      <input type="email" name="email" required>
-    </div>
-    <div class="contact-field">
-      <label>Phone</label>
-      <div style="display:flex;gap:6px">
-        <input type="text" name="phone_code" placeholder="+61" style="width:70px">
-        <input type="tel" name="phone" placeholder="Number">
+  <!-- ===== INTRO BAND ===== -->
+  <section class="contact-intro-band">
+    <div class="contact-intro-meta">
+      <span class="contact-kicker">→ ENQUIRE / 06</span>
+      <h1>Let's do it</h1>
+      <p class="lead">Tell me what you're building and let's shape something together — performance, partnership, program, or press.</p>
+      <div class="contact-signal-strip">
+        <span>Live performance</span>
+        <span>Workshops</span>
+        <span>Science × Art</span>
+        <span>Cultural projects</span>
+        <span>Press &amp; media</span>
       </div>
     </div>
-    <div class="contact-field">
-      <label>Location</label>
-      <input type="text" name="location" placeholder="City, Country">
-    </div>
-    <div class="contact-field">
-      <label>Budget</label>
-      <select name="budget">
-        <option value="">Select range</option>
-        <option value="<1000">< $1k</option>
-        <option value="1000-5000">$1k–$5k</option>
-        <option value="5000+">$5k+</option>
-      </select>
-    </div>
-    <div class="contact-field full">
-      <label>Type</label>
-      <select name="type">
-        <option>Performance</option>
-        <option>Collaboration</option>
-        <option>Media / Press</option>
-      </select>
-    </div>
-    <div class="contact-field full">
-      <label>Details</label>
-      <textarea name="details" placeholder="Private or public event, date, city, venue, audience size (pax), set length, technical requirements, budget range"></textarea>
-    </div>
-  </div>
-</div>
+  </section>
 
-<div id="engagementFields" class="contact-dynamic" hidden>
-  <input type="hidden" name="form_type" value="engagement">
-  <div class="contact-grid">
-    <div class="contact-field">
-      <label>Full name</label>
-      <input type="text" name="full_name" required>
+  <!-- ===== FORM (full width) ===== -->
+  <section class="contact-hero">
+
+    <!-- FORM -->
+    <div class="contact-form-panel">
+      <form class="contact-form" action="https://formspree.io/f/mbdzlpgp" method="POST" accept-charset="UTF-8" autocomplete="on">
+
+        <div class="contact-step">
+          <p class="contact-step-title"><span>01 / What are you looking for?</span></p>
+          <div class="contact-choice-grid">
+            <label class="contact-choice">
+              <input type="radio" name="intent" value="music">
+              <strong>Music</strong>
+              <span>Performances, collaborations, media</span>
+            </label>
+            <label class="contact-choice">
+              <input type="radio" name="intent" value="engagement">
+              <strong>Engagement</strong>
+              <span>Workshops, activations, programs</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="musicFields" class="contact-dynamic" hidden>
+          <input type="hidden" name="form_type" value="music">
+          <p class="contact-step-title"><span>02 / Your details</span></p>
+          <div class="contact-grid">
+            <div class="contact-field">
+              <label>Full name</label>
+              <input type="text" name="full_name" required>
+            </div>
+            <div class="contact-field">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="contact-field">
+              <label>Phone</label>
+              <div style="display:flex;gap:6px">
+                <input type="text" name="phone_code" placeholder="+61" style="width:70px">
+                <input type="tel" name="phone" placeholder="Number">
+              </div>
+            </div>
+            <div class="contact-field">
+              <label>Location</label>
+              <input type="text" name="location" placeholder="City, Country">
+            </div>
+            <div class="contact-field">
+              <label>Budget</label>
+              <select name="budget">
+                <option value="">Select range</option>
+                <option value="<1000">&lt; $1k</option>
+                <option value="1000-5000">$1k–$5k</option>
+                <option value="5000+">$5k+</option>
+              </select>
+            </div>
+            <div class="contact-field">
+              <label>Type</label>
+              <select name="type">
+                <option>Performance</option>
+                <option>Collaboration</option>
+                <option>Media / Press</option>
+              </select>
+            </div>
+            <div class="contact-field full">
+              <label>Details</label>
+              <textarea name="details" placeholder="Private or public event, date, city, venue, audience size (pax), set length, technical requirements, budget range"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div id="engagementFields" class="contact-dynamic" hidden>
+          <input type="hidden" name="form_type" value="engagement">
+          <p class="contact-step-title"><span>02 / Your details</span></p>
+          <div class="contact-grid">
+            <div class="contact-field">
+              <label>Full name</label>
+              <input type="text" name="full_name" required>
+            </div>
+            <div class="contact-field">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="contact-field">
+              <label>Phone</label>
+              <div style="display:flex;gap:6px">
+                <input type="text" name="phone_code" placeholder="+61" style="width:70px">
+                <input type="tel" name="phone" placeholder="Number">
+              </div>
+            </div>
+            <div class="contact-field">
+              <label>Location</label>
+              <input type="text" name="location" placeholder="City, Country">
+            </div>
+            <div class="contact-field">
+              <label>Organisation</label>
+              <input type="text" name="organisation" placeholder="Optional">
+            </div>
+            <div class="contact-field">
+              <label>Audience</label>
+              <select name="audience">
+                <option>Corporate / Conference</option>
+                <option>University / Student Experience</option>
+                <option>School / STEAM</option>
+                <option>Science × Art Collaboration</option>
+              </select>
+            </div>
+            <div class="contact-field">
+              <label>Your role</label>
+              <select name="role">
+                <option>HR / People &amp; Culture</option>
+                <option>Event Coordinator / Producer</option>
+                <option>Student Experience</option>
+                <option>School Director / Leadership</option>
+                <option>Science Teacher / STEAM Lead</option>
+                <option>Research / Innovation Lead</option>
+                <option>Funder / Partner</option>
+              </select>
+            </div>
+            <div class="contact-field">
+              <label>Type</label>
+              <select name="engagement_type">
+                <option>Activation</option>
+                <option>Workshop</option>
+                <option>Program</option>
+                <option>Creative Lab / Collaboration</option>
+              </select>
+            </div>
+            <div class="contact-field">
+              <label>Audience size</label>
+              <input type="text" name="audience_size" placeholder="e.g. 50, 200, 1000+">
+            </div>
+            <div class="contact-field">
+              <label>Budget</label>
+              <select name="budget">
+                <option value="">Select range</option>
+                <option value="<1000">&lt; $1k</option>
+                <option value="1000-5000">$1k–$5k</option>
+                <option value="5000+">$5k+</option>
+              </select>
+            </div>
+            <div class="contact-field full">
+              <label>Goals</label>
+              <div class="contact-goals">
+                <label><input type="checkbox" name="goals[]" value="engagement"> Engagement</label>
+                <label><input type="checkbox" name="goals[]" value="creativity"> Creativity</label>
+                <label><input type="checkbox" name="goals[]" value="wellbeing"> Wellbeing</label>
+                <label><input type="checkbox" name="goals[]" value="team_building"> Team building</label>
+                <label><input type="checkbox" name="goals[]" value="student_belonging"> Student belonging</label>
+                <label><input type="checkbox" name="goals[]" value="science_communication"> Science communication</label>
+                <label><input type="checkbox" name="goals[]" value="funding_partnership"> Funding / partnership support</label>
+              </div>
+            </div>
+            <div class="contact-field full">
+              <label>Details</label>
+              <textarea name="details" placeholder="Context, timeline, location, audience profile, desired outcomes, and any budget/funding constraints"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-submit-row">
+          <button class="btn btn-primary" type="submit">Send enquiry →</button>
+          <p class="contact-note">→ Personal reply</p>
+        </div>
+
+        <p id="contactPreview" class="contact-preview"></p>
+
+      </form>
     </div>
-    <div class="contact-field">
-      <label>Email</label>
-      <input type="email" name="email" required>
+
+  </section>
+
+  <!-- ===== EMAIL + SOCIALS BAND (under form, horizontal) ===== -->
+  <section class="contact-side">
+    <div class="contact-side-card contact-direct">
+      <p class="label">Email directly</p>
+      <a href="mailto:bookings@drweli.com">bookings@drweli.com</a>
+      <p>Skip the form if you'd rather just write — same inbox, same reply.</p>
     </div>
-    <div class="contact-field">
-      <label>Phone</label>
-      <div style="display:flex;gap:6px">
-        <input type="text" name="phone_code" placeholder="+61" style="width:70px">
-        <input type="tel" name="phone" placeholder="Number">
+    <div class="contact-side-card">
+      <p class="label">Stay connected</p>
+      <div class="contact-social-grid">
+        <a href="https://www.instagram.com/welimusic/" target="_blank" rel="noopener" class="contact-social-link"><span class="contact-social-icon">IG</span><span>Instagram</span></a>
+        <a href="https://www.youtube.com/@welimusician/?sub_confirmation=1" target="_blank" rel="noopener" class="contact-social-link"><span class="contact-social-icon">YT</span><span>YouTube</span></a>
+        <a href="https://www.tiktok.com/@welimusician" target="_blank" rel="noopener" class="contact-social-link"><span class="contact-social-icon">TT</span><span>TikTok</span></a>
+        <a href="https://twitter.com/welimusician" target="_blank" rel="noopener" class="contact-social-link"><span class="contact-social-icon">X</span><span>Twitter</span></a>
+        <a href="https://www.linkedin.com/in/dr-weli-weliton-menário-costa-21aa8b224/" target="_blank" rel="noopener" class="contact-social-link"><span class="contact-social-icon">in</span><span>LinkedIn</span></a>
+        <a href="https://www.facebook.com/welimusician" target="_blank" rel="noopener" class="contact-social-link"><span class="contact-social-icon">FB</span><span>Facebook</span></a>
       </div>
     </div>
-    <div class="contact-field">
-      <label>Location</label>
-      <input type="text" name="location" placeholder="City, Country">
-    </div>
-    <div class="contact-field">
-      <label>Organisation</label>
-      <input type="text" name="organisation" placeholder="Optional">
-    </div>
-	    <div class="contact-field">
-	      <label>Audience</label>
-	      <select name="audience">
-	        <option>Corporate / Conference</option>
-	        <option>University / Student Experience</option>
-	        <option>School / STEAM</option>
-	        <option>Science × Art Collaboration</option>
-	      </select>
-	    </div>
-	    <div class="contact-field">
-	      <label>Your role</label>
-	      <select name="role">
-	        <option>HR / People & Culture</option>
-	        <option>Event Coordinator / Producer</option>
-	        <option>Student Experience</option>
-	        <option>School Director / Leadership</option>
-	        <option>Science Teacher / STEAM Lead</option>
-	        <option>Research / Innovation Lead</option>
-	        <option>Funder / Partner</option>
-	      </select>
-	    </div>
-	    <div class="contact-field">
-	      <label>Type</label>
-	      <select name="engagement_type">
-	        <option>Activation</option>
-	        <option>Workshop</option>
-	        <option>Program</option>
-	        <option>Creative Lab / Collaboration</option>
-	      </select>
-	    </div>
-    <div class="contact-field">
-      <label>Audience size</label>
-      <input type="text" name="audience_size" placeholder="e.g. 50, 200, 1000+">
-    </div>
-    <div class="contact-field">
-      <label>Budget</label>
-      <select name="budget">
-        <option value="">Select range</option>
-        <option value="<1000">< $1k</option>
-        <option value="1000-5000">$1k–$5k</option>
-        <option value="5000+">$5k+</option>
-      </select>
-    </div>
-	    <div class="contact-field full">
-	      <label>Goals</label>
-	      <div class="contact-goals">
-	        <label><input type="checkbox" name="goals[]" value="engagement"> Engagement</label>
-	        <label><input type="checkbox" name="goals[]" value="creativity"> Creativity</label>
-	        <label><input type="checkbox" name="goals[]" value="wellbeing"> Wellbeing</label>
-	        <label><input type="checkbox" name="goals[]" value="team_building"> Team building</label>
-	        <label><input type="checkbox" name="goals[]" value="student_belonging"> Student belonging</label>
-	        <label><input type="checkbox" name="goals[]" value="science_communication"> Science communication</label>
-	        <label><input type="checkbox" name="goals[]" value="funding_partnership"> Funding / partnership support</label>
-	      </div>
-	    </div>
-	    <div class="contact-field full">
-	      <label>Details</label>
-	      <textarea name="details" placeholder="Context, timeline, location, audience profile, desired outcomes, and any budget/funding constraints"></textarea>
-	    </div>
-  </div>
-</div>
+  </section>
 
-<div class="contact-submit-row">
-  <button class="btn btn-primary" type="submit">Send enquiry</button>
-  <p class="contact-note">I’ll get back to you personally</p>
-</div>
+  <!-- ===== CLOSING BAND ===== -->
+  <section class="site-book-band" style="margin-top:80px">
+    <div class="site-book-band-inner">
+      <div>
+        <div class="site-book-stamp">→ Personal reply</div>
+        <h2>Within a couple of days, from me directly.</h2>
+        <p>Press, performance, partnership, or program — every enquiry lands in the same inbox.</p>
+      </div>
+      <a class="site-cta-button" href="mailto:bookings@drweli.com">
+        <span>Direct email</span>
+        <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4">
+          <line x1="0" y1="6" x2="24" y2="6"/>
+          <polyline points="18,1 24,6 18,11"/>
+        </svg>
+      </a>
+    </div>
+  </section>
 
-<p id="contactPreview" class="contact-preview"></p>
-
-</form>
-</div>
-
-</section>
 </main>
 
 <script src="/assets/js/contact-hub.js"></script>
+<script src="/site-clock.js"></script>
 </body>
 </html>

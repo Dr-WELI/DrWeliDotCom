@@ -29,6 +29,13 @@
   <main id="top">
     <section class="hero home-hero home-hero-single" id="top">
       <div class="hero-showreel" id="editorialReel" aria-hidden="true">
+
+        <!-- Brand-colored aurora backdrop — visible during transitions, never grey -->
+        <div class="hero-backdrop">
+          <div class="hero-backdrop-aurora"></div>
+          <div class="hero-backdrop-grain"></div>
+        </div>
+
         <figure class="editorial-slide is-active" data-index="0" style="background-image:url('/assets/img/home-showreel-2.jpg');">
           <img src="/assets/img/home-showreel-2.jpg" alt="" loading="eager" decoding="async" fetchpriority="high" />
         </figure>
@@ -37,18 +44,23 @@
           <img src="/assets/img/home-showreel-1.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
         </figure>
 
+        <figure class="editorial-slide" data-index="2" style="background-image:url('/assets/img/home-showreel-3.jpg');">
+          <img src="/assets/img/home-showreel-3.jpg" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        </figure>
+
         <div class="hero-glitch-grid"></div>
         <div class="hero-glitch-scan"></div>
         <div class="hero-glitch-rgb"></div>
         <div class="hero-glitch-crosshair"></div>
 
         <div class="hero-glitch-hud">
-          <span class="hero-hud-tag hero-hud-tag-top">WELI / SIGNAL</span>
+          <span class="hero-hud-tag hero-hud-tag-top">WELI / SIGNAL <span class="hud-rec">●REC</span></span>
           <span class="hero-hud-tag hero-hud-tag-side">music • science • culture</span>
           <div class="hero-glitch-copy">
             <span class="glitch-caption" id="glitchCaptionA" data-text="LIVE PERFORMANCE">LIVE PERFORMANCE</span>
             <span class="glitch-caption" id="glitchCaptionB" data-text="CULTURAL STORYTELLING">CULTURAL STORYTELLING</span>
           </div>
+          <span class="hero-hud-frame" id="heroHudFrame">FRM 0000</span>
         </div>
 
         <div class="hero-showreel-overlay"></div>
@@ -71,17 +83,27 @@
           <div class="hero-marquee-track" id="heroMarqueeTrack">
             <div class="hero-marquee-group">
               <span class="hero-marquee-item">LIVE PERFORMANCE</span>
+              <span class="hero-marquee-item">DANCE YOUR PHD 2024</span>
               <span class="hero-marquee-item">SCIENCE STORYTELLING</span>
-              <span class="hero-marquee-item">CULTURAL CONNECTION</span>
-              <span class="hero-marquee-item">MUSIC &amp; MOVEMENT</span>
-              <span class="hero-marquee-item">SONGWRITING</span>
+              <span class="hero-marquee-item">238+ MEDIA FEATURES</span>
+              <span class="hero-marquee-item">ACTIVATIONS · WORKSHOPS · PROGRAMS</span>
+              <span class="hero-marquee-item">WildWooHoo STUDIO</span>
+              <span class="hero-marquee-item">KANGAROO TIME</span>
+              <span class="hero-marquee-item">NATURE × CULTURE</span>
+              <span class="hero-marquee-item">PHD ECOLOGY · ANU</span>
+              <span class="hero-marquee-item">SYDNEY ↔ BRAZIL</span>
             </div>
-            <div class="hero-marquee-group">
+            <div class="hero-marquee-group" aria-hidden="true">
               <span class="hero-marquee-item">LIVE PERFORMANCE</span>
+              <span class="hero-marquee-item">DANCE YOUR PHD 2024</span>
               <span class="hero-marquee-item">SCIENCE STORYTELLING</span>
-              <span class="hero-marquee-item">CULTURAL CONNECTION</span>
-              <span class="hero-marquee-item">MUSIC &amp; MOVEMENT</span>
-              <span class="hero-marquee-item">SONGWRITING</span>
+              <span class="hero-marquee-item">238+ MEDIA FEATURES</span>
+              <span class="hero-marquee-item">ACTIVATIONS · WORKSHOPS · PROGRAMS</span>
+              <span class="hero-marquee-item">WildWooHoo STUDIO</span>
+              <span class="hero-marquee-item">KANGAROO TIME</span>
+              <span class="hero-marquee-item">NATURE × CULTURE</span>
+              <span class="hero-marquee-item">PHD ECOLOGY · ANU</span>
+              <span class="hero-marquee-item">SYDNEY ↔ BRAZIL</span>
             </div>
           </div>
         </div>
@@ -89,13 +111,13 @@
         <div class="hero-cta-rail hero-cta-rail-expanded hero-cta-two-rows reveal-up is-visible">
           <div class="hero-cta-row">
             <a href="/music" class="hero-metal-btn hero-metal-btn-light is-primary">Music</a>
-            <a href="https://wildwoohoo.com" target="_blank" rel="noopener" class="hero-metal-btn hero-metal-btn-dark is-primary">WildWooHoo</a>
+            <a href="https://wildwoohoo.com" target="_blank" rel="noopener" class="hero-metal-btn hero-metal-btn-light is-primary">WildWooHoo</a>
             <a href="/program" class="hero-metal-btn hero-metal-btn-light">Programs</a>
           </div>
           <div class="hero-cta-row">
             <a href="/academic" class="hero-metal-btn hero-metal-btn-light">Academic</a>
             <a href="/media" class="hero-metal-btn hero-metal-btn-light">Media</a>
-            <a href="/enquire/" class="hero-metal-btn hero-metal-btn-dark">Contact</a>
+            <a href="/enquire/" class="hero-metal-btn hero-metal-btn-light is-primary">Contact</a>
           </div>
         </div>
       </div>

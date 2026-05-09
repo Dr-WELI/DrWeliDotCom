@@ -6,16 +6,21 @@
 (function () {
   'use strict';
 
-  /* ---------- Live clock in utility ribbon -------------------- */
-  const clockEl = document.getElementById('archiveClock');
+  /* ---------- Live local clock in utility ribbon -------------- */
+  const clockEl = document.getElementById('archiveClock') || document.getElementById('siteClock');
   if (clockEl) {
+    let tzLabel = 'LOCAL';
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      const parts = tz.split('/');
+      tzLabel = (parts[parts.length - 1] || tz).replace(/_/g, ' ').toUpperCase();
+    } catch (e) { /* fallback */ }
+
+    const pad = (n) => String(n).padStart(2, '0');
     const tick = () => {
       const d = new Date();
-      const pad = (n) => String(n).padStart(2, '0');
       clockEl.textContent =
-        pad(d.getUTCHours()) + ':' +
-        pad(d.getUTCMinutes()) + ':' +
-        pad(d.getUTCSeconds()) + ' UTC';
+        pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()) + '  ' + tzLabel;
     };
     tick();
     setInterval(tick, 1000);
@@ -79,8 +84,10 @@
     cursor.textContent = '→ open';
     document.body.appendChild(cursor);
 
+    // Only show on real interactive links (not on info-only cards)
     document.querySelectorAll(
-      '.archive-index-entry, .archive-format, .archive-era, .archive-proof-frame'
+      'a.archive-hero-format-chip, a.site-audience-tile, a.archive-hero-cta, ' +
+      'a.archive-index-entry, a.archive-format, a.archive-era, a.btn-cta'
     ).forEach((el) => {
       el.addEventListener('mouseenter', () => { cursor.style.opacity = 1; });
       el.addEventListener('mouseleave', () => { cursor.style.opacity = 0; });

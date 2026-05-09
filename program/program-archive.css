@@ -126,6 +126,21 @@
 }
 .archive-ribbon .live { color: var(--accent); font-weight: 700; }
 .archive-ribbon .clock { font-variant-numeric: tabular-nums; }
+.archive-ribbon a.meta,
+.archive-ribbon .ribbon-link {
+  color: var(--paper);
+  opacity: 1;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .14em;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+.archive-ribbon a.meta:hover,
+.archive-ribbon .ribbon-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
 @keyframes archivePulse {
   0%   { box-shadow: 0 0 0 0 var(--accent); }
   70%  { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
