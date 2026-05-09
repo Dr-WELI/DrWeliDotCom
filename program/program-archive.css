@@ -100,7 +100,17 @@
   align-items: center;
   gap: 24px;
   position: relative;
-  z-index: 5;
+  z-index: 1100;     /* above program-header (z:1000 from site-polish.css) */
+}
+.archive-ribbon ~ header.program-header,
+.archive-ribbon ~ header.site-header.program-header {
+  top: 37px !important;
+}
+@media (max-width: 700px) {
+  .archive-ribbon ~ header.program-header,
+  .archive-ribbon ~ header.site-header.program-header {
+    top: 33px !important;
+  }
 }
 .archive-ribbon .left,
 .archive-ribbon .right { display: flex; gap: 22px; align-items: center; }

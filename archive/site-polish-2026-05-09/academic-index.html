@@ -17,7 +17,6 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/site-archive.css" />
   <style>
     .academic-hero{position:relative;overflow:hidden;isolation:isolate}
     .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px}
@@ -217,20 +216,6 @@
   </style>
 </head>
 <body>
-
-  <!-- ===== UTILITY RIBBON ===== -->
-  <div class="site-ribbon">
-    <div class="left">
-      <span><span class="pulse"></span><span class="live">Live</span></span>
-      <span class="meta">WELI · Academic</span>
-      <span class="meta">Research · Teaching · Talks</span>
-    </div>
-    <div class="right">
-      <span class="meta">Sydney · ANU · UNSW</span>
-      <span class="clock" id="siteClock">00:00:00 UTC</span>
-    </div>
-  </div>
-
   <header class="site-header">
     <a class="brand" href="/" aria-label="WELI home">WELI</a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -285,32 +270,27 @@
       </div>
     </section>
 
-    <section class="site-archive-section site-archive-container">
-      <header class="site-section-head">
-        <h2 class="site-section-title">Capabilities</h2>
-        <div class="site-section-meta">
-          <span class="site-section-stamp">Three working pathways</span>
-          <p class="site-section-update">Research, teaching, and speaking — connected, not siloed. The creative work operates as a public-facing translation layer.</p>
+    <section class="section">
+      <div class="container">
+        <div class="cards three academic-cap-grid">
+          <article class="card">
+            <p class="pathway-kicker">Research</p>
+            <h3>Science and popular culture, ecology & evolution, and analytical work</h3>
+            <p>Research spanning science and popular culture, with ecology, evolution, animal behaviour, personality, and analytical work remaining central through publications, fieldwork, environment monitoring, survey analysis, and long-term studies.</p>
+          </article>
+
+          <article class="card">
+            <p class="pathway-kicker">Teaching</p>
+            <h3>Guest lectures, tutorials & science communication</h3>
+            <p>Teaching and facilitation across ecology, science communication, creativity, humour, public engagement, and culturally resonant ways of translating complex knowledge.</p>
+          </article>
+
+          <article class="card">
+            <p class="pathway-kicker">Speaking</p>
+            <h3>Public talks, culture-facing work & transdisciplinary practice</h3>
+            <p>Conference speaking, media-facing communication, and research-grounded work spanning popular culture, film, music, sound, performance, and research-creation.</p>
+          </article>
         </div>
-      </header>
-      <div class="site-card-grid cols-3">
-        <article class="site-card">
-          <p class="kicker">Research</p>
-          <h3>Science &amp; popular culture, ecology, analytical work</h3>
-          <p>Research spanning science and popular culture, with ecology, evolution, animal behaviour, personality, and analytical work remaining central through publications, fieldwork, environment monitoring, survey analysis, and long-term studies.</p>
-        </article>
-
-        <article class="site-card">
-          <p class="kicker">Teaching</p>
-          <h3>Guest lectures, tutorials &amp; science communication</h3>
-          <p>Teaching and facilitation across ecology, science communication, creativity, humour, public engagement, and culturally resonant ways of translating complex knowledge.</p>
-        </article>
-
-        <article class="site-card">
-          <p class="kicker">Speaking</p>
-          <h3>Public talks, culture-facing work &amp; transdisciplinary practice</h3>
-          <p>Conference speaking, media-facing communication, and research-grounded work spanning popular culture, film, music, sound, performance, and research-creation.</p>
-        </article>
       </div>
     </section>
 
@@ -390,44 +370,46 @@
       </div>
     </section>
 
-    <section class="site-archive-section site-archive-container">
-      <header class="site-section-head">
-        <h2 class="site-section-title">Appointments</h2>
-        <div class="site-section-meta">
-          <span class="site-section-stamp">Recent record</span>
-          <p class="site-section-update">Academic, research, and applied roles — Australia and Brazil.<small>2012 → present</small></p>
+    <section class="section alt">
+      <div class="container appointments-wrap">
+        <div class="section-header">
+          <h2>Appointments</h2>
+          <p class="muted">Recent academic, research, and applied roles</p>
         </div>
-      </header>
 
-      <div class="site-card-grid cols-3">
-        <article class="site-card">
-          <p class="kicker">2025 – Current</p>
-          <h3>Visiting Fellow (Honorary)</h3>
-          <p>Centre for the Public Awareness of Science (Popsicule), ANU College of Systems &amp; Society — Group: Dr Anna-Sophie Jürgens. Lectures, panels, workshops, and research development across science, humour, film, music, and popular culture.</p>
-        </article>
-        <article class="site-card">
-          <p class="kicker">2025 – 2026</p>
-          <h3>Research Data Scientist</h3>
-          <p>UNSW, Educational Data &amp; Insights — Level 6, Step 2, fixed-term part-time. Worked with Anaëlle Medioni on QILT, student experience survey analysis, response rates, reporting, and stakeholder-facing evidence building.</p>
-        </article>
-        <article class="site-card">
-          <p class="kicker">2022 – 2024</p>
-          <h3>Research Officer</h3>
-          <p>ANU Research School of Biology — Officer Grade 5/6, full-time fixed term. Worked with Prof. Justin Borevitz across ARC-funded projects, soil carbon research, remote sensing, modelling, data systems, and advanced statistical workflows.</p>
-        </article>
-      </div>
+        <div class="appointments-row top">
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2025–Current</p>
+            <h3>Visiting Fellow (Honorary)</h3>
+            <p>Centre for the Public Awareness of Science (Popsicule), ANU College of Systems & Society — Group: Dr Anna-Sophie Jürgens. Lectures, panels, workshops, and research development across science, humour, film, music, and popular culture.</p>
+          </article>
 
-      <div class="site-card-grid cols-2" style="margin-top:-1px">
-        <article class="site-card">
-          <p class="kicker">2017 – 2021</p>
-          <h3>PhD Student</h3>
-          <p>The Australian National University — Supervisors: Prof. Loeske Kruuk &amp; Prof. Marco Festa-Bianchet. Long-term field-based Ecology &amp; Evolution research on personality, social environment, and maternal effects in wild kangaroos.</p>
-        </article>
-        <article class="site-card">
-          <p class="kicker">2012 – 2017</p>
-          <h3>Administration Assistant (Science &amp; Education)</h3>
-          <p>Federal Institute of Espírito Santo (IFES), Brazil — Permanent, full-time. Supported science and education delivery, research activities, and academic administration.</p>
-        </article>
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2025–2026</p>
+            <h3>Research Data Scientist</h3>
+            <p>UNSW, Educational Data & Insights — Level 6, Step 2, fixed-term part-time. Worked with Anaëlle Medioni on QILT, student experience survey analysis, response rates, reporting, and stakeholder-facing evidence building.</p>
+          </article>
+
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2022–2024</p>
+            <h3>Research Officer</h3>
+            <p>ANU Research School of Biology — Officer Grade 5/6, full-time fixed term. Worked with Prof. Justin Borevitz across ARC-funded projects, soil carbon research, remote sensing, modelling, data systems, and advanced statistical workflows.</p>
+          </article>
+        </div>
+
+        <div class="appointments-row bottom">
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2017–2021</p>
+            <h3>PhD Student</h3>
+            <p>The Australian National University — Supervisors: Prof. Loeske Kruuk & Prof. Marco Festa-Bianchet. Long-term field-based Ecology & Evolution research on personality, social environment, and maternal effects in wild kangaroos.</p>
+          </article>
+
+          <article class="card appointment-card">
+            <p class="pathway-kicker">2012–2017</p>
+            <h3>Administration Assistant (Science & Education)</h3>
+            <p>Federal Institute of Espírito Santo (IFES), Brazil — Permanent, full-time. Supported science and education delivery, research activities, and academic administration.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -450,101 +432,83 @@
       </div>
     </section>
 
-    <section class="site-archive-section site-archive-container">
-      <header class="site-section-head">
-        <h2 class="site-section-title">Selected<br/>publications</h2>
-        <div class="site-section-meta">
-          <span class="site-section-stamp">Outputs · Ecology · Translation</span>
-          <p class="site-section-update">Research outputs in ecology, behaviour, and public-facing research translation.</p>
+    <section class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Selected publications</h2>
+          <p class="muted">Research outputs in ecology, behaviour, and public-facing research translation</p>
         </div>
-      </header>
 
-      <div class="site-card-grid cols-2">
-        <article class="site-card">
-          <p class="kicker">Journal article</p>
-          <h3>Early-life behavior, survival, and maternal personality in a wild marsupial</h3>
-          <p>Menário Costa, W., King, W.J., Bonnet, T., Festa-Bianchet, M., &amp; Kruuk, L.E.B. (2023). <em>Behavioral Ecology</em>, 34(6), 1002–1012.</p>
-        </article>
+        <div class="cards three publications-grid">
+          <article class="card">
+            <p class="pathway-kicker">Journal article</p>
+            <h3>Early-life behavior, survival, and maternal personality in a wild marsupial</h3>
+            <p>Menário Costa, W., King, W.J., Bonnet, T., Festa-Bianchet, M., & Kruuk, L.E.B. (2023). <em>Behavioral Ecology</em>, 34(6), 1002–1012.</p>
+          </article>
 
-        <article class="site-card">
-          <p class="kicker">PhD thesis</p>
-          <h3>Personality, social environment, and maternal-level effects</h3>
-          <p>Menário Costa, W. (2021). <em>Personality, social environment, and maternal-level effects: insights from a wild kangaroo population.</em> PhD Thesis, Australian National University.</p>
-        </article>
-      </div>
+          <article class="card">
+            <p class="pathway-kicker">PhD thesis</p>
+            <h3>Personality, social environment, and maternal-level effects</h3>
+            <p>Menário Costa, W. (2021). <em>Personality, social environment, and maternal-level effects: insights from a wild kangaroo population.</em> PhD Thesis, Australian National University.</p>
+          </article>
 
-      <article class="flagship-project-card" style="border:1px solid var(--site-rule-soft);border-top:0;padding:clamp(20px,3vw,32px);background:var(--site-paper-2)">
-        <div class="flagship-project-grid">
-          <div>
-            <div class="video-wrap site-tick-frame" style="position:relative">
-              <span class="site-tick tl"></span><span class="site-tick tr"></span>
-              <span class="site-tick bl"></span><span class="site-tick br"></span>
-              <iframe
-                src="https://www.youtube.com/embed/RoSYO3fApEc?start=27"
-                title="Kangaroo Time Dance Your PhD"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+          <article class="card flagship-project-card">
+            <div class="flagship-project-grid">
+              <div>
+                <div class="video-wrap">
+                  <iframe
+                    src="https://www.youtube.com/embed/RoSYO3fApEc?start=27"
+                    title="Kangaroo Time Dance Your PhD"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="flagship-project-copy">
+                <p class="pathway-kicker">Flagship project</p>
+                <h3>Kangaroo Time — Dance Your PhD</h3>
+                <p class="muted">A public-facing research translation project connecting doctoral research on kangaroo behaviour with music, dance, performance, and cultural storytelling.</p>
+                <p class="muted">Placed here as a flagship output, it makes the academic and creative relationship explicit: the work emerges from behavioural ecology while also speaking directly to media, arts, music, and wider public engagement contexts.</p>
+              </div>
             </div>
-          </div>
-
-          <div class="flagship-project-copy">
-            <p class="kicker" style="font-family:var(--site-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--site-accent);font-weight:700">Flagship project</p>
-            <h3 style="font-family:var(--site-display);font-weight:800;font-size:clamp(22px,2.4vw,28px);letter-spacing:-.025em;line-height:1.1;margin:6px 0 12px">Kangaroo Time — Dance Your PhD</h3>
-            <p class="muted">A public-facing research translation project connecting doctoral research on kangaroo behaviour with music, dance, performance, and cultural storytelling.</p>
-            <p class="muted">Placed here as a flagship output, it makes the academic and creative relationship explicit: the work emerges from behavioural ecology while also speaking directly to media, arts, music, and wider public engagement contexts.</p>
-          </div>
+          </article>
         </div>
-      </article>
-    </section>
-
-    <section class="site-archive-section site-archive-container">
-      <header class="site-section-head">
-        <h2 class="site-section-title">Awards<br/>&amp; funding</h2>
-        <div class="site-section-meta">
-          <span class="site-section-stamp">Selected recognition</span>
-          <p class="site-section-update">Across research and public engagement.</p>
-        </div>
-      </header>
-      <div class="site-card-grid cols-4">
-        <article class="site-card">
-          <p class="kicker">2024</p>
-          <h3>Dance Your PhD — Global Winner</h3>
-          <p>Science Magazine / AAAS</p>
-        </article>
-        <article class="site-card">
-          <p class="kicker">2025</p>
-          <h3>Falling Walls Engage</h3>
-          <p>Top 30 worldwide</p>
-        </article>
-        <article class="site-card">
-          <p class="kicker">2024</p>
-          <h3>ACT National Science Week Grant</h3>
-          <p>Project support for science communication</p>
-        </article>
-        <article class="site-card">
-          <p class="kicker">2017 – 2020</p>
-          <h3>Holsworth Wildlife Research Endowment</h3>
-          <p>Research funding support</p>
-        </article>
       </div>
     </section>
 
-    <!-- ===== CLOSING CTA ===== -->
-    <section class="site-book-band">
-      <div class="site-book-band-inner">
-        <div>
-          <div class="site-book-stamp">→ Talk · Workshop · Collaboration</div>
-          <h2>Book a talk, workshop, or collaboration.</h2>
-          <p>Lectures, panels, research-creation, and public-facing science. Send your context and I'll come back with a scoped proposal.</p>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Awards & funding</h2>
+          <p class="muted">Selected recognition across research and public engagement</p>
         </div>
-        <a class="site-cta-button" href="mailto:bookings@drweli.com?subject=Professional%20Enquiry">
-          <span>Professional enquiry</span>
-          <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4">
-            <line x1="0" y1="6" x2="24" y2="6"/>
-            <polyline points="18,1 24,6 18,11"/>
-          </svg>
-        </a>
+
+        <div class="cards three">
+          <article class="card">
+            <p class="pathway-kicker">2024</p>
+            <h3>Dance Your PhD — Global Winner</h3>
+            <p>Science Magazine / AAAS</p>
+          </article>
+
+          <article class="card">
+            <p class="pathway-kicker">2025</p>
+            <h3>Falling Walls Engage</h3>
+            <p>Top 30 Worldwide</p>
+          </article>
+
+          <article class="card">
+            <p class="pathway-kicker">2024</p>
+            <h3>ACT National Science Week Grant</h3>
+            <p>Project support for science communication activity</p>
+          </article>
+
+          <article class="card">
+            <p class="pathway-kicker">2017–2020</p>
+            <h3>Holsworth Wildlife Research Endowment</h3>
+            <p>Research funding support</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -563,17 +527,5 @@
   </footer>
 
   <script src="/script.js"></script>
-  <script>
-    (function(){
-      var el = document.getElementById('siteClock');
-      if(!el) return;
-      function tick(){
-        var d = new Date();
-        var p = function(n){ return String(n).padStart(2,'0'); };
-        el.textContent = p(d.getUTCHours()) + ':' + p(d.getUTCMinutes()) + ':' + p(d.getUTCSeconds()) + ' UTC';
-      }
-      tick(); setInterval(tick, 1000);
-    })();
-  </script>
 </body>
 </html>
