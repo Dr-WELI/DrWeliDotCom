@@ -132,12 +132,12 @@
 }
 
 .glitch-caption::before{
-  color:rgba(88,255,220,.8);
+  color:rgba(255,80,70,.85);          /* ruby chromatic */
   transform:translate(-2px,0);
 }
 
 .glitch-caption::after{
-  color:rgba(222,118,255,.8);
+  color:rgba(241,212,90,.85);         /* champagne-yellow chromatic */
   transform:translate(2px,0);
 }
 
@@ -216,7 +216,7 @@
 .hero-hud-frame{
   position:absolute;
   bottom:24px;
-  right:24px;
+  left:24px;             /* moved off the music·science·culture corner */
   display:inline-flex;
   align-items:center;
   min-height:30px;

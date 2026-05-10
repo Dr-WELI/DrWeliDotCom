@@ -116,23 +116,22 @@ body > main#top {
    Glitch transition
    -------------------------------------------------- */
 
+/* Smoother transition — chromatic shift only, no dramatic clip slice */
 .editorial-slide.is-transitioning img {
-  animation: glitchFlash 0.6s ease !important;
+  animation: glitchFlash 0.7s ease !important;
 }
 
 .hero-showreel.is-glitching .editorial-slide.is-active img,
 .editorial-slide.is-transitioning img {
-  filter: contrast(1.12) saturate(1.05) brightness(.96);
+  filter: contrast(1.10) saturate(1.08) brightness(.92);
 }
 
 @keyframes glitchFlash {
-  0% { transform: translate3d(0,0,0); filter: contrast(1); clip-path: inset(0 0 0 0); }
-  14% { transform: translate3d(-8px,0,0); filter: contrast(1.35) saturate(1.15); clip-path: inset(8% 0 68% 0); }
-  28% { transform: translate3d(8px,0,0); clip-path: inset(48% 0 30% 0); }
-  42% { transform: translate3d(-4px,0,0); clip-path: inset(22% 0 52% 0); }
-  58% { transform: translate3d(5px,0,0); clip-path: inset(70% 0 10% 0); }
-  76% { transform: translate3d(-2px,0,0); filter: contrast(1.2); clip-path: inset(0 0 0 0); }
-  100% { transform: translate3d(0,0,0); filter: contrast(1); clip-path: inset(0 0 0 0); }
+  0%   { transform: translate3d(0,0,0); filter: grayscale(55%) contrast(1.08) brightness(.75) saturate(1.1); }
+  20%  { transform: translate3d(-3px,0,0); filter: grayscale(45%) contrast(1.18) brightness(.78) saturate(1.4) hue-rotate(-6deg); }
+  45%  { transform: translate3d(2px,0,0);  filter: grayscale(50%) contrast(1.12) brightness(.74) saturate(1.25) hue-rotate(4deg); }
+  72%  { transform: translate3d(-1px,0,0); filter: grayscale(55%) contrast(1.06) brightness(.76) saturate(1.1); }
+  100% { transform: translate3d(0,0,0);   filter: grayscale(55%) contrast(1.08) brightness(.75) saturate(1.1); }
 }
 
 @media (max-width: 640px) {

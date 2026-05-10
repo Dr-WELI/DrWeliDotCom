@@ -508,3 +508,22 @@
   background: var(--site-accent);
   flex-shrink: 0;
 }
+
+/* ==========================================================================
+   9. SITE-WIDE MOTION (paired with /site-effects.js)
+   ========================================================================== */
+.site-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 800ms cubic-bezier(.2,.7,.2,1), transform 800ms cubic-bezier(.2,.7,.2,1);
+}
+.site-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes siteTitleUp {
+  to { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-reveal { opacity: 1; transform: none; transition: none; }
+}

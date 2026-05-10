@@ -19,7 +19,14 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/site-archive.css" />
   <style>
-    .academic-hero{position:relative;overflow:hidden;isolation:isolate;min-height:clamp(520px, 75vh, 720px);display:flex;align-items:center;}
+    /* === DARK EDITORIAL HERO (matches program subpages + closing CTA) === */
+    .academic-hero{
+      position:relative;overflow:hidden;isolation:isolate;
+      min-height:clamp(520px, 75vh, 720px);
+      display:flex;align-items:center;
+      background:linear-gradient(160deg, #0d121d 0%, #1a2438 40%, #2f4368 100%);
+      color:#fff;
+    }
     .academic-hero::after{
       content:"";
       position:absolute;
@@ -27,11 +34,16 @@
       pointer-events:none;
       z-index:0;
       background:
-        radial-gradient(ellipse 70% 55% at 22% 55%, rgba(74,95,138,.42) 0%, rgba(74,95,138,0) 65%),
-        radial-gradient(ellipse 55% 40% at 80% 36%, rgba(47,67,104,.34) 0%, rgba(47,67,104,0) 65%),
-        radial-gradient(ellipse 45% 30% at 60% 78%, rgba(183,154,114,.22) 0%, rgba(183,154,114,0) 70%),
-        linear-gradient(180deg, rgba(74,95,138,.10) 0%, rgba(74,95,138,.02) 50%, rgba(74,95,138,.06) 100%);
+        radial-gradient(ellipse 70% 55% at 22% 55%, rgba(127,176,255,.34) 0%, rgba(127,176,255,0) 65%),
+        radial-gradient(ellipse 55% 40% at 80% 36%, rgba(125,145,205,.26) 0%, rgba(125,145,205,0) 65%),
+        radial-gradient(ellipse 45% 30% at 60% 90%, rgba(241,212,90,.16) 0%, rgba(241,212,90,0) 70%);
     }
+    /* Hide jewel decorations that were designed for the old cream bg */
+    .academic-hero .vignette,
+    .academic-hero .hero-grain,
+    .academic-hero .hero-sapphire,
+    .academic-hero .hero-diamond,
+    .academic-hero .hero-sun{ display:none; }
     .academic-hero .hero-title{
       position:relative;
       font-size:clamp(56px, 10vw, 132px) !important;
@@ -39,6 +51,8 @@
       letter-spacing:-.05em !important;
       max-width:none !important;
       font-weight:800;
+      color:#fff !important;
+      text-shadow:0 2px 28px rgba(0,0,0,.45);
     }
     .academic-hero .hero-title::before{
       content:"";
@@ -47,21 +61,39 @@
       transform:translateY(-50%);
       width:min(820px, 92%);
       height:130%;
-      background:radial-gradient(ellipse 60% 80% at 30% 50%, rgba(74,95,138,.32) 0%, rgba(74,95,138,0) 70%);
+      background:radial-gradient(ellipse 60% 80% at 30% 50%, rgba(127,176,255,.30) 0%, rgba(127,176,255,0) 70%);
       z-index:-1;
       pointer-events:none;
       filter:blur(10px);
     }
     .academic-hero .eyebrow{
-      color:#2F4368;
+      color:#b8d0ff !important;
       font-weight:800;
       letter-spacing:.22em;
     }
+    .academic-hero p{
+      color:rgba(255,255,255,.85) !important;
+    }
+    .academic-hero p em{ color:#f1d45a; }
+    .academic-hero .hero-ctas .btn-primary{
+      background:#fff; color:#0d121d; border-color:#fff;
+    }
+    .academic-hero .hero-ctas .btn-primary:hover{
+      background:#f1d45a; color:#0d121d; border-color:#f1d45a;
+    }
+    .academic-hero .hero-ctas .btn-outline{
+      border-color:rgba(255,255,255,.45);
+      color:#fff;
+      background:rgba(255,255,255,.08);
+    }
+    .academic-hero .hero-ctas .btn-outline:hover{
+      background:rgba(255,255,255,.18);
+    }
     .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(20px, 4vw, 64px);padding-right:calc(72px + clamp(20px, 4vw, 64px));}
-    .academic-signal{position:absolute;top:50%;right:24px;transform:translateY(-50%);height:min(560px, 80%);width:48px;overflow:hidden;pointer-events:none;z-index:1;opacity:.78}
+    .academic-signal{position:absolute;top:50%;right:24px;transform:translateY(-50%);height:min(560px, 80%);width:48px;overflow:hidden;pointer-events:none;z-index:1;opacity:.85}
     .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:20px;animation:academicSignalMove 32s linear infinite}
-    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#2F4368;white-space:nowrap;font-weight:700}
-    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(234,228,220,1) 0%, rgba(234,228,220,0) 14%, rgba(234,228,220,0) 86%, rgba(234,228,220,1) 100%);pointer-events:none;z-index:2}
+    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,208,255,.72);white-space:nowrap;font-weight:700}
+    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, #0d121d 0%, rgba(13,18,29,0) 14%, rgba(13,18,29,0) 86%, #2f4368 100%);pointer-events:none;z-index:2}
     @keyframes academicSignalMove{from{transform:translateY(0)}to{transform:translateY(-50%)}}
     .academic-cap-grid .card h3{letter-spacing:-.03em}
     .academic-cap-grid .card p{max-width:34ch}
@@ -343,7 +375,7 @@
       <div class="hero-inner container">
         <p class="eyebrow">→ AUDIENCE / 02 — Academic &amp; Professional</p>
         <h1 class="hero-title">Research,<br/>Teaching &amp;<br/>Creative Practice</h1>
-        <p style="font-family:'Instrument Serif', Georgia, serif;font-style:italic;font-size:clamp(17px, 1.5vw, 22px);line-height:1.45;color:#2F4368;max-width:54ch;margin:18px 0 6px;">PhD in ecology &amp; evolution. <em>Dance Your PhD</em> 2024 winner. Research, teaching, and culture-facing translation.</p>
+        <p style="font-family:'Instrument Serif', Georgia, serif;font-style:italic;font-size:clamp(17px, 1.5vw, 22px);line-height:1.45;color:#b8d0ff;max-width:54ch;margin:18px 0 6px;">PhD in ecology &amp; evolution. <em style="color:#f1d45a;">Dance Your PhD</em> 2024 winner. Research, teaching, and culture-facing translation.</p>
 
         <div class="hero-ctas">
           <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary btn-lg">Professional enquiry</a>
@@ -631,5 +663,6 @@
 
   <script src="/script.js"></script>
   <script src="/site-clock.js"></script>
+  <script src="/site-effects.js"></script>
 </body>
 </html>

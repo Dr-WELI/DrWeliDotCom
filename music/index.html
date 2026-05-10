@@ -179,6 +179,11 @@
       transition:color .15s ease;
     }
     .music-footer-nav a:hover{ color:#ffaa9c; }
+
+    /* Hide platform photo-link strip on mobile — saves clutter */
+    @media (max-width: 760px){
+      .music-platform-strip{ display:none !important; }
+    }
   </style>
 </head>
 <body class="music-page">
@@ -398,6 +403,7 @@
 
   <script src="/assets/js/music-app.js"></script>
   <script src="/site-clock.js"></script>
+  <script src="/site-effects.js"></script>
   <script>
     (function(){ var y = document.getElementById('year2'); if (y) y.textContent = new Date().getFullYear(); })();
   </script>
