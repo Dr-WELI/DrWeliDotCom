@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" role="img" aria-label="WildWooHoo">
+  <title>WildWooHoo wordmark</title>
+  <desc>Custom wordmark with a diagonal cut. Two parallel-world halves above and below the cut. On hover a rainbow zipper sweeps left to right and a solid unclipped layer fades in - the cut closes, the word becomes one.</desc>
+  <defs>
+    <linearGradient id="wwh-spectrum" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C97A66"/>
+      <stop offset="18%" stop-color="#D89E78"/>
+      <stop offset="38%" stop-color="#D2B07A"/>
+      <stop offset="58%" stop-color="#7D8B5D"/>
+      <stop offset="78%" stop-color="#9985A8"/>
+      <stop offset="100%" stop-color="#7D6E92"/>
+    </linearGradient>
+    <filter id="wwh-glow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="wwh-cut-above">
+      <polygon points="0,0 720,0 720,55 0,105"/>
+    </clipPath>
+    <clipPath id="wwh-cut-below">
+      <polygon points="0,121 720,71 720,160 0,160"/>
+    </clipPath>
+  </defs>
+
+  <g class="wwh-wm-top">
+    <text x="364" y="130" text-anchor="middle"
+          font-family="'DM Serif Display','Libre Baskerville',Georgia,'Times New Roman',serif"
+          font-weight="400" font-size="128" letter-spacing="-3"
+          fill="currentColor"
+          clip-path="url(#wwh-cut-above)">WildWooHoo</text>
+  </g>
+
+  <g class="wwh-wm-bot">
+    <text x="356" y="130" text-anchor="middle"
+          font-family="'DM Serif Display','Libre Baskerville',Georgia,'Times New Roman',serif"
+          font-weight="400" font-size="128" letter-spacing="-3"
+          fill="currentColor"
+          clip-path="url(#wwh-cut-below)">WildWooHoo</text>
+  </g>
+
+  <line class="wwh-wm-sunbeam"
+        x1="-40" y1="120" x2="760" y2="58"
+        stroke="#FFF7D8" stroke-width="18" stroke-linecap="round"
+        opacity="0" filter="url(#wwh-glow)"/>
+
+  <line class="wwh-wm-beam"
+        x1="0" y1="113" x2="720" y2="63"
+        stroke="url(#wwh-spectrum)" stroke-width="10" stroke-linecap="round"
+        opacity="0" stroke-dasharray="220 522" stroke-dashoffset="220"/>
+
+  <g class="wwh-wm-spark">
+    <circle cx="0" cy="113" r="9" fill="#FFFAE0"/>
+  </g>
+
+  <g class="wwh-wm-full">
+    <text x="360" y="130" text-anchor="middle"
+          font-family="'DM Serif Display','Libre Baskerville',Georgia,'Times New Roman',serif"
+          font-weight="400" font-size="128" letter-spacing="-3"
+          fill="currentColor">WildWooHoo</text>
+  </g>
+</svg>
