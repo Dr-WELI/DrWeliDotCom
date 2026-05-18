@@ -2374,3 +2374,17 @@ main,
     opacity:1 !important;
   }
 }
+
+
+/* WildWooHoo inline mark - the Mirror W globe rendered alongside any "WildWooHoo" reference.
+   Sized via font-size, coloured via currentColor so it adapts to any context. */
+.wwh-mark {
+  display: inline-block;
+  vertical-align: -.16em;
+  margin-right: .18em;
+  transition: filter .25s ease, transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+a:hover .wwh-mark {
+  filter: drop-shadow(0 0 6px rgba(210, 176, 122, .5));
+  transform: scale(1.05);
+}
