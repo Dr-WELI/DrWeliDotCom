@@ -1,60 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="WildWooHoo W monogram">
-  <title>WildWooHoo - Mirror W globe (parallel worlds)</title>
-  <desc>Two W's, one upright and one reflected, sit inside a faint globe. A white and rainbow diffraction line sits at the reflection plane and reveals as the reflected W flips up into one world.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="WildWooHoo W monogram - rainbow rim">
+  <title>WildWooHoo - Mirror W monogram (rainbow rim variant)</title>
+  <desc>Black horizon-pinched tile with a rainbow rim glow at the perimeter and a cream W mirror on top. Captures the hover-end frame of the black mark as a still - the moment after the spectrum bloom dies and only the rim glow remains. For celebratory and festive contexts where the brand wants to feel alive without sacrificing the dark elegance of the primary mark.</desc>
   <defs>
-    <linearGradient id="m-spectrum" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C97A66"/>
-      <stop offset="18%" stop-color="#D89E78"/>
-      <stop offset="38%" stop-color="#D2B07A"/>
-      <stop offset="58%" stop-color="#7D8B5D"/>
-      <stop offset="78%" stop-color="#9985A8"/>
+    <radialGradient id="mr-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#0E0E0F"/>
+      <stop offset="58%"  stop-color="#0E0E0F"/>
+      <stop offset="72%"  stop-color="#1A4A28"/>
+      <stop offset="82%"  stop-color="#B07F30"/>
+      <stop offset="89%"  stop-color="#C97A66"/>
+      <stop offset="95%"  stop-color="#9985A8"/>
       <stop offset="100%" stop-color="#7D6E92"/>
-    </linearGradient>
-    <linearGradient id="m-white" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="45%" stop-color="#FFF7D8" stop-opacity="1"/>
-      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="m-globe" cx="38%" cy="28%" r="70%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".18"/>
-      <stop offset="42%" stop-color="#D2B07A" stop-opacity=".08"/>
-      <stop offset="100%" stop-color="#7D6E92" stop-opacity=".03"/>
     </radialGradient>
-    <filter id="m-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2.4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <radialGradient id="mr-spec" cx="32%" cy="22%" r="55%">
+      <stop offset="0%"  stop-color="#FFFFFF" stop-opacity=".22"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity=".04"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mr-shadow" cx="78%" cy="82%" r="55%">
+      <stop offset="0%"  stop-color="#000000" stop-opacity=".22"/>
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="mr-tile">
+      <path d="M 24 4 H 76 C 92 4, 96 8, 96 24 V 46 C 96 48, 94.5 49.2, 92 50 C 94.5 50.8, 96 52, 96 54 V 76 C 96 92, 92 96, 76 96 H 24 C 8 96, 4 92, 4 76 V 54 C 4 52, 5.5 50.8, 8 50 C 5.5 49.2, 4 48, 4 46 V 24 C 4 8, 8 4, 24 4 Z"/>
+    </clipPath>
   </defs>
-  <g class="wwh-mono-globe">
-    <circle cx="50" cy="50" r="35" fill="url(#m-globe)" stroke="rgba(255,255,255,.34)" stroke-width="1.25"/>
-    <ellipse cx="50" cy="50" rx="18" ry="35" fill="none" stroke="rgba(210,176,122,.34)" stroke-width="1"/>
-    <ellipse cx="50" cy="50" rx="35" ry="10" fill="none" stroke="rgba(255,255,255,.26)" stroke-width="1"/>
+  <g clip-path="url(#mr-tile)">
+    <rect width="100" height="100" fill="url(#mr-bg)"/>
+    <rect width="100" height="100" fill="url(#mr-spec)"/>
+    <rect width="100" height="100" fill="url(#mr-shadow)"/>
+    <rect x="0" y="0" width="100" height="2" fill="#FFFFFF" opacity=".14"/>
+    <rect x="0" y="98" width="100" height="2" fill="#000000" opacity=".22"/>
+    <path d="M 18 24 L 33 50 L 50 28 L 67 50 L 82 24" stroke="#FBF7EE" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 18 76 L 33 50 L 50 72 L 67 50 L 82 76" stroke="#FBF7EE" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".42"/>
+    <line x1="14" y1="50" x2="86" y2="50" stroke="#FBF7EE" stroke-width="1.1"/>
+    <circle cx="50" cy="50" r="1.8" fill="#FBF7EE" opacity=".9"/>
   </g>
-  <!-- Top W: the world above -->
-  <g class="wwh-mono-top">
-    <text x="50" y="47" text-anchor="middle"
-          font-family="'DM Serif Display','Libre Baskerville',Georgia,'Times New Roman',serif"
-          font-weight="400" font-size="54" letter-spacing="-1.5"
-          fill="currentColor">W</text>
-  </g>
-  <!-- Reflection beam (white sunlight + rainbow diffraction at the reflection plane) -->
-  <line class="wwh-mono-whitebeam"
-        x1="18" y1="51" x2="82" y2="51"
-        stroke="url(#m-white)" stroke-width="5.5" stroke-linecap="round"
-        opacity="0" filter="url(#m-glow)"/>
-  <line class="wwh-mono-beam"
-        x1="16" y1="51" x2="84" y2="51"
-        stroke="url(#m-spectrum)" stroke-width="3" stroke-linecap="round"
-        opacity="0"/>
-  <!-- Mirror W: the reflection (parallel world) -->
-  <g class="wwh-mono-bot">
-    <text x="50" y="47" text-anchor="middle"
-          font-family="'DM Serif Display','Libre Baskerville',Georgia,'Times New Roman',serif"
-          font-weight="400" font-size="54" letter-spacing="-1.5"
-          fill="currentColor">W</text>
-  </g>
+  <path d="M 24 4 H 76 C 92 4, 96 8, 96 24 V 46 C 96 48, 94.5 49.2, 92 50 C 94.5 50.8, 96 52, 96 54 V 76 C 96 92, 92 96, 76 96 H 24 C 8 96, 4 92, 4 76 V 54 C 4 52, 5.5 50.8, 8 50 C 5.5 49.2, 4 48, 4 46 V 24 C 4 8, 8 4, 24 4 Z" fill="none" stroke="rgba(0,0,0,.08)" stroke-width=".5"/>
 </svg>
