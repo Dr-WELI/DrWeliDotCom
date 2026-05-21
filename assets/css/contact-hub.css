@@ -391,6 +391,47 @@ body.contact-page{
 }
 .contact-social-link:hover .contact-social-icon{ background:#fff; color:#111; }
 
+/* ---------- Icon-only social row (no text labels) --------------------- */
+.contact-social-grid--icons{
+  gap:10px;
+}
+.contact-social-grid--icons .contact-social-link{
+  width:44px;
+  height:44px;
+  padding:0;
+  border-radius:50%;
+  justify-content:center;
+  gap:0;
+  background:rgba(255,255,255,.65);
+  border:1px solid rgba(17,17,17,.18);
+}
+.contact-social-grid--icons .contact-social-link:hover{
+  background:#111;
+  border-color:#111;
+  transform:translateY(-2px);
+}
+.contact-social-svg{
+  width:20px;
+  height:20px;
+  color:#1a1a1a;
+  display:block;
+  transition:color .18s ease;
+}
+.contact-social-grid--icons .contact-social-link:hover .contact-social-svg{
+  color:#fff;
+}
+@media (max-width:640px){
+  .contact-social-grid--icons{
+    grid-template-columns:none;
+    justify-content:flex-start;
+  }
+  .contact-social-grid--icons .contact-social-link{
+    width:42px;
+    height:42px;
+    border-right:1px solid rgba(17,17,17,.18) !important;
+  }
+}
+
 /* ---------- Mobile / tablet --------------------------------------------- */
 @media (max-width:920px){
   .contact-hero{ grid-template-columns:1fr; }
