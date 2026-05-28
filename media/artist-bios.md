@@ -27,5 +27,5 @@ This is a genre-fluid universe: Latin, electronic, pop, and left-field moments b
 I’m also the face and voice of **WildWooHoo** (nature-science inspired audio-visual projects for social impact).
 
 For inquiries:  
-📩 weli@weli.live  
+📩 hello@drweli.com  
 🔔 https://www.youtube.com/@welimusician/?sub_confirmation=1
