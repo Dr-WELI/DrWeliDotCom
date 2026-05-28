@@ -1,6 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" ry="10" fill="#FFD33A"/>
-  <text x="32" y="46" text-anchor="middle"
-        font-family="Georgia, 'Times New Roman', serif"
-        font-weight="700" font-size="44" fill="#0a0a0a">W</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 360" role="img" aria-label="WildWooHoo logo">
+  <title>WildWooHoo logo</title>
+  <image href="/wwh-brand/monogram-exact.png" width="510" height="360" preserveAspectRatio="xMidYMid meet"/>
 </svg>
