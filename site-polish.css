@@ -144,4 +144,25 @@ body > main#top {
   .hero-cta-rail-expanded {
     max-width: 420px;
   }
+
+  /* WELI 2026-06-19: on mobile the six nav pills stacked full-width and took over
+     the page. Lay each row out as a compact 3-up grid (two tidy rows of three). */
+  .hero-cta-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    justify-items: stretch;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta-row .hero-metal-btn {
+    min-width: 0;
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
 }
