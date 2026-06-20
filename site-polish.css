@@ -146,15 +146,21 @@ body > main#top {
 
   .hero-cta-rail-expanded {
     max-width: 420px;
+    /* WELI 2026-06-20: drop the box block down so it sits just above the
+       middle of the page, rather than up under the title. */
+    margin-top: 13vh;
   }
 
   /* WELI 2026-06-19: on mobile the six nav pills stacked full-width and took over
-     the page. Lay each row out as a compact 3-up grid (two tidy rows of three). */
+     the page. Lay each row out as a compact 3-up grid (two tidy rows of three).
+     minmax(0,1fr) forces all six boxes to exactly equal width so the two rows
+     line up edge to edge. */
   .hero-cta-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
     justify-items: stretch;
+    width: 100%;
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
