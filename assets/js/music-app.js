@@ -1,21 +1,5 @@
 const tracks = [
   {
-    id: "ep",
-    title: "Yours Academically",
-    subtitle: "EP · Spotify",
-    embed: "https://open.spotify.com/embed/album/0NcO0Jz1X2wlkedPjB7IZL?utm_source=generator&theme=0",
-    link: "https://open.spotify.com/album/0NcO0Jz1X2wlkedPjB7IZL",
-    cover: "/assets/img/release-interlude-yours-academically.jpg"
-  },
-  {
-    id: "kangaroo",
-    title: "Kangaroo Time (Original Edit)",
-    subtitle: "Single · Spotify",
-    embed: "https://open.spotify.com/embed/track/3IDcuKMd6lErGPzaSS2oVx?utm_source=generator&theme=0",
-    link: "https://open.spotify.com/track/3IDcuKMd6lErGPzaSS2oVx?si=4d4ef6596169468f",
-    cover: "/assets/img/release-kangaroo-time.jpg"
-  },
-  {
     id: "goat",
     title: "Cabra da Peste (G.O.A.T.)",
     subtitle: "Single · Spotify",
