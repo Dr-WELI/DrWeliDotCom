@@ -138,7 +138,10 @@ body > main#top {
   .home-hero.home-hero-single {
     padding-top: calc(env(safe-area-inset-top, 0px) + 76px) !important;
     padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 24px) !important;
-    align-items: flex-end !important;
+    /* WELI 2026-06-20: put the content (title + nav boxes) at the TOP-centre where
+       there is open space, instead of crammed against the bottom. */
+    align-items: flex-start !important;
+    justify-content: center !important;
   }
 
   .hero-cta-rail-expanded {
