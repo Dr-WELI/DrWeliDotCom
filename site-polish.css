@@ -169,3 +169,44 @@ body > main#top {
     white-space: nowrap;
   }
 }
+
+/* =============================================================================
+   WELI 2026-06-20: hero nav boxes -> metallic, like the WildWooHoo chip.
+   Dark brushed graphite + machined bevel + layered shadows. Scoped to the hero
+   CTA rows so it wins over the base light-pill style.
+   ========================================================================== */
+.hero-cta-row .hero-metal-btn,
+.hero-cta-row .hero-metal-btn.hero-metal-btn-light {
+  color: #EDEAE2 !important;
+  background-color: #1B1F27 !important;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.022) 0 1px, rgba(0,0,0,0.03) 1px 2px),
+    linear-gradient(180deg, #2A2E36 0%, #1B1F27 48%, #0E1118 100%) !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.45),
+    0 16px 32px -14px rgba(0,0,0,0.62),
+    inset 0 1px 0 rgba(255,255,255,0.13),
+    inset 0 -2px 4px rgba(0,0,0,0.5) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: transform .2s ease, box-shadow .25s ease, border-color .25s ease, background-image .25s ease !important;
+}
+.hero-cta-row .hero-metal-btn:hover,
+.hero-cta-row .hero-metal-btn.hero-metal-btn-light:hover {
+  transform: translateY(-2px);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, rgba(0,0,0,0.03) 1px 2px),
+    linear-gradient(180deg, #333845 0%, #20252e 48%, #0E1118 100%) !important;
+  border-color: rgba(255,255,255,0.18) !important;
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.5),
+    0 20px 40px -14px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.55) !important;
+}
+/* champagne accent dot on the primary boxes, brightened for the dark metal */
+.hero-cta-row .hero-metal-btn.is-primary::after {
+  background: #CBAa78 !important;
+  box-shadow: 0 0 0 3px rgba(203,168,120,0.18) !important;
+}
