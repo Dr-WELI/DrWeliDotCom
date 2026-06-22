@@ -133,7 +133,7 @@
     var ctx = canvas.getContext('2d');
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var w = 0, h = 0, cx = 0, cy = 0, stars = [], raf = null, running = false;
-    var N = opts.count || 220, SPEED = opts.speed || 0.0062, COLOR = opts.color || '160,205,255';
+    var N = opts.count || 220, SPEED = opts.speed || 0.003, COLOR = opts.color || '160,205,255';
     function size() {
       var r = container.getBoundingClientRect();
       w = opts.fullscreen ? window.innerWidth : (r.width || window.innerWidth);
@@ -179,7 +179,7 @@
       host.setAttribute('aria-hidden', 'true');
       host.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;';
       document.body.insertBefore(host, document.body.firstChild);
-      makeWarp(host, { z: 0, count: 240, speed: 0.0042, opacity: 0.6, color: '150,200,255', fullscreen: true }).start();
+      makeWarp(host, { z: 0, count: 240, speed: 0.0022, opacity: 0.6, color: '150,200,255', fullscreen: true }).start();
     }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
