@@ -1,10 +1,10 @@
 const tracks = [
   {
-    id: "goat",
-    title: "Cabra da Peste (G.O.A.T.)",
+    id: "letitgo",
+    title: "Shall We Let It Go?",
     subtitle: "Single · Spotify",
-    embed: "https://open.spotify.com/embed/track/6j1Zkij6ETgFgmJkqxfPux?utm_source=generator&theme=0",
-    link: "https://open.spotify.com/track/6j1Zkij6ETgFgmJkqxfPux?si=af049e27021441e7",
+    embed: "https://open.spotify.com/embed/track/2lDpGWYFNF25neKAI6aGUM?utm_source=generator&theme=0",
+    link: "https://open.spotify.com/track/2lDpGWYFNF25neKAI6aGUM?si=eaa8ee0cb2c942ad",
     cover: "/assets/img/release-shall-we-let-it-go.jpg"
   },
   {
