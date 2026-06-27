@@ -62,6 +62,46 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://drweli.com/program/corporate/#keynote-service",
+      "name": "Science keynote speaking and corporate workshops",
+      "serviceType": "Keynote speaker",
+      "provider": {"@id": "https://drweli.com/#person"},
+      "areaServed": ["Sydney", "Australia", "International"],
+      "audience": {"@type": "BusinessAudience", "name": "Conference producers, leadership and people teams"},
+      "url": "https://drweli.com/program/corporate/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://drweli.com/#person",
+      "makesOffer": {"@type": "Offer", "itemOffered": {"@id": "https://drweli.com/program/corporate/#keynote-service"}}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://drweli.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Programs", "item": "https://drweli.com/program/"},
+        {"@type": "ListItem", "position": 3, "name": "Corporate & keynotes", "item": "https://drweli.com/program/corporate/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What does Dr WELI speak about?", "acceptedAnswer": {"@type": "Answer", "text": "Individuality, hierarchy and how groups actually work, drawn from peer-reviewed research on kangaroo behaviour, neuroscience and team systems. The signature piece, Kangaroo Time live, weaves spoken word, music and movement into a story a room remembers."}},
+        {"@type": "Question", "name": "What keynote formats and runtimes are available?", "acceptedAnswer": {"@type": "Answer", "text": "A 5 to 15 minute conference reset activation, a 20 to 45 minute story-led keynote (Kangaroo Time live), or a 60 to 120 minute workshop or program. They pair, sequence or run as a single moment."}},
+        {"@type": "Question", "name": "Is Dr WELI based in Sydney, and does he travel?", "acceptedAnswer": {"@type": "Answer", "text": "He is based in Sydney and available across Australia and internationally for conferences, leadership offsites and team days."}},
+        {"@type": "Question", "name": "What makes it different from a standard keynote?", "acceptedAnswer": {"@type": "Answer", "text": "It is a live performance grounded in real research: spoken word, music and movement from a PhD behavioural ecologist and AAAS Dance Your PhD Global Winner 2024, not slides."}},
+        {"@type": "Question", "name": "How do I check availability and fees?", "acceptedAnswer": {"@type": "Answer", "text": "Send your event date, audience size and the format you have in mind through the enquiry form, and you will get a scoped recommendation back."}}
+      ]
+    }
+  ]
+}
+</script>
 <!-- END: SEO-INJECT -->
 </head>
 
@@ -288,7 +328,7 @@
       <h2 class="archive-section-title">Main<br/>offer</h2>
       <div class="archive-section-meta">
         <span class="archive-section-stamp">Keynote · 20 to 45 minutes</span>
-        <p class="archive-section-update">The signature corporate piece. Built on Science Magazine's <em>Dance Your PhD</em> 2024 (overall winner) and Falling Walls Engage 2025 (Top 30 worldwide).</p>
+        <p class="archive-section-update">The signature corporate piece. Built on the AAAS <em>Dance Your PhD</em> Global Winner 2024 and Falling Walls Engage 2025 (Top 30 worldwide).</p>
       </div>
     </header>
 
@@ -296,7 +336,7 @@
       <article class="archive-theme-card" style="border-color: var(--signal, #c0392b);">
         <div class="num">K.01 / Featured</div>
         <h3>Kangaroo Time live, the story-led keynote</h3>
-        <p>The same piece that won Science Magazine's global Dance Your PhD prize, adapted for a corporate room. Spoken word, music, and movement weave research on kangaroo behaviour into a story about <em>individuality, hierarchy, and how groups actually work</em>. The room laughs, listens, and walks out with a frame they can use on Monday.</p>
+        <p>The same piece that won the AAAS Dance Your PhD, the contest's global top prize, adapted for a corporate room. Spoken word, music, and movement weave research on kangaroo behaviour into a story about <em>individuality, hierarchy, and how groups actually work</em>. The room laughs, listens, and walks out with a frame they can use on Monday.</p>
         <p style="margin-top:14px"><strong style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal,#c0392b);">Works best as</strong></p>
         <p style="margin-top:0">A conference opener or closer. A leadership offsite anchor. A team retreat centrepiece. Pairs naturally with a 60 to 120 minute follow-up workshop the next morning.</p>
         <p style="margin-top:10px"><a href="/enquire/?topic=Kangaroo%20Time%20live%20keynote">Book Kangaroo Time live →</a></p>
@@ -401,6 +441,39 @@
         </div>
         <p class="archive-proof-caption">// Flagship story-led engagement</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (keynote, for AEO + organisers) ===== -->
+  <section class="archive-section" id="faq">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Keynote<br/>FAQ</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">For conference producers &amp; people teams</span>
+        <p class="archive-section-update">The questions organisers ask most.</p>
+      </div>
+    </header>
+    <div class="archive-faq" style="max-width:760px;display:flex;flex-direction:column;gap:10px;">
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">What does Dr WELI speak about?</summary>
+        <p style="margin:10px 0 0;">Individuality, hierarchy and how groups actually work, drawn from peer-reviewed research on kangaroo behaviour, neuroscience and team systems. The signature piece, <em>Kangaroo Time</em> live, weaves spoken word, music and movement into a story a room remembers.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">What keynote formats and runtimes are available?</summary>
+        <p style="margin:10px 0 0;">A 5 to 15 minute conference reset activation, a 20 to 45 minute story-led keynote (<em>Kangaroo Time</em> live), or a 60 to 120 minute workshop or program. They pair, sequence or run as a single moment.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">Is Dr WELI based in Sydney, and does he travel?</summary>
+        <p style="margin:10px 0 0;">He is based in Sydney and available across Australia and internationally for conferences, leadership offsites and team days.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">What makes it different from a standard keynote?</summary>
+        <p style="margin:10px 0 0;">It is a live performance grounded in real research: spoken word, music and movement from a PhD behavioural ecologist and AAAS Dance Your PhD Global Winner 2024, not slides.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">How do I check availability and fees?</summary>
+        <p style="margin:10px 0 0;">Send your event date, audience size and the format you have in mind through the <a href="/enquire/">enquiry form</a>, and you will get a scoped recommendation back.</p>
+      </details>
     </div>
   </section>
 
