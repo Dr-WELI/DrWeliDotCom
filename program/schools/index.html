@@ -59,6 +59,46 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://drweli.com/program/schools/#service",
+      "name": "School incursions and STEAM workshops",
+      "serviceType": "School incursion",
+      "provider": {"@id": "https://drweli.com/#person"},
+      "areaServed": ["Sydney", "New South Wales", "Australian Capital Territory", "Australia"],
+      "audience": {"@type": "EducationalAudience", "educationalRole": "Primary and lower-secondary students and teachers"},
+      "url": "https://drweli.com/program/schools/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://drweli.com/#person",
+      "makesOffer": {"@type": "Offer", "itemOffered": {"@id": "https://drweli.com/program/schools/#service"}}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://drweli.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Programs", "item": "https://drweli.com/program/"},
+        {"@type": "ListItem", "position": 3, "name": "Schools", "item": "https://drweli.com/program/schools/"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is a school incursion?", "acceptedAnswer": {"@type": "Answer", "text": "An incursion is an in-school program. Dr WELI comes to your school and runs Kangaroo Time Kids, turning animal-behaviour science into music, dance and embodied learning, so students take part with their bodies and meet the research through play."}},
+        {"@type": "Question", "name": "What year levels is it for?", "acceptedAnswer": {"@type": "Answer", "text": "Primary and lower-secondary students. Formats run from whole-school assemblies to STEAM classroom sessions and festival keynotes."}},
+        {"@type": "Question", "name": "How long is a session and what formats are available?", "acceptedAnswer": {"@type": "Answer", "text": "From a 30 to 60 minute assembly or activation to half-day and STEAM classroom formats, shaped to your timetable and delivered in plain language across more than one tongue."}},
+        {"@type": "Question", "name": "Does Dr WELI hold a Working With Children Check?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, a current NSW Working With Children Check."}},
+        {"@type": "Question", "name": "Do you travel to regional NSW and the ACT?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, across New South Wales and the ACT, and further afield by arrangement."}}
+      ]
+    }
+  ]
+}
+</script>
 <!-- END: SEO-INJECT -->
 <!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRQ9VJ2S76"></script>
@@ -412,6 +452,39 @@
         </div>
         <p class="archive-proof-caption">// Flagship format, adaptable for class &amp; school events</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ (for AEO + teacher/coordinator buyers) ===== -->
+  <section class="archive-section" id="faq">
+    <header class="archive-section-head">
+      <h2 class="archive-section-title">Incursion<br/>FAQ</h2>
+      <div class="archive-section-meta">
+        <span class="archive-section-stamp">For teachers &amp; school coordinators</span>
+        <p class="archive-section-update">The questions schools ask most.</p>
+      </div>
+    </header>
+    <div class="archive-faq" style="max-width:760px;display:flex;flex-direction:column;gap:10px;">
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">What is a school incursion?</summary>
+        <p style="margin:10px 0 0;">An incursion is an in-school program. Dr WELI comes to your school and runs <em>Kangaroo Time Kids</em>, turning animal-behaviour science into music, dance and embodied learning, so students take part with their bodies and meet the research through play.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">What year levels is it for?</summary>
+        <p style="margin:10px 0 0;">Primary and lower-secondary students. Formats run from whole-school assemblies to STEAM classroom sessions and festival keynotes.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">How long is a session, and what formats are available?</summary>
+        <p style="margin:10px 0 0;">From a 30 to 60 minute assembly or activation to half-day and STEAM classroom formats, shaped to your timetable and delivered in plain language across more than one tongue.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">Does Dr WELI hold a Working With Children Check?</summary>
+        <p style="margin:10px 0 0;">Yes, a current NSW Working With Children Check.</p>
+      </details>
+      <details style="border:1px solid rgba(127,127,127,.22);border-radius:10px;padding:14px 18px;">
+        <summary style="cursor:pointer;font-weight:600;">Do you travel to regional NSW and the ACT?</summary>
+        <p style="margin:10px 0 0;">Yes, across New South Wales and the ACT, and further afield by arrangement.</p>
+      </details>
     </div>
   </section>
 
