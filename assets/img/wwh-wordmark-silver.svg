@@ -24,7 +24,7 @@
     </mask>
     <linearGradient id="g-silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FAFAFE"/><stop offset="50%" stop-color="#D2D2DA"/><stop offset="100%" stop-color="#9DA0A8"/></linearGradient>
   </defs>
-  <g fill="none" stroke="url(#g-silver)" stroke-linecap="round" stroke-linejoin="round" mask="url(#wm)">
+  <g fill="none" stroke="url(#g-silver)" stroke-linecap="round" stroke-linejoin="round">
     <path d="M 23 55 L 60.5 120 L 103 65 L 145.5 120 L 183 55" stroke-width="22"/>
     <line x1="212" y1="70" x2="212" y2="120" stroke-width="14"/>
     <line x1="230" y1="55" x2="230" y2="120" stroke-width="14"/>
