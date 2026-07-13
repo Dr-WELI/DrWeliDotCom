@@ -80,7 +80,7 @@
   <div class="left">
     <span><span class="pulse"></span><span class="live">Open</span></span>
     <span class="meta">WELI · Enquire</span>
-    <span class="meta">Personal reply within a couple of days</span>
+    <span class="meta">Proposal within two working days</span>
   </div>
   <div class="right">
     <span class="meta">Sydney | Canberra · Worldwide</span>
@@ -98,14 +98,14 @@
   <section class="contact-intro-band">
     <div class="contact-intro-meta">
       <span class="contact-kicker">ENQUIRE / 06</span>
-      <h1>Let's do it</h1>
-      <p class="lead">Tell me what you're building and let's shape something together, performance, partnership, program, or press.</p>
+      <h1>Book Dr WELI</h1>
+      <p class="lead">Book me for a school workshop, a keynote, a university session, a live performance or a commission. Tell me what you want to book and the result you need, and I reply with a proposal built around it, within two working days.</p>
       <div class="contact-signal-strip">
+        <span>Keynotes</span>
+        <span>School and university workshops</span>
         <span>Live performance</span>
-        <span>Workshops</span>
-        <span>Science × Art</span>
-        <span>Cultural projects</span>
-        <span>Press &amp; media</span>
+        <span>Science-art commissions</span>
+        <span>Press and media</span>
       </div>
     </div>
   </section>
@@ -118,17 +118,17 @@
       <form class="contact-form" action="https://formspree.io/f/mbdzlpgp" method="POST" accept-charset="UTF-8" autocomplete="on">
 
         <div class="contact-step">
-          <p class="contact-step-title"><span>01 / What are you looking for?</span></p>
+          <p class="contact-step-title"><span>01 / What do you want to book?</span></p>
           <div class="contact-choice-grid">
             <label class="contact-choice">
               <input type="radio" name="intent" value="music">
-              <strong>Music</strong>
-              <span>Performances, collaborations, media</span>
+              <strong>Music and performance</strong>
+              <span>Live shows, features, collaborations, media</span>
             </label>
             <label class="contact-choice">
               <input type="radio" name="intent" value="engagement">
-              <strong>Engagement</strong>
-              <span>Workshops, activations, programs</span>
+              <strong>Speaking and workshops</strong>
+              <span>Keynotes, school and university sessions</span>
             </label>
           </div>
         </div>
@@ -160,9 +160,11 @@
               <label>Budget</label>
               <select name="budget">
                 <option value="">Select range</option>
-                <option value="<1000">&lt; $1k</option>
-                <option value="1000-5000">$1k–$5k</option>
-                <option value="5000+">$5k+</option>
+                <option>Not sure yet</option>
+                <option>Under $2k</option>
+                <option>$2k to $5k</option>
+                <option>$5k to $15k</option>
+                <option>$15k or more</option>
               </select>
             </div>
             <div class="contact-field">
@@ -173,9 +175,27 @@
                 <option>Media / Press</option>
               </select>
             </div>
+            <div class="contact-field">
+              <label>Date or timeframe</label>
+              <input type="text" name="event_date" placeholder="e.g. 14 March, or flexible">
+            </div>
+            <div class="contact-field">
+              <label>Decide by</label>
+              <select name="decide_by">
+                <option value="">Select</option>
+                <option>This week</option>
+                <option>This month</option>
+                <option>This quarter</option>
+                <option>Still exploring</option>
+              </select>
+            </div>
             <div class="contact-field full">
-              <label>Details</label>
-              <textarea name="details" placeholder="Private or public event, date, city, venue, audience size (pax), set length, technical requirements, budget range"></textarea>
+              <label>What result do you need?</label>
+              <textarea name="outcome" required placeholder="What should this achieve, and what do you want people to leave with? I build the proposal around this."></textarea>
+            </div>
+            <div class="contact-field full">
+              <label>Anything else</label>
+              <textarea name="details" placeholder="Private or public event, city, venue, audience size, set length, technical needs"></textarea>
             </div>
           </div>
         </div>
@@ -210,10 +230,10 @@
             <div class="contact-field">
               <label>Audience</label>
               <select name="audience">
-                <option>Corporate / Conference</option>
-                <option>University / Student Experience</option>
-                <option>School / STEAM</option>
-                <option>Science × Art Collaboration</option>
+                <option>Corporate or conference</option>
+                <option>University or student experience</option>
+                <option>School or STEAM</option>
+                <option>Science-art commission or residency</option>
               </select>
             </div>
             <div class="contact-field">
@@ -231,10 +251,11 @@
             <div class="contact-field">
               <label>Type</label>
               <select name="engagement_type">
-                <option>Activation</option>
+                <option>Conference keynote or energiser</option>
                 <option>Workshop</option>
-                <option>Program</option>
-                <option>Creative Lab / Collaboration</option>
+                <option>School incursion</option>
+                <option>University or researcher session</option>
+                <option>One-off creative project or ongoing collaboration</option>
               </select>
             </div>
             <div class="contact-field">
@@ -245,10 +266,30 @@
               <label>Budget</label>
               <select name="budget">
                 <option value="">Select range</option>
-                <option value="<1000">&lt; $1k</option>
-                <option value="1000-5000">$1k–$5k</option>
-                <option value="5000+">$5k+</option>
+                <option>Not sure yet</option>
+                <option>Under $2k</option>
+                <option>$2k to $5k</option>
+                <option>$5k to $15k</option>
+                <option>$15k or more</option>
               </select>
+            </div>
+            <div class="contact-field">
+              <label>Date or timeframe</label>
+              <input type="text" name="event_date" placeholder="e.g. Term 2, or 14 March">
+            </div>
+            <div class="contact-field">
+              <label>Decide by</label>
+              <select name="decide_by">
+                <option value="">Select</option>
+                <option>This week</option>
+                <option>This month</option>
+                <option>This quarter</option>
+                <option>Still exploring</option>
+              </select>
+            </div>
+            <div class="contact-field full">
+              <label>What result do you need?</label>
+              <textarea name="outcome" required placeholder="What should this achieve, and what do you want your audience to leave with? I build the proposal around this."></textarea>
             </div>
             <div class="contact-field full">
               <label>Goals</label>
@@ -270,8 +311,8 @@
         </div>
 
         <div class="contact-submit-row">
-          <button class="btn btn-primary" type="submit">Send enquiry →</button>
-          <p class="contact-note">Personal reply</p>
+          <button class="btn btn-primary" type="submit">Send booking enquiry →</button>
+          <p class="contact-note">You get a proposal within two working days</p>
         </div>
 
         <p id="contactPreview" class="contact-preview"></p>
@@ -317,9 +358,9 @@
   <section class="site-book-band" style="margin-top:80px">
     <div class="site-book-band-inner">
       <div>
-        <div class="site-book-stamp">Personal reply</div>
-        <h2>Within a couple of days, from me directly.</h2>
-        <p>Press, performance, partnership, or program, every enquiry lands in the same inbox.</p>
+        <div class="site-book-stamp">What happens next</div>
+        <h2>Within two working days, a proposal built around the result you asked for.</h2>
+        <p>I read every enquiry myself and reply from this inbox, whether it is a booking, a commission or press.</p>
       </div>
       <a class="site-cta-button" href="mailto:bookings@drweli.com">
         <span>Direct email</span>
