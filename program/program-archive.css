@@ -147,9 +147,19 @@
   100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
 }
 
-/* The site header sits between the ribbon and the timeline.
-   Just neutralise its absolute padding inside this layout. */
-.program-page.archive-page .program-header { position: relative; z-index: 4; }
+/* WELI 2026-07-31: the header used to sit in flow (position:relative) on the
+   cream body, which read as a distracting white band between the dark ribbon
+   and the dark hero. Float it transparently over the timeline instead - the
+   ribbon's `~` rule sets top:37px, so it lands just under the ribbon. Brand and
+   toggle go light so they read on the dark backdrop. */
+.program-page.archive-page .program-header {
+  position: absolute;
+  left: 0; right: 0; width: 100%;
+  z-index: 20;
+  background: transparent;
+}
+.program-page.archive-page .program-header .brand { color: #fff; }
+.program-page.archive-page .program-header .brand:hover { color: rgba(255,255,255,.82); }
 
 /* ---------- TIMELINE BACKDROP (Engagement DNA) -------------------------- */
 .archive-timeline {
