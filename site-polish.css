@@ -280,3 +280,24 @@ body > main#top {
   .hero-detail .hero-lead{ font-size:13.5px; line-height:1.55; }
   .hero-detail .hero-award{ font-size:.72rem; }
 }
+
+/* =============================================================================
+   WELI 2026-07-14: glitch HUD captions were an unreadable red/yellow smear over
+   the stage photo. Keep the chromatic HUD character, but make the base text
+   legible: strong dark shadow, a soft dark scrim behind the block, and a much
+   subtler chromatic split (1px, lower opacity).
+   ========================================================================== */
+.hero-glitch-copy{
+  padding:9px 13px;
+  border-radius:12px;
+  background:rgba(8,9,12,.40);
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  box-shadow:0 10px 26px -12px rgba(0,0,0,.6);
+}
+.glitch-caption{
+  color:#fff;
+  text-shadow:0 1px 6px rgba(0,0,0,.92), 0 0 2px rgba(0,0,0,.95);
+}
+.glitch-caption::before{ transform:translate(-1px,0); color:rgba(255,80,70,.5); }
+.glitch-caption::after{ transform:translate(1px,0); color:rgba(241,212,90,.5); }
