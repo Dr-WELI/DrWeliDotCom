@@ -317,3 +317,10 @@ body.program-page {
     animation: none;
   }
 }
+
+/* WELI 2026-07-14: "Book an experience" moved into the hero copy block (was
+   floating top-right, disconnected). Now sits under the lead as the primary CTA. */
+.program-copy-core .program-hero-cta{ margin:22px 0 6px; }
+.program-copy-core .program-hero-cta .btn-primary{
+  background:#fff; color:#111; border:1px solid rgba(255,255,255,.25);
+}
