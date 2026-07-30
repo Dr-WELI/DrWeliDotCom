@@ -216,3 +216,67 @@ body > main#top {
   background: #CBAa78 !important;
   box-shadow: 0 0 0 3px rgba(203,168,120,0.18) !important;
 }
+
+/* =============================================================================
+   WELI 2026-07-14: hero premium + legibility pass.
+   The nav boxes now lead; the descriptive copy sits below them in a calm glass
+   panel so it reads cleanly over the stage image instead of a wall of text.
+   Long nav labels ("Speaking & Workshops") wrap inside the box on mobile
+   instead of clipping.
+   ========================================================================== */
+.home-hero .hero-inner{ gap:16px; }
+.home-hero .hero-core{ gap:8px; margin-bottom:0; }
+.home-hero .eyebrow{ font-weight:700; letter-spacing:.2em; font-size:.8rem; color:rgba(255,255,255,.92); }
+
+.hero-detail{
+  width:min(600px, 92vw);
+  margin:2px auto 0;
+  padding:18px 24px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(16,18,24,.55), rgba(9,11,15,.66));
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 22px 50px -18px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  text-align:center;
+}
+.hero-detail .hero-lead{
+  margin:0 auto;
+  color:rgba(255,255,255,.9);
+  font-size:clamp(15px, 1.4vw, 17px);
+  line-height:1.62;
+  letter-spacing:.004em;
+  text-shadow:none;
+  max-width:52ch;
+}
+.hero-detail .hero-award{
+  margin:14px auto 0;
+  padding-top:13px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:#E4C68F;
+  font-weight:700;
+  letter-spacing:.06em;
+  font-size:.8rem;
+  text-transform:uppercase;
+}
+
+@media (max-width:640px){
+  .home-hero .hero-inner{ gap:12px; }
+  /* buttons lead now: sit them just under the title, not dropped to mid-page */
+  .hero-cta-rail-expanded{ margin-top:2vh; }
+  /* let a long label wrap to two lines inside its box instead of clipping */
+  .hero-cta-row .hero-metal-btn{
+    white-space:normal;
+    line-height:1.12;
+    font-size:12px;
+    letter-spacing:0;
+    min-height:46px;
+    height:100%;
+    align-self:stretch;
+    padding-left:6px;
+    padding-right:6px;
+  }
+  .hero-detail{ width:100%; max-width:420px; padding:14px 16px; }
+  .hero-detail .hero-lead{ font-size:13.5px; line-height:1.55; }
+  .hero-detail .hero-award{ font-size:.72rem; }
+}
