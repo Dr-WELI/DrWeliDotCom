@@ -13,11 +13,17 @@ body.contact-page{
 
 .contact-page .site-header{
   position:relative;
-  background:transparent !important;
+  /* WELI 2026-07-31: was transparent, so the cream body showed through as a
+     distracting pale strip between the dark ribbon and the dark intro band.
+     Sit it on the same near-black the intro band opens with, brand goes white,
+     so ribbon -> masthead -> hero read as one continuous dark top. */
+  background:#1a0c0e !important;
   border-bottom:0 !important;
   box-shadow:none !important;
-  padding:18px 24px;
+  padding:16px 24px;
 }
+.contact-page .site-header .brand{ color:#fff; }
+.contact-page .site-header .brand:hover{ color:rgba(255,255,255,.82); }
 
 /* ---------- Top intro band — DARK EDITORIAL (matches site DNA) ---------- */
 .contact-shell{
