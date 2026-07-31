@@ -113,14 +113,15 @@
     /* Symmetric padding now that the signal rail no longer sits inside the hero
        box - lets the centered hero content sit truly centred. */
     .academic-hero .hero-inner{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(20px, 4vw, 64px);padding-right:clamp(20px, 4vw, 64px);}
-    /* WELI 2026-07-31: the running-text rail was a floating clipped segment
-       centred in the hero. Make it a clean full-height spine down the right edge
-       of the dark hero band, mask-faded at both ends so it reads as an intentional
-       HUD rail (clears the nav at the top) rather than a floating chunk. It stays
-       within the dark hero where the light-blue reads cleanly. */
-    .academic-signal{position:absolute;top:0;bottom:0;right:18px;width:40px;overflow:hidden;pointer-events:none;z-index:3;opacity:.82;-webkit-mask:linear-gradient(180deg,transparent 0,#000 22%,#000 90%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 22%,#000 90%,transparent 100%)}
-    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:22px;animation:academicSignalMove 48s linear infinite}
-    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(199,217,255,.82);white-space:nowrap;font-weight:700}
+    /* WELI 2026-07-31: the running-text rail now runs the WHOLE page as a spine
+       down the right edge (moved out of the hero, which clipped + isolated it).
+       mix-blend-mode:difference with a light-blue source keeps it light-lavender
+       over the dark hero and flips it to dark navy over the cream body, so it
+       stays legible on every section and transitions seamlessly. Faded at the
+       very top and bottom of the page. */
+    .academic-signal{position:fixed;top:0;bottom:0;right:18px;width:40px;height:100vh;overflow:hidden;pointer-events:none;z-index:5;opacity:.72;mix-blend-mode:difference;-webkit-mask:linear-gradient(180deg,transparent 0,#000 14%,#000 90%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 14%,#000 90%,transparent 100%)}
+    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:22px;animation:academicSignalMove 60s linear infinite}
+    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:#dfe8ff;white-space:nowrap;font-weight:700}
     @keyframes academicSignalMove{from{transform:translateY(0)}to{transform:translateY(-50%)}}
     .academic-cap-grid .card h3{letter-spacing:-.03em}
     .academic-cap-grid .card p{max-width:34ch}
@@ -430,27 +431,6 @@
       <div class="hero-sapphire"></div>
       <div class="hero-diamond"></div>
       <div class="hero-sun"></div>
-      <div class="academic-signal" aria-hidden="true">
-        <div class="academic-signal-track">
-          <span class="academic-signal-item">ECOLOGY · ANIMAL BEHAVIOUR · PERSONALITY</span>
-          <span class="academic-signal-item">RESEARCH DATA SCIENCE · QILT · UNSW</span>
-          <span class="academic-signal-item">DANCE YOUR PHD 2024 · GLOBAL WINNER</span>
-          <span class="academic-signal-item">ANU · POPSICULE · VISITING FELLOW</span>
-          <span class="academic-signal-item">SCIENCE COMMUNICATION · POPULAR CULTURE</span>
-          <span class="academic-signal-item">FIELDWORK · LONG-TERM STUDIES · MARSUPIALS</span>
-          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE · RESEARCH-CREATION</span>
-          <span class="academic-signal-item">PHD ECOLOGY &amp; EVOLUTION · 2017-2021</span>
-          <!-- duplicate set for seamless loop -->
-          <span class="academic-signal-item">ECOLOGY · ANIMAL BEHAVIOUR · PERSONALITY</span>
-          <span class="academic-signal-item">RESEARCH DATA SCIENCE · QILT · UNSW</span>
-          <span class="academic-signal-item">DANCE YOUR PHD 2024 · GLOBAL WINNER</span>
-          <span class="academic-signal-item">ANU · POPSICULE · VISITING FELLOW</span>
-          <span class="academic-signal-item">SCIENCE COMMUNICATION · POPULAR CULTURE</span>
-          <span class="academic-signal-item">FIELDWORK · LONG-TERM STUDIES · MARSUPIALS</span>
-          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE · RESEARCH-CREATION</span>
-          <span class="academic-signal-item">PHD ECOLOGY &amp; EVOLUTION · 2017-2021</span>
-        </div>
-      </div>
 
       <div class="hero-inner container">
         <p class="eyebrow">AUDIENCE / 02, Higher education &amp; professional</p>
@@ -763,6 +743,27 @@
         </a>
       </div>
     </section>
+      <div class="academic-signal" aria-hidden="true">
+        <div class="academic-signal-track">
+          <span class="academic-signal-item">ECOLOGY · ANIMAL BEHAVIOUR · PERSONALITY</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE · QILT · UNSW</span>
+          <span class="academic-signal-item">DANCE YOUR PHD 2024 · GLOBAL WINNER</span>
+          <span class="academic-signal-item">ANU · POPSICULE · VISITING FELLOW</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION · POPULAR CULTURE</span>
+          <span class="academic-signal-item">FIELDWORK · LONG-TERM STUDIES · MARSUPIALS</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE · RESEARCH-CREATION</span>
+          <span class="academic-signal-item">PHD ECOLOGY &amp; EVOLUTION · 2017-2021</span>
+          <!-- duplicate set for seamless loop -->
+          <span class="academic-signal-item">ECOLOGY · ANIMAL BEHAVIOUR · PERSONALITY</span>
+          <span class="academic-signal-item">RESEARCH DATA SCIENCE · QILT · UNSW</span>
+          <span class="academic-signal-item">DANCE YOUR PHD 2024 · GLOBAL WINNER</span>
+          <span class="academic-signal-item">ANU · POPSICULE · VISITING FELLOW</span>
+          <span class="academic-signal-item">SCIENCE COMMUNICATION · POPULAR CULTURE</span>
+          <span class="academic-signal-item">FIELDWORK · LONG-TERM STUDIES · MARSUPIALS</span>
+          <span class="academic-signal-item">TRANSDISCIPLINARY PRACTICE · RESEARCH-CREATION</span>
+          <span class="academic-signal-item">PHD ECOLOGY &amp; EVOLUTION · 2017-2021</span>
+        </div>
+      </div>
   </main>
 
   <footer class="site-footer">
