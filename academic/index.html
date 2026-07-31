@@ -61,8 +61,9 @@
       font-size:clamp(19px, 1.9vw, 27px);
       line-height:1.4;
       color:#eaf1ff !important;
-      max-width:40ch;
-      margin:20px 0 0;
+      max-width:44ch;
+      margin:20px auto 0;
+      text-align:center;
     }
     .academic-hero .hero-cred{
       font-size:clamp(13px, 1.05vw, 15px);
@@ -70,7 +71,8 @@
       letter-spacing:.005em;
       color:rgba(255,255,255,.58) !important;
       max-width:52ch;
-      margin:12px 0 2px;
+      margin:12px auto 2px;
+      text-align:center;
     }
     .academic-hero .hero-cred em{ color:#f1d45a; font-style:normal; font-weight:600; }
     .academic-hero .hero-title::before{
@@ -108,11 +110,17 @@
     .academic-hero .hero-ctas .btn-outline:hover{
       background:rgba(255,255,255,.18);
     }
-    .academic-hero .hero-inner{position:relative;z-index:2;padding-right:72px;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(20px, 4vw, 64px);padding-right:calc(72px + clamp(20px, 4vw, 64px));}
-    .academic-signal{position:absolute;top:50%;right:24px;transform:translateY(-50%);height:min(560px, 80%);width:48px;overflow:hidden;pointer-events:none;z-index:1;opacity:.85}
-    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:20px;animation:academicSignalMove 32s linear infinite}
-    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(184,208,255,.72);white-space:nowrap;font-weight:700}
-    .academic-signal::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, #0d121d 0%, rgba(13,18,29,0) 14%, rgba(13,18,29,0) 86%, #2f4368 100%);pointer-events:none;z-index:2}
+    /* Symmetric padding now that the signal rail no longer sits inside the hero
+       box - lets the centered hero content sit truly centred. */
+    .academic-hero .hero-inner{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding-left:clamp(20px, 4vw, 64px);padding-right:clamp(20px, 4vw, 64px);}
+    /* WELI 2026-07-31: the running-text rail was a floating clipped segment
+       centred in the hero. Make it a clean full-height spine down the right edge
+       of the dark hero band, mask-faded at both ends so it reads as an intentional
+       HUD rail (clears the nav at the top) rather than a floating chunk. It stays
+       within the dark hero where the light-blue reads cleanly. */
+    .academic-signal{position:absolute;top:0;bottom:0;right:18px;width:40px;overflow:hidden;pointer-events:none;z-index:3;opacity:.82;-webkit-mask:linear-gradient(180deg,transparent 0,#000 22%,#000 90%,transparent 100%);mask:linear-gradient(180deg,transparent 0,#000 22%,#000 90%,transparent 100%)}
+    .academic-signal-track{position:absolute;top:0;right:0;display:flex;flex-direction:column;gap:22px;animation:academicSignalMove 48s linear infinite}
+    .academic-signal-item{writing-mode:vertical-rl;text-orientation:mixed;font-family:ui-monospace, "JetBrains Mono", Menlo, monospace;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(199,217,255,.82);white-space:nowrap;font-weight:700}
     @keyframes academicSignalMove{from{transform:translateY(0)}to{transform:translateY(-50%)}}
     .academic-cap-grid .card h3{letter-spacing:-.03em}
     .academic-cap-grid .card p{max-width:34ch}
@@ -314,10 +322,11 @@
       .research-node{max-width:520px;margin:0 auto}
     }
     @media (max-width:860px){.site-nav .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%}.site-nav .nav-links a{width:100%}}
-    @media (max-width:900px){.academic-signal{right:10px;width:34px;opacity:.55}.academic-signal-item{font-size:.58rem;letter-spacing:.14em}.academic-hero .hero-inner{padding-right:54px}}
+    /* Below ~1080px the centered content gets close to the edges, so retire the
+       fixed rail rather than let it overlap. */
+    @media (max-width:1080px){.academic-signal{display:none}}
     @media (max-width:640px){
       .academic-signal{display:none}
-      .academic-hero .hero-inner{padding-right:0}
       .research-orbit-shell{padding:18px 14px 20px;border-radius:24px}
       .research-node{width:100%;max-width:290px;min-height:auto;padding:16px 16px 14px}
       .research-hub{width:184px;height:184px;padding:18px}
@@ -384,24 +393,6 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WRQ9VJ2S76');</script>
 </head>
 <body class="academic-page">
-<!-- BEGIN: LANG-SWITCHER -->
-<div class="lang-switcher" role="region" aria-label="Translate this page">
-  <select class="lang-switcher-select" aria-label="Translate to another language" onchange="if(this.value){var u=encodeURIComponent(location.href);window.location.href='https://translate.google.com/translate?sl=auto&amp;tl='+this.value+'&amp;u='+u;}">
-    <option value="">EN</option>
-    <option value="pt">PT</option>
-    <option value="es">ES</option>
-    <option value="fr">FR</option>
-    <option value="de">DE</option>
-  </select>
-</div>
-<style>
-.lang-switcher{position:fixed;top:10px;right:10px;z-index:9999;font-family:'Montserrat','Helvetica Neue',Arial,sans-serif;font-size:12px}
-.lang-switcher-select{appearance:none;-webkit-appearance:none;background:rgba(255,255,255,.92);color:#0a0a0a;border:1px solid rgba(0,0,0,.15);border-radius:999px;padding:5px 22px 5px 10px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;line-height:1.2;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%230a0a0a' fill='none' stroke-width='1.4'/></svg>");background-repeat:no-repeat;background-position:right 8px center;background-size:8px 5px}
-.lang-switcher-select:focus,.lang-switcher-select:hover{border-color:rgba(0,0,0,.4);outline:none}
-@media (max-width:560px){.lang-switcher{top:8px;right:8px}.lang-switcher-select{padding:4px 20px 4px 8px;font-size:10px}}
-@media print{.lang-switcher{display:none}}
-</style>
-<!-- END: LANG-SWITCHER -->
 
   <!-- ===== UTILITY RIBBON ===== -->
   <div class="site-ribbon">
