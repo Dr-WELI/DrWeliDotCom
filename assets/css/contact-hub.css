@@ -59,14 +59,14 @@ body.contact-page{
 }
 .contact-intro-band h1{
   font-family:"Instrument Sans", Inter, system-ui, sans-serif;
-  font-weight:800;
-  font-size:clamp(54px, 8.5vw, 132px);
-  line-height:.88;
-  letter-spacing:-.05em;
+  font-weight:700;
+  font-size:clamp(46px, 7vw, 92px);
+  line-height:1.02;
+  letter-spacing:-.02em;
   color:#fff;
   margin:0;
-  max-width:14ch;
-  text-shadow:0 2px 28px rgba(0,0,0,.45);
+  max-width:16ch;
+  text-shadow:0 2px 28px rgba(0,0,0,.4);
 }
 .contact-intro-band .lead{
   font-family:"Instrument Serif", Georgia, serif;
@@ -447,7 +447,7 @@ body.contact-page{
 @media (max-width:640px){
   .contact-shell{ width:min(100% - 22px, 1280px); padding-top:14px; }
   .contact-intro-band{ padding:24px 0 22px; margin-bottom:24px; }
-  .contact-intro-band h1{ font-size:clamp(48px, 16vw, 80px); }
+  .contact-intro-band h1{ font-size:clamp(40px, 12vw, 62px); }
   .contact-choice-grid{ grid-template-columns:1fr; }
   .contact-choice{ border-right:0; border-bottom:1px solid rgba(17,17,17,.10); }
   .contact-choice:last-child{ border-bottom:0; }

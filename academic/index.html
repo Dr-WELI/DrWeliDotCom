@@ -46,14 +46,33 @@
     .academic-hero .hero-sun{ display:none; }
     .academic-hero .hero-title{
       position:relative;
-      font-size:clamp(56px, 10vw, 132px) !important;
-      line-height:.88 !important;
-      letter-spacing:-.05em !important;
+      font-size:clamp(46px, 6.6vw, 92px) !important;
+      line-height:1.02 !important;
+      letter-spacing:-.02em !important;
       max-width:none !important;
-      font-weight:800;
+      font-weight:700;
       color:#fff !important;
-      text-shadow:0 2px 28px rgba(0,0,0,.45);
+      text-shadow:0 2px 28px rgba(0,0,0,.4);
     }
+    /* Connecting idea (was the H1 sentence) now sits below as a calm subheader */
+    .academic-hero .hero-connect{
+      font-family:'Instrument Serif', Georgia, serif;
+      font-style:italic;
+      font-size:clamp(19px, 1.9vw, 27px);
+      line-height:1.4;
+      color:#eaf1ff !important;
+      max-width:40ch;
+      margin:20px 0 0;
+    }
+    .academic-hero .hero-cred{
+      font-size:clamp(13px, 1.05vw, 15px);
+      line-height:1.5;
+      letter-spacing:.005em;
+      color:rgba(255,255,255,.58) !important;
+      max-width:52ch;
+      margin:12px 0 2px;
+    }
+    .academic-hero .hero-cred em{ color:#f1d45a; font-style:normal; font-weight:600; }
     .academic-hero .hero-title::before{
       content:"";
       position:absolute;
@@ -444,8 +463,9 @@
 
       <div class="hero-inner container">
         <p class="eyebrow">AUDIENCE / 02, Academic &amp; Professional</p>
-        <h1 class="hero-title">Research,<br/>Teaching &amp;<br/>Creative Practice</h1>
-        <p style="font-family:'Instrument Serif', Georgia, serif;font-style:italic;font-size:clamp(17px, 1.5vw, 22px);line-height:1.45;color:#b8d0ff;max-width:54ch;margin:18px 0 6px;">PhD in ecology &amp; evolution. <em style="color:#f1d45a;">AAAS Dance Your PhD Global Winner 2024</em>. Research, teaching, and culture-facing translation.</p>
+        <h1 class="hero-title">Academic &amp; Universities</h1>
+        <p class="hero-connect">I connect research and teaching with creative practice.</p>
+        <p class="hero-cred">PhD in ecology and evolution. <em>AAAS Dance Your PhD Global Winner 2024</em>.</p>
 
         <div class="hero-ctas">
           <a href="mailto:bookings@drweli.com?subject=Professional%20Enquiry" class="btn btn-primary btn-lg">Professional enquiry</a>

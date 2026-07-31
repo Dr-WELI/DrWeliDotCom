@@ -227,11 +227,20 @@ body > main#top {
 .home-hero .hero-inner{ gap:16px; }
 .home-hero .hero-core{ gap:8px; margin-bottom:0; }
 .home-hero .eyebrow{ font-weight:700; letter-spacing:.2em; font-size:.8rem; color:rgba(255,255,255,.92); }
+/* WELI 2026-07-31: eyebrow uses a "•" separator (matches the corner label) and
+   stays one line on desktop; the break shows only on mobile. */
+.home-hero .eyebrow .eb-sep{ color:rgba(255,255,255,.5); }
+.home-hero .eyebrow .eb-break{ display:none; }
+
+/* WELI 2026-07-31: running text sits in the middle of the hero - buttons above,
+   description box below - with symmetric breathing room so it reads balanced. */
+.home-hero .hero-marquee{ margin:clamp(16px, 2.8vh, 32px) 0; }
 
 .hero-detail{
-  width:min(600px, 92vw);
-  margin:2px auto 0;
-  padding:18px 24px;
+  width:min(520px, 92vw);
+  /* box is now separated from the buttons by the marquee above it */
+  margin:4px auto 0;
+  padding:16px 22px;
   border-radius:18px;
   background:linear-gradient(180deg, rgba(16,18,24,.55), rgba(9,11,15,.66));
   border:1px solid rgba(255,255,255,.10);
@@ -276,7 +285,9 @@ body > main#top {
     padding-left:6px;
     padding-right:6px;
   }
-  .hero-detail{ width:100%; max-width:420px; padding:14px 16px; }
+  .home-hero .eyebrow .eb-break{ display:inline; }
+  .home-hero .hero-marquee{ margin:clamp(12px, 2.2vh, 22px) 0; }
+  .hero-detail{ width:100%; max-width:360px; margin-top:4px; padding:13px 16px; }
   .hero-detail .hero-lead{ font-size:13.5px; line-height:1.55; }
   .hero-detail .hero-award{ font-size:.72rem; }
 }
