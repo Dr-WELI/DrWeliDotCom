@@ -527,3 +527,47 @@
 @media (prefers-reduced-motion: reduce) {
   .site-reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ============================================================================
+   WELI 2026-07-31 — Dark editorial masthead (academic + media)
+   ----------------------------------------------------------------------------
+   These content pages had a flat cream nav slab wedged between the dark utility
+   ribbon and the dark hero, which read as a distracting light band. The nav is
+   in-flow (position:relative -> it scrolls away), so darken it to the ribbon's
+   ink: ribbon + nav + hero now read as one continuous premium dark masthead,
+   and the cream editorial body below is untouched.
+   ========================================================================== */
+.academic-page .site-header,
+.media-page .site-header {
+  background: var(--site-ink) !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.academic-page .site-header .brand,
+.media-page .site-header .brand,
+.academic-page .site-header .nav-toggle,
+.media-page .site-header .nav-toggle { color: #fff !important; }
+.academic-page .site-nav a,
+.media-page .site-nav a { color: rgba(255,255,255,.86); }
+.academic-page .site-nav a:hover,
+.media-page .site-nav a:hover { color: #fff; opacity: 1; }
+/* Enquire / Contact pill: invert to light so it reads on the dark bar */
+.academic-page .site-header .btn-primary,
+.media-page .site-header .btn-primary,
+.academic-page .site-nav .btn-primary,
+.media-page .site-nav .btn-primary {
+  background: #fff !important;
+  color: #111 !important;
+  border-color: #fff !important;
+}
+/* Mobile: the collapsed nav dropdown is cream by default — darken it too so the
+   white links stay legible. */
+@media (max-width: 860px) {
+  .academic-page .site-nav,
+  .media-page .site-nav {
+    background: rgba(17,17,17,.97);
+    border-color: rgba(255,255,255,.12);
+  }
+}
