@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dr WELI | Ars Biologica portfolio and proposal</title>
-<meta name="description" content="Dr WELI’s photography and sci pop portfolio, with a proposed freshwater artwork, visitor route, timeline and budget." />
+<title>Dr WELI | Turning science into compelling art</title>
+<meta name="description" content="Dr WELI turns published research into pop songs, films and spatial work. Track record, method, and the proposed freshwater artwork for Ars Biologica 2027-28." />
 <link rel="canonical" href="https://drweli.com/portfolio/ars-biologica/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -16,119 +16,276 @@
 <meta name="robots" content="noindex, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dr WELI">
-<meta property="og:title" content="Visual support material: Ars Biologica ArtXScience Residency">
-<meta property="og:description" content="Artistic vision, community work, science collaboration, and the proposed spatial work.">
+<meta property="og:title" content="Turning science into compelling art | Dr WELI">
+<meta property="og:description" content="A behavioural ecologist who writes pop songs from published findings. Track record, method, and the proposed Ars Biologica artwork.">
 <meta property="og:url" content="https://drweli.com/portfolio/ars-biologica/">
 <meta property="og:image" content="https://drweli.com/portfolio/ars-biologica/img/1_Kangaroo-Time_cast-in-kangaroo-habitat.jpg">
 <style>
-  :root { --ink:#0E0E0F; --cream:#FBF7EE; --stone:#807872; --honey:#E5B96D; --savanna:#27A05B; }
+  :root { --ink:#0E0E0F; --cream:#FBF7EE; --stone:#807872; --honey:#E5B96D; --savanna:#27A05B; --line:rgba(14,14,15,.1); }
   * { box-sizing: border-box; }
-  body { background: var(--cream); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; line-height: 1.6; margin: 0; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 64px 24px 96px; }
-  .head { padding: 0 0 40px; border-bottom: 1px solid rgba(14,14,15,.1); margin-bottom: 48px; }
-  .eyebrow { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--stone); margin: 0 0 12px; font-weight: 700; }
-  h1 { font-size: clamp(32px, 4.6vw, 50px); line-height: 1.06; letter-spacing: -0.02em; margin: 0 0 18px; font-weight: 800; }
+  body { background: var(--cream); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; line-height: 1.62; margin: 0; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 60px 24px 96px; }
+  .head { padding: 0 0 36px; border-bottom: 1px solid var(--line); margin-bottom: 44px; }
+  .eyebrow { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--stone); margin: 0 0 14px; font-weight: 700; }
+  h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.04; letter-spacing: -0.025em; margin: 0 0 20px; font-weight: 800; }
   h1 em { font-style: italic; font-weight: 400; color: var(--savanna); }
-  .lede { font-size: 19px; color: #2a2a2a; max-width: 720px; margin: 0 0 20px; }
-  .crit { background:#fff; border-left: 4px solid var(--honey); padding: 16px 20px; border-radius: 4px; font-size: 15px; max-width: 760px; margin: 24px 0 0; }
-  .crit .src { display:block; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--stone); font-weight: 700; margin-top: 10px; }
-  figure { margin: 0 0 56px; }
-  figure img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid rgba(14,14,15,.1); background:#fff; }
-  figcaption { margin-top: 14px; max-width: 760px; }
-  .n { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--stone); font-weight: 700; }
-  .proves { font-size: 15px; font-weight: 700; margin: 6px 0 4px; }
-  .say { font-size: 15px; color: #33312f; margin: 0; }
-  h2 { font-size: 24px; letter-spacing: -0.01em; margin: 64px 0 20px; font-weight: 700; }
-  .video { background: var(--ink); color: var(--cream); border-radius: 16px; padding: 28px 32px; margin: 8px 0 56px; }
-  .video h3 { margin: 0 0 10px; font-size: 19px; }
-  .video p { margin: 0 0 14px; font-size: 15px; opacity: .88; max-width: 680px; }
-  .video a { color: var(--honey); text-decoration: none; border-bottom: 1px solid currentColor; font-weight: 600; }
-  .logistics { background:#fff; border:1px solid rgba(14,14,15,.1); border-radius:14px; padding:26px 30px; margin:16px 0 56px; }
-  .logistics h2 { margin:0 0 14px; font-size:22px; }
-  .logistics p { font-size:15px; max-width:760px; margin:0 0 12px; }
-  .logistics .k { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--stone); font-weight:700; margin:0 0 4px; }
-  .logistics dl { margin:18px 0 0; display:grid; grid-template-columns:minmax(150px,auto) 1fr; gap:10px 22px; font-size:15px; }
-  .logistics dt { font-weight:700; }
-  .logistics dd { margin:0; color:#33312f; }
-  @media (max-width:640px) { .logistics dl { grid-template-columns:1fr; gap:2px 0; } .logistics dd { margin-bottom:12px; } }
-  .meta { border-top: 1px solid rgba(14,14,15,.1); margin-top: 24px; padding-top: 28px; font-size: 15px; }
+  .lede { font-size: 19.5px; color: #2a2a2a; max-width: 730px; margin: 0 0 18px; }
+  .lede strong { font-weight: 700; }
+  h2 { font-size: 27px; letter-spacing: -0.015em; margin: 72px 0 8px; font-weight: 780; }
+  h2 + .sub { color: var(--stone); font-size: 14px; margin: 0 0 24px; font-weight: 600; letter-spacing:.02em; }
+  h3 { font-size: 19px; margin: 34px 0 10px; font-weight: 720; }
+  p { max-width: 760px; }
+  .jump { display:flex; flex-wrap:wrap; gap:9px; margin:26px 0 0; }
+  .jump a { font-size:13px; font-weight:700; color:var(--ink); text-decoration:none; border:1px solid #b9b3a8; border-radius:99px; padding:8px 14px; }
+  .jump a:hover { background:var(--honey); border-color:var(--honey); }
+
+  .record { display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; margin:30px 0 8px; }
+  .record div { background:#fff; padding:20px 22px; }
+  .record b { display:block; font-size:25px; line-height:1.12; letter-spacing:-.02em; font-weight:800; margin-bottom:5px; }
+  .record span { display:block; font-size:13.5px; color:#4b4844; }
+  .record a { color:var(--ink); border-bottom:1px solid var(--honey); text-decoration:none; }
+  .srcnote { font-size:12.5px; color:var(--stone); margin:14px 0 0; max-width:760px; }
+
+  .media { background: var(--ink); color: var(--cream); border-radius: 16px; padding: 26px 30px 30px; margin: 22px 0 18px; }
+  .media h3 { margin: 0 0 8px; font-size: 20px; color:#fff; }
+  .media p { margin: 0 0 14px; font-size: 15.5px; opacity: .9; max-width: 700px; }
+  .media a { color: var(--honey); text-decoration: none; border-bottom: 1px solid currentColor; font-weight: 600; }
+  .frame { position:relative; width:100%; padding-top:56.25%; border-radius:10px; overflow:hidden; background:#000; margin:6px 0 16px; }
+  .frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .spot { border-radius:12px; width:100%; height:152px; border:0; margin:6px 0 14px; }
+
+  figure { margin: 0 0 42px; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); background:#fff; }
+  figcaption { margin-top: 13px; max-width: 760px; font-size: 15px; color:#33312f; }
+  figcaption b { font-weight:700; color:var(--ink); }
+  .pair { display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; }
+  .pair figure { margin-bottom:0; }
+  @media (max-width:700px){ .pair { grid-template-columns:1fr; } }
+
+  .quotebox { background:#fff; border-left:4px solid var(--savanna); border-radius:4px; padding:22px 26px; margin:22px 0; max-width:800px; }
+  .quotebox q { display:block; font-size:17.5px; line-height:1.5; font-style:italic; }
+  .quotebox .src { display:block; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--stone); font-weight:700; margin-top:12px; }
+  .arrow { margin:16px 0 6px; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--stone); font-weight:800; }
+  .reads { background:var(--honey); border-radius:8px; padding:18px 22px; margin:8px 0 6px; max-width:800px; font-size:19px; font-weight:700; line-height:1.4; }
+  .caveat { font-size:14px; color:var(--stone); max-width:780px; }
+
+  .steps { counter-reset:s; list-style:none; padding:0; margin:22px 0 10px; max-width:820px; }
+  .steps > li { counter-increment:s; position:relative; padding:0 0 26px 52px; }
+  .steps > li::before { content:counter(s); position:absolute; left:0; top:0; width:34px; height:34px; border-radius:99px; background:var(--ink); color:var(--cream); font-size:14px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .steps > li b { display:block; font-size:16.5px; margin-bottom:5px; }
+  .steps > li span { display:block; font-size:15.5px; color:#33312f; }
+
+  .walk { list-style:none; padding:0; margin:22px 0 10px; max-width:820px; border-left:2px solid var(--line); }
+  .walk li { position:relative; padding:0 0 24px 26px; }
+  .walk li::before { content:""; position:absolute; left:-7px; top:7px; width:12px; height:12px; border-radius:99px; background:var(--savanna); border:3px solid var(--cream); }
+  .walk li b { display:block; font-size:16px; margin-bottom:4px; }
+  .walk li span { font-size:15.5px; color:#33312f; }
+  .walk li:last-child::before { background:var(--honey); }
+
+  .ask { background:#fff; border:1px solid var(--line); border-radius:14px; padding:26px 30px; margin:24px 0 8px; }
+  .ask p { font-size:16px; }
+  .ask p.big { font-size:18.5px; font-weight:700; max-width:800px; }
+  table { border-collapse:collapse; width:100%; max-width:800px; font-size:15px; margin:16px 0 8px; }
+  th, td { text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--stone); }
+  td.who { font-weight:700; white-space:nowrap; }
+
+  .meta { border-top: 1px solid var(--line); margin-top: 60px; padding-top: 28px; font-size: 15px; }
   .meta a { color: var(--ink); border-bottom: 1px solid var(--honey); text-decoration: none; }
-  .meta p { margin: 0 0 8px; }
-  .note { font-size: 13px; color: var(--stone); margin-top: 28px; max-width: 760px; }
-  .back { display:inline-block; margin-top: 40px; padding: 10px 20px; border: 1px solid var(--ink); border-radius: 999px; text-decoration:none; color: var(--ink); font-size: 14px; font-weight: 600; }
+  .note { font-size: 13.5px; color: var(--stone); margin-top: 24px; max-width: 800px; }
+  .back { display:inline-block; margin-top: 34px; padding: 10px 20px; border: 1px solid var(--ink); border-radius: 999px; text-decoration:none; color: var(--ink); font-size: 14px; font-weight: 600; }
   .back:hover { background: var(--ink); color: var(--cream); }
   @media print {
-    body { background:#fff; }
-    .wrap { max-width: none; padding: 0; }
-    figure, .video, .crit { break-inside: avoid; page-break-inside: avoid; }
-    figure img { border: 1px solid #ccc; }
-    .back { display: none; }
-    a { color: var(--ink); }
+    body { background:#fff; } .wrap { max-width:none; padding:0; }
+    figure, .media, .quotebox, .ask { break-inside: avoid; page-break-inside: avoid; }
+    .frame, .spot, .jump, .back { display:none; } a { color: var(--ink); }
   }
-  .flow-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:28px 0 50px; }
-  .flow-card { background:#fff; border:1px solid rgba(14,14,15,.12); border-radius:16px; padding:22px; box-shadow:0 8px 26px rgba(14,14,15,.035); }
-  .flow-card strong {display:block; font-size:20px; line-height:1.2; margin-bottom:9px;}
-  .flow-card span {display:block; color:#4b4844; font-size:14px;}
-  .pill {display:inline-block; font-size:11px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; color:#12572f; background:#dff2e4; border-radius:99px; padding:5px 11px; margin:0 0 12px;}
-  .jump {display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 0;}
-  .jump a {font-size:13px; font-weight:700; color:var(--ink); text-decoration:none; border:1px solid #b9b3a8; border-radius:99px; padding:8px 14px;}
-  .jump a:hover {background:var(--honey);}
-  .logistics ol {padding-left:22px;}.logistics li {padding:8px 0;}
-  .flow-card:hover {border-color:var(--savanna);}
-  @media(max-width:700px){.flow-grid{grid-template-columns:1fr;}.wrap{padding-top:38px;}}
 </style>
 </head>
 <body>
 <div class="wrap">
+
   <header class="head">
-    <p class="eyebrow">Ars Biologica · selected work and proposed artwork</p>
-    <h1>From field photography to <em>sci pop</em></h1>
-    <p class="lede">I am WELI, an evolutionary ecologist, songwriter, performer and creative director. My work moved from kangaroo field photography into pop songs, films and public workshops. I chose water for this residency because flow offers a way to compose rhythm, movement and a route through space. The scientists' research gives that artistic language a precise starting point.</p>
-  <nav class="jump" aria-label="Page sections"><a href="#early-work">Earlier photography</a><a href="#kt-title">Kangaroo Time</a><a href="#cabra-title">Cabra da Peste</a><a href="#proposal-title">Proposed artwork</a><a href="proposal/">Timeline &amp; budget</a></nav></header>
+    <p class="eyebrow">Ars Biologica ArtXScience Residency 2027-28 &middot; supporting material</p>
+    <h1>Turning science into <em>compelling art</em></h1>
+    <p class="lede">I am Dr Weliton Menario Costa, known as WELI. I hold a PhD in behavioural ecology from the Australian National University, and I write pop songs, direct music films and stage spatial work out of published research. <strong>My own doctoral findings on kangaroo personality became a song, a film, a photographic series and a workshop.</strong> This page shows what that practice has produced, and what I propose to make with the freshwater scientists at the Biology Centre.</p>
+    <nav class="jump" aria-label="Page sections">
+      <a href="#record">Track record</a><a href="#kangaroo-time">Kangaroo Time</a><a href="#cabra">Cabra da Peste</a><a href="#photography">The Photography Project</a><a href="#method">How I work with scientists</a><a href="#artists">Artists and the town</a><a href="#installation">The installation</a><a href="#travel">Travel</a><a href="proposal/">Full proposal</a>
+    </nav>
+  </header>
 
-  <section aria-labelledby="early-work">
-    <h2 id="early-work">Early work · kangaroo photography</h2>
-    <p>My kangaroo photography and photoshoot project began before September 2021, during my doctoral research. It was an early way of making the lives and relationships of the animals I studied visible beyond a data table. My <a href="https://openresearch-repository.anu.edu.au/bitstream/1885/248721/1/WMenarioCosta_ANU_RSB_Thesis_2021.pdf#page=32">2021 ANU thesis, Figure 2</a>, reproduces a field photograph credited to me. Field photography and later staged images fed the visual language that I developed further in <em>Kangaroo Time</em>.</p>
-  </section>
-
-  <section class="video" aria-labelledby="kt-title">
-    <h3 id="kt-title">Kangaroo Time (Club Edit) · song and music film</h3>
-    <p>I developed my research on eastern grey kangaroo personality and social life into a pop song and film, directing a Canberra cast whose different styles give the work its movement. I co-wrote the song with Nicholas Moynihan and performed in the film; Nic Vevers produced the video. It won the 2024 AAAS Dance Your PhD overall prize.</p>
-    <p><a href="https://www.youtube.com/watch?v=RoSYO3fApEc" rel="noopener">Watch Kangaroo Time</a></p>
-  </section>
-
-  <section class="video" aria-labelledby="cabra-title">
-    <h3 id="cabra-title">Cabra da Peste (G.O.A.T.) · commissioned song</h3>
-    <p>For Brazil's Encontro Anual de Etologia 2024, I made a bilingual Latin pop song with Jon Panic from my earlier research on female goat social hierarchy. <em>Cabra</em> names the animal and evokes a person with toughness and charisma in Brazilian Portuguese. That double meaning let the research enter the song through popular culture and a human story, without turning the track into a summary of a paper.</p>
-    <p><a href="https://open.spotify.com/track/6j1Zkij6ETgFgmJkqxfPux" rel="noopener">Listen to Cabra da Peste</a></p>
-  </section>
-
-  <h2>Images from completed work</h2>
-  <figure><img src="img/1_Kangaroo-Time_cast-in-kangaroo-habitat.jpg" alt="Kangaroo Time cast together in kangaroo habitat" width="2000" height="1337" loading="lazy"><figcaption>Cast on location for <em>Kangaroo Time</em>. My role: concept, direction and lead performance. Film and production image credits remain with the original production team.</figcaption></figure>
-  <figure><img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="Kangaroo Time ensemble silhouetted at dusk" width="2000" height="1336" loading="lazy"><figcaption>Movement designed for the film frame and a cast with different dance practices.</figcaption></figure>
-  <figure><img src="img/3_Live-performance_Dance-Your-PhD-winner-announced.jpg" alt="WELI performing while the Dance Your PhD prize is announced" width="2000" height="1235" loading="lazy"><figcaption>Live performance after the 2024 AAAS Dance Your PhD award.</figcaption></figure>
-  <figure><img src="img/4_Workshop_go-ahead-and-dance-this.jpg" alt="Workshop slide inviting participants to translate a scientific graph into movement" width="2000" height="1333" loading="lazy"><figcaption>A workshop exercise: reading a research figure and trying it as movement.</figcaption></figure>
-  <figure><img src="img/5_Workshop_audience-with-the-work.jpg" alt="Workshop audience discussing a research-based music film" width="2000" height="1333" loading="lazy"><figcaption>Public discussion and participation around the finished work.</figcaption></figure>
-
-  <section class="logistics" aria-labelledby="proposal-title">
-    <h2 id="proposal-title">Proposed Ars Biologica work</h2>
-    <p>Flow is why I chose water: it can give a song its groove, guide bodies in a film, and carry visitors from one part of a room to another. I will first talk with Dr Shabarova, Dr Chiriac and Dr Dindhoria about which finding they want me to explore in relation to climate pressure, water quality and local life. Their study systems, images, field sounds and interpreted patterns could shape a song, music film and walk-through artwork. The scientists help identify and interpret the material; I write and direct the art. A local movement professional, paid dancers, a filmmaker and an exhibition/AV specialist bring specialist skills to the production.</p>
-    <p>One possible starting point is Shabarova and colleagues' study of a South Bohemian <strong>forest pond</strong> after two floods. The organisms washed out and the microbial community recovered through succession. My possible human starting point is the desire to reconnect after disruption. The final research choice and emotional direction will be made through the residency exchange. A forest pond finding will not be labelled as a finding about managed fishponds.</p>
-    <h3>One artwork, three encounters</h3><div class="flow-grid">
-      <div class="flow-card"><span class="pill">01 · Enter</span><strong>Research in place</strong><span>Field sounds and credited images, with captions saying what scientists observed.</span></div>
-      <div class="flow-card"><span class="pill">02 · Trace</span><strong>Source becomes song</strong><span>Compare an original sound with a pop stem and see lyric, movement and film decisions.</span></div>
-      <div class="flow-card"><span class="pill">03 · Listen</span><strong>The completed film</strong><span>A timed, captioned screening after moving through the sources.</span></div>
+  <section aria-labelledby="record">
+    <h2 id="record">What the practice has done so far</h2>
+    <p class="sub">Every figure below comes from a source a reader can check.</p>
+    <div class="record">
+      <div><b>Overall Winner</b><span>AAAS <a href="https://www.science.org/content/article/watch-2024-dance-your-ph-d-winners" rel="noopener">Dance Your PhD</a> 2024, the annual international prize run by the journal <em>Science</em>. Awarded for <em>Kangaroo Time</em>.</span></div>
+      <div><b>238+ features</b><span>Media coverage of <em>Kangaroo Time</em> across five continents, including the Guardian, NPR, BBC and Smithsonian Magazine. Independent monitoring report, Isentia 2024.</span></div>
+      <div><b>154,766 views</b><span>Lifetime YouTube audience for the <em>Kangaroo Time</em> film, 98.2% positive reactions, 64.5% arriving from press and sharing off-platform.</span></div>
+      <div><b>One of 30</b><span>Shortlisted worldwide for <a href="https://falling-walls.com/engage/shortlist-finalists" rel="noopener">Falling Walls Engage 2025</a>, Berlin, for the project listed there as <em>Science for the People</em>.</span></div>
+      <div><b>Invited to open</b><span>The XLI Encontro Anual de Etologia 2024, the Brazilian Ethology Society's annual meeting, speaking on creativity in ethology.</span></div>
+      <div><b>Three countries</b><span>My workshop <em>Science and the People</em> delivered at National Science Week Australia (Kambri, Aug 2024), Research Fest (ANU, Dec 2024) and the Athens Science Festival with SciCo Greece (May 2025).</span></div>
     </div>
-    <ol>
-      <li><strong>Encounter the source.</strong> Move through freestanding fabric and a controlled listening/viewing area with scientist-credited field sounds, research images and captions that say what was observed.</li>
-      <li><strong>Hear the transformation.</strong> Compare a source recording with a short song stem; see my lyric notes, rhythm decisions, movement score and storyboard beside the material that informed them. Labels distinguish an observation from my artistic interpretation.</li>
-      <li><strong>Experience the result.</strong> Enter a timed, captioned screening of the complete music video. The song also stands as a contemporary pop release beyond the exhibition.</li>
-    </ol>
-    <p>An exhibition designer and AV technician will price, build, test, maintain and remove a safe visitor route with suitable sound and projection. The number of displays and the layout depend on the venue and full-run equipment quote. A simpler single-screen route with physical source material remains the fallback.</p>
-    <p><a href="proposal/">See the staged timeline, €15,000 production envelope and €3,000 travel target</a>. These are planning figures; full-duration AV and film costs still need written quotes.</p>\n    <p>In 2027 I will hold a listening and movement lab where residents can respond before the work is finished. The 2028 festival brings the completed work back to the public. I plan twelve short captioned process videos and credited image updates for České Budějovice 2028.</p>
+    <p class="srcnote">These are reach and recognition figures. They describe how far the work travelled and who judged it, and I present them as measures of circulation only.</p>
   </section>
-  <p class="note">This is a proposal for the 2027–28 residency. Collaborators, venue, research-material rights and equipment remain subject to agreement. My project budget and timetable will be revised with the residency team at the required October/November 2027 stage.</p>
-  <a href="/" class="back">Dr WELI home</a>
+
+  <section aria-labelledby="kangaroo-time">
+    <h2 id="kangaroo-time">Kangaroo Time</h2>
+    <p class="sub">My own research, as a pop song and a music film &middot; 2023</p>
+    <p>I spent my doctorate following eastern grey kangaroos, measuring how individual personality, the social environment and maternal effects shape behaviour. The finding that stayed with me was variation: kangaroos in one mob differ from one another in stable, measurable ways. I wrote that into a pop song, and built the film around a Canberra cast whose dance styles differ as visibly as the animals did. I wrote and performed the song with producer Nicholas Moynihan; Nic Vevers directed photography and edit.</p>
+    <div class="media">
+      <h3>Watch the film</h3>
+      <div class="frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/RoSYO3fApEc" title="Kangaroo Time (Club Edit) by Dr WELI" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <p>This film is the closest existing example of my practice. <strong>The proposal for Ars Biologica takes it two steps further.</strong> Kangaroo Time was made to a competition brief, so it carries explanatory text on screen. The freshwater film is made to international music-video standards with no explanatory text, unless the scientists want a captioned version for the installation, which we would discuss. And where science reached Kangaroo Time through lyrics, concept and movement, here the scientists' own field recordings enter the sound itself, as texture and as the starting point for rhythm and melody.</p>
+      <p><a href="https://www.youtube.com/watch?v=RoSYO3fApEc" rel="noopener">Open on YouTube</a></p>
+    </div>
+    <figure><img src="img/1_Kangaroo-Time_cast-in-kangaroo-habitat.jpg" alt="The Kangaroo Time cast standing together in open eucalypt grassland, the habitat of the kangaroos studied in the research" width="2000" height="1337"><figcaption><b>The cast on location, in the habitat the research was done in.</b> My role was concept, direction and lead performance. Production image credits remain with the original team.</figcaption></figure>
+    <figure><img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time ensemble silhouetted against a dusk sky, each dancer holding a different posture" width="2000" height="1336"><figcaption><b>Nine people, nine different shapes, one frame.</b> The variation the research measured is the variation you are looking at.</figcaption></figure>
+    <figure><img src="img/3_Live-performance_Dance-Your-PhD-winner-announced.jpg" alt="WELI performing live on stage around the time the Dance Your PhD prize was announced" width="2000" height="1235"><figcaption><b>Performing live, 2024.</b> I am a performer as well as a writer, and the work exists on stage as well as on screen.</figcaption></figure>
+  </section>
+
+  <section aria-labelledby="cabra">
+    <h2 id="cabra">Cabra da Peste (G.O.A.T.)</h2>
+    <p class="sub">A commissioned research-to-song, in Portuguese &middot; 2024</p>
+    <p>The Brazilian Ethology Society invited me to open its 2024 annual meeting by speaking about creativity in ethology. I wrote a song for it. <em>Cabra da Peste</em> draws on my Honours research in Brazil on dominance among female goats, and my Honours supervisor appears in the track. The title is the reason the song works: in Brazilian Portuguese <em>cabra</em> names the animal and also names a person of real toughness and charisma, so one phrase is literally true about the goats and literally true about the women the song is addressed to. The research enters through popular culture and a human story, and the track stays a pop song throughout. It was produced with Jon Panic and released in December 2024.</p>
+    <div class="media">
+      <h3>Listen</h3>
+      <iframe class="spot" src="https://open.spotify.com/embed/track/6j1Zkij6ETgFgmJkqxfPux?utm_source=generator" title="Cabra da Peste (G.O.A.T.) by WELI on Spotify" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <p>Two commissions, two languages, two research bases, two finished pop releases. <strong>This is the part of the practice that matters for a residency: I have done this on a brief and on a deadline, more than once.</strong></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="photography">
+    <h2 id="photography">The Photography Project</h2>
+    <p class="sub">Staged photography from the same research &middot; shot October 2023, released 2024</p>
+    <p><b>I am the creative director of this series.</b> Concept and direction are mine; Tony Oliver and Reid Workman photographed it, with hair and make-up by Neha Suryavanshi, Shauna Priest and Anchal Goel, and technical support from Paris Smith-Davies and Leandro Eugenio de Souza. I cast it and set the brief for each model.</p>
+    <p><b>What it communicates.</b> The series takes the same doctoral findings that produced <em>Kangaroo Time</em> and translates them into portraiture. Each model stands in for something the research measured: an axis of personality, a social role, a maternal effect. They are photographed in the open eucalypt country where the kangaroos were actually observed. A person in classical Indian dance costume and a person in drag are two extremes of human self-presentation, standing in the same paddock, in the same light, as the animals whose individual differences I spent four years measuring. You see the finding before anyone explains it to you. The images have since become the visual identity of my studio.</p>
+    <div class="pair">
+      <figure><img src="img/8_Photography-Project_classical-dance-in-kangaroo-habitat.jpg" alt="A dancer in blue and gold classical Indian costume holds a low Bharatanatyam position under a large eucalypt in open Australian grassland" width="2000" height="1336"><figcaption><b>Bharatanatyam in kangaroo country.</b> The costume, the posture and the ground are each precise, and putting the three in one frame is the whole argument.</figcaption></figure>
+      <figure><img src="img/9_Photography-Project_drag-performance-in-the-paddock.jpg" alt="A drag performer in a feathered headdress and white winged costume stands in the same open grassland with eucalypts behind" width="1200" height="802"><figcaption><b>The same paddock, a different way of being looked at.</b> Two portraits from one session, holding the distance between them the way a mob holds its variation.</figcaption></figure>
+    </div>
+    <p>This is directly relevant to what I am proposing. <strong>It is evidence that I can run a crew of specialist artists toward a concept drawn from a scientific finding, and that the result reads without a caption.</strong> The residency asks me to do that again, with a different research group, in a different medium, in a different country.</p>
+  </section>
+
+  <section aria-labelledby="method">
+    <h2 id="method">How I work with the scientists</h2>
+    <p class="sub">The method, step by step, with a worked example</p>
+
+    <ol class="steps">
+      <li>
+        <b>First, a conversation. Before any artistic decision is made.</b>
+        <span>I sit down with the researchers and ask them to tell me about their research in their own words, and then ask the question that actually decides this project: <em>of everything you have found, what would you most want a stranger to know?</em> I am listening specifically for findings that speak to what this call asks for: climate emergence, sustainable agriculture, geoengineering, permaculture, water resource management, and the wider ecological effects that land on the people who live nearby. Out of that conversation we choose the research to work with, or the combination of findings, and I explain what I can and cannot do with each one. <b>The scientists choose what their science is going to say. I choose how it is going to sound.</b></span>
+      </li>
+      <li>
+        <b>Then I read the paper properly, and read it for the emotional connector.</b>
+        <span>I go through the publication line by line looking for two things. The central problem, meaning the real-life pain the research exists to address. And the sentence where the finding itself carries a human feeling without needing a metaphor laid over it. Below is that read, done on a real paper from this Centre, so you can see exactly what I mean.</span>
+      </li>
+    </ol>
+
+    <h3>The worked example</h3>
+    <p>Here is the read, on a paper by researchers at the Biology Centre. I am showing the mechanics, and the actual choice of paper belongs to step one.</p>
+
+    <p class="arrow">Quote what you have</p>
+    <div class="quotebox">
+      <q>Release of dissolved nutrients from the pond is associated with inflow rates and community recovery, and returns to predisturbance levels before microbial compositions recover.</q>
+      <span class="src">Shabarova, Salcher, Porcal, Znachor, Nedoma, Grossart, Se&#271;a, Hejzlar &amp; &#352;imek (2021), <em>Recovery of freshwater microbial communities after extreme rain events is mediated by cyclic succession</em>, Nature Microbiology 6, p.479</span>
+    </div>
+
+    <p class="arrow">The central problem underneath it</p>
+    <p>Extreme rain is arriving more often. After a flood, the chemistry of a water body can go back to looking like it did before, while the living community inside it has not finished coming back. <b>A pond can measure as recovered and still not be recovered.</b> For anyone managing water for a town, a fishpond or a farm, that gap between the number and the living thing is the real problem, and it is a problem people can feel.</p>
+
+    <p class="arrow">Translate that poetically to a human emotion</p>
+    <div class="reads">Something has come back. I am not back yet.</div>
+    <p class="caveat">Everyone has been in a room where the situation has returned to normal and they personally have not returned to normal. That is the connector. It is a human reading of the finding, and I would never present it as a scientific claim.</p>
+
+    <p class="arrow">And that becomes the central emotional hook</p>
+    <p>It gives me a working title, <b>Come Back Again</b>, and one tension to write across all three outcomes at once.</p>
+    <table>
+      <tr><td class="who">In the song</td><td>A chorus that asks for a return, over verses that sit in the distance between a measurement and a living thing. The hook comes out of the finding and stays answerable to it, while the delivery follows the song's logic instead of the paper's order.</td></tr>
+      <tr><td class="who">In the music film</td><td>Bodies that leave and come back changed. The long white sheet moving in open wind, which is the image I already hold for this work, reads as water, as a flood line, and as the thing that returns without returning the same.</td></tr>
+      <tr><td class="who">In the installation</td><td>The visitor walks the same gap the paper describes: the sources first, then what was made from them, then the finished work. They arrive at the film having already heard the pond.</td></tr>
+    </table>
+    <p class="caveat">The example above is a demonstration of method. If the team judges that another paper gives the town and the science a more urgent starting point, we use that one, and a finding about a forest pond will never be presented as a finding about a managed fishpond.</p>
+
+    <ol class="steps" start="3">
+      <li>
+        <b>Then I ask them to send me material from their own study systems.</b>
+        <span>Two kinds. <b>Sound:</b> recordings from the water and from anything associated with the organisms they study, including frequency and wave-pattern data where it exists. <b>Image:</b> photographs, video and figures that show the patterns they see in their microorganisms, their study populations and their ecosystems, along with the fieldwork itself. I ask for material that already exists and is already cleared, and nobody is asked to produce new recordings without agreement and resourcing.</span>
+      </li>
+      <li>
+        <b>They send it. Then we talk about why they chose it.</b>
+        <span>This second conversation is the one that does the work. What made you pick this recording? What am I looking at in this image, and what is remarkable about it to you? That is where I learn which patterns are meaningful and which are noise, and where a misreading gets caught before it reaches a lyric.</span>
+      </li>
+      <li>
+        <b>Then I go away and immerse in it.</b>
+        <span>I sit with the material, the research narrative and the central problem until the song starts. The writing runs on two tracks. <b>Lyrics</b> carry the emotional connector. <b>The non-lyrical production</b> carries the science directly: a real field recording used as timbre and texture, and documented patterns in the data used to inform rhythm, melody and groove. The visual material does the same job on the other side, informing the choreography, the script and the scenes of the music film, and setting the aesthetic of the installation.</span>
+      </li>
+      <li>
+        <b>Three review points, and they hold a veto over the science.</b>
+        <span>The scientists check the emotional premise and the early demo, then the source descriptions and credits, then the rough cut and captions. Anything misleading gets changed. My artistic decisions stay mine, and their science stays theirs.</span>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="artists">
+    <h2 id="artists">The other artists, and the town</h2>
+    <p class="sub">Who builds it, and who is in it</p>
+
+    <h3>How I work with other artists</h3>
+    <p>I am the principal artist, creative director, songwriter and performer. I conceive and approve the song, the script, the edit and the route through the room. Around that I hire specialists, because the standard I am aiming at is a commercial music release. <b>I lead, and specialists build.</b></p>
+    <table>
+      <tr><th>Who</th><th>What they do, and what stays mine</th></tr>
+      <tr><td class="who">Music producer</td><td>Arrangement, recording, mix, master and separated stems, over three studio days. One of those days exists specifically to run the concept through the field recordings and the organisms' patterns, so the science reaches the arrangement as well as the words. A songwriting credit follows an actual agreed contribution.</td></tr>
+      <tr><td class="who">Czech filmmaker</td><td>Director of photography and editor, working to a treatment I write and approve. Final edit approval is mine.</td></tr>
+      <tr><td class="who">Movement lead</td><td>A local movement professional. We talk first about choreography and how movement should flow through the piece, then they rehearse the performers and stage the shoot days with me.</td></tr>
+      <tr><td class="who">Exhibition designer and AV</td><td>A Czech specialist who prices, builds, tests, maintains and strikes the room safely, and writes the daily operating guide. They own the safety and the engineering; the spatial concept is mine.</td></tr>
+    </table>
+    <p>Everyone is paid, credited, and holds their own permissions. The scientists advise on their research and their material, and are neither unpaid crew nor presumed co-authors of the song.</p>
+
+    <h3>How I work with the community, who are not scientists</h3>
+    <p>The performers in this film are people who live in the town. That is a decision about the work as much as about participation: a cast of residents puts the place the research is about inside the film about the research. I also want the <b>videographer</b> to be local wherever the host's networks can reach one, for the same reason.</p>
+    <p>Before any of that, I would sit down with a local movement professional and talk about how people here move, what movement language the town would recognise, and how that should flow through the choreography. I did exactly this on <em>Kangaroo Time</em>, where the cast's own dance practices shaped the film itself.</p>
+    <p>In 2027 I hold a public lab: I play two drafts, open the conversation, and invite anyone who wants to try the movement. I document at least two artistic decisions that the room changed or confirmed. In 2028 the finished work comes back to the same people, with the scientists and the performers in the room.</p>
+    <figure><img src="img/4_Workshop_go-ahead-and-dance-this.jpg" alt="A workshop slide inviting participants to translate a scientific graph into movement" width="2000" height="1333"><figcaption><b>The exercise I run:</b> read a real research figure, then try it as movement. It is how people find out they can hold a finding in their body before they can explain it.</figcaption></figure>
+    <figure><img src="img/5_Workshop_audience-with-the-work.jpg" alt="Workshop participants seated in discussion around a research-based music film" width="2000" height="1333"><figcaption><b>The conversation after.</b> This format has run in Canberra twice and in Athens with SciCo Greece, so the 2027 public lab is a format I have already delivered in a country that is not my own.</figcaption></figure>
+  </section>
+
+  <section aria-labelledby="installation">
+    <h2 id="installation">The installation, in the order you walk it</h2>
+    <p class="sub">The artwork is the room. The film is one station inside it.</p>
+    <p>A short, accessible route between freestanding translucent fabric surfaces. Positioned speakers mean that walking changes what you hear, so the shape of the music is something you experience physically even when the film is not playing. Every label distinguishes what the scientists observed from what I made of it.</p>
+    <ol class="walk">
+      <li><b>1 &middot; The fieldwork</b><span>Images of the work being done, from the research team and from my own time with them. You meet the people and the place before you meet any result.</span></li>
+      <li><b>2 &middot; The publication</b><span>Their paper, displayed and readable. The actual peer-reviewed science, credited, in the room.</span></li>
+      <li><b>3 &middot; What they sent me</b><span>The bioacoustic recordings, the photographs, the video, the patterns. Playable and viewable as they arrived, before I touched them.</span></li>
+      <li><b>4 &middot; How I worked</b><span>Documentation of the creative process: photographs, short videos, my writing, lyric drafts and the visual scores. Printed brochures that visitors keep and use, covering the process and what sci pop is, and the different ways research can enter music.</span></li>
+      <li><b>5 &middot; The mini cinema</b><span>A timed screening of the finished music film, captioned, in a controlled listening space. You arrive here having already heard the pond it came from.</span></li>
+      <li><b>6 &middot; What happened next</b><span>If the song is released by the festival, the room ends with the release data, the media coverage and whatever impact it has had. The work carries on past the gallery door, and the last thing you see is the evidence of that.</span></li>
+    </ol>
+    <p>There is no live water, no organism display and no sensor dependency. If the full-run AV hire proves unaffordable, the route keeps the positioned sound and the physical surfaces, the process material goes to print, and one screen alternates between process and film.</p>
+    <figure><img src="img/6_Installation-plan.jpg" alt="Diagram of the proposed installation showing the visitor route between fabric surfaces and into the screening space" width="2000" height="1414"><figcaption><b>The route in plan.</b> An exhibition designer and AV technician price, build and test it against the real venue.</figcaption></figure>
+  </section>
+
+  <section aria-labelledby="travel">
+    <h2 id="travel">The travel, said plainly</h2>
+    <p class="sub">One request, with the arithmetic behind it</p>
+    <div class="ask">
+      <p class="big">The &euro;3,000 travel allowance cannot cover three journeys between Australia and Europe. I want to say that clearly rather than promise a schedule I cannot fund.</p>
+      <p>I live in Sydney. A return Sydney to Prague fare sits around &euro;1,100 at the low end, so two crossings consume the allowance almost exactly once ground transport, transfers and the rail to Linz are counted. Three crossings do not fit, and no amount of careful booking makes them fit.</p>
+      <p><b>So I am asking for two stays: September 2027 and March 2028, the festival month.</b> September replaces the first scheduled stay, and I would film while I am there, with the song already finished and mastered before I fly. That puts me in the country when the local performers, the scientists and the locations are all available to the same shoot, and it puts me back for the festival when the work goes up.</p>
+      <p>This needs the organisers' written agreement, because the call describes September as an optional second stay, and I am asking for it to stand in for the first. Everything before September runs remotely: the research conversations, the material exchange, the writing, the crew scoping and the preproduction. I am raising this now so it is settled before delivery starts.</p>
+    </div>
+    <figure><img src="img/7_Delivery-timeline.jpg" alt="Diagram of the delivery timeline across 2027 and 2028 showing remote phases and the two in-country stays" width="2000" height="1414"><figcaption><b>The full schedule</b>, with what happens remotely and what happens in Cesk&eacute; Bud&#283;jovice.</figcaption></figure>
+  </section>
+
+  <div class="meta">
+    <p><b><a href="proposal/">Read the full proposal</a></b> for the phase-by-phase schedule, the &euro;15,000 production budget, the named candidate suppliers and the production dependencies.</p>
+    <p>sci pop, the term I use for this work, is set out in a paper deposited at <a href="https://doi.org/10.5281/zenodo.21387515" rel="noopener">doi.org/10.5281/zenodo.21387515</a>. The four-step compositional method behind <em>Kangaroo Time</em>, <em>Cabra da Peste</em> and this proposal is written up separately and is in preparation.</p>
+    <p class="note">This is a proposal for the 2027-28 residency. Collaborators, venue, research-material rights and equipment remain subject to agreement, and the budget and timetable will be revised with the residency team at the October to November 2027 stage. Suppliers named in the full proposal are candidates I would approach, and none has been commissioned or has quoted for this project.</p>
+    <a href="/" class="back">Dr WELI home</a>
+  </div>
+
 </div>
 </body>
 </html>
