@@ -49,6 +49,14 @@
   .note { font-size: 13px; color: var(--stone); margin-top: 28px; max-width: 760px; }
   .back { display:inline-block; margin-top: 40px; padding: 10px 20px; border: 1px solid var(--ink); border-radius: 999px; text-decoration:none; color: var(--ink); font-size: 14px; font-weight: 600; }
   .back:hover { background: var(--ink); color: var(--cream); }
+  @media print {
+    body { background:#fff; }
+    .wrap { max-width: none; padding: 0; }
+    figure, .video, .crit { break-inside: avoid; page-break-inside: avoid; }
+    figure img { border: 1px solid #ccc; }
+    .back { display: none; }
+    a { color: var(--ink); }
+  }
 </style>
 </head>
 <body>
@@ -73,16 +81,16 @@
   <h2>Artistic vision</h2>
 
   <figure>
-    <img src="img/1_Kangaroo-Time_cast-in-kangaroo-habitat.jpg" alt="The full Kangaroo Time cast standing together in kangaroo habitat at dusk." loading="lazy">
+    <img src="img/1_Kangaroo-Time_cast-in-kangaroo-habitat.jpg" alt="The full Kangaroo Time cast standing together in kangaroo habitat at dusk." width="2000" height="1337" decoding="async" fetchpriority="high">
     <figcaption>
       <p class="n">01 · Kangaroo Time, full cast on location</p>
       <p class="proves">Artistic vision, and directing people in a real place.</p>
-      <p class="say">Shot in the animals' own habitat, with a cast drawn from several communities. Nobody here is a professional film extra. This is the working method I would use in South Bohemia.</p>
+      <p class="say">Shot on location in kangaroo habitat, with a cast drawn from several communities. This is the working method I would use in South Bohemia: local people, in a real place, inside the work rather than illustrating it.</p>
     </figcaption>
   </figure>
 
   <figure>
-    <img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time ensemble in silhouette at dusk." loading="lazy">
+    <img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time ensemble in silhouette at dusk." width="2000" height="1336" decoding="async" fetchpriority="high">
     <figcaption>
       <p class="n">02 · Kangaroo Time, ensemble at dusk</p>
       <p class="proves">Image-making and choreography at the same time.</p>
@@ -93,7 +101,7 @@
   <h2>Science collaboration</h2>
 
   <figure>
-    <img src="img/3_Live-performance_Dance-Your-PhD-winner-announced.jpg" alt="Dr WELI performing live while the screen behind announces the Dance Your PhD 2024 winner." loading="lazy">
+    <img src="img/3_Live-performance_Dance-Your-PhD-winner-announced.jpg" alt="Dr WELI performing live while the screen behind announces the Dance Your PhD 2024 winner." width="2000" height="1235" decoding="async" fetchpriority="high">
     <figcaption>
       <p class="n">03 · Live, with the award announced behind</p>
       <p class="proves">The work is recognised inside science, not only beside it.</p>
@@ -102,29 +110,29 @@
   </figure>
 
   <figure>
-    <img src="img/4_Workshop_go-ahead-and-dance-this.jpg" alt="Workshop slide reading Go ahead and dance this, next to a labelled behavioural phenotype graph." loading="lazy">
+    <img src="img/4_Workshop_go-ahead-and-dance-this.jpg" alt="Workshop slide reading Go ahead and dance this, next to a labelled behavioural phenotype graph." width="2000" height="1333" decoding="async" fetchpriority="high">
     <figcaption>
       <p class="n">04 · The method, in one slide</p>
-      <p class="proves">Turning a scientific figure into movement, with scientists in the room.</p>
-      <p class="say">The slide reads "Go ahead and dance this:" beside a labelled behavioural phenotype graph. This is the paper-to-score lab I would run with your researchers in the first on-site month.</p>
+      <p class="proves">Turning a scientific figure into an instruction to move.</p>
+      <p class="say">The slide reads "Go ahead and dance this:" beside a labelled behavioural phenotype graph, in a university teaching session. This is the paper-to-score lab I would run with your researchers in the first on-site month.</p>
     </figcaption>
   </figure>
 
   <h2>Working with communities</h2>
 
   <figure>
-    <img src="img/5_Workshop_audience-with-the-work.jpg" alt="Workshop participants engaging with the work in a full room." loading="lazy">
+    <img src="img/5_Workshop_audience-with-the-work.jpg" alt="Workshop participants engaging with the work in a full room." width="2000" height="1333" decoding="async" fetchpriority="high">
     <figcaption>
-      <p class="n">05 · People doing it, not watching it</p>
-      <p class="proves">Community participation that actually happens.</p>
-      <p class="say">The public listening and movement lab planned for 2027 works like this: people connected to regional waters hear drafts, move with them, and say what lands. Nobody has to dance or be filmed, and their responses change the song before it is finished.</p>
+      <p class="n">05 · A real room, with the work in front of it</p>
+      <p class="proves">Audiences this work has already been put in front of.</p>
+      <p class="say">Kangaroo Time on screen in a university teaching session. The 2027 listening and movement lab goes further than this: people connected to regional waters hear drafts, move with them if they want to, and say what lands. Nobody has to dance or be filmed, and their responses change the song before it is finished.</p>
     </figcaption>
   </figure>
 
   <h2>What I would make with you</h2>
 
   <figure>
-    <img src="img/6_Installation-plan.jpg" alt="Plan view of the proposed walk-through installation: four freestanding translucent panels, one projector, stereo sound, and the visitor path." loading="lazy">
+    <img src="img/6_Installation-plan.jpg" alt="Plan view of the proposed walk-through installation: four freestanding translucent panels, one projector, stereo sound, and the visitor path." width="2000" height="2000" decoding="async" fetchpriority="high">
     <figcaption>
       <p class="n">06 · The spatial work, plan view</p>
       <p class="proves">Feasibility, stated as a drawing rather than a promise.</p>
@@ -133,7 +141,7 @@
   </figure>
 
   <figure>
-    <img src="img/7_Delivery-timeline.jpg" alt="Delivery timeline showing three on-site stays across fifteen months with remote work between them." loading="lazy">
+    <img src="img/7_Delivery-timeline.jpg" alt="Delivery timeline showing three on-site stays across fifteen months with remote work between them." width="2000" height="2000" decoding="async" fetchpriority="high">
     <figcaption>
       <p class="n">07 · Delivery timeline</p>
       <p class="proves">Which month delivers what, across the full programme window.</p>
