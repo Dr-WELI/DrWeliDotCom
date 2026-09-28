@@ -210,6 +210,67 @@
     mask-image:radial-gradient(85% 70% at 50% 40%,#000 20%,transparent 100%);
     -webkit-mask-image:radial-gradient(85% 70% at 50% 40%,#000 20%,transparent 100%);
   }
+
+  .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0 14px;
+    border:1px solid var(--line); border-radius:14px; background:rgba(22,26,34,.5); }
+  .scroll table { min-width:640px; margin:0; }
+  .scroll th { background:rgba(14,17,24,.9); }
+  @media print { .scroll { overflow:visible; border:0; background:none; } .scroll table { min-width:0; } }
+  /* ---- hero: the idea first, the proof immediately under it ---- */
+  .hero { padding:8px 0 40px; border-bottom:1px solid var(--line); margin-bottom:12px; }
+  .bigidea { font-size:clamp(30px,4.6vw,50px); line-height:1.06; letter-spacing:-.03em;
+    font-weight:800; margin:0 0 20px; max-width:16ch; }
+  .bigidea span { background:linear-gradient(100deg,#FFE7A6,var(--gold) 45%,#E4A93A);
+    -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .standfirst { font-size:19px; color:var(--dim); max-width:640px; margin:0 0 10px; }
+  .standfirst b { color:var(--text); font-weight:650; }
+  .who { font-size:16px; color:var(--dim); max-width:660px; margin:18px 0 0; }
+
+  .proof { display:flex; flex-wrap:wrap; gap:10px; margin:30px 0 0; }
+  .proof div { flex:1 1 150px; background:linear-gradient(160deg,var(--metal-1),var(--metal-3));
+    border:1px solid var(--line); border-radius:12px; padding:15px 16px; }
+  .proof b { display:block; font-size:20px; line-height:1.15; font-weight:800; color:var(--gold);
+    letter-spacing:-.02em; margin-bottom:4px; }
+  .proof span { display:block; font-family:var(--mono); font-size:10.5px; line-height:1.55;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--faint); }
+
+  /* ---- three-part proposal ---- */
+  .three { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:28px 0 12px; }
+  .three article { background:linear-gradient(165deg,rgba(22,26,34,.92),rgba(14,17,24,.92));
+    border:1px solid var(--line); border-radius:16px; padding:24px; position:relative; overflow:hidden; }
+  .three article::before { content:""; position:absolute; left:0; top:0; width:100%; height:2px;
+    background:linear-gradient(90deg,var(--cyan),var(--mint),transparent); }
+  .three .tag { font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--cyan); display:block; margin-bottom:12px; }
+  .three h3 { margin:0 0 9px; font-size:21px; }
+  .three p { font-size:15px; margin:0; color:var(--dim); }
+
+  /* ---- done / deliver tables ---- */
+  .rec td { padding:14px 15px; }
+  .rec td.yr { font-family:var(--mono); font-size:12px; color:var(--cyan); white-space:nowrap;
+    letter-spacing:.06em; vertical-align:top; }
+  .rec td.what b { display:block; font-size:16px; color:var(--text); margin-bottom:3px; }
+  .rec td.what span { font-size:14.5px; color:var(--dim); }
+  .rec td.out { font-size:14px; color:var(--gold); text-align:right; white-space:nowrap; vertical-align:top; }
+
+  .deliver td.ph { font-family:var(--mono); font-size:12px; color:var(--cyan); white-space:nowrap;
+    letter-spacing:.05em; vertical-align:top; }
+  .deliver td.dl { color:var(--gold); font-size:14.5px; vertical-align:top; }
+  .here { display:inline-block; font-family:var(--mono); font-size:10px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--ink); background:var(--mint); border-radius:4px;
+    padding:2px 7px; margin-left:8px; font-weight:700; vertical-align:2px; }
+
+  @media (max-width:820px) { .three { grid-template-columns:1fr; } }
+  @media (max-width:760px) {
+    .bigidea { max-width:none; }
+    .rec td.out { text-align:left; white-space:normal; }
+  }
+  @media print {
+    .proof div, .three article { background:#fff !important; border:1px solid #bbb; }
+    .proof b, .three .tag, .rec td.out, .deliver td.dl, .rec td.yr, .deliver td.ph { color:#111 !important; }
+    .bigidea span { -webkit-text-fill-color:#111; color:#111; }
+    .here { background:#eee; color:#111; }
+  }
 </style>
 </head>
 <body>
@@ -243,95 +304,129 @@
 
 <div class="wrap">
 
-  <header class="head">
-    <p class="eyebrow">Ars Biologica ArtXScience Residency 2027-28 &middot; supporting material</p>
-    <h1>I turn research into <em>pop music, film and public art.</em></h1>
-    <p class="lede"><strong>I wrote, performed and directed <em>Kangaroo Time</em> from my doctoral research. It won the 2024 AAAS Dance Your PhD overall prize.</strong> I then made <em>Cabra da Peste</em> from another scientific subject and directed a staged photographic series. For Ars Biologica, I propose a freshwater song, a film made with Czech performers and a walk-through artwork that shows how the science became both.</p>
-    <nav class="jump" aria-label="Page sections">
-      <a href="#record">Track record</a><a href="#kangaroo-time">Kangaroo Time</a><a href="#cabra">Cabra da Peste</a><a href="#photography">The Photography Project</a><a href="#workshops">Public practice</a><a href="#method">How I work with scientists</a><a href="#artists">Artists and the town</a><a href="#installation">The installation</a><a href="#travel">Travel</a><a href="proposal/">Full proposal</a>
+    <header class="hero">
+    <p class="eyebrow">Ars Biologica ArtXScience Residency 2027-28 &middot; Dr WELI</p>
+    <h1 class="bigidea">A pond can measure as recovered while the life inside it <span>has not come back</span>.</h1>
+    <p class="standfirst">That is a real finding from the Biology Centre, and it is the song I want to write. <b>Come Back Again</b>: a pop single, a music film, and a room the visitor walks through.</p>
+    <p class="who">I am Dr Weliton Menario Costa, WELI. I turn published research into pop music. My own PhD on kangaroo personality became a song and film that won the AAAS Dance Your PhD Overall Prize 2024 and travelled to 238 media features across five continents.</p>
+    <div class="proof">
+      <div><b>Overall Winner</b><span>AAAS Dance Your PhD 2024</span></div>
+      <div><b>238+</b><span>media features, five continents. Guardian, NPR, BBC, Smithsonian. Isentia 2024</span></div>
+      <div><b>154,766</b><span>views, 98.2% positive, 64.5% from press and sharing</span></div>
+      <div><b>1 of 30</b><span>Falling Walls Engage 2025, worldwide</span></div>
+      <div><b>2 commissions</b><span>research to released song, on deadline</span></div>
+      <div><b>PhD + 9 yrs</b><span>behavioural ecology, ANU. Practice since 2017</span></div>
+    </div>
+    <nav class="jump" aria-label="Sections">
+      <a href="#make">What I make</a><a href="#done">What I have done</a><a href="#deliver">How I deliver</a><a href="#method">The method</a><a href="#room">The room</a><a href="#travel">Travel</a><a href="proposal/">Budget &amp; full proposal</a>
     </nav>
   </header>
 
-  <section aria-labelledby="record">
-    <h2 id="record">What the practice has done so far</h2>
-    <p class="sub">Every figure below comes from a source a reader can check.</p>
-    <div class="record">
-      <div><b>Overall Winner</b><span>AAAS <a href="https://www.science.org/content/article/watch-2024-dance-your-ph-d-winners" rel="noopener">Dance Your PhD</a> 2024, the annual international prize run by the journal <em>Science</em>. Awarded for <em>Kangaroo Time</em>.</span></div>
-      <div><b>238+ features</b><span>Media coverage of <em>Kangaroo Time</em> across five continents, including the Guardian, NPR, BBC and Smithsonian Magazine. Independent monitoring report, Isentia 2024.</span></div>
-      <div><b>154,766 views</b><span>Lifetime YouTube audience for the <em>Kangaroo Time</em> film, 98.2% positive reactions, 64.5% arriving from press and sharing off-platform.</span></div>
-      <div><b>One of 30</b><span>Shortlisted worldwide for <a href="https://falling-walls.com/engage/shortlist-finalists" rel="noopener">Falling Walls Engage 2025</a>, Berlin, for the project listed there as <em>Science for the People</em>.</span></div>
-      <div><b>Invited to open</b><span>The XLI Encontro Anual de Etologia 2024, the Brazilian Ethology Society's annual meeting, speaking on creativity in ethology.</span></div>
-      <div><b>Three settings</b><span>I have led research-to-art activities at Australia's National Science Week, ANU Research Fest and the Athens Science Festival with SciCo Greece. <a href="/program/schools/">Transforming Science Into Compelling Art</a> explains the workshop approach.</span></div>
+  <section aria-labelledby="make">
+    <h2 id="make">What I make</h2>
+    <p class="sub">One artwork, three parts. The room is the artwork; the film is one station inside it.</p>
+    <div class="three">
+      <article>
+        <span class="tag">01 &middot; The song</span>
+        <h3>A pop single</h3>
+        <p>Written from the finding the scientists choose. Their field recordings enter the track itself, as texture and as the starting points for rhythm and melody. It is released afterwards, so the research keeps travelling once the festival closes.</p>
+      </article>
+      <article>
+        <span class="tag">02 &middot; The film</span>
+        <h3>A music film</h3>
+        <p>Shot in Cesk&eacute; Bud&#283;jovice with local performers, to music-industry standards, with no explanatory text on screen. I write and direct it, as I did for <em>Kangaroo Time</em>.</p>
+      </article>
+      <article>
+        <span class="tag">03 &middot; The room</span>
+        <h3>A spatial artwork</h3>
+        <p>Six stops across three built stations, from the scientists' fieldwork and paper to a timed screening of the finished film. Positioned sound, so walking changes what you hear.</p>
+      </article>
     </div>
-    <p class="srcnote">These are reach and recognition figures. They describe how far the work travelled and who judged it, and I present them as measures of circulation only.</p>
-  
-    <h3>The practice, in time</h3>
-    <p>I began making images alongside my field research. One of my photographs appears as Figure 2 of my 2021 ANU thesis, credited <em>Image credits: Weliton Menario Costa</em> (<a href="https://openresearch-repository.anu.edu.au/bitstream/1885/248721/1/WMenarioCosta_ANU_RSB_Thesis_2021.pdf" rel="noopener">thesis PDF, p.15</a>). I later directed the staged Photography Project, shot in 2023 and released in 2024, and developed original research-based songs and films. The projects below show the work and my role in each one.</p>
   </section>
 
-  <section aria-labelledby="kangaroo-time">
-    <h2 id="kangaroo-time">Kangaroo Time</h2>
-    <p class="sub">My own research, as a pop song and a music film &middot; 2023</p>
-    <p>I spent my doctorate following eastern grey kangaroos, measuring how individual personality, the social environment and maternal effects shape behaviour. The finding that stayed with me was variation: kangaroos in one mob differ from one another in stable, measurable ways. I wrote that into a pop song, and built the film around a Canberra cast whose dance styles differ as visibly as the animals did. <b>I wrote and directed the film</b>, and co-wrote and performed the song with Nicholas Moynihan. Nic Vevers (ANU Science) produced, with Matthew Barnes on sound. The credits read Direction, Weliton Menario Costa. Twenty-seven named collaborators, twenty-four of them cast.</p>
+  <section aria-labelledby="done">
+    <h2 id="done">What I have done</h2>
+    <p class="sub">Every line here has a public record a reader can check.</p>
+    <div class="scroll"><table class="rec">
+      <tr>
+        <td class="yr">2023&ndash;24</td>
+        <td class="what"><b>Kangaroo Time</b><span>Pop song and music film from my own doctoral research. I wrote and directed it. Cast of 24 people from multicultural Canberra, none performers by trade. Production Nic Vevers (ANU Science); co-songwriter Nicholas Moynihan; sound Matthew Barnes. 27 named collaborators.</span></td>
+        <td class="out">AAAS Overall Winner 2024<br>238+ features, 5 continents<br><span style="color:var(--faint);font-size:12.5px">Isentia 2024</span></td>
+      </tr>
+      <tr>
+        <td class="yr">2024</td>
+        <td class="what"><b>Cabra da Peste (G.O.A.T.)</b><span>Commissioned by the Brazilian Ethology Society to open its 2024 annual meeting. In Portuguese, from my Honours research on female goat hierarchy, written and performed with Jon Panic. Made to a brief, to a date.</span></td>
+        <td class="out">Opened the XLI Encontro<br>Anual de Etologia</td>
+      </tr>
+      <tr>
+        <td class="yr">2023&ndash;24</td>
+        <td class="what"><b>The Photography Project</b><span>Staged portrait series translating the same doctoral findings into people. Concept and creative direction mine; photographed by Tony Oliver and Reid Workman, with hair and make-up by Neha Suryavanshi, Shauna Priest and Anchal Goel.</span></td>
+        <td class="out">Became my studio's<br>visual identity</td>
+      </tr>
+      <tr>
+        <td class="yr">2024&ndash;25</td>
+        <td class="what"><b>Science and the People</b><span>My workshop for researchers and artists. Delivered at National Science Week Australia, ANU Research Fest, and the Athens Science Festival with SciCo Greece.</span></td>
+        <td class="out">Three countries<br>1 of 30 worldwide, Falling Walls</td>
+      </tr>
+    </table></div>
+
     <div class="media">
-      <h3>Watch the film</h3>
+      <h3>Kangaroo Time &middot; watch two minutes</h3>
       <div class="frame">
         <iframe src="https://www.youtube-nocookie.com/embed/RoSYO3fApEc" title="Kangaroo Time (Club Edit) by Dr WELI" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
-      <p>This film shows my research-to-pop practice at full scale. <em>Kangaroo Time</em> includes explanatory text for its competition brief. The freshwater film will stand as a music video for listeners outside the gallery, with accessible captions for dialogue or lyrics as needed. Subject to permissions and material availability, source recordings and documented patterns may enter its sound, movement and imagery, while the installation shows exactly what was observed and what I invented.</p>
-      <p><a href="https://www.youtube.com/watch?v=RoSYO3fApEc" rel="noopener">Open on YouTube</a></p>
+      <p>This is the closest existing example of the practice. The freshwater film takes it two steps further: the scientists' field recordings enter the sound itself, and the film is made to music-industry standards instead of to a competition brief, so it carries no explanatory text on screen.</p>
     </div>
-    <figure><img src="img/1_Kangaroo-Time_cast-in-kangaroo-habitat.jpg" alt="The Kangaroo Time cast standing together in open eucalypt grassland, the habitat of the kangaroos studied in the research" width="2000" height="1337"><figcaption><b>The cast on location, in the habitat the research was done in.</b> My role was concept, direction and lead performance. Production image credits remain with the original team.</figcaption></figure>
-    <figure><img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time ensemble silhouetted against a dusk sky, each dancer holding a different posture" width="2000" height="1336"><figcaption><b>Nine people, nine different shapes, one frame.</b> The variation the research measured is the variation you are looking at.</figcaption></figure>
-    <figure><img src="img/3_Live-performance_Dance-Your-PhD-winner-announced.jpg" alt="WELI performing live on stage around the time the Dance Your PhD prize was announced" width="2000" height="1235"><figcaption><b>Performing live, 2024.</b> I am a performer as well as a writer, and the work exists on stage as well as on screen.</figcaption></figure>
-  </section>
 
-  <section aria-labelledby="cabra">
-    <h2 id="cabra">Cabra da Peste (G.O.A.T.)</h2>
-    <p class="sub">A research-based song made for an invited conference opening &middot; 2024</p>
-    <p>The Brazilian Ethology Society invited me to open its 2024 annual meeting by speaking about creativity in ethology. I wrote a song for it. <em>Cabra da Peste</em> draws on my Honours research in Brazil on dominance among female goats, and my Honours supervisor appears in the track. The title is the reason the song works: in Brazilian Portuguese <em>cabra</em> names the animal and also names a person of real toughness and charisma, so one phrase is literally true about the goats and literally true about the women the song is addressed to. The research enters through popular culture and a human story, and the track stays a pop song throughout. It was produced with Jon Panic and released in December 2024.</p>
     <div class="media">
-      <h3>Listen</h3>
+      <h3>Cabra da Peste &middot; listen</h3>
       <iframe class="spot" src="https://open.spotify.com/embed/track/6j1Zkij6ETgFgmJkqxfPux?utm_source=generator" title="Cabra da Peste (G.O.A.T.) by WELI on Spotify" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <p>Two finished songs in different languages from two research histories: one internationally awarded film and one song made for an invited conference appearance. They show I can lead collaborators from scientific material to pop music that reaches an audience.</p>
+      <p>In Brazilian Portuguese <em>cabra</em> names the animal and also names a person of real toughness. One phrase, literally true about the goats and literally true about the women the song addresses. That is how the research gets in without the track becoming a lecture.</p>
     </div>
-  </section>
 
-  <section aria-labelledby="photography">
-    <h2 id="photography">The Photography Project</h2>
-    <p class="sub">Staged photography from the same research &middot; shot October 2023, released 2024</p>
-    <p><b>I am the creative director of this series.</b> Concept and direction are mine; Tony Oliver and Reid Workman photographed it, with hair and make-up by Neha Suryavanshi, Shauna Priest and Anchal Goel, and technical support from Paris Smith-Davies and Leandro Eugenio de Souza. I cast it and set the brief for each model.</p>
-    <p><b>What it communicates.</b> The series takes the doctoral concern with personality, social environments and difference and translates it into staged portraiture. The performers bring distinct movement and visual traditions into the same eucalypt grassland as the kangaroo research. Bharatanatyam and drag are not illustrations of particular measurements: placing different people, postures and forms of self-presentation in one research landscape invites viewers to notice individual variation before they read about it. These images became part of my studio's visual identity.</p>
+    <figure><img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time ensemble silhouetted against a dusk sky, each dancer holding a different posture" width="2000" height="1336"><figcaption><b>Nine people, nine different shapes, one frame.</b> The variation the research measured is the variation you are looking at.</figcaption></figure>
     <div class="pair">
-      <figure><img src="img/8_Photography-Project_classical-dance-in-kangaroo-habitat.jpg" alt="A dancer in blue and gold classical Indian costume holds a low Bharatanatyam position under a large eucalypt in open Australian grassland" width="2000" height="1336"><figcaption><b>Bharatanatyam in kangaroo country.</b> The costume, the posture and the ground are each precise, and putting the three in one frame is the whole argument.</figcaption></figure>
-      <figure><img src="img/9_Photography-Project_drag-performance-in-the-paddock.jpg" alt="A drag performer in a feathered headdress and white winged costume stands in the same open grassland with eucalypts behind" width="1200" height="802"><figcaption><b>The same paddock, a different way of being looked at.</b> Two portraits from one session, holding the distance between them the way a mob holds its variation.</figcaption></figure>
+      <figure><img src="img/8_Photography-Project_classical-dance-in-kangaroo-habitat.jpg" alt="A dancer in blue and gold classical Indian costume holds a low Bharatanatyam position under a large eucalypt in open Australian grassland" width="2000" height="1336"><figcaption><b>The Photography Project.</b> Each model stands in for something the research measured, photographed where the kangaroos were observed.</figcaption></figure>
+      <figure><img src="img/9_Photography-Project_drag-performance-in-the-paddock.jpg" alt="A drag performer in a feathered headdress and white winged costume stands in the same open grassland with eucalypts behind" width="1200" height="802"><figcaption><b>Same paddock, a different way of being looked at.</b> Two portraits from one session.</figcaption></figure>
     </div>
-    <p>This is directly relevant to what I am proposing. <strong>It is evidence that I can run a crew of specialist artists toward a concept drawn from a scientific finding, and that the result reads without a caption.</strong> The residency asks me to do that again, with a different research group, in a different medium, in a different country.</p>
+
+    <h3>Five years of professional practice, with a dated record</h3>
+    <p>I performed through my doctorate, 2017 to 2021. The photography began in those same years, in the field: a photograph I took at the study site is published as Figure 2 of my <a href="https://openresearch-repository.anu.edu.au/bitstream/1885/248721/1/WMenarioCosta_ANU_RSB_Thesis_2021.pdf" rel="noopener">2021 ANU thesis, p.15</a>, credited <em>Image credits: Weliton Menario Costa</em>. First independent releases 2023.</p>
   </section>
 
-  <section aria-labelledby="workshops">
-    <h2 id="workshops">Turning science into compelling art, with other people</h2>
-    <p>My work also happens in a room with a public. In <a href="/program/schools/"><em>Transforming Science Into Compelling Art</em></a>, participants start with a research question or figure, look for an emotional or bodily point of contact, and test what happens when it becomes movement, image or music. I have led related activities for National Science Week in Australia, ANU Research Fest and Athens Science Festival with SciCo Greece. That experience is the foundation for the 2027 public listening and movement lab, where local responses can change the proposed work.</p>
-    <p><a href="https://falling-walls.com/engage/shortlist-finalists" rel="noopener">Falling Walls Engage shortlisted my public-engagement work among 30 projects worldwide in 2025</a>. It is a separate recognition for the participatory side of my practice, alongside the AAAS prize for the finished music film.</p>
+  <section aria-labelledby="deliver">
+    <h2 id="deliver">How I deliver it to you</h2>
+    <p class="sub">What happens remotely, what happens in Cesk&eacute; Bud&#283;jovice, and what lands at each gate.</p>
+    <div class="scroll"><table class="deliver">
+      <thead><tr><th>When</th><th>What I do</th><th>What you receive</th></tr></thead>
+      <tbody>
+        <tr><td class="ph">Jan&ndash;Mar 2027<br>remote</td><td>Kick-off with the scientists and the host. We choose the research together. I read the paper and issue the material request.</td><td class="dl">Collaboration and rights framework. Research shortlist. Process videos 1&ndash;3.</td></tr>
+        <tr><td class="ph">Apr&ndash;Aug 2027<br>remote</td><td>Material exchange and the conversation about why they chose it. Songwriting. Three studio days in Sydney, one of them spent running the concept through their field recordings.</td><td class="dl">Source register. Finished master and stems <b>before</b> filming. Storyboard. Videos 4&ndash;8.</td></tr>
+        <tr><td class="ph">Sep 2027<br><b>on site</b><span class="here">Stay 1</span></td><td>Scientist and site meetings. Public listening and movement lab. Rehearsal with the local movement lead. The film shot with me and the local cast together.</td><td class="dl">Film shot. Public feedback documented. Approved source imagery. Video 9.</td></tr>
+        <tr><td class="ph">Oct 2027&ndash;<br>Feb 2028<br>remote</td><td>Edit, scientist review of facts, captions and credits, then the Czech installation build and testing.</td><td class="dl">Your required written phase-two proposal with quotes and rider. Final film. Tested installation and maintenance guide. Videos 10&ndash;13.</td></tr>
+        <tr><td class="ph">Mar 2028<br><b>on site</b><span class="here">Stay 2</span></td><td>Install, test, screen, hold the public conversation with the scientists and performers, document, strike.</td><td class="dl">Completed exhibition and film. Engagement documented. Videos 14&ndash;15. Safe strike.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Fifteen short captioned process videos run from January 2027 to festival close, with credited, permission-cleared stills supplied to Cesk&eacute; Bud&#283;jovice 2028 at each phase. <a href="proposal/">The full proposal carries the &euro;15,000 production budget line by line</a>, with two published price anchors and 8.9% contingency.</p>
   </section>
 
   <section aria-labelledby="method">
-    <h2 id="method">How I work with the scientists</h2>
-    <p class="sub">The method, step by step, with a worked example</p>
+    <h2 id="method">The method, and what I need from you</h2>
+    <p class="sub">Step one is a conversation. No artistic decision comes before it.</p>
 
-    <ol class="steps">
-      <li>
-        <b>First, a conversation. Before any artistic decision is made.</b>
-        <span>I would ask the researchers what they are working on, which finding matters most to them, and why people living with these waters should care. We would discuss the actual study sites and how the work relates to water quality, climate pressures and local life. Together we would select one study, or compatible findings whose limits we can explain. I would then read the chosen papers with them before deciding what feeling might carry the song.</span>
-      </li>
-      <li>
-        <b>Then I read the paper properly, and read it for the emotional connector.</b>
-        <span>I ask what problem the study addresses and what its findings actually show. Then I look for a human experience that connects to that result. The example below shows how I might begin, before choosing the final research with the team.</span>
-      </li>
-    </ol>
+    <div class="scroll"><table class="deliver">
+      <thead><tr><th>Step</th><th>What happens</th><th>What I need from the scientists</th></tr></thead>
+      <tbody>
+        <tr><td class="ph">01</td><td>We talk. I ask what you would most want a stranger to know, listening for findings that touch climate emergence, water resource management, sustainable agriculture, permaculture, geoengineering, and the effects that reach people living nearby. <b>We choose the research together.</b></td><td class="dl">Your time, and your judgement on which finding matters most.</td></tr>
+        <tr><td class="ph">02</td><td>I read the chosen paper twice: once for the central problem, once for the sentence where the finding already carries a human feeling. The worked example below is that read, done on a real paper from your Centre.</td><td class="dl">Correction of anything I misread.</td></tr>
+        <tr><td class="ph">03</td><td>I ask for material that <b>already exists and is already cleared</b>. Nobody makes new recordings without agreement and resourcing.</td><td class="dl"><b>Sound:</b> water, rain, sampling, anything from your study systems, frequency and wave data where it exists.<br><b>Image:</b> microscopy, video, habitat, fieldwork, and any documented pattern.</td></tr>
+        <tr><td class="ph">04</td><td>Second conversation: <b>why did you choose these?</b> This is where I learn which pattern is meaningful and which is noise.</td><td class="dl">One call, and a sentence on each item.</td></tr>
+        <tr><td class="ph">05</td><td>I go away and write. Recordings become texture and the starting points for rhythm and melody. Your images shape the choreography, the script and the look of the room.</td><td class="dl">Nothing.</td></tr>
+        <tr><td class="ph">06</td><td>Three review points: the emotional premise and demo, the source descriptions and credits, then the rough cut and captions.</td><td class="dl">A veto over the science. Anything misleading gets changed.</td></tr>
+      </tbody>
+    </table></div>
 
-    <h3>The worked example</h3>
-    <p>Here is the read, on a paper by researchers at the Biology Centre. I am showing the mechanics, and the actual choice of paper belongs to step one.</p>
+    <h3>The worked example, on a real paper from your Centre</h3>
 
     <p class="arrow">Quote what you have</p>
     <div class="quotebox">
@@ -340,63 +435,37 @@
     </div>
 
     <p class="arrow">The central problem underneath it</p>
-    <p>In this forest-pond study, the measured release of dissolved nutrients returned to its earlier level before the microbial community had recovered its earlier composition. I am interested in that difference in timing. It does <em>not</em> mean that all water chemistry recovered, or that the study describes a managed fishpond. I would check with the authors how that result relates to the wider question of recovery after floods.</p>
+    <p>Extreme rain is arriving more often. After a flood, the chemistry can look as it did before while the living community has not finished coming back. <b>A pond can measure as recovered and still not be recovered.</b> For anyone managing water for a town, a fishpond or a farm, that gap is the real problem.</p>
 
-    <p class="arrow">Translate that poetically to a human emotion</p>
+    <p class="arrow">Translate it to a human emotion</p>
     <div class="reads">Something has come back. I am not back yet.</div>
-    <p class="caveat">Everyone has been in a room where the situation has returned to normal and they personally have not returned to normal. That is the connector. It is a human reading of the finding, and I would never present it as a scientific claim.</p>
 
-    <p class="arrow">And that becomes the central emotional hook</p>
-    <p>It gives me a working title, <b>Come Back Again</b>, and one tension to write across all three outcomes at once.</p>
+    <p class="arrow">That becomes the hook, across all three outcomes</p>
     <table>
-      <tr><td class="who">In the song</td><td>That difference between one thing returning and another taking longer could give me a feeling to write from. The lyric and production would follow the needs of a contemporary pop song, not the order of the paper.</td></tr>
-      <tr><td class="who">In the music film</td><td>I would test movements and images with the local performers, using the researchers' permitted footage and observed patterns as references rather than illustrating the paper scene by scene.</td></tr>
-      <tr><td class="who">In the installation</td><td>Visitors would encounter the actual study and the material shared by the scientists, then my working documents, then the finished song and film. They could see where observation ends and artistic interpretation begins.</td></tr>
+      <tr><td class="who">In the song</td><td>The difference between one thing returning and another taking longer gives me a feeling to write from. The lyric follows the needs of a pop song, and the order of the paper stays in the paper.</td></tr>
+      <tr><td class="who">In the film</td><td>I test movement and images with the local performers, using your permitted footage and observed patterns as reference.</td></tr>
+      <tr><td class="who">In the room</td><td>The visitor meets your study and your material first, then my working documents, then the finished work. They can see where observation ends and interpretation begins.</td></tr>
     </table>
-    <p class="caveat">The example above is a demonstration of method. If the team judges that another paper gives the town and the science a more urgent starting point, we use that one, and a finding about a forest pond will never be presented as a finding about a managed fishpond.</p>
-
-    <ol class="steps" start="3">
-      <li>
-        <b>Then I ask them to send me material from their own study systems.</b>
-        <span>I would ask for existing recordings of the study systems where available, including water, weather, sampling or laboratory ambience, and for photographs, microscope footage and figures showing real patterns in the organisms or data. The researchers would explain why they chose each item, what it represents and who may grant permission. I would not ask them to make new recordings without an agreement and budget.</span>
-      </li>
-      <li>
-        <b>They send it. Then we talk about why they chose it.</b>
-        <span>This second conversation is the one that does the work. What made you pick this recording? What am I looking at in this image, and what is remarkable about it to you? That is where I learn which patterns are meaningful and which are noise, and where a misreading gets caught before it reaches a lyric.</span>
-      </li>
-      <li>
-        <b>Then I go away and immerse in it.</b>
-        <span>I would write the song from the emotional idea we identified. With the producer, I could try a cleared field sound as texture or rhythmic material, or use a documented pattern as a prompt for phrasing. Microscope images and footage could suggest movement, framing or colour for the film and installation. Those are artistic choices informed by research, not a claim that microbes make the music we hear.</span>
-      </li>
-      <li>
-        <b>Three review points, and they hold a veto over the science.</b>
-        <span>The scientists check the emotional premise and the early demo, then the source descriptions and credits, then the rough cut and captions. Anything misleading gets changed. My artistic decisions stay mine, and their science stays theirs.</span>
-      </li>
-    </ol>
+    <p class="caveat">This is a demonstration of method. If the team judges another paper a more urgent starting point, we use that one, and a forest-pond finding is never presented as a finding about a managed fishpond.</p>
   </section>
 
-  <section aria-labelledby="artists">
-    <h2 id="artists">The other artists, and the town</h2>
-    <p class="sub">Who builds it, and who is in it</p>
 
-    <h3>How I work with other artists</h3>
-    <p>I will write and perform the song, direct the film treatment and make the final artistic decisions about the installation. I would work with a producer to make a release-quality recording, a Czech filmmaker to shoot and edit the video, local movement artists to develop the performance with me, and an exhibition designer to make the spatial work safe and practical.</p>
-    <table>
-      <tr><th>Who</th><th>What they do, and what stays mine</th></tr>
-      <tr><td class="who">Music producer</td><td>Arrangement, recording, mix, master and separated stems, over three studio days. One of those days exists specifically to run the concept through the field recordings and the organisms' patterns, so the science reaches the arrangement as well as the words. A songwriting credit follows an actual agreed contribution.</td></tr>
-      <tr><td class="who">Czech filmmaker</td><td>Director of photography and editor, working to a treatment I write and approve. Final edit approval is mine.</td></tr>
-      <tr><td class="who">Movement lead</td><td>A local movement professional. <b>I prepare my own body for the shoot and author the central choreography.</b> We talk first about how movement should flow through the piece and what this town would recognise, and they then adapt it to the local performers, rehearse them, and stage the shoot days with me.</td></tr>
-      <tr><td class="who">Exhibition designer and AV</td><td>A Czech specialist who prices, builds, tests, maintains and strikes the room safely, and writes the daily operating guide. They own the safety and the engineering; the spatial concept is mine.</td></tr>
-    </table>
-    <p>Everyone is paid, credited, and holds their own permissions. The scientists advise on their research and their material, and are neither unpaid crew nor presumed co-authors of the song.</p>
-
-    <h3>How local people would take part</h3>
-    <p>The performers in this film are people who live in the town. That is a decision about the work as much as about participation: a cast of residents puts the place the research is about inside the film about the research. I also want the <b>videographer</b> to be local wherever the host's networks can reach one, for the same reason.</p>
-    <p>Before any of that, I would sit down with a local movement professional and talk about how people here move, what movement language the town would recognise, and how that should flow through the choreography. I did exactly this on <em>Kangaroo Time</em>, where the cast's own dance practices shaped the film itself.</p>
-    <p>In 2027 I hold a public lab: I play two drafts, open the conversation, and invite anyone who wants to try the movement. I document at least two artistic decisions that the room changed or confirmed. In 2028 the finished work comes back to the same people, with the scientists and the performers in the room.</p>
-    <figure><img src="img/4_Workshop_go-ahead-and-dance-this.jpg" alt="A workshop slide inviting participants to translate a scientific graph into movement" width="2000" height="1333"><figcaption><b>The exercise I run:</b> read a real research figure, then try it as movement. It is how people find out they can hold a finding in their body before they can explain it.</figcaption></figure>
-    <figure><img src="img/5_Workshop_audience-with-the-work.jpg" alt="Workshop participants seated in discussion around a research-based music film" width="2000" height="1333"><figcaption><b>The conversation after.</b> This format has run in Canberra twice and in Athens with SciCo Greece, so the 2027 public lab is a format I have already delivered in a country that is not my own.</figcaption></figure>
+    <section aria-labelledby="artists">
+    <h2 id="artists">Who builds it, and who is in it</h2>
+    <p class="sub">I lead. Specialists build. The performers live in the town.</p>
+    <div class="scroll"><table>
+      <thead><tr><th>Role</th><th>What they do, and what stays mine</th></tr></thead>
+      <tr><td class="who">Me</td><td><b>Principal artist, creative director, songwriter, performer, director of the film.</b> I prepare my own body for the shoot and author the central choreography. Final approval on song, script, edit and route is mine.</td></tr>
+      <tr><td class="who">Music producer</td><td>Arrangement, recording, mix, master, stems, over three Sydney studio days. One day exists to run the concept through your field recordings, so the science reaches the arrangement as well as the words.</td></tr>
+      <tr><td class="who">Czech filmmaker</td><td>Photography and edit, to a treatment I write. Local to the town where the host's networks reach one.</td></tr>
+      <tr><td class="who">Movement lead</td><td>A local professional. They adapt my choreography to the local performers, rehearse them, and stage the shoot with me.</td></tr>
+      <tr><td class="who">Exhibition and AV</td><td>A Czech specialist prices, builds, tests, maintains and strikes the room, and writes the operating guide.</td></tr>
+    </table></div>
+    <p>Everyone is paid, credited and holds their own permissions. The scientists advise on their research and material. They are neither unpaid crew nor presumed co-authors of the song.</p>
+    <p><b>In 2027 I hold a public lab.</b> I play two drafts, anyone who wants to can try the movement, and what the room says changes the song before it is finished. Nobody has to dance or be filmed. I document at least two artistic decisions the room changed. <b>In 2028 the finished work returns to the same people at the festival.</b></p>
+    <figure><img src="img/5_Workshop_audience-with-the-work.jpg" alt="Workshop participants seated in discussion around a research-based music film" width="2000" height="1333"><figcaption><b>The format already runs.</b> Twice in Canberra and once in Athens with SciCo Greece, so the 2027 lab is something I have delivered in a country that is not my own.</figcaption></figure>
   </section>
+
 
   <section aria-labelledby="installation">
     <h2 id="installation">The installation, in the order you walk it</h2>
@@ -414,19 +483,17 @@
     <figure><img src="img/6_Installation-plan.jpg" alt="Diagram of the proposed installation showing the visitor route between fabric surfaces and into the screening space" width="2000" height="1414"><figcaption><b>The route in plan.</b> An exhibition designer and AV technician price, build and test it against the real venue.</figcaption></figure>
   </section>
 
-  <section aria-labelledby="travel">
-    <h2 id="travel">The travel, said plainly</h2>
-    <p class="sub">One request, with the arithmetic behind it</p>
+    <section aria-labelledby="travel">
+    <h2 id="travel">Travel, said plainly</h2>
+    <p class="sub">Your specification, and the only version of it Sydney can fund</p>
     <div class="ask">
-      <p class="big">The call sets the travel requirement at two to five trips to Budweis plus two trips to Ars Electronica, funded up to &euro;3,000. From Sydney, only the bottom of that range is fundable, so that is what I am proposing.</p>
-      <p>I live in Sydney and hold an Italian passport, so I can work and travel in the EU. A return Sydney to Prague fare sits around &euro;1,100 at the low end, so two crossings consume the allowance almost exactly once airport transfers, the Prague to Budweis rail and the Budweis to Linz rail are counted. <b>A third crossing from Australia does not fit, and I will not budget as though it does.</b></p>
-      <p>So the version I am proposing is the minimum compliant reading of your own specification: <b>two stays in Budweis, with both Ars Electronica visits made by rail from Budweis inside those stays.</b> Everything the call requires still happens.</p>
-      <p><b>So I am asking for two stays: September 2027 and March 2028, the festival month.</b> September replaces the first scheduled stay, and I would film while I am there, with the song already finished and mastered before I fly. That puts me in the country when the local performers, the scientists and the locations are all available to the same shoot, and it puts me back for the festival when the work goes up.</p>
-      <p>This needs the organisers' written agreement, because the call describes September as an optional second stay, and I am asking for it to stand in for the first. Everything before September runs remotely: the research conversations, the material exchange, the writing, the crew scoping and the preproduction.</p>
-      <p>One detail I would want confirmed early: the call covers one month of accommodation in &#268;esk&eacute; Bud&#283;jovice from a separate budget, and which of the two stays that applies to changes the subsistence arithmetic above. I am raising all of this now so it is settled before delivery starts.</p>
+      <p class="big">The call sets travel at two to five trips to Budweis plus two to Ars Electronica, funded up to &euro;3,000. From Sydney, only the bottom of that range is fundable.</p>
+      <p>A return Sydney to Prague fare sits near &euro;1,100. Two crossings consume the allowance almost exactly once airport transfers and the Prague and Linz rail are counted. A stress case reaches about &euro;4,000. <b>A third crossing does not fit, and I will not budget as though it does.</b></p>
+      <p><b>So I propose the minimum compliant version of your own terms: two stays, September 2027 and March 2028, with both Ars Electronica visits by rail from Budweis inside them.</b> Everything else runs remotely. I arrive in September with the song finished and mastered, which is the one month when the performers, the scientists and the locations are available to the same shoot.</p>
+      <p>This needs your written agreement, since the call describes September as an optional second stay. If you require the February presence instead, the first stay can connect to a family trip to Brazil in August 2027 and fly Brazil to Prague, which also fits. <b>One thing to confirm:</b> which of the two stays carries the separately funded month of accommodation, because it changes the subsistence arithmetic.</p>
     </div>
-    <figure><img src="img/7_Delivery-timeline.jpg" alt="Diagram of the delivery timeline across 2027 and 2028 showing remote phases and the two in-country stays" width="2000" height="1414"><figcaption><b>The full schedule</b>, with what happens remotely and what happens in &#268;esk&eacute; Bud&#283;jovice.</figcaption></figure>
   </section>
+
 
   <div class="meta">
     <p><b><a href="proposal/">Read the full proposal</a></b> for the phase-by-phase schedule, the &euro;15,000 production budget, the named candidate suppliers and the production dependencies.</p>
