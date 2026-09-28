@@ -282,6 +282,16 @@
   @media (max-width:760px) { .glance td.q { width:auto; display:block; padding-bottom:4px; }
     .glance td.a { display:block; padding-top:0; } }
   @media print { .glance td.q { color:#111 !important; } }
+
+  .dl { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; margin:22px 0 10px; }
+  .dl a { display:block; background:linear-gradient(160deg,var(--metal-1),var(--metal-3));
+    border:1px solid var(--line); border-radius:14px; padding:20px 22px; text-decoration:none; }
+  .dl a:hover { border-color:var(--gold); }
+  .dl b { display:block; color:var(--gold); font-size:17px; margin-bottom:5px; }
+  .dl span { display:block; color:var(--dim); font-size:14px; }
+  .dl em { font-family:var(--mono); font-style:normal; font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--faint); display:block; margin-top:8px; }
+  @media print { .dl { display:none; } }
 </style>
 </head>
 <body>
@@ -317,8 +327,8 @@
 
     <header class="hero">
     <p class="eyebrow">Ars Biologica ArtXScience Residency 2027-28 &middot; Dr WELI</p>
-    <h1 class="bigidea">A pond can measure as recovered while the life inside it <span>has not come back</span>.</h1>
-    <p class="standfirst">That is a real finding from the Biology Centre. Someone still has to decide the water is fine, and that decision is the song I want to write. <b>Crystal Clear</b> is the working title, and it comes from one paper I have read. <b>The real one starts with a conversation.</b> A pop single, a music film, and a room the visitor walks through.</p>
+    <h1 class="bigidea">I make pop music out of research. <span>Here is exactly how.</span></h1>
+    <p class="standfirst">For Ars Biologica I would make one artwork in three parts: a pop single, a music film shot in &#268;esk&eacute; Bud&#283;jovice, and a room the visitor walks through. <b>The concept is not decided, and that is deliberate.</b> It comes out of the first conversation with the scientists. What follows is the method, and one worked example on a paper from the Centre, so you can see how I read research.</p>
     <p class="who">I am Dr Weliton Menario Costa, WELI. <b>I am a scientist and an artist</b>: a behavioural ecologist by training, and a creative director and innovator working on science in music and popular culture. My own PhD on kangaroo personality became a song and film that won the AAAS Dance Your PhD Overall Prize 2024 and travelled to 238 media features across five continents. Its reception is why I founded <a href="https://wildwoohoo.com" rel="noopener">WildWooHoo</a>, my science-to-art studio, and why I named and defined this practice as <a href="https://doi.org/10.5281/zenodo.21387515" rel="noopener">sci pop</a>.</p>
     <div class="proof">
       <div><b>Overall Winner</b><span><a href="https://www.science.org/content/article/watch-2024-dance-your-ph-d-winners" rel="noopener">AAAS Dance Your PhD 2024</a>, run by the journal Science</span></div>
@@ -329,7 +339,7 @@
       <div><b>PhD + 9 yrs</b><span>behavioural ecology, ANU. Practice since 2017</span></div>
     </div>
     <nav class="jump" aria-label="Sections">
-      <a href="#how">How I read a paper</a><a href="#glance">In one minute</a><a href="#make">What I make</a><a href="#done">What I have done</a><a href="#deliver">How I deliver</a><a href="#method">The method</a><a href="#room">The room</a><a href="#travel">Travel</a><a href="proposal/">Budget &amp; full proposal</a>
+      <a href="#how">How I read a paper</a><a href="#ask">What I ask you for</a><a href="#glance">In one minute</a><a href="#make">What I make</a><a href="#done">What I have done</a><a href="#deliver">How I deliver</a><a href="#method">The method</a><a href="#room">The room</a><a href="#travel">Travel</a><a href="#docs">Download as PDF</a><a href="proposal/">Budget &amp; full proposal</a>
     </nav>
   </header>
 
@@ -339,10 +349,28 @@
     <p><b>Science speaks about reality.</b> It reports what is there, carefully, with its limits stated. That is its job and I was trained to do it.</p>
     <p><b>Art translates the emotion of that reality through the artist's angle.</b> So when I say I read a paper for its emotional hook, I mean something precise. I am looking for the opening: the place where something written in the findings opens an emotion, and I can enter there and express what <em>I</em> feel in front of it.</p>
     <div class="reads">Not a point about environmental activism. An opening onto human life.</div>
-    <p>The line about a pond that measures as recovered is not a slogan about water policy. It is a gap I recognised, because everyone has been told something was fine before it was. <b>That parallel with human life is what makes it a pop song instead of a message.</b> The science stays exactly as accurate as the scientists say it is, and the feeling is mine, and the two are kept visibly apart in the room.</p>
+    <p>The example below is not a slogan about water policy. It is a gap I recognised, because everyone has been told something was fine before it was. <b>That parallel with human life is what makes it a pop song instead of a message.</b> The science stays exactly as accurate as the scientists say it is, and the feeling is mine, and the two are kept visibly apart in the room.</p>
     <p class="caveat"><b>The title also hands the work a material.</b> Crystal is glass: the slide, the lens, the surface you look through to see anything at an ecological scale at all. The room already runs on translucent surfaces, and this gives them a reason. What a visitor does there is look through something clear at something they still cannot see.
     </p>
     <p class="caveat">It stays a working title. It came from one paper I chose to read, and once I am talking with the team a different finding may open a wider door onto the environmental questions this residency exists for. The title moves with it.</p>
+  </section>
+
+  <section aria-labelledby="ask">
+    <h2 id="ask">What I ask the scientists for</h2>
+    <p class="sub">Material that already exists and is already cleared. No new field campaign.</p>
+    <p><b>I want it in the work in as many ways as it can honestly be there, and not only in the lyrics.</b> A story is one channel. Sound, tempo, movement and image are four more, and they carry a research system more directly than a sentence about it does.</p>
+    <div class="scroll"><table class="deliver">
+      <thead><tr><th>What I ask for</th><th>Where it ends up</th></tr></thead>
+      <tbody>
+        <tr><td class="ph">Field recordings</td><td class="dl">Water, rain, wind, sampling, the equipment, the lab. <b>These become the actual sound of the track</b>, as texture and as layers under the production, and one of them is usually where the rhythm starts.</td></tr>
+        <tr><td class="ph">Measured or observed patterns</td><td class="dl">Time series, frequencies, wave forms, spatial or seasonal patterns. <b>These inform tempo, phrasing and groove</b>, and they give the movement lead something real to build the choreography from.</td></tr>
+        <tr><td class="ph">Microscopy</td><td class="dl">Photographs and video down the lens. <b>These set the look of the film</b> and the surfaces and lighting in the room.</td></tr>
+        <tr><td class="ph">Fieldwork photographs and video</td><td class="dl">The sites, the sampling, the team at work. <b>These give the film its scenes and framing</b>, and they are the first thing a visitor meets in the room.</td></tr>
+        <tr><td class="ph">Anything they find beautiful or strange in their own material</td><td class="dl"><b>This is the most useful category and I ask for it explicitly.</b> What excites a researcher about their own data is usually where the thing an audience can feel is hiding.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Then we talk through why they chose each item. That conversation is where I learn which pattern is meaningful and which is noise, and it is where a misreading gets caught before it reaches a lyric or a shot.</p>
+    <p class="caveat">Every source is labelled in the room with author, recordist, place and date. A recording of water is never labelled as a microorganism's voice.</p>
   </section>
 
 <section aria-labelledby="glance">
@@ -372,7 +400,7 @@
       <article>
         <span class="tag">02 &middot; The film</span>
         <h3>A music film</h3>
-        <p>Shot in Cesk&eacute; Bud&#283;jovice with local performers, to music-industry standards, with no explanatory text on screen. I write and direct it, as I did for <em>Kangaroo Time</em>.</p>
+        <p>Shot in &#268;esk&eacute; Bud&#283;jovice with local performers, to music-industry standards, with no explanatory text on screen. I write and direct it, as I did for <em>Kangaroo Time</em>.</p>
       </article>
       <article>
         <span class="tag">03 &middot; The room</span>
@@ -441,7 +469,7 @@
 
   <section aria-labelledby="deliver">
     <h2 id="deliver">How I deliver it to you</h2>
-    <p class="sub">What happens remotely, what happens in Cesk&eacute; Bud&#283;jovice, and what lands at each gate.</p>
+    <p class="sub">What happens remotely, what happens in &#268;esk&eacute; Bud&#283;jovice, and what lands at each gate.</p>
     <div class="scroll"><table class="deliver">
       <thead><tr><th>When</th><th>What I do</th><th>What you receive</th></tr></thead>
       <tbody>
@@ -452,7 +480,7 @@
         <tr><td class="ph">Mar 2028<br><b>on site</b><span class="here">Stay 2</span></td><td>Install, test, screen, hold the public conversation with the scientists and performers, document, strike.</td><td class="dl">Completed exhibition and film. Engagement documented. Videos 14&ndash;15. Safe strike.</td></tr>
       </tbody>
     </table></div>
-    <p>Fifteen short captioned process videos run from January 2027 to festival close, with credited, permission-cleared stills supplied to Cesk&eacute; Bud&#283;jovice 2028 at each phase. <a href="proposal/">The full proposal carries the &euro;15,000 production budget line by line</a>, with two published price anchors and 8.9% contingency.</p>
+    <p>Fifteen short captioned process videos run from January 2027 to festival close, with credited, permission-cleared stills supplied to &#268;esk&eacute; Bud&#283;jovice 2028 at each phase. <a href="proposal/">The full proposal carries the &euro;15,000 production budget line by line</a>, with two published price anchors and 8.9% contingency.</p>
   </section>
 
   <section aria-labelledby="method">
@@ -480,10 +508,10 @@
     </div>
 
     <p class="arrow">The central problem underneath it</p>
-    <p>Extreme rain is arriving more often. After a flood, the chemistry can look as it did before while the living community has not finished coming back. <b>A pond can measure as recovered and still not be recovered.</b> For anyone managing water for a town, a fishpond or a farm, that gap is the real problem.</p>
+    <p>Extreme rain is arriving more often. In this study one measured quantity returned to its earlier level before the living community did. <b>So a water body can pass the check people run on it and still be short of what lived in it.</b> For anyone managing water for a town or a farm, the distance between the measure and the community is the working problem.</p>
 
     <p class="arrow">Translate it to a human emotion</p>
-    <div class="reads">You can see the water is clear. You cannot see what is missing.</div>
+    <div class="reads">Clarity is what a person can check by looking. Recovery is not.</div>
 
     <p class="arrow">That becomes the hook, across all three outcomes</p>
     <table>
@@ -539,6 +567,15 @@
     </div>
   </section>
 
+
+    <section aria-labelledby="docs">
+    <h2 id="docs">Everything on one page, or everything in full</h2>
+    <p class="sub">Both as PDFs, if that is easier than reading a web page</p>
+    <div class="dl">
+      <a href="docs/Crystal-Clear_one-page-summary.pdf"><b>The summary</b><span>The project, the numbers, the one request, who does what, and the eligibility record.</span><em>PDF &middot; 2 pages</em></a>
+      <a href="docs/Crystal-Clear_full-proposal.pdf"><b>The full proposal</b><span>Method, the four phases, the installation station by station, the &euro;15,000 budget line by line, named candidate suppliers and production dependencies.</span><em>PDF &middot; 16 pages</em></a>
+    </div>
+  </section>
 
   <div class="meta">
     <h3>The practice has a name and a published definition</h3>
