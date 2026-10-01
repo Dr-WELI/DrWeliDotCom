@@ -25,18 +25,18 @@
      ink-night ground = depth. cyan = water and signal. mint = the living thread.
      gold = the premium TEXT accent (never cyan text). magenta = music only. */
   :root {
-    --ink:#0B0E14; --surface:#161A22; --metal-1:#2A2E36; --metal-2:#1B1F27; --metal-3:#0E1118;
-    --text:#E9F1EA; --dim:rgba(233,241,234,.72); --faint:rgba(233,241,234,.46);
-    --cyan:#34D6DE; --mint:#6FE0C8; --gold:#FFC857; --magenta:#DC3CAD; --coral:#FF7A4D;
-    --line:rgba(233,241,234,.12); --hair:rgba(52,214,222,.28);
-    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+ --ink:#0B0E14; --surface:#161A22; --metal-1:#2A2E36; --metal-2:#1B1F27; --metal-3:#0E1118;
+ --text:#E9F1EA; --dim:rgba(233,241,234,.72); --faint:rgba(233,241,234,.46);
+ --cyan:#34D6DE; --mint:#6FE0C8; --gold:#FFC857; --magenta:#DC3CAD; --coral:#FF7A4D;
+ --line:rgba(233,241,234,.12); --hair:rgba(52,214,222,.28);
+ --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
   }
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; }
   body {
     background:var(--ink); color:var(--text); margin:0; line-height:1.62;
     font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-    -webkit-font-smoothing:antialiased;
+ -webkit-font-smoothing:antialiased;
   }
 
   /* ---- the water field: depth wash + flow lines + colony dots + tech grid ---- */
@@ -54,7 +54,7 @@
     background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);
     background-size:64px 64px;
     mask-image:radial-gradient(70% 55% at 50% 30%,#000 30%,transparent 100%);
-    -webkit-mask-image:radial-gradient(70% 55% at 50% 30%,#000 30%,transparent 100%);
+ -webkit-mask-image:radial-gradient(70% 55% at 50% 30%,#000 30%,transparent 100%);
   }
   .field svg { position:absolute; left:-5%; top:0; width:110%; height:100%; opacity:.30; }
   .field .colony { position:absolute; inset:0; opacity:.5; }
@@ -122,7 +122,8 @@
   figcaption { margin-top:14px; max-width:780px; font-size:15px; color:var(--dim); }
   figcaption b { color:var(--text); }
   .pair { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start; }
-  .pair figure { margin-bottom:0; }
+  .pair figure { margin-bottom:0; display:flex; flex-direction:column; }
+  .pair figure img { aspect-ratio:3/2; object-fit:cover; }
 
   /* ---- the worked example ---- */
   .quotebox { background:rgba(22,26,34,.72); border:1px solid var(--line); border-left:2px solid var(--cyan);
@@ -208,7 +209,7 @@
       radial-gradient(circle at 63% 8%,  rgba(111,224,200,.20) 0 1.2px, transparent 1.8px);
     background-size: 340px 340px, 470px 470px, 300px 300px, 520px 520px, 400px 400px, 260px 260px, 380px 380px;
     mask-image:radial-gradient(85% 70% at 50% 40%,#000 20%,transparent 100%);
-    -webkit-mask-image:radial-gradient(85% 70% at 50% 40%,#000 20%,transparent 100%);
+ -webkit-mask-image:radial-gradient(85% 70% at 50% 40%,#000 20%,transparent 100%);
   }
 
   .scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0 14px;
@@ -221,7 +222,7 @@
   .bigidea { font-size:clamp(30px,4.6vw,50px); line-height:1.06; letter-spacing:-.03em;
     font-weight:800; margin:0 0 20px; max-width:16ch; }
   .bigidea span { background:linear-gradient(100deg,#FFE7A6,var(--gold) 45%,#E4A93A);
-    -webkit-background-clip:text; background-clip:text; color:transparent; }
+ -webkit-background-clip:text; background-clip:text; color:transparent; }
   .standfirst { font-size:19px; color:var(--dim); max-width:640px; margin:0 0 10px; }
   .standfirst b { color:var(--text); font-weight:650; }
   .who { font-size:16px; color:var(--dim); max-width:660px; margin:18px 0 0; }
@@ -342,14 +343,15 @@
     <p class="standfirst">For Ars Biologica I would make one artwork in three parts: a pop single, a music film shot in &#268;esk&eacute; Bud&#283;jovice, and an installation. <b>The concept is not decided, and that is deliberate.</b> It comes out of the first conversation with the scientists. What follows is the method, and one worked example on a paper from the Centre, so you can see how I read research.</p>
     <p class="who" style="margin-top:14px"><b>How I work with the science.</b> I work with scientific content inside four artistic forms: <b>songwriting, music production, video, and installation</b>. The scientists are invited in at the level of material. I ask them for <b>bioacoustic records, or any sound recording from their study systems</b>, taken across the different subjects and spaces they work in, and for <b>images or video showing the patterns, organisation and structures</b> of the microbiological life they study. <b>That material is the reference I design the song from and write the video script from.</b></p>
     <p class="who" style="margin-top:12px"><b>Working title: Crystal Clear.</b> It hands the work a material: crystal is glass, the slide and the lens the science is seen through. The title moves if the chosen finding does.</p>
-    <p class="who">I am Dr Weliton Menario Costa, WELI. <b>I am a scientist and an artist</b>: a behavioural ecologist by training, and a creative director and innovator working on science in music and popular culture. My own PhD on kangaroo personality became a song and film that won the AAAS Dance Your PhD Overall Prize 2024 and travelled to 238 media features across five continents. Its reception is why I founded <a href="https://wildwoohoo.com" rel="noopener">WildWooHoo</a>, my science-to-art studio, and why I named and defined this practice as <a href="https://doi.org/10.5281/zenodo.21387515" rel="noopener">sci pop</a>.</p>
+    <p class="who">I am Dr Weliton Menario Costa, WELI. <b>I am a scientist and an artist</b>: a behavioural ecologist by training, and a creative director and innovator working on science in music and popular culture. My own PhD on kangaroo personality became a song and a film, and its reception is why I founded <a href="https://wildwoohoo.com" rel="noopener">WildWooHoo</a>, my science-to-art studio, and why I named and defined this practice as <a href="https://doi.org/10.5281/zenodo.21387515" rel="noopener">sci pop</a>.</p>
     <div class="proof">
       <div><b>Overall Winner</b><span><a href="https://www.science.org/content/article/watch-2024-dance-your-ph-d-winners" rel="noopener">AAAS Dance Your PhD 2024</a>, run by the journal Science</span></div>
       <div><b>238+</b><span>media features, five continents. Guardian, NPR, BBC, Smithsonian. Isentia 2024</span></div>
       <div><b>154,766</b><span>views, 98.2% positive, 64.5% from press and sharing</span></div>
-      <div><b>1 of 30</b><span><a href="https://falling-walls.com/engage/shortlist-finalists" rel="noopener">Falling Walls Engage 2025</a>, shortlisted worldwide</span></div>
-      <div><b>2 commissions</b><span>research to released song, on deadline</span></div>
-      <div><b>PhD + 9 yrs</b><span>behavioural ecology, ANU. Practice since 2017</span></div>
+      <div><b>3 countries</b><span>where my workshop has run: Australia, Greece, Brazil</span></div>
+      <div><b>Top 30</b><span><a href="https://falling-walls.com/engage/shortlist-finalists" rel="noopener">Falling Walls Engage 2025</a>, shortlisted worldwide</span></div>
+      
+      
     </div>
     <nav class="jump" aria-label="Sections"><a href="#pack">The files</a><a href="#reel">Watch</a><a href="#stills">Stills</a><a href="proposal/">Full proposal</a></nav>
   </header>
@@ -365,14 +367,13 @@
       <article><span class="tag">03 &middot; The installation</span><h3>A spatial work</h3><p>The scientists' fieldwork and material, then the choices that shaped the song and film, then a timed screening. Positioned sound, so walking changes what you hear.</p></article>
     </div>
     <ul class="plain" style="margin-top:20px">
-      <li><a href="docs/Crystal-Clear_project-cheat-sheet.pdf"><b>Project cheat sheet</b></a> &mdash; the whole proposal on a sheet: practice, concept, how the scientists are involved, activities and timeline, budget, outcomes, impact and risks.</li>
-      <li><a href="docs/Crystal-Clear_full-proposal.pdf"><b>Full proposal</b></a> &mdash; 16 pages. Method, the four phases, the installation station by station, the budget line by line, candidate suppliers, dependencies. <em>You did not ask for this. It is here if you want it.</em></li>
-      <li><a href="docs/Dr-WELI_CV.pdf"><b>CV</b></a> &mdash; practice, productions, research, appearances and credits, with dates.</li>
-      <li><a href="proposal/"><b>The proposal as a web page</b></a> &mdash; same content, if you would rather not download anything.</li>
+      <li><a href="docs/Crystal-Clear_project-cheat-sheet.pdf"><b>Project cheat sheet</b></a> - the whole proposal on a sheet: practice, concept, how the scientists are involved, activities and timeline, budget, outcomes, impact and risks.</li>
+      <li><a href="docs/Crystal-Clear_full-proposal.pdf"><b>Full proposal</b></a> - 16 pages. Method, the four phases, the installation station by station, the budget line by line, candidate suppliers, dependencies. <em>You did not ask for this. It is here if you want it.</em></li>
+      <li><a href="docs/Dr-WELI_CV.pdf"><b>CV</b></a> - practice, productions, research, appearances and credits, with dates.</li>
     </ul>
   </section><section aria-labelledby="reel">
     <h2 id="reel">The portfolio</h2>
-    <p class="sub">One body of work, and what it has had to do in the world</p>
+    <p class="sub">One body of work, and where it has had to work</p>
     <div class="reel">
 
       <article>
@@ -414,17 +415,17 @@
     </div>
   </section>  <section aria-labelledby="stills">
     <h2 id="stills">Stills</h2>
-    <p class="sub">The research, and the artwork made from it</p>
+    <p class="sub">The research, and the work made from it</p>
     <div class="pair">
       <figure><img src="img/10_Field_kangaroo-mob-at-the-study-site.jpg" alt="Five eastern grey kangaroos in golden grass against dense green scrub at the study site" width="2000" height="1333"><figcaption><b>The research.</b> Eastern grey kangaroos at my study site, photographed by me during the doctorate.</figcaption></figure>
-      <figure><img src="img/11_Photography-Project_human-mob-in-the-grass.jpg" alt="Six models posed in kangaroo-like postures across tall golden grass under storm clouds" width="2000" height="1125"><figcaption><b>The artwork.</b> The same mob, made of people. Each model stands in for something the research measured.</figcaption></figure>
+      <figure><img src="img/12_Photography-Project_three-models-kangaroo-postures.jpg" alt="Three models in fur styling holding kangaroo-like postures in open eucalypt grassland" width="2000" height="1333"><figcaption><b>The Photography Project</b>, 2023. Concept and creative direction mine; photographed by Tony Oliver and Reid Workman, hair and make-up by Neha Suryavanshi, Shauna Priest and Anchal Goel.</figcaption></figure>
     </div>
+    <figure><img src="img/11_Photography-Project_human-mob-in-the-grass.jpg" alt="Six models posed in kangaroo-like postures across tall golden grass under storm clouds" width="2000" height="1125"><figcaption><b>The same mob, made of people.</b> Each model stands in for something the research measured: a personality axis, a social role, a maternal effect.</figcaption></figure>
     <div class="pair">
       <figure><img src="img/14_Field_kangaroo-mid-leap.jpg" alt="An eastern grey kangaroo at full stretch mid-leap across open grassland" width="2000" height="1333"><figcaption><b>The animal.</b></figcaption></figure>
-      <figure><img src="img/13_Photography-Project_leaping.jpg" alt="A model in fur mid-leap across tall golden grass in the bounding posture of a kangaroo" width="2000" height="1333"><figcaption><b>A person doing it.</b> Same gesture, same country. No caption tells you that.</figcaption></figure>
+      <figure><img src="img/13_Photography-Project_leaping.jpg" alt="A model in fur mid-leap across tall golden grass in the bounding posture of a kangaroo" width="2000" height="1333"><figcaption><b>A person doing it.</b> Same gesture, same country.</figcaption></figure>
     </div>
-    <figure><img src="img/12_Photography-Project_three-models-kangaroo-postures.jpg" alt="Three models in fur styling holding kangaroo-like postures in open eucalypt grassland" width="2000" height="1333"><figcaption><b>The Photography Project</b>, shot October 2023, released 2024. Concept and creative direction mine; photographed by Tony Oliver and Reid Workman, with hair and make-up by Neha Suryavanshi, Shauna Priest and Anchal Goel.</figcaption></figure>
-    <figure><img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time ensemble silhouetted against a dusk sky, each dancer holding a different posture" width="2000" height="1336"><figcaption><b>The <em>Kangaroo Time</em> cast on location, 2023.</b> Twenty-four people from multicultural Canberra, none of them performers by trade. Each brought their own dance practice into the film instead of being taught a routine, which is how I would work with performers in &#268;esk&eacute; Bud&#283;jovice.</figcaption></figure>
+    <figure><img src="img/2_Kangaroo-Time_ensemble-at-dusk.jpg" alt="The Kangaroo Time cast silhouetted against a dusk sky" width="2000" height="1336"><figcaption><b>The <em>Kangaroo Time</em> cast on location, 2023.</b> Twenty-four people from multicultural Canberra, none of them performers by trade. Each brought their own dance practice into the film instead of being taught a routine, which is how I would work with performers in &#268;esk&eacute; Bud&#283;jovice.</figcaption></figure>
   </section>
 
 <div class="meta">
