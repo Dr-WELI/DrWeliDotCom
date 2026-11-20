@@ -5,6 +5,10 @@
    that it feels more modern eg the sujacent pages - leave the home page as it is".
    So: no colour is changed here, and the home page does not load this file.
    Loaded last on the 12 inner pages.
+   Follow-up the same day (WELI: "Yes, fix them"): labels typed in capitals
+   in the HTML are now sentence case too, and the label styles the first pass
+   missed (enquire, media, the four program pages, the pointer label) are
+   added below. The ribbon clock shows the city as written, not in capitals.
    ========================================================================== */
 
 /* 1. Headings: medium weight instead of heavy, slightly tighter */
@@ -28,7 +32,11 @@ h3, .card h3, .site-card h3, .music-release-meta h3 {
 .site-audience-tag, .site-chip, .cred-label, .fact .k, .timeline-year, .music-release-type, .music-release-meta,
 .music-press-item, .three .tag, .research-hub span, .reel .ctx, .quote .src, .quotebox .src, .academic-signal-item,
 .music-bookings-stamp, .site-book-stamp, .hero-detail .hero-award, .music-footer-meta, .bio-card .word-count,
-.proof span, .dl em, .here, .back, .arrow, .site-audience-arrow, th, h2 + .sub {
+.proof span, .dl em, .here, .back, .arrow, .site-audience-arrow, th, h2 + .sub,
+.contact-kicker, .media-kicker, .media-orbit-text span, .command-topline, .archive-rail,
+.kicker, .story-chip, .contact-signal-strip span, .contact-step-title, .contact-note, .label, .press-strip span,
+.archive-hero-cat, .archive-hero-academic, .archive-hero-format-chip, .archive-section-stamp,
+.archive-proof-cue, .archive-proof-caption, .archive-book-stamp {
   text-transform: none !important;
   letter-spacing: 0 !important;
   font-family: inherit !important;
@@ -36,7 +44,8 @@ h3, .card h3, .site-card h3, .music-release-meta h3 {
 }
 
 /* 3. Buttons and small navigation: sentence case, regular tracking */
-.site-cta-button, .music-bookings-cta-btn, .music-footer-nav a, .jump a {
+.site-cta-button, .music-bookings-cta-btn, .music-footer-nav a, .jump a,
+.archive-hero-cta, .btn-cta, .contact-submit-row .btn {
   text-transform: none !important;
   letter-spacing: 0 !important;
   font-weight: 600 !important;
@@ -48,8 +57,15 @@ h3, .card h3, .site-card h3, .music-release-meta h3 {
   letter-spacing: .01em !important;
   font-weight: 500 !important;
 }
-.site-ribbon { font-weight: 400 !important; letter-spacing: .02em !important; opacity: .78; }
-.site-ribbon *, .site-ribbon { text-transform: none !important; }
+.site-ribbon, .archive-ribbon { font-weight: 400 !important; letter-spacing: .02em !important; opacity: .78; }
+.site-ribbon *, .site-ribbon, .archive-ribbon *, .archive-ribbon { text-transform: none !important; }
+
+/* 4b. Bold lead-ins in the program theme cards: no capitals, still bold */
+.archive-theme-card p strong { text-transform: none !important; letter-spacing: 0 !important; font-family: inherit !important; }
+
+/* 4c. The small "open" label that follows the pointer over links
+   (class set in site-effects.js and program/program-archive.js) */
+.site-cursor-label { text-transform: none !important; letter-spacing: 0 !important; font-family: inherit !important; font-weight: 600 !important; }
 
 /* 5. Body text: regular weight and an easy line height */
 body { font-weight: 400; }

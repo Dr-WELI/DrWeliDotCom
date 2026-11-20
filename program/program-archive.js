@@ -9,11 +9,11 @@
   /* ---------- Live local clock in utility ribbon -------------- */
   const clockEl = document.getElementById('archiveClock') || document.getElementById('siteClock');
   if (clockEl) {
-    let tzLabel = 'LOCAL';
+    let tzLabel = 'Local';
     try {
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
       const parts = tz.split('/');
-      tzLabel = (parts[parts.length - 1] || tz).replace(/_/g, ' ').toUpperCase();
+      tzLabel = (parts[parts.length - 1] || tz).replace(/_/g, ' ');
     } catch (e) { /* fallback */ }
 
     const pad = (n) => String(n).padStart(2, '0');
@@ -71,6 +71,7 @@
   /* ---------- Custom cursor follower on interactive cards ---- */
   if (window.matchMedia('(pointer:fine)').matches) {
     const cursor = document.createElement('div');
+    cursor.className = 'site-cursor-label';
     cursor.style.cssText = [
       'position:fixed', 'top:0', 'left:0',
       'pointer-events:none', 'z-index:200',
