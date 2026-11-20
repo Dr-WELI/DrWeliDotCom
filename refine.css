@@ -1,0 +1,56 @@
+/* =============================================================================
+   drweli.com inner pages: lighter, more modern text (WELI 2026-11-20,
+   LIVE-TRUTH section 10): "you do not need to change the colar of anything
+   mjor in drweli site. that site is good - just ensure the text is lifhter and
+   that it feels more modern eg the sujacent pages - leave the home page as it is".
+   So: no colour is changed here, and the home page does not load this file.
+   Loaded last on the 12 inner pages.
+   ========================================================================== */
+
+/* 1. Headings: medium weight instead of heavy, slightly tighter */
+h1, h2,
+.hero-title, .academic-hero .hero-title, .site-section-title, .site-audience-title,
+.music-world-title, .music-world-section-head h2, .music-bookings-band h2, .site-book-band h2 {
+  font-weight: 560 !important;
+  letter-spacing: -0.02em !important;
+}
+h1 em, h2 em { font-weight: inherit !important; }
+h3, .card h3, .site-card h3, .music-release-meta h3 {
+  font-weight: 560 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+}
+.site-card .num, td.num, .hero-site-header .brand { font-weight: 520 !important; }
+
+/* 2. Labels: sentence case, no wide tracking, same face as the text */
+.eyebrow, .academic-hero .eyebrow, .home-hero .eyebrow, .page-kicker-chip, .music-kicker, .music-world-kicker,
+.pathway-kicker, .press-eyebrow, .site-card .kicker, .section-subtitle, .site-section-stamp, .site-section-update small,
+.site-audience-tag, .site-chip, .cred-label, .fact .k, .timeline-year, .music-release-type, .music-release-meta,
+.music-press-item, .three .tag, .research-hub span, .reel .ctx, .quote .src, .quotebox .src, .academic-signal-item,
+.music-bookings-stamp, .site-book-stamp, .hero-detail .hero-award, .music-footer-meta, .bio-card .word-count,
+.proof span, .dl em, .here, .back, .arrow, .site-audience-arrow, th, h2 + .sub {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-family: inherit !important;
+  font-weight: 500 !important;
+}
+
+/* 3. Buttons and small navigation: sentence case, regular tracking */
+.site-cta-button, .music-bookings-cta-btn, .music-footer-nav a, .jump a {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+}
+
+/* 4. Moving strips and the top ribbon: quieter, same colours */
+.page-marquee-track span, .program-marquee-track span, .hero-marquee-item {
+  text-transform: none !important;
+  letter-spacing: .01em !important;
+  font-weight: 500 !important;
+}
+.site-ribbon { font-weight: 400 !important; letter-spacing: .02em !important; opacity: .78; }
+.site-ribbon *, .site-ribbon { text-transform: none !important; }
+
+/* 5. Body text: regular weight and an easy line height */
+body { font-weight: 400; }
+p, li, dd { line-height: 1.65; }
