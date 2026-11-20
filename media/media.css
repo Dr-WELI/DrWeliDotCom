@@ -194,6 +194,10 @@ body.media-page{font-family:Instrument Sans,system-ui;background:radial-gradient
 .media-map{
   text-align:center;
   padding:80px 20px;
+  /* The dots' hover labels reach past the map's edges and grow with the pulse.
+     Clip them here so they never make the page wider than a phone (20 Nov 2026). */
+  overflow-x:hidden; /* older browsers */
+  overflow-x:clip;
 }
 
 /* container */
